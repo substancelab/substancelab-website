@@ -1,0 +1,15 @@
+lokalebasen:
+  case_study: true
+  client: Lokalebasen, Denmark
+  client_website: http://lokalebasen.dk
+  description: Lokalebasen is a danish portal for renting and selling offices, warehouses, and production facilities. Substance Lab was hired to build the site from the ground up, using Agile and Test Driven Development.
+  featured: true
+  name: Lokalebasen
+  position: 3
+  services:
+  - Google Maps
+  - Javascript
+  - Ruby on Rails
+  - Web application development
+  slug: lokalebasen
+  website: http://lokalebasen.dk

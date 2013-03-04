@@ -1,0 +1,70 @@
+html lang="en"
+  head
+    meta charset='utf-8'
+    - if defined?(metadata)
+      title== metadata.title
+
+    -# Simple, clean, basic styles for ancient browsers
+    == stylesheet_link_tag 'basic.css', :media => "screen"
+
+    -# One stylesheet to import them all
+    == stylesheet_link_tag "layout.css"
+
+    -# And one to make my life easier
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="/stylesheets/ie6.css" /><![endif]-->
+
+    -# And one to make printing pretty
+    == stylesheet_link_tag 'print.css', :media => 'print'
+
+    -# Get the Droid Sans font from Google Fonts
+    == stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold'
+
+    -# Poor IE no speaky HTML5
+    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'jquery.form.js', 'rails', 'quote_slider.js'
+
+    - if defined?(metadata)
+      - unless metadata.keywords.blank?
+        meta name="keywords", content=metadata.keywords
+      - unless metadata.description.blank?
+        meta name="description", content=metadata.description
+
+    -#== csrf_meta_tag
+    meta name="viewport" content="width=770"
+    meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
+    link href="/images/favicon.png" rel="icon" type="image/x-icon"
+
+  -# body id=metadata.section class="#{controller_name}_controller #{action_name}_action"
+  body
+    header
+      .container
+        .branding
+          == link_to("/", :class => 'logo', :title => "Substance Lab | Carefully crafting websites and web applications") do
+            span.substance Substance
+            span.lab Lab
+        nav
+          ul
+            li== link_to 'Home', "/"
+            li== link_to 'Work', "/works"
+    == yield
+
+    footer
+      .container
+        .legalese
+          '&copy;
+          == "#{[2008, Time.now.year].uniq.join("-")}"
+          == link_to('Substance Lab', "http//substancelab.com", :title => "Substance Lab - freelance web design and web development in Copenhagen, Denmark")
+        .contents
+          ul.links
+            li== link_to 'Homepage', "/", :title => "Substance Lab - freelance web application development and webdesign in Copenhagen, Denmark, Europe"
+            li== link_to 'Web application development', "/work", :title => "Web application development projects by Substance Lab"
+            li== link_to 'Contact', "/#anchor=contact", :title => "Contact Substance Lab"
+            li== link_to 'Client login', "http//work.substancelab.com", :title => "Substance Lab client extranet"
+
+        .network
+          Substance sites:
+          ul.links
+            li== link_to 'mentalized', "http//mentalized.net", :title => "The personal website of Jakob Skjerning, and independent web developer in Copenhagen, Denmark"
+            li== link_to 'FlowToDo', "http//flowtodo.com", :title => "Task tracking tool that actually helps you collect, focus, and get things done"
+            li== link_to 'Objectpush', "http//objectpush.com", :title => "POP3 meets JSON"

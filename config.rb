@@ -49,6 +49,9 @@ require 'slim'
 #   end
 # end
 
+# Pretty URLs
+activate :directory_indexes
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

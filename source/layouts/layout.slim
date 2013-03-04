@@ -1,8 +1,11 @@
 html lang="en"
   head
     meta charset='utf-8'
-    - if defined?(metadata)
-      title== metadata.title
+    title
+      - if current_page.data.title.blank?
+        | Substance Lab | Carefully crafting websites and web applications
+      - else
+        == "#{current_page.data.title} | Substance Lab"
 
     -# Simple, clean, basic styles for ancient browsers
     == stylesheet_link_tag 'basic.css', :media => "screen"
@@ -24,19 +27,17 @@ html lang="en"
 
     == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'jquery.form.js', 'rails', 'quote_slider.js'
 
-    - if defined?(metadata)
-      - unless metadata.keywords.blank?
-        meta name="keywords", content=metadata.keywords
-      - unless metadata.description.blank?
-        meta name="description", content=metadata.description
+    - unless current_page.data.keywords.blank?
+      meta name="keywords" content="#{current_page.data.keywords.join(',')}"
+    - unless current_page.data.description.blank?
+      meta name="description" content="#{current_page.data.description}"
 
     -#== csrf_meta_tag
     meta name="viewport" content="width=770"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
     link href="/images/favicon.png" rel="icon" type="image/x-icon"
 
-  -# body id=metadata.section class="#{controller_name}_controller #{action_name}_action"
-  body
+  body id="#{current_page.data.section}" class="#{(current_page.data.body_classes || []).join(" ")}"
     header
       .container
         .branding

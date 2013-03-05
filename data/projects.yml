@@ -1,3 +1,20 @@
+gamekillers:
+  case_study: true
+  client: SBS Radio, Denmark
+  client_website: http://sbsradio.dk
+  description: SBS Radio wanted a campaign website to promote their upcoming TV show, Gamekillers - a production by AXE known from MTV.
+  featured: true
+  name: Gamekillers
+  position: 4
+  services:
+  - CSS
+  - Javascript
+  - Ruby on Rails
+  - Web application development
+  - Webdesign
+  - YouTube integration
+  slug: gamekillers
+
 lokalebasen:
   case_study: true
   client: Lokalebasen, Denmark

@@ -1,0 +1,44 @@
+article
+  header.intro
+    .container
+      h1= project.name
+      .subtitle
+        = project.description
+
+  .container
+    == partial project.slug
+    -# project_image(project)
+    h2 Substance Lab did
+    p= project.services.to_sentence
+
+    .columns.double.case_studies
+      .column
+        h2 View another case study
+
+        ul
+          - case_studies.reject { |key, values| key == project }.each do |key, case_study|
+            li
+              = link_to project_url(:id => case_study), {:class => 'more'} do
+                h3= case_study
+                .services
+                  = case_study.services.to_sentence
+                  for
+                  = case_study.client
+
+      .column
+        h2 Want something like this?
+        p
+          | You can use the form below to get in touch with Substance Lab. Or you can send an email message using your regular email client to <a href="mailto:jakob@substancelab.com" title="Send an email to Jakob">jakob@substancelab.com</a>.
+        / render 'contact_forms/form', :object => ContactForm.new
+
+/- if false || code_image = project_code_image_path(project)
+/  style
+/    .intro {
+/    background-image: -moz-linear-gradient(top, rgba(50,106,128,1) 0%, rgba(50,106,128,0) 200%), url("#{code_image}"); /* FF3.6+ */
+/    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,106,128,1)), color-stop(200%,rgba(50,106,128,0))), url("#{code_image}"); /* Chrome,Safari4+ */
+/    background-image: -webkit-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Chrome10+,Safari5.1+ */
+/    background-image: -o-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Opera 11.10+ */
+/    background-image: -ms-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* IE10+ */
+/    background-image: linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* W3C */
+/    }
+

@@ -12,8 +12,14 @@ module ProjectHelpers
     }
   end
 
+  def projects_url
+    "/work/"
+  end
+
   def project_url(project)
-    File.join("/work/#{project["slug"]}")
+    slug = project["slug"]
+    raise "Slug for #{project.inspect} cannot be blank" if slug.blank?
+    File.join(projects_url, project["slug"])
   end
 
 end

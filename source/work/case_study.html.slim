@@ -18,7 +18,7 @@ article
         ul
           - case_studies.reject { |key, values| key == project }.each do |key, case_study|
             li
-              = link_to project_url(:id => case_study), {:class => 'more'} do
+              = link_to project_url(case_study), {:class => 'more'} do
                 h3= case_study
                 .services
                   = case_study.services.to_sentence

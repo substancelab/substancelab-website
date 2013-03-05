@@ -1,0 +1,66 @@
+//
+//  Grid:
+//  Columns: 230 + 30 + 230 + 30 + 230: 750
+//    + 15 on each side
+//
+//  Rows: 12px
+//
+
+// Define the grid sizes
+$grid_column_width: 250px
+$grid_column_spacing: 30px
+$grid_column_margin_right: 15px
+$grid_column_margin_left: $grid_column_margin_right
+$grid_row_height: 12px
+
+/* Setup generic columns */
+$columns_total_width: 100%
+$columns_amount: 3
+$column_spacing: 5%
+$column_width: ($columns_total_width - ($columns_amount - 1) * $column_spacing) / $columns_amount
+
+.columns
+  clear: both
+
+  margin-bottom: 40px
+
+  +clear
+
+
+  h1,
+  .subtitle
+    margin-left: 0
+    margin-right: 0
+
+h1 + .columns
+  /* Columns immediately after a headline needs bigger top margin, since there is no tagline there */
+  margin-top: 29px
+
+/* Basic columns == .tripple columns */
+.column,
+.tripple.columns .column
+  float: left
+  margin-left: $column_spacing
+  display: inline /* Avoid IE double margin bug - TODO: Move to ie6.css */
+  width: $column_width
+
+.column:first-child, .first-child
+  margin-left: 0
+
+.single.columns .column
+  /*: 3 columns with spacing between */
+  width: ($column_width * 3 + $column_spacing * 2)
+
+.double.columns .column
+  width: (($columns_total_width - $column_spacing) / 2)
+
+.golden.columns .content.column,
+.golden.columns .primary.column
+  width: 61% 
+
+.golden.columns .sidebar.column
+  width: 33.5% 
+
+.columns
+  .span2
+    width: $column_width * 2 + $column_spacing

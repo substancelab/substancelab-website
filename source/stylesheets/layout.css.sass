@@ -1,0 +1,377 @@
+@import "shared"
+@import "mixins/clear"
+@import "columns"
+
+// Generic elements
+
+p
+  margin-bottom: 1.8em
+
+strong
+  font-weight: bold
+
+
+/* Links */
+a
+  background-color: #E6E6E6 /* For browsers that don't understand RGBA */
+  background: $link_background_color
+  +border-radius(1em)
+  color: $link_color
+  padding: 0 0.5em
+  text-decoration: none
+  -moz-transition: 0.2s all ease
+  -webkit-transition: 0.2s all ease
+
+  &:visited
+    background-color: #E6E6E6 /* For browsers that don't understand RGBA */
+    background-color: $link_visited_background_color
+    color: $link_visited_color
+
+  &:hover
+    background-color: $link_hover_color
+    color: #ffffff
+
+  &.external:after
+    content: ' →'
+
+  &.image
+    background: inherit
+    padding: inherit
+    +border-radius(inherit)
+
+.more
+  background-color : $substance_lab_blue
+  color: #ffffff
+  display: block
+  font-weight: bold
+  padding: 5px 10px
+  text-align: center
+  text-decoration: none
+  text-shadow: #163440 1px 1px 2px
+  +border-radius(5px)
+
+
+
+/* Headlines */
+
+h1, h2, h3, .subtitle
+  font-family: 'Droid Sans', "Helvetica Neue", Helvetica, Arial, Sans-serif
+  font-weight: bold
+  letter-spacing: -0.05em
+
+
+h1,
+.subtitle,
+.abstract
+  margin-top: 0
+  font-size: 2.56em /* ~33.28px */
+  line-height: 1.1em /* ~36.608px */
+  padding-bottom: 2px
+  padding-top: 9px
+  text-shadow: rgba(0,0,0,0.3) 2px 2px 2px
+
+
+h2
+  color : $substance_lab_blue
+  font-size: 1.6em
+  line-height: 1.6em
+  margin-top: 1.9em
+  margin-bottom: 0.5em
+  padding-bottom: 1px
+  padding-top: 0px
+
+
+h2:first-child
+  margin-top: 0
+
+
+h3
+  color : $substance_lab_blue
+  line-height: 1.8em
+  margin-top: 1.4em
+  margin-bottom: 0
+  padding-top: 1px
+
+
+.subtitle
+  font-size: 1.6em
+  font-weight: bold
+  line-height: 1.6em
+  margin-bottom: 0
+  margin-top: 0
+  padding-bottom: 1px
+  padding-top: 5px
+
+
+/* Forms */
+
+form
+  margin: 0
+  padding: 0
+
+input
+  vertical-align: middle
+
+
+input, select, textarea
+  border: 1px solid #bbbbbb
+  margin: 0
+  padding: 4px
+  width: 90%
+  +border-radius(4px)
+
+
+button
+  padding: 4px
+
+
+input:focus
+  border-color: $link_hover_color
+  outline: 1px dotted #333333
+
+
+input:focus,
+textarea:focus,
+select:focus
+  outline: none
+
+label
+  display: block
+  font-weight: bold
+  line-height: 1.8em
+
+
+select
+  height: 2.2em
+  margin-top: 1px
+
+
+textarea
+  line-height: 1.4em
+  height: 223px
+  padding-bottom: 0
+  padding-right: 0
+  padding-top: 0
+
+
+.formField
+  margin-bottom: 12px
+
+  .errors
+    color : $error_color
+
+  .field_with_errors
+    input
+      border-color: $error_color
+      +box-shadow($error_color, 0, 0, 6px)
+
+/* Lists */
+
+ul
+  list-style-type: square
+  margin-bottom: 1em
+
+
+li
+  margin-left: 1.5em
+
+
+/* Sidebar navigation lists */
+
+.sidebar
+  nav
+    list-style-type: none
+    margin-left: 0
+    margin-top: 1px
+  
+
+  nav li
+    margin-left: 0
+  
+
+  nav a
+    padding-top: 9px
+    padding-right: 1em
+    padding-bottom: 6px
+    padding-left: 1em
+  
+
+
+
+/* Tables - for tabular data */
+
+th
+  font-weight: bold
+  width: 7em
+
+
+.sidebar th
+  padding-right: 1em
+  text-align: right
+
+
+
+// General classes
+
+.abstract
+  font-size: 1.96em
+  line-height: 1.4em
+  padding-bottom: 3px
+  padding-top: 0px
+
+
+nav
+  list-style-type: none
+
+  a
+    color: #ffffff
+    display: block
+    padding: 0.1em 0.5em
+    text-decoration: none
+    +border-radius(1em)
+
+
+.column nav a
+  background-color : $substance_lab_blue
+  line-height: 1.55em
+  margin-bottom: 1px
+
+ul.links
+  display: block
+  list-style-type: none
+  overflow: hidden
+
+  li
+    float: left
+    margin: 0 1px 0 0
+    a
+      +border-radius(0)
+
+  li:first-child
+    a
+      +border-left-radius(1em)
+  li:last-child
+    a
+      +border-right-radius(1em)
+
+
+
+// Layout structure
+
+#container,
+.container
+  font-size: 1em
+  margin-left: auto
+  margin-right: auto
+  
+  width: 90%
+  min-width: 780px
+  max-width: 1200px
+  min-height: 600px
+
+header .container, .intro .container, footer .container
+  min-height: 0
+
+header
+  a
+    background-color: inherit
+    +border-radius(1em)
+    color: #ffffff
+    font-weight: bold
+    padding: 0 1em
+    text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
+    &:visited
+      background-color: inherit
+      color: #ffffff
+    &:hover
+      background-color: $substance_lab_blue / 2
+      text-decoration: none
+
+  .logo
+    text-transform: lowercase
+    .substance
+      color: #ffffff
+    .lab
+      color: #aaaaaa
+
+  .branding
+    float: left
+    margin-left: -1em
+
+  nav
+    float: right
+    margin-right: -1em
+    ul
+      list-style-type: none
+    li
+      float: left
+      margin-left: 1px
+
+  a.current
+    background-color: $substance_lab_blue
+
+
+.columns
+  h1,
+  .subtitle
+    margin-left: 0
+    margin-right: 0
+
+h1 + .columns
+  /* Columns immediately after a headline needs bigger top margin, since there is no tagline there */
+  margin-top: 29px
+
+.screenshot
+  border: 1px solid #cccccc
+  background-color: #ffffff
+  float: left
+  margin-bottom: 48px /* Must be at least 21px to make room for the box-shadow (6px + 15px) */
+  position: relative
+  width: 61% /* 230 + 30 + 230 */
+  +box-shadow(rgba(0, 0, 0, 0.2), 0, 2px, 8px)
+
+  .inner
+    background-repeat: no-repeat
+    background-position: 0 0
+    border: 8px solid #ffffff
+
+  .inner img
+    display: block
+    height: 280px
+    width: 100%
+    visibility: hidden
+
+img.screenshot
+  border: 8px solid #ffffff
+
+
+.case .screenshot
+  width: 100%
+
+
+.screenshots
+  text-align: center
+
+  a img
+    background-color: #ffffff
+    border: 1px solid #bbbbbb
+    padding: 8px
+
+
+#index #services, #recent-work, #contact_form, footer
+  clear: both
+  overflow: hidden
+
+
+#about .person img
+  border: 1px solid #bbbbbb 
+  float: right
+  margin-left: 0.5em
+
+
+#contact_form h3
+  margin-top: 0
+
+//@import 'home/index'
+//@import 'projects/index'
+//@import 'projects/show'

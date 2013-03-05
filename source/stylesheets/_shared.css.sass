@@ -1,0 +1,92 @@
+@import compass/css3/border-radius.scss
+@import compass/css3/box-shadow.scss
+
+// General rules to use in more than one stylesheet
+
+@import "colors"
+
+article, footer, header, nav, section
+  display: block
+  zoom: 1
+
+body
+  background: #f4f5eD
+  color: $body_text_color
+  font: 13px/1.231 'Helvetica Neue', Helvetica, Arial, Sans-serif
+  font-size: 82%
+  line-height: 1.8em
+
+header
+  background: $substance_lab_blue
+  color: #ffffff
+  display: block
+  overflow: hidden
+  padding: 1em 0
+
+  a
+    display: block
+    text-decoration: none
+    
+    &:hover, &:focus
+      text-decoration: underline
+    
+/* Generic intro element. This wraps the title and subtitle/abstract */
+.intro
+  background: $substance_lab_blue
+  color: #ffffff
+  margin-bottom: 35px
+  padding-bottom: 4em
+  padding-top: 2em
+
+  h1, .subtitle
+    color: inherit
+
+footer
+  background: #f4f5ed url("/images/horizontal_divider.png") 50% 0 no-repeat
+  clear: both
+  color: #888888
+  display: block
+  font-size: 11px
+  padding: 14px 0
+  margin-top: 0
+
+  .container
+    min-width: 736px
+    max-width: 1156px
+
+  .legalese
+    float: left
+
+
+  .contents
+    float: right
+
+
+  .network
+    clear: left
+    float: left
+
+blockquote
+  font-family: palatino, georgia, times, serif
+  font-size: 1.6em
+  line-height: 1.67em
+  p
+    margin-top: 1.8em
+    margin-bottom: 0
+    margin-left: 1.4em
+    &:first-child
+      margin-top: 0
+  .author
+    font-size: 12px
+    margin-left: 2.4em
+    &:before
+      content: '—'
+  &:before
+    content: '“'
+    display: block
+    font-size: 2em
+    float: left
+    line-height: 1em
+
+.vcard
+  margin-bottom: 1em

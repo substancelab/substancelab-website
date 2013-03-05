@@ -1,0 +1,8 @@
+// Float clearing without overflow issues or extra markup, wewt!
+@mixin clear
+  &:after
+    display: block
+    clear: both
+    content: " "
+    height: 0
+    overflow: hidden

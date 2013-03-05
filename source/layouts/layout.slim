@@ -25,6 +25,9 @@ html lang="en"
     -# Poor IE no speaky HTML5
     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
+    - if content_for?(:stylesheets)
+      == yield_content(:stylesheets)
+
     == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'jquery.form.js', 'rails', 'quote_slider.js'
 
     - unless current_page.data.keywords.blank?

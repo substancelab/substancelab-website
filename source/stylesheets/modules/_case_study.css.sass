@@ -1,0 +1,73 @@
+.case_study
+  overflow-x: hidden
+
+  header
+    img
+      display: block
+      margin: 2em auto 1em auto
+
+    &.intro
+      background-position: 50% 0
+      background-repeat: no-repeat
+      background-size: cover
+
+      a
+        display: inline
+        padding: inherit
+
+  .columns
+    clear: both
+    margin-bottom: 4em
+    margin-top: 4em
+    overflow: visible
+
+    +clear
+
+    .screenshot
+      img
+        width: 100%
+
+    .intro
+      background: transparent
+      color: inherit
+      margin-bottom: 0
+      padding: 0
+
+  .display-project
+    width: 100%
+
+  .pullout
+    margin: 0 2em
+
+  blockquote.pullout
+    margin-top: -0.3em
+    width: 60%
+    .author
+      margin-top: -0.4em
+
+  .content
+    font-size: 1.6em
+    font-weight: 300
+    line-height: 1.5em
+
+  .case_studies
+    .more
+      background: transparent
+      padding: 0
+      text-align: left
+      text-shadow: none
+      &:hover
+        h3, .services
+          color: $link_hover_color
+    h3
+      line-height: 1.2em
+      margin: 0 0 0.35em 0
+    ul
+    li
+      list-style-type: none
+      margin-bottom: 1.1em
+      margin-left: 0
+    .services
+      font-weight: normal
+      color: $body_text_color
+

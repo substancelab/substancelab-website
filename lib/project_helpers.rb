@@ -16,6 +16,17 @@ module ProjectHelpers
     "/work/"
   end
 
+  def project_code_image_path(project)
+    code_image_path = File.join("work", project.slug, "code.jpg")
+    file_path = File.join(source, images_dir, code_image_path)
+    if File.exist?(file_path)
+      image_path(code_image_path)
+    else
+      return nil
+    end
+  end
+
+
   def project_url(project)
     slug = project["slug"]
     raise "Slug for #{project.inspect} cannot be blank" if slug.blank?

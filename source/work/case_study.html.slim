@@ -3,7 +3,6 @@ body_classes:
 - case_study
 section: portfolio
 ---
-
 article.case_study class=project["slug"]
   header.intro
     .container
@@ -37,14 +36,14 @@ article.case_study class=project["slug"]
           | You can use the form below to get in touch with Substance Lab. Or you can send an email message using your regular email client to <a href="mailto:jakob@substancelab.com" title="Send an email to Jakob">jakob@substancelab.com</a>.
         / render 'contact_forms/form', :object => ContactForm.new
 
-/- if false || code_image = project_code_image_path(project)
-/  style
-/    .intro {
-/    background-image: -moz-linear-gradient(top, rgba(50,106,128,1) 0%, rgba(50,106,128,0) 200%), url("#{code_image}"); /* FF3.6+ */
-/    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,106,128,1)), color-stop(200%,rgba(50,106,128,0))), url("#{code_image}"); /* Chrome,Safari4+ */
-/    background-image: -webkit-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Chrome10+,Safari5.1+ */
-/    background-image: -o-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Opera 11.10+ */
-/    background-image: -ms-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* IE10+ */
-/    background-image: linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* W3C */
-/    }
+- if code_image = project_code_image_path(project)
+  css:
+    .intro {
+      background-image: -moz-linear-gradient(top, rgba(50,106,128,1) 0%, rgba(50,106,128,0) 200%), url("#{code_image}"); /* FF3.6+ */
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,106,128,1)), color-stop(200%,rgba(50,106,128,0))), url("#{code_image}"); /* Chrome,Safari4+ */
+      background-image: -webkit-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Chrome10+,Safari5.1+ */
+      background-image: -o-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Opera 11.10+ */
+      background-image: -ms-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* IE10+ */
+      background-image: linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* W3C */
+     }
 

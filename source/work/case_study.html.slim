@@ -12,7 +12,8 @@ article.case_study class=project.slug
 
   .container
     == partial project.slug
-    -# project_image(project)
+    == project_image(project)
+
     h2 Substance Lab did
     p= project.services.to_sentence
 
@@ -24,7 +25,7 @@ article.case_study class=project.slug
           - case_studies.reject { |key, values| values.slug == project.slug }.each do |key, case_study|
             li
               = link_to project_url(case_study), {:class => 'more'} do
-                h3= case_study
+                h3= case_study.name
                 .services
                   = case_study.services.to_sentence
                   for

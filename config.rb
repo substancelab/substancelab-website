@@ -56,6 +56,9 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+require 'lib/asset_helpers'
+helpers AssetHelpers
+
 require 'lib/project_helpers'
 helpers ProjectHelpers
 

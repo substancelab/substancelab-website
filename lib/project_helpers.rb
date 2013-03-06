@@ -1,15 +1,16 @@
+require 'active_support/core_ext/array/grouping'
 
 module ProjectHelpers
   def case_studies
     data.projects.select { |slug, values|
       values['case_study'] == true
-    }
+    }.values.sort_by(&:position)
   end
 
   def featured_projects
     data.projects.select { |slug, values|
       values['featured'] == true
-    }
+    }.values.sort_by(&:position)
   end
 
   def projects_url

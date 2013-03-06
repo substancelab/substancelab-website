@@ -1,2 +1,43 @@
-- featured_projects.each do |project|
-  = project.inspect
+---
+section: portfolio
+---
+section.intro
+  .container
+    h1 Portfolio
+    .subtitle Featured works by Substance Lab
+
+.container.portfolio
+  - featured_projects.in_groups_of(3).each do |projects|
+    .columns
+      - projects.reject(&:nil?).each do |project|
+        article.project.column id=project.slug
+          - if project.case_study
+            == link_to "Learn how Substance Lab helped #{project.client} build #{project.name}", project_url(project), :class => 'site', :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+          -else
+            .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
+          .description
+            h2= project.name
+
+            p== project.description
+
+            - unless project.services.blank?
+              h3 Substance Lab did
+              p= project.services.to_sentence
+
+            ul.links
+              - if project.case_study?
+                li== link_to("Case study", project_url(project), :class => 'case_study', :title => "Learn how Substance Lab helped #{project.client} build #{project.name}")
+              - unless project.website.blank?
+                li== link_to('Project website', project.website, :class => 'external')
+
+
+
+  section.columns.single
+    .content.column
+      h2 Client list
+
+      p The full list of companies and organizations Substance Lab has worked with:
+
+      ul.clients
+        - clients.each do |client|
+          li== link_to client.name, client.website

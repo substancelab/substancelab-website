@@ -101,5 +101,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   middleman (~> 3.0.12)
   slim

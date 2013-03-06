@@ -59,11 +59,15 @@ set :images_dir, 'images'
 require 'lib/asset_helpers'
 helpers AssetHelpers
 
+require 'lib/client_helpers'
+helpers ClientHelpers
+
 require 'lib/project_helpers'
 helpers ProjectHelpers
 
-case_studies.each do |key, values|
-  proxy File.join("/work", values.slug), "/work/case_study.html", :locals => {:project => values}
+
+case_studies.each do |case_study|
+  proxy File.join("/work", case_study.slug), "/work/case_study.html", :locals => {:project => case_study}
 end
 
 # Build-specific configuration

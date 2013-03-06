@@ -1,0 +1,32 @@
+@import "mixins/bubble"
+
+// Portfolio page
+.portfolio
+  .project.columns
+    margin-bottom: 41px
+
+  ul.clients
+    /* Give capable browsers a little more */
+    -moz-column-count: 4
+    -moz-column-gap: 4%
+    -webkit-column-count: 4
+    -webkit-column-gap: 4%
+
+  .project
+    overflow: visible
+    position: relative
+    .description
+      margin-top: 320px
+
+  .site
+    +bubble(300px)
+    left: 50%
+    margin-left: -150px
+    position: absolute
+
+  .project:nth-child(even) .sidebar
+    float: right
+    margin-right: 0
+  .project:nth-child(even) .screenshot
+    float: left
+    margin-left: 0

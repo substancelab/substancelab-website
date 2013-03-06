@@ -60,7 +60,7 @@ require 'lib/project_helpers'
 helpers ProjectHelpers
 
 case_studies.each do |key, values|
-  proxy File.join("/work", values["slug"]), "/work/case_study.html", :locals => {:project => values}
+  proxy File.join("/work", values.slug), "/work/case_study.html", :locals => {:project => values}
 end
 
 # Build-specific configuration

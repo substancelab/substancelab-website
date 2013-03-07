@@ -5,6 +5,6 @@ module ClientHelpers
         :name => project.client,
         :website => project.client_website
       )
-    }.sort_by(&:name)
+    }.sort_by { |p| p.name.downcase }
   end
 end

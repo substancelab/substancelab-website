@@ -7,7 +7,7 @@ section.intro
     .subtitle Featured works by Substance Lab
 
 .container.portfolio
-  - featured_projects.in_groups_of(3).each do |projects|
+  - portfolio_projects.in_groups_of(3).each do |projects|
     .columns
       - projects.reject(&:nil?).each do |project|
         article.project.column id=project.slug

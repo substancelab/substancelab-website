@@ -13,6 +13,14 @@ module ProjectHelpers
     }.values.sort_by(&:position)
   end
 
+  def portfolio_projects
+    projects = case_studies.sort_by { |p| [p.position, p.name.downcase] }
+    projects += featured_projects.select { |project| !project.case_study}.sort_by { |p| [p.position, p.name.downcase] }
+
+    # Always return in tripples
+    projects = projects.first(projects.size - projects.size % 3)
+  end
+
   def projects_url
     "/work/"
   end

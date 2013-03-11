@@ -11,7 +11,7 @@ article.case_study class=project.slug
         = project.description
 
   .container
-    == partial project.slug
+    == partial project.slug, :locals => {:project => project}
     == project_image(project)
 
     h2 Substance Lab did

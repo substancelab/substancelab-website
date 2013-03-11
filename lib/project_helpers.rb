@@ -46,9 +46,4 @@ module ProjectHelpers
     raise "Slug for #{project.inspect} cannot be blank" if slug.blank?
     File.join(projects_url, slug)
   end
-
-  # Fetches a specific project from data storage
-  def project(key)
-    data.projects[key]
-  end
 end

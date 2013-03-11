@@ -22,7 +22,7 @@ article.case_study class=project.slug
         h2 View another case study
 
         ul
-          - case_studies.reject { |key, values| values.slug == project.slug }.each do |key, case_study|
+          - case_studies.reject { |case_study| case_study.slug == project.slug }.each do |case_study|
             li
               = link_to project_url(case_study), {:class => 'more'} do
                 h3= case_study.name

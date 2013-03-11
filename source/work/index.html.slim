@@ -40,4 +40,4 @@ section.intro
 
       ul.clients
         - clients.each do |client|
-          li== link_to client.name, client.website
+          li== link_to client.name, client.website, :title => client.name

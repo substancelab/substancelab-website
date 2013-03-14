@@ -46,4 +46,10 @@ module ProjectHelpers
     raise "Slug for #{project.inspect} cannot be blank" if slug.blank?
     File.join(projects_url, slug)
   end
+
+  def technologies
+    data.projects.collect { |slug, values|
+      values.technologies
+    }.flatten.compact.uniq.sort
+  end
 end

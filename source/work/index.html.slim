@@ -41,3 +41,13 @@ section.intro
       ul.clients
         - clients.each do |client|
           li== link_to client.name, client.website, :title => client.name
+
+  section.columns.single
+    .content.column
+      h2 Technologies
+
+      p Substance Lab routinely works with a wide variety of technologies:
+
+      ul.technologies
+        - technologies.each do |technology|
+          li= technology

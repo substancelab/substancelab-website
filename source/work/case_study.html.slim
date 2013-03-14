@@ -14,8 +14,14 @@ article.case_study class=project.slug
     == partial project.slug, :locals => {:project => project}
     == project_image(project)
 
-    h2 Substance Lab did
-    p= project.services.to_sentence
+    .columns.double
+      .column.services
+        h2 Substance Lab did
+        p= project.services.sort.to_sentence
+
+      .column.technologies
+        h2 Technologies used
+        p= project.technologies.sort.to_sentence
 
     .columns.double.case_studies
       .column

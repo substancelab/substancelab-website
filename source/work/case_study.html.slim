@@ -39,9 +39,11 @@ section: portfolio
                   for
                   = case_study.client
 
+    .contact.columns.double
       .column
         h2 Want something like this?
-        p Every successful project starts with communication:
+        p Every successful project starts with communication.
+      .column
         == partial "modules/contact_details"
 
 - if code_image = project_code_image_path(project)

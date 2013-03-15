@@ -24,7 +24,7 @@ section.intro
               h3 Substance Lab did
               p= project.services.to_sentence
 
-            ul.links
+            ul.link-list
               - if project.case_study?
                 li== link_to("Case study", project_url(project), :class => 'case_study', :title => "Learn how Substance Lab helped #{project.client} build #{project.name}")
               - unless project.website.blank?

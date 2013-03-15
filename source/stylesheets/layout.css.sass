@@ -229,26 +229,6 @@ nav
   line-height: 1.55em
   margin-bottom: 1px
 
-ul.links
-  display: block
-  list-style-type: none
-  overflow: hidden
-
-  li
-    float: left
-    margin: 0 1px 0 0
-    a
-      +border-radius(0)
-
-  li:first-child
-    a
-      +border-left-radius(1em)
-  li:last-child
-    a
-      +border-right-radius(1em)
-
-
-
 // Layout structure
 
 .container
@@ -360,6 +340,7 @@ img.screenshot
 
 @import "modules/case_study"
 @import "modules/portfolio"
+@import "modules/link_list"
 
 //@import 'home/index'
 //@import 'projects/index'

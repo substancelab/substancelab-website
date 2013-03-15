@@ -56,11 +56,11 @@ html lang="en"
     footer
       .container
         .legalese
-          '&copy;
+          ' &copy;
           == "#{[2008, Time.now.year].uniq.join("-")}"
           == link_to('Substance Lab', "http//substancelab.com", :title => "Substance Lab - freelance web design and web development in Copenhagen, Denmark")
         .contents
-          ul.links
+          ul.link-list
             li== link_to 'Homepage', "/", :title => "Substance Lab - freelance web application development and webdesign in Copenhagen, Denmark, Europe"
             li== link_to 'Web application development', "/work", :title => "Web application development projects by Substance Lab"
             li== link_to 'Contact', "/#anchor=contact", :title => "Contact Substance Lab"
@@ -68,7 +68,7 @@ html lang="en"
 
         .network
           | Substance sites:
-          ul.links
+          ul.link-list
             li== link_to 'mentalized', "http//mentalized.net", :title => "The personal website of Jakob Skjerning, and independent web developer in Copenhagen, Denmark"
             li== link_to 'FlowToDo', "http//flowtodo.com", :title => "Task tracking tool that actually helps you collect, focus, and get things done"
             li== link_to 'Objectpush', "http//objectpush.com", :title => "POP3 meets JSON"

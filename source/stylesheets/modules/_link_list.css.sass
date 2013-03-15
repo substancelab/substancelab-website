@@ -1,0 +1,22 @@
+.link-list
+  display: block
+  list-style-type: none
+  overflow: hidden
+
+  li
+    float: left
+    margin: 0 1px 0 0
+    a
+      padding: 0 0.5em
+    &::before
+      content: "\00B7"
+      padding: 0
+
+  li:first-child
+    a
+      padding-left: 0
+    &::before
+      content: ""
+
+
+

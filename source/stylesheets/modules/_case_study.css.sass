@@ -1,3 +1,5 @@
+@import "mixins/separator"
+
 .case_study
   overflow-x: hidden
 
@@ -49,24 +51,5 @@
     font-weight: 300
     line-height: 1.5em
 
-  .case_studies
-    .more
-      background: transparent
-      padding: 0
-      text-align: left
-      text-shadow: none
-      &:hover
-        h3, .services
-          color: $link_hover_color
-    h3
-      line-height: 1.2em
-      margin: 0 0 0.35em 0
-    ul
-    li
-      list-style-type: none
-      margin-bottom: 1.1em
-      margin-left: 0
-    .services
-      font-weight: normal
-      color: $body_text_color
-
+  .portfolio
+    +separator

@@ -24,20 +24,17 @@ section: portfolio
           h2 Technologies used
           p= project.technologies.sort.to_sentence
 
-  .container
+  .container.portfolio
     .columns.double
       .column
-        h2 View another case study
-
-        ul.case_studies
-          - case_studies.reject { |case_study| case_study.slug == project.slug }.each do |case_study|
-            li
-              = link_to project_url(case_study), {:class => 'more'} do
-                h3= case_study.name
-                .services
-                  = case_study.services.to_sentence
-                  for
-                  = case_study.client
+        h2 Other case studies
+    .columns.case_studies
+      - case_studies.reject { |case_study| case_study.slug == project.slug }.shuffle.first(3).each do |case_study|
+          .project.column id=project.slug
+            == link_to("Learn how Substance Lab helped #{project.client} build #{project.name}", project_url(case_study), :class => 'site', :style => "background-image: url(/images/work/#{case_study.slug}/square.jpg)")
+            .description
+              h3= case_study.name
+              p== case_study.description
 
     .contact.columns.double
       .column

@@ -13,26 +13,19 @@ strong
 
 /* Links */
 a
-  background-color: #E6E6E6 /* For browsers that don't understand RGBA */
-  background: $link_background_color
-  +border-radius(1em)
   color: $link_color
-  padding: 0 0.5em
+  font-weight: bold
   text-decoration: none
   -moz-transition: 0.2s all ease
   -webkit-transition: 0.2s all ease
 
   &:visited
-    background-color: #E6E6E6 /* For browsers that don't understand RGBA */
-    background-color: $link_visited_background_color
     color: $link_visited_color
 
   &:hover
-    background-color: $link_hover_color
-    color: #ffffff
-
-  &.external:after
-    content: ' →'
+    color: $link_hover_color
+    -moz-transition: none
+    -webkit-transition: none
 
   &.image
     background: inherit

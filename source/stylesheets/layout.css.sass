@@ -1,3 +1,5 @@
+@import "compass/css3/transition"
+
 @import "shared"
 @import "mixins/clear"
 @import "columns"
@@ -16,16 +18,15 @@ a
   color: $link_color
   font-weight: bold
   text-decoration: none
-  -moz-transition: 0.2s all ease
-  -webkit-transition: 0.2s all ease
+  +transition(0.2s all ease)
 
   &:visited
     color: $link_visited_color
 
+  &:focus,
   &:hover
     color: $link_hover_color
-    -moz-transition: none
-    -webkit-transition: none
+    +transition(none)
 
   &.image
     background: inherit

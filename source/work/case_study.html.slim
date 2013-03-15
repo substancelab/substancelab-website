@@ -23,11 +23,11 @@ article.case_study class=project.slug
         h2 Technologies used
         p= project.technologies.sort.to_sentence
 
-    .columns.double.case_studies
+    .columns.double
       .column
         h2 View another case study
 
-        ul
+        ul.case_studies
           - case_studies.reject { |case_study| case_study.slug == project.slug }.each do |case_study|
             li
               = link_to project_url(case_study), {:class => 'more'} do
@@ -39,9 +39,8 @@ article.case_study class=project.slug
 
       .column
         h2 Want something like this?
-        p
-          | You can use the form below to get in touch with Substance Lab. Or you can send an email message using your regular email client to <a href="mailto:jakob@substancelab.com" title="Send an email to Jakob">jakob@substancelab.com</a>.
-        / render 'contact_forms/form', :object => ContactForm.new
+        p Every successful project starts with communication:
+        == partial "modules/contact_details"
 
 - if code_image = project_code_image_path(project)
   css:

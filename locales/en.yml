@@ -1,0 +1,7 @@
+---
+en:
+  work:
+    index:
+      featured_works: Featured works by Substance Lab
+      link_to_case_study: "Learn how Substance Lab helped %{client} build %{project}"
+      portfolio: Portfolio

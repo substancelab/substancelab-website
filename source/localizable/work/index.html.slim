@@ -1,0 +1,53 @@
+---
+section: portfolio
+---
+section.intro
+  .container
+    h1== I18n.t("work.index.portfolio")
+    .subtitle== I18n.t("work.index.featured_works")
+
+.container.portfolio
+  - portfolio_projects.in_groups_of(3).each do |projects|
+    .columns
+      - projects.reject(&:nil?).each do |project|
+        article.project.column id=project.slug
+          - if project.case_study
+            == link_to I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name), project_url(project), :class => 'site', :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+          -else
+            .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
+          .description
+            h2= project.name
+
+            p== project.description
+
+            - unless project.services.blank?
+              h3 Substance Lab did
+              p= project.services.to_sentence
+
+            ul.link-list
+              - if project.case_study?
+                li== link_to("Case study", project_url(project), :class => 'case_study', :title => "Learn how Substance Lab helped #{project.client} build #{project.name}")
+              - unless project.website.blank?
+                li== link_to('Project website', project.website, :class => 'external')
+
+
+
+  section.columns.single
+    .content.column
+      h2 Client list
+
+      p The full list of companies and organizations Substance Lab has worked with:
+
+      ul.clients
+        - clients.each do |client|
+          li== link_to client.name, client.website, :title => client.name
+
+  section.columns.single
+    .content.column
+      h2 Technologies
+
+      p Substance Lab routinely works with a wide variety of technologies:
+
+      ul.technologies
+        - technologies.each do |technology|
+          li= technology

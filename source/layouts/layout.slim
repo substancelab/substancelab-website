@@ -57,7 +57,7 @@ html lang="en"
       .container
         .legalese
           ' &copy;
-          == "#{[2008, Time.now.year].uniq.join("-")}"
+          ==' "#{[2008, Time.now.year].uniq.join("-")}"
           == link_to('Substance Lab', "http//substancelab.com", :title => "Substance Lab - freelance web design and web development in Copenhagen, Denmark")
         .contents
           ul.link-list

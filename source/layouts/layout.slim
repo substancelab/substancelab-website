@@ -28,7 +28,7 @@ html lang="en"
     - if content_for?(:stylesheets)
       == yield_content(:stylesheets)
 
-    == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'jquery.form.js', 'rails', 'quote_slider.js'
+    == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'quote_slider.js'
 
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"

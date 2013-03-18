@@ -1,0 +1,25 @@
+@import "mixins/bubble"
+
+.hero
+  h1
+    font-weight: normal
+    margin-bottom: 1em
+    text-align: center
+
+  .work
+    $_image_size: 350px
+    height: $_image_size
+    margin-bottom: 2em
+    margin-top: 2em
+    position: relative
+    .sites
+      .site
+        +bubble($_image_size)
+        position: absolute
+      .nth-child-1
+        left: 0px
+      .nth-child-2
+        left: 50%
+        margin-left: -$_image_size/2
+      .nth-child-3
+        right: 0px

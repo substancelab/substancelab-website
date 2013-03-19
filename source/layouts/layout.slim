@@ -49,8 +49,8 @@ html lang="en"
             span.lab Lab
         nav
           ul
-            li== link_to 'Home', "/"
-            li== link_to 'Work', projects_url
+            li== link_to I18n.t("navigation.home"), "/"
+            li== link_to I18n.t("navigation.work"), projects_url
     == yield
 
     footer

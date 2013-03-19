@@ -12,6 +12,9 @@ en:
     vat_id: DK33371942
     vat_id_name: VAT ID
     web_application_work_by_substance_lab: Web application work by Substance Lab
+  navigation:
+    home: home
+    work: Work
   work:
     index:
       featured_works: Featured works by Substance Lab

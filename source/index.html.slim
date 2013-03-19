@@ -14,7 +14,7 @@ section.intro
         == localized_partial("index/about_substance_lab")
 
       .person.column
-        h2 The person
+        h2= I18n.t("index.the_person")
         == link_to(image_tag('people/jakob.jpg', :alt => "Jakob Skjerning (photo by Tobias H. Michaelsen)", :size => '80x100'), 'http://flickr.com/photos/tobias/526577612/', :title => 'Photo by Tobias H. Michaelsen', :class => 'image')
         == localized_partial("index/about_jakob")
 
@@ -29,9 +29,9 @@ section.intro
       == localized_partial("index/quotes")
 
     section.columns
-      h2 Get in touch
       .double.columns
         #about.column
+          h2= I18n.t("index.contact_us")
           .vcard
             div
               == link_to 'Substance Lab ApS', 'http://substancelab.com', :title => 'Substance Lab - website redesign and web application development', :class => 'fn org url'
@@ -42,18 +42,18 @@ section.intro
                 span.postal-code
                   ' 6000
                 span.locality Kolding
-              .country-name Denmark
+              .country-name= I18n.t("index.address.country")
 
             .email
               == link_to 'info@substancelab.com', 'mailto:info@substancelab.com'
             .tel
-              ' Phone:
+              ' #{I18n.t("index.phone")}:
               abbr title="+4571990999"
-                | +45 7199 0999
+                = I18n.t("index.phone_number")
 
           p
-            ' VAT ID:
-            == link_to 'DK33371942', 'http://cvr.dk/Site/Forms/PublicService/DisplayCompany.aspx?cvrnr=33371942', :title => 'Official Substance Lab registration details'
+            ' #{I18n.t("index.vat_id_name")}:
+            == link_to I18n.t("index.vat_id"), 'http://cvr.dk/Site/Forms/PublicService/DisplayCompany.aspx?cvrnr=33371942', :title => 'Official Substance Lab registration details'
 
         #map.column
           .map

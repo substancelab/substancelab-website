@@ -2,7 +2,15 @@
 en:
   index:
     about_substance_lab: About Substance Lab
+    address:
+      country: Denmark
+    contact_us: Get in touch
     peptalk: Handcrafted <strong>web applications</strong> and <strong>online software</strong> with a focus on <strong>simplicity</strong> and <strong>profitability</strong>
+    phone: Phone
+    phone_number: +45 7199 0999
+    the_person: The person
+    vat_id: DK33371942
+    vat_id_name: VAT ID
     web_application_work_by_substance_lab: Web application work by Substance Lab
   work:
     index:

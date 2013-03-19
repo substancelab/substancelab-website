@@ -2,7 +2,15 @@
 da:
   index:
     about_substance_lab: Substance Lab
+    address:
+      country: Danmark
+    contact_us: Kontaktoplysninger
     peptalk: <strong>web applikationer</strong> og <strong>online software</strong> bygget med kærlighed og fokus på <strong>brugervenlighed</strong> og <strong>bundlinie</strong>
+    phone: Telefon
+    phone_number: 7199 0999
+    the_person: Personen bag
+    vat_id: 33371942
+    vat_id_name: CVR-nummer
     web_application_work_by_substance_lab: Web application lavet af Substance Lab
   work:
     index:

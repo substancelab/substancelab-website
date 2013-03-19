@@ -14,7 +14,7 @@
             $this.quoteSlider('setTimeout');
             $this.quoteSlider('showNextQuote');
           }
-          , 10000
+          , 15000
         );
       },
 

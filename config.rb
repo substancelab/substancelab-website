@@ -53,7 +53,9 @@ require 'slim'
 activate :directory_indexes
 
 # Hello World
-activate :i18n, :mount_at_root => :en
+activate :i18n, :mount_at_root => ENV["LOCALE"] || :en
+require 'lib/i18n_helpers'
+helpers I18nHelpers
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'

@@ -1,3 +1,11 @@
 ---
 da:
-  hello: Hej
+  index:
+    about_substance_lab: Substance Lab
+    peptalk: <strong>web applikationer</strong> og <strong>online software</strong> bygget med kærlighed og fokus på <strong>brugervenlighed</strong> og <strong>bundlinie</strong>
+    web_application_work_by_substance_lab: Web application lavet af Substance Lab
+  work:
+    index:
+      featured_works: Udvalgte værker lavet af Substance Lab
+      link_to_case_study: "Læs hvordan Substance Lab hjalp %{client} med %{project}"
+      portfolio: Portfolio

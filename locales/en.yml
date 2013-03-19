@@ -1,5 +1,9 @@
 ---
 en:
+  index:
+    about_substance_lab: About Substance Lab
+    peptalk: Handcrafted <strong>web applications</strong> and <strong>online software</strong> with a focus on <strong>simplicity</strong> and <strong>profitability</strong>
+    web_application_work_by_substance_lab: Web application work by Substance Lab
   work:
     index:
       featured_works: Featured works by Substance Lab

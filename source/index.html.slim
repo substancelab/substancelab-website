@@ -1,32 +1,22 @@
 section.intro
   .hero.container
-    h1
-      |
-        Handcrafted <strong>web applications</strong> and <strong>online software</strong><br />
-        with a focus on <strong>simplicity</strong> and <strong>profitability</strong>
+    h1== I18n.t("index.peptalk")
 
     section.work
       .sites
         - featured_projects.first(3).each_with_index do |project, index|
-          == link_to 'Web application work by Substance Lab', "/work##{project.slug}", :class => "site nth-child-#{index + 1}", :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+          == link_to(I18n.t("index.web_application_work_by_substance_lab"), project_url(project), :class => "site nth-child-#{index + 1}", :style => "background-image: url(/images/work/#{project.slug}/square.jpg)")
 
 .container
   article
     section#about.double.columns
       .company.column
-        h2 About Substance Lab
-
-        p Substance Lab creates successful web applications. You have the idea and the vision, Substance Lab has the technical chops to bring them to life.
-
-        p From the beginning of the project lifecycle, over prioritization of features and programming, to continued maintenance and support, Substance Lab works with you to meet your business goals.
+        == localized_partial("index/about_substance_lab")
 
       .person.column
         h2 The person
-        p
-          == link_to(image_tag('people/jakob.jpg', :alt => "Jakob Skjerning (photo by Tobias H. Michaelsen)", :size => '80x100'), 'http://flickr.com/photos/tobias/526577612/', :title => 'Photo by Tobias H. Michaelsen', :class => 'image')
-          |
-            Jakob is a versatile web developer with a passion for clean code, a keen eye for design and a strong sense of usability.
-        p He has worked professionally with web development since 2000 and is focused on Ruby on Rails development.
+        == link_to(image_tag('people/jakob.jpg', :alt => "Jakob Skjerning (photo by Tobias H. Michaelsen)", :size => '80x100'), 'http://flickr.com/photos/tobias/526577612/', :title => 'Photo by Tobias H. Michaelsen', :class => 'image')
+        == localized_partial("index/about_jakob")
 
         ul.link-list
           li== link_to 'Website', 'http://mentalized.net', :title => 'Jakobs website', :rel => 'me'
@@ -36,15 +26,7 @@ section.intro
           li== link_to 'Github', 'http://github.com/koppen', :title => 'Jakob on Github', :rel => 'me'
 
     section.quotes.sliding_quotes
-      blockquote
-        p Jakob Skjerning is an extremly good developer, who's an expert in keeping hours down and in helping the client to find the best value solution to a problem. He delivers fast and he's on time.
-        .author Caroline Meldgaard &mdash; Owner, Børn i byen
-      blockquote
-        p Without Jakob, our project would have languished and ultimately we would have squandered countless misguided hours. People NEED an individual like Jakob on their team to successfully move forward and get things done.
-        .author Christopher Parks &mdash; CEO, change:healthcare
-      blockquote
-        p Jakob delivered the result we needed and then some - and did so on schedule! Very good communication skills
-        .author David Pepke &mdash; Web Content Manager, SBS Radio
+      == localized_partial("index/quotes")
 
     section.columns
       h2 Get in touch

@@ -209,21 +209,6 @@ lokalebasen:
   - Ruby on Rails
   website: http://lokalebasen.dk
 
-mapicture:
-  client: Mapicture, Denmark
-  client_website: http://mapicture.dk
-  position: 28
-  services:
-  - Automation
-  - Project management
-  - Rejseplanen integration
-  technologies:
-  - Delayed Job
-  - PostgreSQL
-  - Ruby
-  - Ruby on Rails
-  - Twitter Bootstrap
-
 mitbarnsnavn:
   client: Babysteps, Denmark
   client_website: http://mitbarnsnavn.dk
@@ -269,6 +254,34 @@ region_syddanmark:
   - CSS
   - Javascript
   - Ruby on Rails
+
+rp_lookups:
+  case_study: true
+  client: Mapicture, Denmark
+  client_website: http://mapicture.dk
+  description: |
+    Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
+  featured: true
+  name: Internal analysis tool
+  position: 1
+  services:
+  services:
+  - Automation
+  - Project management
+  - Rejseplanen integration
+  - Web application development
+  - Webdesign
+  slug: mapicture
+  technologies:
+  - Ruby on Rails
+  - Delayed Job
+  - Javascript
+  - Leaflet.js
+  - Knockout
+  - PostGIS
+  - PostgreSQL
+  - Twitter Bootstrap
+  website:
 
 smartphoneguide:
   client: KanKom Online, Denmark

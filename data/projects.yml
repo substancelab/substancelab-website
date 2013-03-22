@@ -91,6 +91,23 @@ daily-rush:
   - MySQL
   - PHP
 
+ejendomsstatistik:
+  case_study: false
+  client: Lokalebasen.dk A/S
+  client_website: http://lokalebasen.dk
+  featured: false
+  name: Ejendomsstatistik.dk
+  position: 1
+  services:
+  - Project management
+  slug: ejendomsstatistik
+  technologies:
+  - Ruby on Rails
+  - CSS
+  - Javascript
+  - PostgreSQL
+  website: http://eventzonen.dk
+
 eventzonen:
   case_study: true
   client: Underholdningsbureauet, Denmark
@@ -99,7 +116,7 @@ eventzonen:
     eventzonen.dk puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
   featured: true
   name: eventzonen.dk
-  position: 1
+  position: 2
   services:
   - Web application development
   - Project management

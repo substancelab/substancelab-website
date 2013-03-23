@@ -1,5 +1,10 @@
 ---
 da:
+  contact_details:
+    email: "Send en e-mail til %{email_link}"
+    phone: "Ring til Jakob på %{phone_number}"
+    phone_number: 7199 0999
+    twitter: "Tweet til %{twitter_link}"
   index:
     about_substance_lab: Substance Lab
     address:
@@ -7,7 +12,6 @@ da:
     contact_us: Kontaktoplysninger
     peptalk: Substance Lab bygger <strong>online tjenester</strong> med fokus på <strong>brugervenlighed</strong> og <strong>bundlinie</strong>
     phone: Telefon
-    phone_number: 7199 0999
     the_person: Personen bag
     vat_id: 33371942
     vat_id_name: CVR-nummer
@@ -28,3 +32,7 @@ da:
       substance_lab_did: Substance Lab lavede
       technologies: Teknologier
       technologies_used: Anvendte teknologier
+    show:
+      other_case_studies: Andre cases
+      success_starts_with_communication: Et succesfuldt projekt starter med samtale.
+      want_something_like_this: Leder du efter noget lignende?

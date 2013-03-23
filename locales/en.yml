@@ -1,5 +1,10 @@
 ---
 en:
+  contact_details:
+    email: "Send an email to %{email_link}"
+    phone: "Give Jakob a call on %{phone_number}"
+    phone_number: +45 7199 0999
+    twitter: "Tweet at %{twitter_link}"
   index:
     about_substance_lab: About Substance Lab
     address:
@@ -7,7 +12,6 @@ en:
     contact_us: Get in touch
     peptalk: Handcrafted <strong>web applications</strong> and <strong>online software</strong> with a focus on <strong>simplicity</strong> and <strong>profitability</strong>
     phone: Phone
-    phone_number: +45 7199 0999
     the_person: The person
     vat_id: DK33371942
     vat_id_name: VAT ID
@@ -28,3 +32,7 @@ en:
       substance_lab_did: Substance Lab did
       technologies: Technologies
       technologies_used: Technologies used
+    show:
+      other_case_studies: Other case studies
+      success_starts_with_communication: Every successful project starts with communication.
+      want_something_like_this: Want something like this?

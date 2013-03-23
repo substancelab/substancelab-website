@@ -1,11 +1,7 @@
 ul
   li.email
-    ' Send an email to
-    == mail_to("jakob@substancelab.com")
+    ==' I18n.t("contact_details.email", :email_link => mail_to("jakob@substancelab.com"))
   li.phone
-    ' Give Jakob a call on
-    strong
-      | +45 7199 0999
+    ==' I18n.t("contact_details.phone", :phone_number => "<strong>#{I18n.t("contact_details.phone_number")}</strong>")
   li.twitter
-    ' Tweet at
-    == link_to("@substancelab", "http://twitter.com/substancelab")
+    ==' I18n.t("contact_details.twitter", :twitter_link => link_to("@substancelab", "http://twitter.com/substancelab"))

@@ -27,19 +27,19 @@ section: portfolio
   .container.portfolio
     .columns.double
       .column
-        h2 Other case studies
+        h2= I18n.t("work.show.other_case_studies")
     .columns.case_studies
       - case_studies.reject { |case_study| case_study.slug == project.slug }.shuffle.first(3).each do |case_study|
           .project.column id=project.slug
-            == link_to("Learn how Substance Lab helped #{project.client} build #{project.name}", project_url(case_study), :class => 'site', :style => "background-image: url(/images/work/#{case_study.slug}/square.jpg)")
+            == link_to I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name), project_url(project), :class => 'site', :style => "background-image: url(/images/work/#{case_study.slug}/square.jpg)"
             .description
               h3= case_study.name
               p== localized(case_study.description)
 
     .contact.columns.double
       .column
-        h2 Want something like this?
-        p Every successful project starts with communication.
+        h2= I18n.t("work.show.want_something_like_this")
+        p= I18n.t("work.show.success_starts_with_communication")
       .column
         == partial "modules/contact_details"
 

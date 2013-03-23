@@ -12,4 +12,14 @@ module I18nHelpers
     partial(File.join(fallback_locale, partial_path))
   end
 
+  # Returns content in current locale. If content has no translation for
+  # current locale, the english description is returned
+  def localized(content)
+    if content.respond_to?(:fetch)
+      content.fetch(I18n.locale.to_s, content.fetch(fallback_locale))
+    else
+      content
+    end
+  end
+
 end

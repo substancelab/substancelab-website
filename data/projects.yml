@@ -19,7 +19,8 @@ agency-fusion:
 biq:
   client: BiQ, Denmark
   client_website: http://biq.dk
-  description: BiQ is business intelligence database with 25 years of information about 400.000 danish companies and their board members, directors, owners and more.
+  description:
+    en: BiQ is business intelligence database with 25 years of information about 400.000 danish companies and their board members, directors, owners and more.
   featured: true
   name: BiQ
   position: 6
@@ -40,7 +41,8 @@ biq:
 born-i-byen:
   client: "Børn i byen, Denmark"
   client_website: http://bornibyen.dk
-  description: "Børn i byen (Children in the city) is a community driven guide to Copenhagen focusing on parents and their children."
+  description:
+    en: "Børn i byen (Children in the city) is a community driven guide to Copenhagen focusing on parents and their children."
   featured: true
   name: "Børn i byen"
   position: 5
@@ -59,7 +61,8 @@ born-i-byen:
 change-healthcare:
   client: change:healthcare, USA
   client_website: http://changehealthcare.com
-  description: Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money
+  description:
+    en: Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money
   featured: true
   name: change:healthcare
   position: 7
@@ -106,14 +109,15 @@ ejendomsstatistik:
   - CSS
   - Javascript
   - PostgreSQL
-  website: http://eventzonen.dk
+  website: http://ejendomsstatistik.dk
 
 eventzonen:
   case_study: true
   client: Underholdningsbureauet, Denmark
   client_website: http://eventzonen.dk
-  description: |
-    eventzonen.dk puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
+  description:
+    da: På eventzonen.dk kommer arrangører i kontakt med kunstnere og foredragsholdere. Websitet er bygget fra bunden af Substance Lab.
+    en: eventzonen.dk puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
   featured: true
   name: eventzonen.dk
   position: 2
@@ -149,7 +153,8 @@ gamekillers:
   case_study: true
   client: SBS Radio, Denmark
   client_website: http://sbsradio.dk
-  description: SBS Radio wanted a campaign website to promote their upcoming TV show, Gamekillers - a production by AXE known from MTV.
+  description:
+    en: SBS Radio wanted a campaign website to promote their upcoming TV show, Gamekillers - a production by AXE known from MTV.
   featured: true
   name: Gamekillers
   position: 4
@@ -208,7 +213,9 @@ lokalebasen:
   case_study: true
   client: Lokalebasen, Denmark
   client_website: http://lokalebasen.dk
-  description: Lokalebasen is a danish portal for renting and selling offices, warehouses, and production facilities. Substance Lab was hired to build the site from the ground up, using Agile and Test Driven Development.
+  description:
+    da: Lokalebasen.dk er Danmarks førende portal for udlejning af kontorlokaler, produktions- og lagerbygninger og butikker. Substance Lab har været med fra starten, og bygget sitet under anvendelse af agile metoder.
+    en: Lokalebasen is a danish portal for renting and selling offices, warehouses, and production facilities. Substance Lab was hired to build the site from the ground up, using Agile and Test Driven Development.
   featured: true
   name: Lokalebasen
   position: 3
@@ -276,8 +283,9 @@ rp_lookups:
   case_study: true
   client: Mapicture, Denmark
   client_website: http://mapicture.dk
-  description: |
-    Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
+  description:
+    da: Det er ikke simpelt at indsamle og visualisere rejsetider mellem tusindvis af afgangssteder og destinationer. Men det er netop det Mapictures interne analyseværktøj gør.
+    en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
   featured: true
   name: Internal analysis tool
   position: 1
@@ -313,7 +321,8 @@ smartphoneguide:
 wildfire:
   client: Wildfire, USA
   client_website: http://wildfireapp.com
-  description: With Wildfire companies can easily launch marketing campaigns on social networks like Facebook and Twitter. Substance Lab worked with the virtual development team to build out the featureset of Wildfire.
+  description:
+    en: With Wildfire companies can easily launch marketing campaigns on social networks like Facebook and Twitter. Substance Lab worked with the virtual development team to build out the featureset of Wildfire.
   featured: true
   name: Wildfire
   position: 2

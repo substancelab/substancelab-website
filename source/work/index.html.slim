@@ -12,29 +12,29 @@ section.intro
       - projects.reject(&:nil?).each do |project|
         article.project.column id=project.slug
           - if project.case_study
-            == link_to "Learn how Substance Lab helped #{project.client} build #{project.name}", project_url(project), :class => 'site', :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+            == link_to I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name), project_url(project), :class => 'site', :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
           -else
             .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
           .description
             h2= project.name
 
-            p== project.description
+            p== localized(project.description)
 
             - unless project.services.blank?
-              h3 Substance Lab did
+              h3= I18n.t("work.index.substance_lab_did")
               p= project.services.to_sentence
 
             ul.link-list
               - if project.case_study?
-                li== link_to("Case study", project_url(project), :class => 'case_study', :title => "Learn how Substance Lab helped #{project.client} build #{project.name}")
+                li== link_to(I18n.t("work.index.case_study"), project_url(project), :class => 'case_study', :title => I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name))
               - unless project.website.blank?
-                li== link_to('Project website', project.website, :class => 'external')
+                li== link_to(I18n.t("work.index.project_website"), project.website, :class => 'external')
 
   section.columns.single
     .content.column
-      h2 Client list
+      h2= I18n.t("work.index.client_list")
 
-      p The full list of companies and organizations Substance Lab has worked with:
+      p= I18n.t("work.index.list_of_companies_worked_with")
 
       ul.clients
         - clients.each do |client|
@@ -42,9 +42,9 @@ section.intro
 
   section.columns.single
     .content.column
-      h2 Technologies
+      h2= I18n.t("work.index.technologies")
 
-      p Substance Lab routinely works with a wide variety of technologies:
+      p= I18n.t("work.index.list_of_technologies")
 
       ul.technologies
         - technologies.each do |technology|

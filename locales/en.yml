@@ -17,6 +17,14 @@ en:
     work: Work
   work:
     index:
+      case_study: Case study
+      client_list: Client list
       featured_works: Featured works by Substance Lab
       link_to_case_study: "Learn how Substance Lab helped %{client} build %{project}"
+      list_of_companies_worked_with: "The full list of companies and organizations Substance Lab has worked with:"
+      list_of_technologies: "Substance Lab routinely works with a wide variety of technologies:"
       portfolio: Portfolio
+      project_website: Project website
+      substance_lab_did: Substance Lab did
+      technologies: Technologies
+      technologies_used: Technologies used

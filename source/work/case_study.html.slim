@@ -9,7 +9,7 @@ section: portfolio
       .container
         h1= project.name
         .subtitle
-          = project.description
+          = localized(project.description)
 
     .container
       == partial project.slug, :locals => {:project => project}
@@ -17,11 +17,11 @@ section: portfolio
 
       .columns.double
         .column.services
-          h2 Substance Lab did
+          h2= I18n.t("work.index.substance_lab_did")
           p= project.services.sort.to_sentence
 
         .column.technologies
-          h2 Technologies used
+          h2= I18n.t("work.index.technologies_used")
           p= project.technologies.sort.to_sentence
 
   .container.portfolio
@@ -34,7 +34,7 @@ section: portfolio
             == link_to("Learn how Substance Lab helped #{project.client} build #{project.name}", project_url(case_study), :class => 'site', :style => "background-image: url(/images/work/#{case_study.slug}/square.jpg)")
             .description
               h3= case_study.name
-              p== case_study.description
+              p== localized(case_study.description)
 
     .contact.columns.double
       .column

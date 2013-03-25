@@ -59,7 +59,8 @@ section.intro
           .map
             iframe height="350" src="http://maps.google.dk/maps?f=q&amp;source=s_q&amp;hl=da&amp;geocode=&amp;q=Jernbanegade+27,+Kolding&amp;aq=&amp;sll=55.510892,9.514085&amp;sspn=0.009477,0.01354&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Jernbanegade+27,+6000+Kolding&amp;ll=55.495874,9.480085&amp;spn=0.017017,0.030041&amp;z=14&amp;iwloc=A&amp;output=embed"
 
-javascript:
-  $(document).ready(function() {
-    $('.sliding_quotes').quoteSlider();
-  })
+- content_for :scripts do
+  javascript:
+    $(document).ready(function() {
+      $('.sliding_quotes').quoteSlider();
+    })

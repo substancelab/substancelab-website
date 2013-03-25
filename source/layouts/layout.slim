@@ -28,14 +28,11 @@ html lang="en"
     - if content_for?(:stylesheets)
       == yield_content(:stylesheets)
 
-    == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'quote_slider.js'
-
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
     - unless current_page.data.description.blank?
       meta name="description" content="#{current_page.data.description}"
 
-    -#== csrf_meta_tag
     meta name="viewport" content="width=770"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
     link href="/images/favicon.png" rel="icon" type="image/x-icon"
@@ -73,5 +70,8 @@ html lang="en"
             li== link_to 'FlowToDo', "http://flowtodo.com", :title => "Task tracking tool that actually helps you collect, focus, and get things done"
             li== link_to 'Objectpush', "http://objectpush.com", :title => "POP3 meets JSON"
             li== link_to 'Votes.io', "http://votes.io", :title => "Quick polls. Fast answers. Get started in seconds."
+
+  == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'quote_slider.js'
+  == yield_content :scripts
 
   == partial "layouts/substance_lab"

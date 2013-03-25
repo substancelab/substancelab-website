@@ -49,6 +49,9 @@ require 'slim'
 #   end
 # end
 
+# Add asset hash to URLs
+activate :asset_hash
+
 # Pretty URLs
 activate :directory_indexes
 

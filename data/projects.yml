@@ -20,6 +20,7 @@ biq:
   client: BiQ, Denmark
   client_website: http://biq.dk
   description:
+    da: BiQ er en database med fakta om mere end 500'000 firmaer og deres direktører, ejere, og bestyrelsesmedlemmer over de sidste 25 år.
     en: BiQ is business intelligence database with 25 years of information about 400.000 danish companies and their board members, directors, owners and more.
   featured: true
   name: BiQ
@@ -42,6 +43,7 @@ born-i-byen:
   client: "Børn i byen, Denmark"
   client_website: http://bornibyen.dk
   description:
+    da: "Børn i byen er forældrenes guide til København og Aarhus. Her finder du anmeldelser og informationer om børnevenlige restauranter, caféer, arrangementer og meget andet."
     en: "Børn i byen (Children in the city) is a community driven guide to Copenhagen focusing on parents and their children."
   featured: true
   name: "Børn i byen"
@@ -62,7 +64,8 @@ change-healthcare:
   client: change:healthcare, USA
   client_website: http://changehealthcare.com
   description:
-    en: Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money
+    da: "change:healthcare hjælper forbrugere i USA med at finde rundt i den jungle, der er deres sundhedssystem, med værktøjer til at holde styr på regninger og forsikringer sammenligning af priser på medicin og læger."
+    en: "Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money."
   featured: true
   name: change:healthcare
   position: 7
@@ -154,6 +157,7 @@ gamekillers:
   client: SBS Radio, Denmark
   client_website: http://sbsradio.dk
   description:
+    da: SBS Radio havde brug for et kampagne website for at promovere TV showet, Gamekillers. Substance Lab leverede på mindre end en måned.
     en: SBS Radio wanted a campaign website to promote their upcoming TV show, Gamekillers - a production by AXE known from MTV.
   featured: true
   name: Gamekillers
@@ -322,6 +326,7 @@ wildfire:
   client: Wildfire, USA
   client_website: http://wildfireapp.com
   description:
+    da: "Wildfire gør det nemt for firmaer at lancere og håndtere marketing kampagner på tværs af sociale medier som Facebook og Twitter. Substance Lab arbejde som en del af Wildfires distribuerede team."
     en: With Wildfire companies can easily launch marketing campaigns on social networks like Facebook and Twitter. Substance Lab worked with the virtual development team to build out the featureset of Wildfire.
   featured: true
   name: Wildfire

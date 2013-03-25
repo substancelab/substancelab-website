@@ -15,7 +15,7 @@ section.intro
 
       .person.column
         h2= I18n.t("index.the_person")
-        == link_to(image_tag('people/jakob.jpg', :alt => "Jakob Skjerning (photo by Tobias H. Michaelsen)", :size => '80x100'), 'http://flickr.com/photos/tobias/526577612/', :title => 'Photo by Tobias H. Michaelsen', :class => 'image')
+        == link_to(image_tag('people/jakob.jpg', :alt => "Jakob Skjerning (photo by Tobias H. Michaelsen)", :width => "80", :height => "100"), 'http://flickr.com/photos/tobias/526577612/', :title => 'Photo by Tobias H. Michaelsen', :class => 'image')
         == localized_partial("index/about_jakob")
 
         ul.link-list

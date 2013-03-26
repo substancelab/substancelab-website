@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+middleman build --clean
+middleman deploy

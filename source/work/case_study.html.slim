@@ -18,7 +18,7 @@ section: portfolio
       .columns.double
         .column.services
           h2= I18n.t("work.index.substance_lab_did")
-          p= project.services.sort.to_sentence
+          p= project_services(project)
 
         .column.technologies
           h2= I18n.t("work.index.technologies_used")

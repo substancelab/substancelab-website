@@ -22,7 +22,7 @@ section.intro
 
             - unless project.services.blank?
               h3= I18n.t("work.index.substance_lab_did")
-              p= project.services.to_sentence
+              p= project_services(project)
 
             ul.link-list
               - if project.case_study?

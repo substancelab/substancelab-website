@@ -19,6 +19,18 @@ da:
   navigation:
     home: Forside
     work: Cases
+  services:
+    automation: Automatisering
+    economic_integration: Integration med E-conomic
+    google_maps: Integration med Google Maps
+    internationalization: Internationalisering
+    payment_gateway_integration: Integration med betalingsgateway
+    project_management: Projektstyring
+    recurring_billing: Abonnementsbetalinger
+    rejseplanen_integration: Integration med Rejseplanen
+    web_application_development: Programmering
+    webdesign: Webdesign
+    youtube_integration: Integration med YouTube
   work:
     index:
       case_study: Læs casen

@@ -41,6 +41,12 @@ module ProjectHelpers
     end
   end
 
+  def project_services(project)
+    project.services.collect { |service|
+      I18n.t(["services", service].join("."))
+    }.sort.to_sentence
+  end
+
   def project_url(project)
     slug = project.slug
     raise "Slug for #{project.inspect} cannot be blank" if slug.blank?

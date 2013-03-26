@@ -3,8 +3,8 @@
   client_website: http://37signals.com
   position: 24
   services:
-  - Internationalization
-  - Ruby on Rails
+  - internationalization
+  - web_application_development
   technologies:
   - Ruby
   - Ruby on Rails
@@ -14,7 +14,7 @@ agency-fusion:
   client_website: http://agencyfusion.com
   position: 17
   services:
-  - User experience design
+  - ux
 
 biq:
   client: BiQ, Denmark
@@ -26,8 +26,8 @@ biq:
   name: BiQ
   position: 6
   services:
-  - Web application development
-  - Webdesign
+  - web_application_development
+  - webdesign
   slug: biq
   technologies:
   - CSS
@@ -49,7 +49,8 @@ born-i-byen:
   name: "Børn i byen"
   position: 5
   services:
-  - Web application development
+  - google_maps
+  - web_application_development
   slug: born-i-byen
   technologies:
   - Google Maps
@@ -70,7 +71,7 @@ change-healthcare:
   name: change:healthcare
   position: 7
   services:
-  - Web application development
+  - web_application_development
   technologies:
   - Ruby
   - Ruby on Rails
@@ -89,8 +90,8 @@ daily-rush:
   client_website: http://dailyrush.dk
   position: 21
   services:
-  - Web application development
-  - Webdesign
+  - web_application_development
+  - webdesign
   technologies:
   - CSS
   - HTML
@@ -105,7 +106,7 @@ ejendomsstatistik:
   name: Ejendomsstatistik.dk
   position: 1
   services:
-  - Project management
+  - project_management
   slug: ejendomsstatistik
   technologies:
   - Ruby on Rails
@@ -125,11 +126,11 @@ eventzonen:
   name: eventzonen.dk
   position: 2
   services:
-  - Web application development
-  - Project management
-  - YouTube integration
-  - Payment gateway integration
-  - Recurring billing
+  - web_application_development
+  - project_management
+  - youtube_integration
+  - payment_gateway_integration
+  - recurring_billing
   slug: eventzonen-dk
   technologies:
   - Ruby on Rails
@@ -143,8 +144,8 @@ fab-it:
   client_website: http://fab-it.dk
   position: 23
   services:
-  - E-conomic integration
-  - Frontend development
+  - economic_integration
+  - frontend_development
   technologies:
   - CSS
   - HTML
@@ -163,9 +164,9 @@ gamekillers:
   name: Gamekillers
   position: 4
   services:
-  - Web application development
-  - Webdesign
-  - YouTube integration
+  - web_application_development
+  - webdesign
+  - youtube_integration
   slug: gamekillers
   technologies:
   - CSS
@@ -178,7 +179,7 @@ iiamo:
   client_website: http://www.loopassociates.com/
   position: 22
   services:
-  - Frontend development
+  - frontend_development
   technologies:
   - Ruby on Rails
 
@@ -187,7 +188,7 @@ justitsministeriet:
   client_website: http://www.justitsministeriet.dk/english.html
   position: 25
   services:
-  - Web application development
+  - web_application_development
   technologies:
   - Ruby on Rails
 
@@ -196,8 +197,8 @@ kailas:
   client_website: http://www.kailas.dk
   position: 11
   services:
-  - Webdesign
-  - Frontend development
+  - webdesign
+  - frontend_development
   technologies:
   - CSS
   - HTML
@@ -207,11 +208,12 @@ kontrakten:
   client_website: http://www.dpu.dk/site.aspx?p=8102
   position: 16
   services:
-  - Ruby on Rails
+  - web_application_development
   technologies:
   - CSS
   - HTML
   - Javascript
+  - Ruby on Rails
 
 lokalebasen:
   case_study: true
@@ -224,13 +226,14 @@ lokalebasen:
   name: Lokalebasen
   position: 3
   services:
-  - E-conomic integration
-  - Google Maps
-  - Internationalization
-  - Web application development
+  - economic_integration
+  - google_maps
+  - internationalization
+  - web_application_development
   slug: lokalebasen
   technologies:
   - Coffeescript
+  - Google Maps
   - Javascript
   - PostgreSQL
   - Ruby
@@ -242,7 +245,7 @@ mitbarnsnavn:
   client_website: http://mitbarnsnavn.dk
   position: 9
   services:
-  - Frontend development
+  - frontend_development
   technologies:
   - CSS
   - HTML
@@ -253,7 +256,7 @@ nethunters:
   client_website: http://dusorjob.dk
   position: 20
   services:
-  - Frontend development
+  - frontend_development
   technologies:
   - Ruby on Rails
 
@@ -262,7 +265,7 @@ pluggd:
   client_website: http://pluggd.com
   position: 13
   services:
-  - Webdesign
+  - webdesign
   technologies:
   - CSS
   - HTML
@@ -275,9 +278,9 @@ region_syddanmark:
   name: Fundingguiden
   position: 27
   services:
-  - Frontend development
-  - Project management
-  - Responsive Webdesign
+  - frontend_development
+  - project_management
+  - responsive_design
   technologies:
   - CSS
   - Javascript
@@ -295,11 +298,11 @@ rp_lookups:
   position: 1
   services:
   services:
-  - Automation
-  - Project management
-  - Rejseplanen integration
-  - Web application development
-  - Webdesign
+  - automation
+  - project_management
+  - rejseplanen_integration
+  - web_application_development
+  - webdesign
   slug: mapicture
   technologies:
   - Ruby on Rails
@@ -318,7 +321,7 @@ smartphoneguide:
   name: SmartphoneGuide
   position: 26
   services:
-  - Web application development
+  - web_application_development
   technologies:
   - PHP
 
@@ -332,8 +335,8 @@ wildfire:
   name: Wildfire
   position: 2
   services:
-  - Facebook integration
-  - Web application development
+  - facebook_integration
+  - web_application_development
   slug: wildfire
   technologies:
   - Javascript

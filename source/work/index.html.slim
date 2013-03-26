@@ -12,7 +12,7 @@ section.intro
       - projects.reject(&:nil?).each do |project|
         article.project.column id=project.slug
           - if project.case_study
-            == link_to I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name), project_url(project), :class => 'site', :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+            == project_bubble(project)
           -else
             .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
           .description

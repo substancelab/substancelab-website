@@ -13,6 +13,11 @@ module ProjectHelpers
     }.values.sort_by(&:position)
   end
 
+  def project_bubble(project)
+    image = asset_url("/images/work/#{project.slug}/square.jpg")
+    link_to(I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name), project_url(project), :class => 'site', :style => "background-image: url(#{image})")
+  end
+
   def portfolio_projects
     projects = case_studies.sort_by { |p| [p.position, p.name.downcase] }
     projects += featured_projects.select { |project| !project.case_study}.sort_by { |p| [p.position, p.name.downcase] }

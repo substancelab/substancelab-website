@@ -31,7 +31,7 @@ section: portfolio
     .columns.case_studies
       - case_studies.reject { |case_study| case_study.slug == project.slug }.shuffle.first(3).each do |case_study|
           .project.column id=case_study.slug
-            == link_to I18n.t("work.index.link_to_case_study", :client => case_study.client, :project => case_study.name), project_url(case_study), :class => 'site', :style => "background-image: url(/images/work/#{case_study.slug}/square.jpg)"
+            == project_bubble(case_study)
             .description
               h3= case_study.name
               p== localized(case_study.description)

@@ -83,7 +83,7 @@ require 'lib/project_helpers'
 helpers ProjectHelpers
 
 case_studies.each do |case_study|
-  proxy File.join("/work", case_study.slug), "/work/case_study.html", :locals => {:project => case_study}, :ignore => true
+  proxy File.join("/work", case_study.slug, "index.html"), "/work/case_study.html", :locals => {:project => case_study}, :ignore => true
 end
 
 # Build-specific configuration

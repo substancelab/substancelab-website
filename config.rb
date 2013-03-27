@@ -52,14 +52,18 @@ require 'slim'
 # Add asset hash to URLs
 activate :asset_hash
 
-case ENV["LOCALE"]
-when 'da'
+LOCALE = ENV["LOCALE"]
+if LOCALE
   # Deploy to UnoEuro
+  DEPLOYMENT_PATHS = {
+    'da' => "/public_html/",
+    'en' => "/substancelab.com/"
+  }
   activate :deploy do |deploy|
     deploy.method = :ftp
     deploy.user = "substancelab.dk"
     deploy.host = "linux41.unoeuro.com"
-    deploy.path = "/public_html/"
+    deploy.path = DEPLOYMENT_PATHS[LOCALE]
     deploy.password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
   end
 end

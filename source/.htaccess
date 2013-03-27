@@ -1,0 +1,16 @@
+ExpiresActive On
+
+# Expiry for images
+<FilesMatch "\.(gif|jpg|png)">
+  ExpiresDefault "access plus 1 year"
+</FilesMatch>
+
+# Expiry for javascripts
+<FilesMatch "\.(js)">
+  ExpiresDefault "access plus 1 year"
+</FilesMatch>
+
+# Expiry for stylesheets
+<FilesMatch "\.(css)">
+  ExpiresDefault "access plus 1 year"
+</FilesMatch>

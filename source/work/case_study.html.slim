@@ -25,7 +25,7 @@ section: portfolio
           p= project.technologies.sort.to_sentence
 
   .container.portfolio
-    .columns.double
+    .columns.double.case_studies
       .column
         h2= I18n.t("work.show.other_case_studies")
     .columns.case_studies
@@ -53,4 +53,3 @@ section: portfolio
       background-image: -ms-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* IE10+ */
       background-image: linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* W3C */
      }
-

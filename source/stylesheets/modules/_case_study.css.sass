@@ -53,3 +53,41 @@
 
   .portfolio
     +separator
+
+.screenshot
+  background-color: #ffffff
+  border: 1px solid #cccccc
+  +box-shadow(rgba(0, 0, 0, 0.2), 0, 2px, 8px)
+  float: left
+  margin-bottom: 48px /* Must be at least 21px to make room for the box-shadow (6px + 15px) */
+  position: relative
+  width: 61% /* 230 + 30 + 230 */
+  @media #{$breakpoint-desktop}
+    width: 100%
+
+  .inner
+    background-repeat: no-repeat
+    background-position: 0 0
+    border: 8px solid #ffffff
+
+  .inner img
+    display: block
+    height: 280px
+    width: 100%
+    visibility: hidden
+
+img.screenshot
+  border: 8px solid #ffffff
+
+.case .screenshot
+  width: 100%
+
+.screenshots
+  text-align: center
+
+  a img
+    background-color: #ffffff
+    border: 1px solid #bbbbbb
+    padding: 8px
+
+

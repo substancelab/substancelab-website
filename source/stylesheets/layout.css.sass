@@ -2,6 +2,8 @@
 
 @import "shared"
 @import "mixins/clear"
+
+@import "breakpoints"
 @import "columns"
 
 @import "modules/hero"
@@ -67,6 +69,10 @@ h1,
   padding-bottom: 2px
   padding-top: 9px
   text-shadow: rgba(0,0,0,0.3) 2px 2px 2px
+  @media #{$breakpoint-desktop}
+    font-size: 1.6em
+    padding: 0.2em 0
+    margin: 0
 
 h2
   font-size: 1.6em
@@ -94,7 +100,9 @@ h3
   margin-top: 0
   padding-bottom: 1px
   padding-top: 5px
-
+  @media #{$breakpoint-desktop}
+    font-size: 1em
+    font-weight: bold
 
 /* Forms */
 
@@ -238,6 +246,8 @@ nav
   width: 90%
   min-width: 780px
   max-width: 1200px
+  @media #{$breakpoint-desktop}
+    min-width: 0
 
 header .container, .intro .container, footer .container
   min-height: 0
@@ -290,43 +300,6 @@ header
 h1 + .columns
   /* Columns immediately after a headline needs bigger top margin, since there is no tagline there */
   margin-top: 29px
-
-.screenshot
-  border: 1px solid #cccccc
-  background-color: #ffffff
-  float: left
-  margin-bottom: 48px /* Must be at least 21px to make room for the box-shadow (6px + 15px) */
-  position: relative
-  width: 61% /* 230 + 30 + 230 */
-  +box-shadow(rgba(0, 0, 0, 0.2), 0, 2px, 8px)
-
-  .inner
-    background-repeat: no-repeat
-    background-position: 0 0
-    border: 8px solid #ffffff
-
-  .inner img
-    display: block
-    height: 280px
-    width: 100%
-    visibility: hidden
-
-img.screenshot
-  border: 8px solid #ffffff
-
-
-.case .screenshot
-  width: 100%
-
-
-.screenshots
-  text-align: center
-
-  a img
-    background-color: #ffffff
-    border: 1px solid #bbbbbb
-    padding: 8px
-
 
 #index #services, #recent-work, footer
   clear: both

@@ -44,6 +44,11 @@ h1 + .columns
   display: inline /* Avoid IE double margin bug - TODO: Move to ie6.css */
   width: $column_width
 
+  @media #{$breakpoint-desktop}
+    float: none
+    margin-left: 0
+    width: auto
+
 .column:first-child, .first-child
   margin-left: 0
 

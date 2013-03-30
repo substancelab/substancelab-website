@@ -1,5 +1,7 @@
 @import "mixins/bubble"
 
+$_bubble_size: 300px
+
 // Portfolio page
 .portfolio
   .project.columns
@@ -11,17 +13,30 @@
     -moz-column-gap: 4%
     -webkit-column-count: 4
     -webkit-column-gap: 4%
+    @media #{$breakpoint-desktop}
+      -moz-column-count: 1
+      -webkit-column-count: 1
 
   .project
+    +separator-bottom
+    display: block
     overflow: visible
+    padding-bottom: 1em
     position: relative
+    @media #{$breakpoint-desktop}
+      position: static
     .description
-      margin-top: 320px
+      margin-top: $_bubble_size + 20px
+      @media #{$breakpoint-desktop}
+        margin-top: 0
+        padding-top: $_bubble_size + 20px
+    @media #{$breakpoint-desktop}
+      margin-bottom: 2em
 
   .site
-    +bubble(300px)
+    +bubble($_bubble_size)
     left: 50%
-    margin-left: -150px
+    margin-left: $_bubble_size/-2
     position: absolute
 
   .project:nth-child(even) .sidebar
@@ -37,3 +52,6 @@
     -moz-column-gap: 4%
     -webkit-column-count: 6
     -webkit-column-gap: 4%
+    @media #{$breakpoint-desktop}
+      -moz-column-count: 2
+      -webkit-column-count: 2

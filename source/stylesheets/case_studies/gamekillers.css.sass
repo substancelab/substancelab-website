@@ -1,3 +1,5 @@
+@import "breakpoints"
+
 .gamekillers
   img
     display: block
@@ -16,3 +18,12 @@
       float: right
       margin-left: 1em
       margin-right: -20%
+    @media #{$breakpoint-desktop}
+      box-sizing: border-box
+      float: none
+      margin-bottom: 1em
+      width: 100%
+      &:nth-of-type(odd),
+      &:nth-of-type(even)
+        margin-left: 0
+        margin-right: 0

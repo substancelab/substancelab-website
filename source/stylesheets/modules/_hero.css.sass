@@ -6,9 +6,6 @@
     margin-bottom: 1em
     text-align: center
 
-    @media #{$breakpoint-desktop}
-      overflow-x: hidden
-
   .work
     $_image_size: 350px
     $_small_image_size: $_image_size - 50px
@@ -16,18 +13,18 @@
     margin-bottom: 2em
     margin-top: 2em
     position: relative
-    @media #{$breakpoint-desktop}
+    @media #{$breakpoint-phone}
       height: $_small_image_size
       margin-bottom: 0
     .sites
       .site
         +bubble($_image_size)
         position: absolute
-        @media #{$breakpoint-desktop}
+        @media #{$breakpoint-phone}
           display: none
       .nth-child-1
         left: 0px
-        @media #{$breakpoint-desktop}
+        @media #{$breakpoint-phone}
           display: block
           left: 50%
           height: $_small_image_size

@@ -11,19 +11,28 @@
 
   .work
     $_image_size: 350px
+    $_small_image_size: $_image_size - 50px
     height: $_image_size
     margin-bottom: 2em
     margin-top: 2em
     position: relative
     @media #{$breakpoint-desktop}
-      display: none
+      height: $_small_image_size
+      margin-bottom: 0
     .sites
       .site
         +bubble($_image_size)
         position: absolute
-
+        @media #{$breakpoint-desktop}
+          display: none
       .nth-child-1
         left: 0px
+        @media #{$breakpoint-desktop}
+          display: block
+          left: 50%
+          height: $_small_image_size
+          margin-left: $_small_image_size/-2
+          width: $_small_image_size
       .nth-child-2
         left: 50%
         margin-left: -$_image_size/2

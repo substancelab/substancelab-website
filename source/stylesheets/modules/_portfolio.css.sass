@@ -18,12 +18,13 @@ $_bubble_size: 300px
       -webkit-column-count: 1
 
   .project
-    +separator-bottom
     display: block
     overflow: visible
     padding-bottom: 1em
     position: relative
     @media #{$breakpoint-desktop}
+      +separator-bottom
+      padding-bottom: 1em
       position: static
     .description
       margin-top: $_bubble_size + 20px

@@ -47,5 +47,6 @@ en:
       technologies_used: Technologies used
     show:
       other_case_studies: Other case studies
+      screenshot_of_project: "Screenshot of %{project_name}"
       success_starts_with_communication: Every successful project starts with communication.
       want_something_like_this: Want something like this?

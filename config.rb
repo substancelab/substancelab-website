@@ -37,6 +37,9 @@ helpers AssetHelpers
 require 'lib/client_helpers'
 helpers ClientHelpers
 
+require 'lib/layout_helpers'
+helpers LayoutHelpers
+
 require 'lib/project_helpers'
 helpers ProjectHelpers
 

@@ -46,5 +46,6 @@ da:
       technologies_used: Anvendte teknologier
     show:
       other_case_studies: Andre cases
+      screenshot_of_project: "Skærmbillede fra %{project_name}"
       success_starts_with_communication: Et succesfuldt projekt starter med samtale.
       want_something_like_this: Leder du efter noget lignende?

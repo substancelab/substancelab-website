@@ -1,3 +1,4 @@
+doctype html
 html lang="en"
   head
     meta charset='utf-8'
@@ -24,6 +25,8 @@ html lang="en"
 
     - if content_for?(:stylesheets)
       == yield_content(:stylesheets)
+    - if content_for?(:page_specific_style)
+      == yield_content(:page_specific_style)
 
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
@@ -34,7 +37,7 @@ html lang="en"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
     link href="/images/favicon.png" rel="icon" type="image/x-icon"
 
-  body id="#{current_page.data.section}" class="#{(current_page.data.body_classes || []).join(" ")}"
+  body *body_attributes
     header
       .container
         .branding
@@ -68,7 +71,7 @@ html lang="en"
             li== link_to 'Objectpush', "http://objectpush.com", :title => "POP3 meets JSON"
             li== link_to 'Votes.io', "http://votes.io", :title => "Quick polls. Fast answers. Get started in seconds."
 
-  == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'quote_slider.js'
-  == yield_content :scripts
+    == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'quote_slider.js'
+    == yield_content :scripts
 
   == partial "layouts/substance_lab"

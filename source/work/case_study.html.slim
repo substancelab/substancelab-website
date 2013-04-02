@@ -44,12 +44,13 @@ section: portfolio
         == partial "modules/contact_details"
 
 - if code_image = project_code_image_path(project)
-  css:
-    .intro {
-      background-image: -moz-linear-gradient(top, rgba(50,106,128,1) 0%, rgba(50,106,128,0) 200%), url("#{code_image}"); /* FF3.6+ */
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,106,128,1)), color-stop(200%,rgba(50,106,128,0))), url("#{code_image}"); /* Chrome,Safari4+ */
-      background-image: -webkit-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Chrome10+,Safari5.1+ */
-      background-image: -o-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Opera 11.10+ */
-      background-image: -ms-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* IE10+ */
-      background-image: linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* W3C */
-     }
+  - content_for :page_specific_style do
+    css:
+      .intro {
+        background-image: -moz-linear-gradient(top, rgba(50,106,128,1) 0%, rgba(50,106,128,0) 200%), url("#{code_image}"); /* FF3.6+ */
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,106,128,1)), color-stop(200%,rgba(50,106,128,0))), url("#{code_image}"); /* Chrome,Safari4+ */
+        background-image: -webkit-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Chrome10+,Safari5.1+ */
+        background-image: -o-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* Opera 11.10+ */
+        background-image: -ms-linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* IE10+ */
+        background-image: linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("#{code_image}"); /* W3C */
+      }

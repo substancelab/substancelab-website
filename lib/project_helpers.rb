@@ -42,7 +42,7 @@ module ProjectHelpers
   def project_image(project)
     image = File.join("work", project.slug, "project.jpg")
     if image_exists?(image)
-      image_tag(image, :class => 'display-project')
+      image_tag(image, :class => 'display-project', :alt => I18n.t("work.show.screenshot_of_project", :project_name => project.name))
     end
   end
 

@@ -1,4 +1,6 @@
 require 'slim'
+Slim::Engine.set_default_options :pretty => true
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'

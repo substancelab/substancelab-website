@@ -36,6 +36,7 @@ html lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
     link href="/images/favicon.png" rel="icon" type="image/x-icon"
+    == localized_partial "layouts/google_analytics"
 
   body *body_attributes
     header
@@ -73,7 +74,5 @@ html lang="en"
 
     == javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js', 'quote_slider.js'
     == yield_content :scripts
-
-    == localized_partial "layouts/google_analytics"
 
   == partial "layouts/substance_lab"

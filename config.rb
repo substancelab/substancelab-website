@@ -1,5 +1,8 @@
 require 'slim'
-Slim::Engine.set_default_options :pretty => true
+Slim::Engine.set_default_options({
+  :format => :html5,
+  :pretty => true
+})
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'

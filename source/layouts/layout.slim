@@ -51,17 +51,17 @@ html lang="en"
         .legalese
           ' &copy;
           ==' "#{[2008, Time.now.year].uniq.join("-")}"
-          == link_to('Substance Lab', "http://substancelab.com", :title => "Substance Lab - freelance web design and web development in Copenhagen, Denmark")
+          == link_to('Substance Lab', "/", :title => I18n.t("footer.link_to_substance_lab"))
         .contents
           ul.link-list
-            li== link_to 'Homepage', "/", :title => "Substance Lab - freelance web application development and webdesign in Copenhagen, Denmark, Europe"
-            li== link_to 'Web application development', "/work", :title => "Web application development projects by Substance Lab"
+            li== link_to 'Homepage', "/", :title => I18n.t("footer.link_to_substance_lab")
+            li== link_to 'Web application development', "/work", :title => I18n.t("footer.link_to_portfolio")
             li== link_to 'Client login', "http://work.substancelab.com", :title => "Substance Lab client extranet"
 
         .network
           | Substance sites:
           ul.link-list
-            li== link_to 'mentalized', "http://mentalized.net", :title => "The personal website of Jakob Skjerning, and independent web developer in Copenhagen, Denmark"
+            li== link_to 'mentalized', "http://mentalized.net", :title => "The personal website of Jakob Skjerning, an independent web developer in Kolding, Denmark"
             li== link_to 'FlowToDo', "http://flowtodo.com", :title => "Task tracking tool that actually helps you collect, focus, and get things done"
             li== link_to 'Objectpush', "http://objectpush.com", :title => "POP3 meets JSON"
             li== link_to 'Votes.io', "http://votes.io", :title => "Quick polls. Fast answers. Get started in seconds."

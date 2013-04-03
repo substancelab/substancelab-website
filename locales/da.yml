@@ -5,6 +5,9 @@ da:
     phone: "Ring til Jakob på %{phone_number}"
     phone_number: 7199 0999
     twitter: "Tweet til %{twitter_link}"
+  footer:
+    link_to_portfolio: "Webudviklingsprojekter programmeret af Substance Lab"
+    link_to_substance_lab: "Substance Lab - freelance Ruby on Rails udvikling og programmering i Kolding, Danmark"
   index:
     about_substance_lab: Substance Lab
     address:

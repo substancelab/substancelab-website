@@ -3,6 +3,10 @@ body_classes:
 - case_study
 section: portfolio
 ---
+- content_for :page_title do
+  == project.name + ": "
+  == project_services(project)
+
 .case_study class=project.slug
   article
     header.intro

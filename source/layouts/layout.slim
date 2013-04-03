@@ -2,11 +2,11 @@ doctype html
 html lang="en"
   head
     meta charset='utf-8'
-    title
-      - if current_page.data.title.blank?
-        | Substance Lab | Carefully crafting websites and web applications
-      - else
-        == "#{current_page.data.title} | Substance Lab"
+    title== page_title
+    - unless current_page.data.keywords.blank?
+      meta name="keywords" content="#{current_page.data.keywords.join(',')}"
+    - unless current_page.data.description.blank?
+      meta name="description" content="#{current_page.data.description}"
 
     -# One stylesheet to import them all
     == stylesheet_link_tag "layout.css", :media => "all"
@@ -27,11 +27,6 @@ html lang="en"
       == yield_content(:stylesheets)
     - if content_for?(:page_specific_style)
       == yield_content(:page_specific_style)
-
-    - unless current_page.data.keywords.blank?
-      meta name="keywords" content="#{current_page.data.keywords.join(',')}"
-    - unless current_page.data.description.blank?
-      meta name="description" content="#{current_page.data.description}"
 
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="

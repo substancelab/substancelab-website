@@ -1,6 +1,9 @@
 ---
 section: portfolio
 ---
+- content_for :page_title do
+  == I18n.t("work.index.featured_works")
+
 section.intro
   .container
     h1== I18n.t("work.index.portfolio")

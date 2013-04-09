@@ -1,4 +1,13 @@
-LOCALE = ENV["LOCALE"] || 'en'
+puts %q{
+   _____  /\ __  ____   _____ _______ ___/\  __ __  _____  _____    _/|    ___/\  ____
+  /  ___\/  |  \/  _ \_/  ___V__   __V  _  \/  \  \/  ___\/   __\  /  !___/  _  \/  _ \_
+ /____   \  !   \  _   \____  \/   \/       \ \    \      \   ___\/       \      \  _   \
+/         \_____/______/______/\___/\___!___/__\_  /______/____  /\_______/__|___/       \
+\_________/ substancelab.com                     \/            \/              \_________/
+
+}
+
+LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 
 # Configure site
 SETTINGS = {
@@ -33,17 +42,25 @@ activate :asset_hash
 # Blogging
 activate :blog do |blog|
   blog.permalink = ":title"
+  blog.sources = File.join(LOCALE, ":year-:month-:day-:title.html")
   blog.prefix = "articles"
 end
 page "articles/*", :layout => :articles
 
 # Deployment
-activate :deploy do |deploy|
-  deploy.method = :ftp
-  deploy.user = "substancelab.dk"
-  deploy.host = "linux41.unoeuro.com"
-  deploy.path = self.deploy_path
-  deploy.password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
+if LOCALE
+  # Deploy to UnoEuro
+  DEPLOYMENT_PATHS = {
+    'da' => "/public_html/",
+    'en' => "/substancelab.com/"
+  }
+  activate :deploy do |deploy|
+    deploy.method = :ftp
+    deploy.user = "substancelab.dk"
+    deploy.host = "linux41.unoeuro.com"
+    deploy.path = DEPLOYMENT_PATHS[LOCALE]
+    deploy.password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
+  end
 end
 
 # Pretty URLs

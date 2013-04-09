@@ -30,6 +30,13 @@ set :images_dir, 'images'
 # Add asset hash to URLs
 activate :asset_hash
 
+# Blogging
+activate :blog do |blog|
+  blog.permalink = ":title"
+  blog.prefix = "articles"
+end
+page "articles/*", :layout => :articles
+
 # Deployment
 activate :deploy do |deploy|
   deploy.method = :ftp
@@ -48,11 +55,17 @@ I18n.locale = LOCALE
 require 'lib/i18n_helpers'
 helpers I18nHelpers
 
+require 'lib/article_helpers'
+helpers ArticleHelpers
+
 require 'lib/asset_helpers'
 helpers AssetHelpers
 
 require 'lib/client_helpers'
 helpers ClientHelpers
+
+require 'lib/i18n_helpers'
+helpers I18nHelpers
 
 require 'lib/layout_helpers'
 helpers LayoutHelpers

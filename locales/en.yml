@@ -5,6 +5,9 @@ en:
     phone: "Give Jakob a call on %{phone_number}"
     phone_number: +45 7199 0999
     twitter: "Tweet at %{twitter_link}"
+  date:
+    formats:
+      long: "%B %-d, %Y"
   footer:
     link_to_portfolio: "Web application development projects by Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails application development in Kolding, Denmark, Europe"

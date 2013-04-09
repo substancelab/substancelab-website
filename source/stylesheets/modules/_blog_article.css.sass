@@ -1,0 +1,34 @@
+@import "mixins/separator"
+
+.blog-article
+  article
+    p:first-child
+      +separator-bottom
+      border-style: dashed
+      font-size: 1.6em
+      line-height: 1.4em
+      margin-bottom: 1em
+      padding-bottom: 1em
+      width: 100/61*100%
+  nav
+    +separator
+    overflow: hidden
+    padding: 1em 0
+    a
+      padding: 0
+    aside
+      float: left
+      text-align: center
+      width: 50%
+    .next, .previous
+      min-height: 1em
+      width: 25%
+    .next
+      float: right
+      text-align: right
+      a:after
+        content: " »"
+    .previous
+      float: left
+      a:before
+        content: "« "

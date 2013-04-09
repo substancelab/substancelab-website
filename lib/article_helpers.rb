@@ -13,6 +13,6 @@ module ArticleHelpers
   end
 
   def link_to_article(article)
-    link_to(article.title, article_path(article), :title => article.summary)
+    link_to(article.title, article_path(article), :title => article.data["subtitle"] || article.title)
   end
 end

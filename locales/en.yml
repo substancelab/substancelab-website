@@ -3,17 +3,23 @@ en:
   articles:
     show:
       meta_data: "%{author} wrote this on %{date}"
+      sound_interesting: Did this sound interesting?
+      personal_conversation: Let us talk about how Substance Lab can help you.
+
   contact_details:
     email: "Send an email to %{email_link}"
     phone: "Give Jakob a call on %{phone_number}"
     phone_number: +45 7199 0999
     twitter: "Tweet at %{twitter_link}"
+
   date:
     formats:
       long: "%B %-d, %Y"
+
   footer:
     link_to_portfolio: "Web application development projects by Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails application development in Kolding, Denmark, Europe"
+
   index:
     about_substance_lab: About Substance Lab
     address:
@@ -25,9 +31,11 @@ en:
     vat_id: DK33371942
     vat_id_name: VAT ID
     web_application_work_by_substance_lab: Web application work by Substance Lab
+
   navigation:
     home: Home
     work: Work
+
   services:
     api_development: API development
     automation: Automation

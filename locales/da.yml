@@ -1,13 +1,25 @@
 ---
 da:
+  articles:
+    show:
+      meta_data: "Skrevet af %{author} d. %{date}"
+      sound_interesting: Lyder det interessant?
+      personal_conversation: Lad os snakke om hvad Substance Lab kan hjælpe dig med.
+
   contact_details:
     email: "Send en e-mail til %{email_link}"
     phone: "Ring til Jakob på %{phone_number}"
     phone_number: 7199 0999
     twitter: "Tweet til %{twitter_link}"
+
+  date:
+    formats:
+      long: "%-d. %B, %Y"
+
   footer:
     link_to_portfolio: "Webudviklingsprojekter programmeret af Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails udvikling og programmering i Kolding, Danmark"
+
   index:
     about_substance_lab: Substance Lab
     address:
@@ -19,9 +31,11 @@ da:
     vat_id: 33371942
     vat_id_name: CVR-nummer
     web_application_work_by_substance_lab: Web application lavet af Substance Lab
+
   navigation:
     home: Forside
     work: Cases
+
   services:
     api_development: Udvikling af API
     automation: Automatisering
@@ -36,6 +50,7 @@ da:
     web_application_development: Programmering
     webdesign: Webdesign
     youtube_integration: Integration med YouTube
+
   work:
     index:
       case_study: Læs casen

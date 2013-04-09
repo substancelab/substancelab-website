@@ -1,5 +1,8 @@
 ---
 en:
+  articles:
+    show:
+      meta_data: "%{author} wrote this on %{date}"
   contact_details:
     email: "Send an email to %{email_link}"
     phone: "Give Jakob a call on %{phone_number}"

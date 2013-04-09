@@ -13,8 +13,7 @@ section.intro
       - if article = current_article.previous_article
         == link_to_article(article)
     aside
-      ' Jakob wrote this on
-      =' I18n.l(current_article.date.to_date, :format => :long)
+      = I18n.t("articles.show.meta_data", :author => "Jakob", :date => I18n.l(current_article.date.to_date, :format => :long))
     .next
       - if article = current_article.next_article
         == link_to_article(article)

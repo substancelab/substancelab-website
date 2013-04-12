@@ -24,6 +24,7 @@ da:
     about_substance_lab: Substance Lab
     address:
       country: Danmark
+    blog_headline: "Skriverier med substans &ndash; %{link_to_blog}"
     contact_us: Kontaktoplysninger
     peptalk: Udvikling af <strong>online løsninger</strong> med fokus på <strong>brugervenlighed</strong> og <strong>bundlinie</strong>
     phone: Telefon

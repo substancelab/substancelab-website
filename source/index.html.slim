@@ -33,6 +33,15 @@ section.quotes
     .sliding_quotes
       == localized_partial("index/quotes")
 
+- if blog.articles.any?
+  section.articles
+    h2== I18n.t("index.blog_headline", :link_to_blog => link_to("Substance Lab bloggen", "/articles"))
+    .columns
+      - blog.articles.first(3).each do |article|
+        article.column
+          h3.entry-title== link_to article.title, article
+          == article.data['subtitle'] || article.summary(100)
+
 section#contact
   .container
     h2= I18n.t("index.contact_us")

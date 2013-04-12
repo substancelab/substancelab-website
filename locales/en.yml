@@ -24,6 +24,7 @@ en:
     about_substance_lab: About Substance Lab
     address:
       country: Denmark
+    blog_headline: "Substantial articles &ndash; %{link_to_blog}"
     contact_us: Get in touch
     peptalk: Handcrafted <strong>web applications</strong> and <strong>online software</strong> with a focus on <strong>simplicity</strong> and <strong>profitability</strong>
     phone: Phone

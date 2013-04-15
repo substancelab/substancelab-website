@@ -1,29 +1,29 @@
 ---
-title: Drop nu www
-date: 2013-04-08 15:22 UTC
-subtitle: "\"www\" er ligegyldigt, overflødigt og spild af tid."
+title: www er ligegyldigt
+subtitle: 'Starter dit website med "www", gør du det forkert.'
 ---
+I World Wide Webs spæde start var "www" i starten af en website-adresse med til at signalere, at "her kommer et af disse nymodens domænenavne, hvor du kan læse informationer". Nu til dags er det absolut overflødigt.
 
-Vi ser dem alle steder: Website adresser, der starter med "www". Det er næsten så
-indgroet en del af os, at vi automatisker taster det, når vi skal besøge et
-website.
+Nu til dags er der ingen personer, der ikke genkender "substancelab.dk" som værende et domænenavn og som ikke øjeblikkeligt ved, hvad de kan bruge det til.
 
-It’s about time we kill the “www”. I don’t mean the World Wide Web, obviously, but the three letters that appear at the beginning of a plethora of website addresses.
+Det er ingen teknisk grund til have "www" med i adressen - og der har aldrig været det.
 
-Seen from a human perspective they serve very little purpose these days. Sure, many people believe they are required - and in some cases they are due to technical oversights - and will happily enter them in the address bar.
-
-It could be argued that they make it easy to recognize a website address. I agree, everybody recognizes “www.example.com” as a website address. However, my guess is that people are just as likely to recognize “example.com”. The dot and the 2-4 letters following it are what makes a website address - both on a technical level, but also in peoples minds.
-
-## Why it’s bad
-
-The World Wide Web is the only thing I know of whose shortened form takes three times longer to say than what it’s short for.
+At tilføje "www" er udelukkende med til at gøre adressen mere besværlig at indtaste - og især at udtale. "www" er formentligt en af de få forkortelser i verden, der tager længere tid at sige end det, det er en forkortelse for.
 
 
-## En kort historielektion
+## Den korrekte opsætning
 
-Det gav fint mening i gamle dage.
+Dit website bør være tilgængeligt på dit domænenavn uden www foran. Det bør dog også være tilgængeligt med www foran, da det kan være nødvendigt i nogle situationer, men det bør viderestille til versionen uden www.
+
+En fin detalje er at gøre det tilgængeligt på andre adresser også, fx "ww" eller "vvv", så brugere der taster forkert stadig kan få fat i dit indhold.
 
 
-* http://no-www.org
-* http://mentalized.net/journal/2008/01/31/double_u_double_u_double_huh/
+## "www" kan være nødvendigt
+
+Der er dog situationer, hvor du bør placere de 3 ligegyldige w'er foran dit domæne navn. I e-mails, tweets, forumposts og andre steder, hvor du gerne vil have, at domænenavnet automatisk bliver et link til dit website.
+
+Det er desværre ikke alt software, der endnu har opdaget, at der findes andre domænenavne end .com, så hvor de gladeligt laver "substancelab.com" til et link sker det ikke for "substancelab.dk". Her kan du blive nødt til at hjælpe dem ved at skrive "www" foran.
+
+Men på visitkort, websites, i reklamer, foldere, samtaler og alle andre steder er "www" spild, så drop det.
+
 

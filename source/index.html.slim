@@ -34,7 +34,7 @@ section.quotes
       == localized_partial("index/quotes")
 
 - if blog.articles.any?
-  section.articles
+  section.article-list
     h2== I18n.t("index.blog_headline", :link_to_blog => link_to("Substance Lab bloggen", "/articles"))
     .columns
       - blog.articles.first(3).each do |article|

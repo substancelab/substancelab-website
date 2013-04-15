@@ -15,6 +15,7 @@ da:
   date:
     formats:
       long: "%-d. %B, %Y"
+      short: "%d-%m-%Y"
 
   footer:
     link_to_portfolio: "Webudviklingsprojekter programmeret af Substance Lab"

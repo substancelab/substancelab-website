@@ -1,6 +1,7 @@
 ---
 title: www er ligegyldigt
 subtitle: 'Starter dit website med "www", gør du det forkert.'
+tags: domæner, www, server
 ---
 I World Wide Webs spæde start var "www" i starten af en website-adresse med til at signalere, at "her kommer et af disse nymodens domænenavne, hvor du kan læse informationer". Nu til dags er det absolut overflødigt.
 

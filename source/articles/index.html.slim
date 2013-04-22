@@ -3,15 +3,21 @@ section.intro
     h1 Artikler
     .subtitle Substance Lab bloggen - Skriverier med substans
 
-.container
+.container.article-list
   - articles = blog.articles.reverse
 
+  section.most-recent-article.columns.single
+    - article = articles.pop
+    article.column
+      h2.entry-title== link_to article.title, article
+      == article.summary
+      == link_to "Læs artiklen '#{article.title}'", article, :class => 'more'
 
-  section.previous-articles.columns.dual
+  section.previous-articles.columns.double
     - articles.pop(2).each do |article|
       article.column
         h2.entry-title== link_to article.title, article
-        == article.data['subtitle'] || article.summary(100)
+        == article.summary
 
   section.older-articles
     .columns

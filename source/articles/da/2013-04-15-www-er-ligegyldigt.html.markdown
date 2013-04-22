@@ -5,6 +5,8 @@ tags: domæner, www, server
 ---
 I World Wide Webs spæde start var "www" i starten af en website-adresse med til at signalere, at "her kommer et af disse nymodens domænenavne, hvor du kan læse informationer". Nu til dags er det absolut overflødigt.
 
+READMORE
+
 Nu til dags er der ingen personer, der ikke genkender "substancelab.dk" som værende et domænenavn og som ikke øjeblikkeligt ved, hvad de kan bruge det til.
 
 Det er ingen teknisk grund til have "www" med i adressen - og der har aldrig været det.

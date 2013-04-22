@@ -5,6 +5,8 @@ tags: software, udvikling, prioritering, eksterne tjenester
 ---
 Der findes en kategori af features, som du næsten uundgåeligt møder under udviklingen af applikationer af en hvis størrelse. Det kan være features som udsending af mails, abonnementsbetaling, nyhedsbrevsudsending, fakturering, søgning.
 
+READMORE
+
 ## "Det er jo bare..."
 
 Fælles for dem alle er, at featuren lyder dejligt enkel, når man snakker om den. "Vi skal bare sende en mail", "det er jo bare en række linier med et beløb", "den skal bare finde det, jeg leder efter".

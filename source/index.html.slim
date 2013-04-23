@@ -40,7 +40,7 @@ section.quotes
       - blog.articles.first(3).each do |article|
         article.column
           h3.entry-title== link_to article.title, article
-          == article.data['subtitle'] || article.summary(100)
+          == article.summary
 
 section#contact
   .container

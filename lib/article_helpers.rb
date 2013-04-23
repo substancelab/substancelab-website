@@ -12,6 +12,10 @@ module ArticleHelpers
       sub(':title', article.slug)
   end
 
+  def articles_path
+    blog.options.prefix
+  end
+
   def link_to_article(article)
     link_to(article.title, article_path(article), :title => article.data["subtitle"] || article.title)
   end

@@ -42,6 +42,8 @@ html lang="#{current_locale}"
             ul
               li== link_to I18n.t("navigation.home"), "/"
               li== link_to I18n.t("navigation.work"), projects_url
+              - if blog.articles.any?
+                li== link_to I18n.t("navigation.articles"), articles_path
 
       - if content_for?(:masthead)
         .masthead-container

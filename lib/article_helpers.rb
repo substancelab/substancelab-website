@@ -17,6 +17,12 @@ module ArticleHelpers
   end
 
   def link_to_article(article)
-    link_to(article.title, article_path(article), :title => article.data["subtitle"] || article.title)
+    href = article_path(article)
+    title = article.data["subtitle"] || article.title
+    if block_given?
+      link_to(href, :title => title, &block)
+    else
+      link_to(article.title, href, :title => title)
+    end
   end
 end

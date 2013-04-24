@@ -7,6 +7,7 @@ gem "middleman-blog"
 gem "middleman-deploy"
 gem "middleman-minify-html"
 
+gem "actionpack", "~>3.2.13"
 gem "activesupport"
 gem "builder"
 gem "json", "<= 1.8.0"

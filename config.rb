@@ -81,6 +81,9 @@ helpers AssetHelpers
 require 'lib/client_helpers'
 helpers ClientHelpers
 
+require 'lib/html_helpers'
+helpers HtmlHelpers
+
 require 'lib/i18n_helpers'
 helpers I18nHelpers
 

@@ -1,10 +1,8 @@
 ---
 title: Isbjerge
-subtitle: "Fuld fart frem, eller?"
 tags: software, udvikling, prioritering, eksterne tjenester
 ---
 Der findes en kategori af features, som du næsten uundgåeligt møder under udviklingen af applikationer af en hvis størrelse. Det kan være features som udsending af mails, abonnementsbetaling, nyhedsbrevsudsending, fakturering, søgning.
-
 READMORE
 
 ## "Det er jo bare..."

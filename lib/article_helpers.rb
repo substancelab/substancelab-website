@@ -18,11 +18,11 @@ module ArticleHelpers
 
   def link_to_article(article)
     href = article_path(article)
-    title = article.data["subtitle"] || article.title
+    title = article.title
     if block_given?
       link_to(href, :title => title, &block)
     else
-      link_to(article.title, href, :title => title)
+      link_to(title, href, :title => title)
     end
   end
 end

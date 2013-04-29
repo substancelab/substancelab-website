@@ -11,13 +11,14 @@ section.intro
     article.column
       h2.entry-title== link_to article.title, article
       == article.summary
-      == link_to "Læs artiklen '#{article.title}'", article, :class => 'more'
+      p== link_to "Læs artiklen '#{article.title}'", article
 
   section.previous-articles.columns.double
     - articles.pop(2).each do |article|
       article.column
         h2.entry-title== link_to article.title, article
         == article.summary
+        p== link_to "Læs artiklen '#{article.title}'", article
 
   section.older-articles
     .columns

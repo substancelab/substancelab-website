@@ -7,6 +7,7 @@ tags: software, development, product management
 Det er måske sært at høre en programmør argumentere for, at jo mindre kode dit projekt indeholder, jo bedre. Jeg lever trods alt af (og hygger mig med) at skrive bunkevis af Ruby on Rails kode.
 
 Man skulle tro, at jeg er fortaler for endnu mere kode i projekter. Det er sådan set også, men kode kommer med en række risici, som er værd at være opmærksom på.
+READMORE
 
 ## Store projekter er svære at overskue
 

@@ -1,5 +1,9 @@
 module I18nHelpers
 
+  def current_locale
+    I18n.locale.to_s
+  end
+
   def fallback_locale
     "en"
   end

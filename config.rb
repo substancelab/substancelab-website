@@ -12,7 +12,7 @@ set :images_dir, 'images'
 activate :asset_hash
 
 # Deployment
-LOCALE = ENV["LOCALE"]
+LOCALE = ENV["LOCALE"] || 'en'
 if LOCALE
   # Deploy to UnoEuro
   DEPLOYMENT_PATHS = {
@@ -32,7 +32,7 @@ end
 activate :directory_indexes
 
 # Hello World
-activate :i18n, :mount_at_root => ENV["LOCALE"] || :en
+activate :i18n, :mount_at_root => LOCALE
 require 'lib/i18n_helpers'
 helpers I18nHelpers
 

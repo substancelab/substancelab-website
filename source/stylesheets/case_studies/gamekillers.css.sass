@@ -1,6 +1,9 @@
 @import "breakpoints"
+@import "mixins/full_width"
 
 .gamekillers
+  .quote
+    +full-width
   img
     display: block
     float: none
@@ -9,15 +12,21 @@
     width: 66%
   h2
     clear: both
-  .screenshot
+    text-align: center
+    margin: 1em
+  section
+    clear: both
+    padding: 2em 0
     &:nth-of-type(odd)
-      float: left
-      margin-left: -20%
-      margin-right: 1em
+      .screenshot
+        float: left
+        margin-left: -20%
+        margin-right: 1em
     &:nth-of-type(even)
-      float: right
-      margin-left: 1em
-      margin-right: -20%
+      .screenshot
+        float: right
+        margin-left: 1em
+        margin-right: -20%
     @media #{$breakpoint-desktop}
       box-sizing: border-box
       float: none

@@ -9,46 +9,47 @@ section.intro
     h1== I18n.t("work.index.portfolio")
     .subtitle== I18n.t("work.index.featured_works")
 
-.container.portfolio
-  - portfolio_projects.in_groups_of(3).each do |projects|
-    .columns
-      - projects.reject(&:nil?).each do |project|
-        article.project.column id=project.slug
-          - if project.case_study
-            == project_bubble(project)
-          -else
-            .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
-          .description
-            h2= project.name
+section.portfolio
+  .container
+    - portfolio_projects.in_groups_of(3).each do |projects|
+      .columns
+        - projects.reject(&:nil?).each do |project|
+          article.project.column id=project.slug
+            - if project.case_study
+              == project_bubble(project)
+            -else
+              .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
+            .description
+              h2= project.name
 
-            p== localized(project.description)
+              p== localized(project.description)
 
-            - unless project.services.blank?
-              h3= I18n.t("work.index.substance_lab_did")
-              p= project_services(project)
+              - unless project.services.blank?
+                h3= I18n.t("work.index.substance_lab_did")
+                p= project_services(project)
 
-            ul.link-list
-              - if project.case_study?
-                li== link_to(I18n.t("work.index.case_study"), project_url(project), :class => 'case_study', :title => I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name))
-              - unless project.website.blank?
-                li== link_to(I18n.t("work.index.project_website"), project.website, :class => 'external')
+              ul.link-list
+                - if project.case_study?
+                  li== link_to(I18n.t("work.index.case_study"), project_url(project), :class => 'case_study', :title => I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name))
+                - unless project.website.blank?
+                  li== link_to(I18n.t("work.index.project_website"), project.website, :class => 'external')
 
-  section.columns.single
-    .content.column
+  section.clients
+    .container
       h2= I18n.t("work.index.client_list")
 
       p= I18n.t("work.index.list_of_companies_worked_with")
 
-      ul.clients
+      ul.client-list
         - clients.each do |client|
           li== link_to client.name, client.website, :title => client.name
 
-  section.columns.single
-    .content.column
+  section.technology
+    .container
       h2= I18n.t("work.index.technologies")
 
       p= I18n.t("work.index.list_of_technologies")
 
-      ul.technologies
+      ul.technology-list
         - technologies.each do |technology|
           li= technology

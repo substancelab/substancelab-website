@@ -8,17 +8,18 @@ section: portfolio
   == project_services(project)
 
 .case_study class=project.slug
-  article
-    header.intro
-      .container
-        h1= project.name
-        .subtitle
-          = localized(project.description)
-
+  header.intro
     .container
-      == partial project.slug, :locals => {:project => project}
-      == project_image(project)
+      h1= project.name
+      .subtitle
+        = localized(project.description)
 
+  section
+    == partial project.slug, :locals => {:project => project}
+    == project_image(project)
+
+  section.details
+    .container
       .columns.double
         .column.services
           h2= I18n.t("work.index.substance_lab_did")
@@ -28,7 +29,8 @@ section: portfolio
           h2= I18n.t("work.index.technologies_used")
           p= project.technologies.sort.to_sentence
 
-  .container.portfolio
+section.portfolio
+  .container
     .columns.double.case_studies
       .column
         h2= I18n.t("work.show.other_case_studies")
@@ -40,7 +42,9 @@ section: portfolio
               h3= case_study.name
               p== localized(case_study.description)
 
-    .contact.columns.double
+section.contact
+  .container
+    .columns.double
       .column
         h2= I18n.t("work.show.want_something_like_this")
         p= I18n.t("work.show.success_starts_with_communication")

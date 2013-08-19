@@ -2,6 +2,7 @@
 
 @import "shared"
 @import "mixins/clear"
+@import "mixins/full_width"
 
 @import "breakpoints"
 @import "columns"
@@ -240,19 +241,25 @@ nav
 // Layout structure
 
 .container
+  +full-width
   font-size: 1em
   margin-left: auto
   margin-right: auto
-  width: 90%
-  min-width: 780px
-  max-width: 1200px
-  @media #{$breakpoint-desktop}
-    min-width: 0
+
+section
+  .container
+    max-width: 42em
+    width: 66%
+
+    @media #{$breakpoint-desktop}
+      width: 90%
+
 
 header .container, .intro .container, footer .container
   min-height: 0
 
 header
+  +full-width
   a
     background-color: inherit
     +border-radius(1em)
@@ -298,7 +305,6 @@ footer
       margin: 0
       text-align: right
 
-
 .columns
   h1,
   .subtitle
@@ -314,7 +320,7 @@ h1 + .columns
   overflow: hidden
 
 
-#about .person img
+#person img
   border: 1px solid #bbbbbb 
   float: right
   margin-left: 0.5em

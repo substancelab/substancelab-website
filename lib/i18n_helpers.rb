@@ -8,15 +8,15 @@ module I18nHelpers
     "en"
   end
 
-  # If partial exists for the current locale, that partial is rendered.
-  # Otherwise the same partial in the fallback locale is rendered
+  # Renders a partial path for current locale. If the partial doesn't exist for
+  # the current locale it will be looked for in the fallback_locale. If it does
+  # not exist there either, it will be looked for without a specific locale
   def localized_partial(partial_path, locals = {})
-    full_path = path_for_localized_partial(partial_path)
-    partial(full_path, locals)
-  rescue Middleman::CoreExtensions::Rendering::TemplateNotFound
-    puts "#{partial_path.inspect} not found for locale #{I18n.locale.to_s} at #{full_path.inspect}. Falling back to #{fallback_locale.inspect}"
-    # The partial doesn't exist for current locale, fall back to fallback locale
-    partial(File.join(fallback_locale, partial_path), locals)
+    paths = [
+      File.join(current_locale, partial_path),
+      File.join(fallback_locale, partial_path)
+    ]
+    partial_with_fallbacks(paths, locals)
   end
 
   # Returns content in current locale. If content has no translation for
@@ -29,9 +29,12 @@ module I18nHelpers
     end
   end
 
-  private
-
-  def path_for_localized_partial(partial_path)
-    File.join(current_locale, partial_path)
+  def partial_with_fallbacks(paths, locals = {})
+    partial_path = paths.shift
+    partial(partial_path, locals)
+  rescue Middleman::CoreExtensions::Rendering::TemplateNotFound
+    fail if paths.empty?
+    puts "#{partial_path.inspect} not found. Falling back to #{paths.inspect}"
+    partial_with_fallbacks(paths, locals)
   end
 end

@@ -73,5 +73,9 @@ html lang="#{current_locale}"
             li== link_to 'Objectpush', "http://objectpush.com", :title => "POP3 meets JSON"
             li== link_to 'Votes.io', "http://votes.io", :title => "Quick polls. Fast answers. Get started in seconds."
 
-    == javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', 'quote_slider.js'
+    == javascript_include_tag \
+      "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js",\
+      "quote_slider.js",\
+      "jquery-waypoints/waypoints"
+
     == yield_content :scripts

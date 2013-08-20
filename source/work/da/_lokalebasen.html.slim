@@ -1,0 +1,182 @@
+article
+  .container
+    h1 HTML Ipsum Presents
+
+    p
+      strong Pellentesque habitant morbi tristique
+      |
+        senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+        semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo.
+        Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
+        condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
+        fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis
+        tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar
+        facilisis. Ut felis.</p>
+
+    h2 Header Level 2
+
+    ol
+      li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      li Aliquam tincidunt mauris eu risus.
+
+    blockquote
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+
+    h3 Header Level 3
+
+    ul
+      li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      li Aliquam tincidunt mauris eu risus.
+
+    pre
+      code
+        |
+          #header h1 a {
+            display: block;
+            width: 300px;
+            height: 80px;
+          }
+
+    h2#more Moar!
+
+  section.graph
+
+  section
+    .container
+      p
+        strong Pellentesque habitant morbi tristique
+        |
+          senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+          semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo.
+          Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
+          condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
+          fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis
+          tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar
+          facilisis. Ut felis.</p>
+
+      h2 Header Level 2
+
+      ol
+        li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        li Aliquam tincidunt mauris eu risus.
+
+      blockquote
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+
+      h3 Header Level 3
+
+      ul
+        li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        li Aliquam tincidunt mauris eu risus.
+
+      pre
+        code
+          |
+            #header h1 a {
+              display: block;
+              width: 300px;
+              height: 80px;
+            }
+
+== javascript_include_tag "http://d3js.org/d3.v3.min.js"
+
+css:
+  .graph {
+    background: #ccc;
+    height: 300px;
+  }
+  path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+  }
+
+- content_for :scripts do
+  javascript:
+    function GrossProfitGraph(element, data) {
+      this.element = function() {
+        return $('.graph');
+      };
+
+      this.hasBeenAnimated = function(element) {
+        return $(element).hasClass('in');
+      };
+
+      this.resetAnimation = function() {
+        this.path
+          .attr("stroke-dasharray", totalLength + " " + totalLength)
+          .attr("stroke-dashoffset", totalLength);
+      };
+
+      this.setupWaypoint = function() {
+        var graph = this;
+
+        graph.resetAnimation();
+
+        graph.element().waypoint(function(direction) {
+          graph.startAnimation(window.path);
+        }, {
+          offset: "75%"
+        });
+      };
+
+      this.startAnimation = function() {
+        if (this.hasBeenAnimated(this.element())) {
+          return false;
+        };
+
+        this.path
+          .transition()
+            .duration(1000)
+            .ease("linear")
+            .attr("stroke-dashoffset", 0);
+
+        this.element().addClass('in');
+      };
+
+      // With help from http://bl.ocks.org/duopixel/4063326
+
+      var height = this.element().height();
+      var width = this.element().width();
+      var margin = 20;
+
+      // Setup axis
+      var x = d3.scale.linear().domain(
+        [0, data.length - 1]
+      ).range(
+        [0 + margin, width - margin]
+      );
+      var y = d3.scale.linear().domain(
+        [0, d3.max(data)]
+      ).range(
+        [0 + margin, height - margin]
+      );
+
+      var svgCanvas = d3.select(this.element()[0])
+        .append("svg:svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      // Move the graph into place
+      var graph = svgCanvas.append("svg:g")
+        .attr("transform", "translate(0, " + height + ")");
+
+      // Create the line
+      var line = d3.svg.line()
+        .x(function(d,i) { return x(i); })
+        .y(function(d) { return -1 * y(d); });
+
+      // Add the line to the graph
+      this.path = graph.append("svg:path").attr("d", line(data));
+
+      var totalLength = this.path.node().getTotalLength();
+    };
+
+    $(document).ready(function() {
+      var graph = new GrossProfitGraph($('.graph'), [8, 1194, 1542, 1658]);
+      graph.setupWaypoint();
+    })

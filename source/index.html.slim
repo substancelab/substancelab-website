@@ -35,10 +35,10 @@ section.quotes
 
 - if blog.articles.any?
   section.article-list
-    h2== I18n.t("index.blog_headline", :link_to_blog => link_to("Substance Lab bloggen", "/articles"))
-    .columns
-      - blog.articles.first(3).each do |article|
-        - link_to article, :class => 'block-link column' do
+    .container
+      h2== I18n.t("index.blog_headline", :link_to_blog => link_to("Substance Lab bloggen", "/articles"))
+      - blog.articles.first(1).each do |article|
+        - link_to article, :class => 'block-link' do
           h3.entry-title== article.title
           p== strip_tags(article.summary)
 

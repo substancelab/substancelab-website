@@ -1,31 +1,33 @@
 @import "mixins/separator"
 
 .blog-article
-  article
-    .content > p:first-child
-      +separator-bottom
-      border-style: dashed
-      font-size: 1.6em
-      line-height: 1.4em
-      margin-bottom: 2rem
-      padding-bottom: 2rem
-      width: 100/61*100%
-    p:first-child + h2
-      margin-top: 0em
+  .content > p:first-child
+    +separator-bottom
+    border-style: dashed
+    font-size: 1.6em
+    line-height: 1.6em
+    margin-bottom: 2rem
+    padding-bottom: 2rem
+  p:first-child + h2
+    margin-top: 0em
+
+  aside
+    +separator
+    margin: 1em 0
+    padding: 1em 0
+    .blog-article-meta
+      $_meta_color: lighten($body_text_color, 50%)
+      color: $_meta_color
+      text-align: center
 
   nav
-    +separator
     overflow: hidden
     padding: 1em 0
     a
       padding: 0
-    aside
-      float: left
-      text-align: center
-      width: 50%
     .next, .previous
       min-height: 1em
-      width: 25%
+      width: 45
     .next
       float: right
       text-align: right
@@ -35,3 +37,7 @@
       float: left
       a:before
         content: "« "
+
+.blog-article-headline
+  padding: 1em 0
+  text-align: center

@@ -1,26 +1,19 @@
 section.intro
-
   .container
-    h1== current_article.title
+    h1.blog-article-headline== current_article.title
 
-.container.blog-article
-  article.columns.golden
-    .column.content
+article.blog-article
+  .container
+    .content
       == current_article.body
 
-  nav
-    .previous
-      - if article = current_article.previous_article
-        == link_to_article(article)
     aside
-      = I18n.t("articles.show.meta_data", :author => "Jakob", :date => I18n.l(current_article.date.to_date, :format => :long))
-    .next
-      - if article = current_article.next_article
-        == link_to_article(article)
-
-  .contact.columns.double
-    .column
-      h2= I18n.t("articles.show.sound_interesting")
-      p= I18n.t("articles.show.personal_conversation")
-    .column
-      == partial "modules/contact_details"
+      .blog-article-meta
+        = I18n.t("articles.show.meta_data", :author => "Jakob", :date => I18n.l(current_article.date.to_date, :format => :long))
+      nav
+        .previous
+          - if article = current_article.previous_article
+            == link_to_article(article)
+        .next
+          - if article = current_article.next_article
+            == link_to_article(article)

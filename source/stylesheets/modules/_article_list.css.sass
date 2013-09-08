@@ -1,5 +1,12 @@
+@import "mixins/separator"
+
 .article-list
   overflow: hidden
+
+  .article-list-article
+    +separator-bottom
+    margin-bottom: 2em
+    padding-bottom: 1em
   .entry-title
     margin-top: 0
   .published
@@ -12,9 +19,3 @@
       color: #ffffff
     display: inline-block
     text-shadow: none
-  .most-recent-article
-    .more
-      display: block
-      margin-left: auto
-      margin-right: auto
-      width: 33%

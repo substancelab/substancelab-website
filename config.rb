@@ -1,3 +1,22 @@
+LOCALE = ENV["LOCALE"] || 'en'
+
+# Configure site
+SETTINGS = {
+  "da" => {
+    "deploy_path" => "/public_html/",
+    "domain" => "substancelab.dk"
+  },
+  "en" => {
+    "deploy_path" => "/substancelab.com/",
+    "domain" => "substancelab.com"
+  }
+}
+SITE_SETTINGS = SETTINGS[LOCALE]
+# Expose configuration to the entire Middleman application
+SITE_SETTINGS.each do |key, value|
+  self.set(key, value)
+end
+
 require 'slim'
 Slim::Engine.set_default_options({
   :format => :html5,
@@ -12,20 +31,12 @@ set :images_dir, 'images'
 activate :asset_hash
 
 # Deployment
-LOCALE = ENV["LOCALE"] || 'en'
-if LOCALE
-  # Deploy to UnoEuro
-  DEPLOYMENT_PATHS = {
-    'da' => "/public_html/",
-    'en' => "/substancelab.com/"
-  }
-  activate :deploy do |deploy|
-    deploy.method = :ftp
-    deploy.user = "substancelab.dk"
-    deploy.host = "linux41.unoeuro.com"
-    deploy.path = DEPLOYMENT_PATHS[LOCALE]
-    deploy.password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
-  end
+activate :deploy do |deploy|
+  deploy.method = :ftp
+  deploy.user = "substancelab.dk"
+  deploy.host = "linux41.unoeuro.com"
+  deploy.path = self.deploy_path
+  deploy.password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
 end
 
 # Pretty URLs

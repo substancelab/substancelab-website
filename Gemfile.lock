@@ -8,7 +8,6 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
-    builder (3.0.4)
     chunky_png (1.2.8)
     coffee-script (2.2.0)
       coffee-script-source
@@ -119,7 +118,6 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  builder
   middleman (~> 3.0.12)
   middleman-deploy
   middleman-minify-html

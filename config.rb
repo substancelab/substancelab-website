@@ -52,11 +52,6 @@ case_studies.each do |case_study|
   proxy File.join("/work", case_study.slug, "index.html"), "/work/case_study.html", :locals => {:project => case_study}, :ignore => true
 end
 
-# Sitemapping
-require 'builder'
-page "/sitemap.xml", :layout => false
-
-
 # Build-specific configuration
 configure :build do
   # Minify all the things

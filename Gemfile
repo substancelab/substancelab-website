@@ -7,5 +7,4 @@ gem "middleman-deploy"
 gem "middleman-minify-html"
 
 gem "activesupport"
-gem "builder"
 gem "slim"

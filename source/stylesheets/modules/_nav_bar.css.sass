@@ -1,0 +1,50 @@
+.nav-bar
+  +full-width
+
+  background: $substance_lab_blue
+  color: #ffffff
+  display: block
+  overflow: hidden
+  padding: 1em 0
+
+  a
+    background-color: inherit
+    +border-radius(1em)
+    color: #ffffff
+    display: block
+    font-weight: bold
+    padding: 0 1em
+    text-decoration: none
+    text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
+    &:hover, &:focus
+      text-decoration: underline
+    &:visited
+      background-color: inherit
+      color: #ffffff
+    &:hover
+      background-color: $substance_lab_blue / 2
+      text-decoration: none
+
+  .logo
+    text-transform: lowercase
+    .substance
+      color: #ffffff
+    .lab
+      color: #aaaaaa
+
+  .branding
+    float: left
+    margin-left: -1em
+
+  nav
+    float: right
+    margin-right: -1em
+    ul
+      list-style-type: none
+    li
+      float: left
+      margin-left: 1px
+
+  a.current
+    background-color: $substance_lab_blue
+

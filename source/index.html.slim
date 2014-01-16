@@ -1,10 +1,9 @@
 ---
 priority: 1
 ---
-section.masthead
+- content_for :masthead do
   .hero.container
     h1== I18n.t("index.peptalk")
-
     section.work
       .sites
         - featured_projects.first(3).each_with_index do |project, index|

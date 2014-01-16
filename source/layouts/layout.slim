@@ -31,16 +31,20 @@ html lang="#{current_locale}"
     == localized_partial "layouts/google_analytics"
 
   body *body_attributes
-    .nav-bar
-      .container
-        .branding
-          == link_to("/", :class => 'logo', :title => "Substance Lab | Carefully crafting websites and web applications") do
-            span.substance Substance
-            span.lab Lab
-        nav
-          ul
-            li== link_to I18n.t("navigation.home"), "/"
-            li== link_to I18n.t("navigation.work"), projects_url
+    section.masthead
+      .nav-bar
+        .container
+          .branding
+            == link_to("/", :class => 'logo', :title => "Substance Lab | Carefully crafting websites and web applications") do
+              span.substance Substance
+              span.lab Lab
+          nav
+            ul
+              li== link_to I18n.t("navigation.home"), "/"
+              li== link_to I18n.t("navigation.work"), projects_url
+
+      - if content_for?(:masthead)
+        == yield_content(:masthead)
 
     == yield
 

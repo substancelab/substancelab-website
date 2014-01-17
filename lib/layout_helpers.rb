@@ -12,7 +12,7 @@ module LayoutHelpers
     if image_url
       content_for(:page_specific_style) do
         content_tag(:style) do
-          show_code_image_in_header(image_url)
+          css_for_masthead_image(image_url)
         end
       end
     end

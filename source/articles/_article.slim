@@ -17,3 +17,5 @@ article.blog-article
         .next
           - if article = current_article.next_article
             == link_to_article(article)
+
+- masthead_image(article_image(current_article))

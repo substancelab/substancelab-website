@@ -1,4 +1,17 @@
 module ArticleHelpers
+  def article_image(article)
+    image = article.metadata.fetch(:page, {}).fetch("image", nil)
+    if image
+      article_image_path = File.join(article_images_path(article), image)
+      image_path(article_image_path)
+    end
+  end
+
+  # Returns the path where images for the current article are stored
+  def article_images_path(article)
+    File.join("articles")
+  end
+
   # Returns the full path to article
   def article_path(article)
     permalink = blog.options.permalink

@@ -41,7 +41,7 @@ module ProjectHelpers
 
   def show_code_image_in_header(code_image)
     code_image_url = image_path(code_image)
-    css = render_individual_file("stylesheets/modules/_code_image.css.sass", {:code_image => 'foob'})
+    css = render_individual_file("stylesheets/modules/_masthead_image.css.sass", {:code_image => 'foob'})
     css.gsub('url("code_image")', "url('#{code_image_url}')")
   end
 

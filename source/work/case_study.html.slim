@@ -52,7 +52,4 @@ section.contact
       .column
         == partial "modules/contact_details"
 
-- if code_image = project_code_image_path(project)
-  - content_for :page_specific_style do
-    css:
-      #{show_code_image_in_header(code_image)}
+- masthead_image(project_code_image_path(project))

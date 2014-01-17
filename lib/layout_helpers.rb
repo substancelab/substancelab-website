@@ -8,6 +8,16 @@ module LayoutHelpers
     attrs
   end
 
+  def masthead_image(image_url)
+    if image_url
+      content_for(:page_specific_style) do
+        content_tag(:style) do
+          show_code_image_in_header(image_url)
+        end
+      end
+    end
+  end
+
   def page_title
     title = if content_for?(:page_title)
       yield_content :page_title
@@ -20,6 +30,19 @@ module LayoutHelpers
     else
       "#{title} | Substance Lab"
     end
+  end
+
+  def css_for_masthead_image(image_url)
+    css = render_individual_file(
+      "stylesheets/modules/_masthead_image.css.sass"
+    )
+
+    # We can't pass variables to the template, so using low-level string
+    # replacement to get the image in there
+    css.gsub(
+      'url("<image_url_goes_here>")',
+      "url('#{image_url}')"
+    )
   end
 
 end

@@ -100,7 +100,7 @@ daily-rush:
 
 ejendomsstatistik:
   case_study: false
-  client: Lokalebasen.dk A/S
+  client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
   featured: false
   name: Ejendomsstatistik.dk
@@ -217,7 +217,7 @@ kontrakten:
 
 lokalebasen:
   case_study: true
-  client: Lokalebasen, Denmark
+  client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
   description:
     da: Lokalebasen.dk er Danmarks førende portal for udlejning af kontorlokaler, produktions- og lagerbygninger og butikker. Substance Lab har været med fra starten, og bygget sitet under anvendelse af agile metoder.

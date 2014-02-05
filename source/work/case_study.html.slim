@@ -16,7 +16,7 @@ priority: 1
 
 .case_study class=project.slug
   section
-    == partial project.slug, :locals => {:project => project}
+    == localized_partial File.join("work", project.slug), :locals => {:project => project}
     == project_image(project)
 
   section.details

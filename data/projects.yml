@@ -52,6 +52,8 @@ born-i-byen:
   position: 5
   services:
   - google_maps
+  - payment_gateway_integration
+  - responsive_design
   - web_application_development
   slug: born-i-byen
   technologies:

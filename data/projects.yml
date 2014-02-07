@@ -40,6 +40,8 @@ biq:
   website: http://biq.dk
 
 born-i-byen:
+  case_studies:
+  - da
   client: "Børn i byen, Denmark"
   client_website: http://bornibyen.dk
   description:
@@ -99,7 +101,6 @@ daily-rush:
   - PHP
 
 ejendomsstatistik:
-  case_study: false
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
   featured: false
@@ -116,7 +117,8 @@ ejendomsstatistik:
   website: http://ejendomsstatistik.dk
 
 eventzonen:
-  case_study: true
+  case_studies:
+  - en
   client: Underholdningsbureauet, Denmark
   client_website: http://eventzonen.dk
   description:
@@ -154,7 +156,8 @@ fab-it:
   - Ruby on Rails
 
 gamekillers:
-  case_study: true
+  case_studies:
+  - en
   client: SBS Radio, Denmark
   client_website: http://sbsradio.dk
   description:
@@ -216,7 +219,8 @@ kontrakten:
   - Ruby on Rails
 
 lokalebasen:
-  case_study: true
+  case_studies:
+  - en
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
   description:
@@ -287,7 +291,8 @@ region_syddanmark:
   - Ruby on Rails
 
 rp_lookups:
-  case_study: true
+  case_studies:
+  - en
   client: Mapicture, Denmark
   client_website: http://mapicture.dk
   description:

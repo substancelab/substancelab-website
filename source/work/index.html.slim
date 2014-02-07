@@ -15,7 +15,7 @@ section.portfolio
       .columns
         - projects.reject(&:nil?).each do |project|
           article.project.column id=project.slug
-            - if project.case_study
+            - if case_study?(project)
               == project_bubble(project)
             -else
               .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
@@ -29,7 +29,7 @@ section.portfolio
                 p= project_services(project)
 
               ul.link-list
-                - if project.case_study?
+                - if case_study?(project)
                   li== link_to(I18n.t("work.index.case_study"), project_url(project), :class => 'case_study', :title => I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name))
                 - unless project.website.blank?
                   li== link_to(I18n.t("work.index.project_website"), project.website, :class => 'external')

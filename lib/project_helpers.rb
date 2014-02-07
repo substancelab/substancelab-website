@@ -1,16 +1,35 @@
 require 'active_support/core_ext/array/grouping'
 
 module ProjectHelpers
+  def all_projects
+    data.projects.map { |slug, values|
+      build_project(values)
+    }.sort_by { |project|
+      [project.position, project.name.try(:downcase)]
+    }
+  end
+
+  def build_project(values)
+    OpenStruct.new(values)
+  end
+
+  # Returns all projects with case studies in the current locale
   def case_studies
-    data.projects.select { |slug, values|
-      values['case_study'] == true
-    }.values.sort_by(&:position)
+    locale = current_locale
+    all_projects.select { |project|
+      (project.case_studies || []).include?(locale)
+    }
+  end
+
+  # Returns true if project has a case study in the current locale
+  def case_study?(project)
+      Array(project.case_studies).include?(current_locale)
   end
 
   def featured_projects
-    data.projects.select { |slug, values|
-      values['featured'] == true
-    }.values.sort_by(&:position)
+    all_projects.select { |project|
+      project.featured
+    }
   end
 
   def project_bubble(project)
@@ -19,8 +38,8 @@ module ProjectHelpers
   end
 
   def portfolio_projects
-    projects = case_studies.sort_by { |p| [p.position, p.name.downcase] }
-    projects += featured_projects.select { |project| !project.case_study}.sort_by { |p| [p.position, p.name.downcase] }
+    projects = case_studies
+    projects += featured_projects.select { |project| !projects.include?(project) }
 
     # Always return in tripples
     projects = projects.first(projects.size - projects.size % 3)

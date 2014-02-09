@@ -14,7 +14,7 @@ SETTINGS = {
 SITE_SETTINGS = SETTINGS[LOCALE]
 # Expose configuration to the entire Middleman application
 SITE_SETTINGS.each do |key, value|
-  self.set(key, value)
+  self.set(key.intern, value)
 end
 
 require 'slim'

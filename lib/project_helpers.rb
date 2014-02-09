@@ -49,8 +49,8 @@ module ProjectHelpers
     "/work/"
   end
 
-  def project_code_image_path(project)
-    image = File.join("work", project.slug, "code.jpg")
+  def project_masthead_image_path(project)
+    image = File.join("work", project.slug, "masthead.jpg")
     if image_exists?(image)
       image_path(image)
     else

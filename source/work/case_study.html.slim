@@ -30,18 +30,20 @@ priority: 1
           h2= I18n.t("work.index.technologies_used")
           p= project.technologies.sort.to_sentence
 
-section.portfolio
-  .container
-    .columns.double.case_studies
-      .column
-        h2= I18n.t("work.show.other_case_studies")
-    .columns.case_studies
-      - case_studies.reject { |case_study| case_study.slug == project.slug }.shuffle.first(3).each do |case_study|
-          .project.column id=case_study.slug
-            == project_bubble(case_study)
-            .description
-              h3= case_study.name
-              p== localized(case_study.description)
+- other_case_studies = case_studies.reject { |case_study| case_study.slug == project.slug }
+- if other_case_studies.any?
+  section.portfolio
+    .container
+      .columns.double.case_studies
+        .column
+          h2= I18n.t("work.show.other_case_studies")
+      .columns.case_studies
+        - other_case_studies.shuffle.first(3).each do |case_study|
+            .project.column id=case_study.slug
+              == project_bubble(case_study)
+              .description
+                h3= case_study.name
+                p== localized(case_study.description)
 
 section.contact
   .container

@@ -44,6 +44,7 @@ activate :directory_indexes
 
 # Hello World
 activate :i18n, :mount_at_root => LOCALE
+I18n.locale = LOCALE
 require 'lib/i18n_helpers'
 helpers I18nHelpers
 

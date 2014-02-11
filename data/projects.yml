@@ -224,6 +224,7 @@ kontrakten:
 
 lokalebasen:
   case_studies:
+  - da
   - en
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk

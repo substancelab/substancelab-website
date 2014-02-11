@@ -332,6 +332,17 @@ smartphoneguide:
   technologies:
   - PHP
 
+test_cloud:
+  client: Xamarin Europe, Denmark
+  client_website: http://xamarin.com
+  name: Xamarin Test Cloud
+  position: 3
+  services:
+  - web_application_development
+  technologies:
+  - Angular
+  - Ruby on Rails
+
 wildfire:
   client: Wildfire, USA
   client_website: http://wildfireapp.com

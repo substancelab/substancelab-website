@@ -1,0 +1,30 @@
+.featured-work
+  +full-width
+  $_image_size: 350px
+  $_small_image_size: $_image_size - 50px
+  height: $_image_size
+  margin-bottom: 4rem
+  margin-top: 4rem
+  @media #{$breakpoint-phone}
+    height: $_small_image_size
+    margin-bottom: 0
+  .container
+    position: relative
+    .site
+      +bubble($_image_size)
+      position: absolute
+      @media #{$breakpoint-phone}
+        display: none
+    .nth-child-1
+      left: 0px
+      @media #{$breakpoint-phone}
+        display: block
+        left: 50%
+        height: $_small_image_size
+        margin-left: $_small_image_size/-2
+        width: $_small_image_size
+    .nth-child-2
+      left: 50%
+      margin-left: -$_image_size/2
+    .nth-child-3
+      right: 0px

@@ -1,5 +1,5 @@
 - content_for :masthead do
-  .container.blog-article-header
+  .blog-article-header
     h1.blog-article-headline== current_article.title
     .blog-article-meta
       = I18n.t("articles.show.meta_data", :author => "Jakob", :date => I18n.l(current_article.date.to_date, :format => :long))

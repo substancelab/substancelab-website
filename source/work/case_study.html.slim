@@ -9,10 +9,9 @@ priority: 1
   == project_services(project)
 
 - content_for :masthead do
-  .container
-    h1= project.name
-    .subtitle
-      = localized(project.description)
+  h1= project.name
+  .subtitle
+    = localized(project.description)
 
 .case_study class=project.slug
   section

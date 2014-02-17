@@ -21,6 +21,14 @@ module ProjectHelpers
     }
   end
 
+  # Adds project title and description to the masthead
+  def case_study_masthead(project)
+    content_for(:masthead) do
+      content_tag(:h1, project.name) +
+      content_tag(:div, localized(project.description), :class => "subtitle")
+    end
+  end
+
   # Returns true if project has a case study in the current locale
   def case_study?(project)
       Array(project.case_studies).include?(current_locale)

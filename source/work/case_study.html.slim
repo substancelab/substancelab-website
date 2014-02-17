@@ -20,14 +20,18 @@ priority: 1
 
   section.details
     .container
-      .columns.double
+      .columns.tripple
+        .column.description
+          h3 = project.name
+          p = localized(project.description)
+
         .column.services
-          h2= I18n.t("work.index.substance_lab_did")
-          p= project_services(project)
+          h3 = I18n.t("work.index.substance_lab_did")
+          p = project_services(project)
 
         .column.technologies
-          h2= I18n.t("work.index.technologies_used")
-          p= project.technologies.sort.to_sentence
+          h3 = I18n.t("work.index.technologies_used")
+          p = project.technologies.sort.to_sentence
 
 - other_case_studies = case_studies.reject { |case_study| case_study.slug == project.slug }
 - if other_case_studies.any?

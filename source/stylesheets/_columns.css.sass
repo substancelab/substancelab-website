@@ -26,7 +26,6 @@ $column_width: ($columns_total_width - ($columns_amount - 1) * $column_spacing) 
 
   +clear
 
-
   h1,
   .subtitle
     margin-left: 0
@@ -37,8 +36,7 @@ h1 + .columns
   margin-top: 29px
 
 /* Basic columns == .tripple columns */
-.column,
-.tripple.columns .column
+.column
   float: left
   margin-left: $column_spacing
   display: inline /* Avoid IE double margin bug - TODO: Move to ie6.css */

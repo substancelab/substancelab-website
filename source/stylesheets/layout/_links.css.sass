@@ -1,0 +1,30 @@
+/* Links */
+a
+  color: $link_color
+  font-weight: bold
+  text-decoration: none
+  +transition(0.2s all ease)
+
+  &:visited
+    color: $link_visited_color
+
+  &:focus,
+  &:hover
+    color: $link_hover_color
+    +transition(none)
+
+  &.image
+    background: inherit
+    padding: inherit
+    +border-radius(inherit)
+
+.more
+  background-color : $substance_lab_blue
+  color: #ffffff
+  display: block
+  font-weight: bold
+  padding: 5px 10px
+  text-align: center
+  text-decoration: none
+  text-shadow: #163440 1px 1px 2px
+  +border-radius(5px)

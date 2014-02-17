@@ -1,0 +1,49 @@
+/* Headlines */
+
+h1, h2, h3, .subtitle
+  +droid-sans
+  font-weight: bold
+
+h1,
+.subtitle,
+  margin-top: 0
+  font-size: 2.56em /* ~33.28px */
+  line-height: 1.1em /* ~36.608px */
+  padding-bottom: 2px
+  padding-top: 9px
+  text-shadow: rgba(0,0,0,0.3) 2px 2px 2px
+  @media #{$breakpoint-desktop}
+    font-size: 1.6em
+    padding: 0.2em 0
+    margin: 0
+
+h2
+  font-size: 1.6em
+  line-height: 1.6em
+  margin-top: 1.9em
+  margin-bottom: 0.5em
+  padding-bottom: 1px
+  padding-top: 0px
+
+h2:first-child
+  margin-top: 0
+
+h3
+  line-height: 1.8em
+  margin-top: 1.4em
+  margin-bottom: 0
+  padding-top: 1px
+
+
+.subtitle
+  font-size: 1.6em
+  font-weight: bold
+  line-height: 1.6em
+  margin-bottom: 0
+  margin-top: 0
+  padding-bottom: 1px
+  padding-top: 5px
+  @media #{$breakpoint-desktop}
+    font-size: 1em
+    font-weight: bold
+

@@ -22,8 +22,12 @@ namespace :middleman do
     system 'middleman build --clean'
   end
 
+  task :clean do
+    system 'rm -rf build'
+  end
+
   desc "Deploys the site to whatever host is configured in middleman"
-  task :deploy => :build do
+  task :deploy => [:clean, :build] do
     system 'middleman deploy'
   end
 end

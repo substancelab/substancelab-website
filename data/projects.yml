@@ -26,6 +26,7 @@ biq:
   name: BiQ
   position: 5
   services:
+  - api_development
   - web_application_development
   - webdesign
   slug: biq
@@ -51,6 +52,7 @@ born-i-byen:
   name: "Børn i byen"
   position: 2
   services:
+  - api_development
   - google_maps
   - payment_gateway_integration
   - responsive_design
@@ -232,6 +234,7 @@ lokalebasen:
   name: Lokalebasen
   position: 1
   services:
+  - api_development
   - economic_integration
   - google_maps
   - internationalization
@@ -304,7 +307,6 @@ rp_lookups:
   name: Internal analysis tool
   position: 4
   services:
-  services:
   - automation
   - project_management
   - rejseplanen_integration
@@ -338,6 +340,7 @@ test_cloud:
   name: Xamarin Test Cloud
   position: 3
   services:
+  - api_development
   - web_application_development
   technologies:
   - Angular

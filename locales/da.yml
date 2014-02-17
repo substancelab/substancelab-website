@@ -23,6 +23,7 @@ da:
     home: Forside
     work: Cases
   services:
+    api_development: Udvikling af API
     automation: Automatisering
     economic_integration: Integration med E-conomic
     google_maps: Integration med Google Maps

@@ -23,6 +23,7 @@ en:
     home: Home
     work: Work
   services:
+    api_development: API development
     automation: Automation
     economic_integration: E-conomic integration
     google_maps: Google Maps integration

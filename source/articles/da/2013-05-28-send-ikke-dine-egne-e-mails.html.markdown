@@ -1,7 +1,7 @@
 ---
 title: Send ikke dine egne e-mails
 date: 2013-05-28 15:10 UTC
-tags:
+tags: eksterne tjenester, produktstyring, software
 ---
 
 Jeg er - som den trofaste læser, nok har bemærket - stor fortaler for at lade eksterne tjenester håndtere så meget som muligt af din web applikation. Et af de områder, der er oplagt, er udsending af e-mail.

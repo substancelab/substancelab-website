@@ -4,7 +4,6 @@ tags: features, software, udvikling
 ---
 
 Når en udvikler fortæller dig, "beklager, det kan ikke lade sig gøre", er det tit en løgn - eller i bedste fald en tilpasning af sandheden til en ønsket virkelighed.
-
 READMORE
 
 Typisk er den ønskede feature eller ændring teknisk mulig, men der er en række muligheder, som vil resultere i "det kan ikke lade sig gøre" svaret:

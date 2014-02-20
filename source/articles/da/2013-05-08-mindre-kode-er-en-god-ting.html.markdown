@@ -1,7 +1,7 @@
 ---
 title: Mindre kode er en god ting
 date: 2013-05-08 10:44
-tags: software, development, product management
+tags: software, udvikling, produktstyring
 ---
 
 Man skulle tro, at jeg er fortaler for endnu mere kode i projekter. Det er sådan set også, men kode kommer med en række risici, som er værd at være opmærksom på.

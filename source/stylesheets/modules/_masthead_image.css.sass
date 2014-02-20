@@ -3,5 +3,7 @@
 //
 // It adds a full-width background image to the masthead.
 @import "compass/css3/images"
+@import "_colors.css.sass"
 .masthead
-  +background-image(linear-gradient(top, rgba(50,106,128,1) 0%,rgba(50,106,128,0) 200%), url("<image_url_goes_here>"))
+  +background-image(linear-gradient(top, rgba($base-color, 1) 0%,rgba($base-color, 0) 200%), url("<image_url_goes_here>"))
+  background-size: cover

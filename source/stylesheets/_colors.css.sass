@@ -11,10 +11,14 @@
 
 
 /* Define some colors */
-$substance_lab_blue: #326A80
+$base-color: rgba(0,238,75,1)
+$accent-color: rgba(0,255,123,1)
+
+$substance_lab_blue: $base-color
 $error_color: #dd2222
 
-$body_text_color: #333322
-$link_color: lighten($substance_lab_blue, 10%)
-$link_hover_color: #ff9900
-$link_visited_color: darken($substance_lab_blue, 10%)
+$body_color: #f4f5eD
+$body_text_color: #223322
+$link_color: $base-color
+$link_hover_color: $accent-color
+$link_visited_color: darken($link_color, 10%)

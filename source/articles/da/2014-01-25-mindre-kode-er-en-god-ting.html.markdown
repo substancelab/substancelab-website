@@ -1,6 +1,5 @@
 ---
 title: Mindre kode er en god ting
-date: 2013-05-08 10:44
 tags: software, udvikling, produktstyring
 ---
 

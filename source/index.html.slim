@@ -3,7 +3,16 @@ priority: 1
 ---
 - content_for :masthead do
   .hero
-    h1== I18n.t("index.peptalk")
+    h1.tagline Grow online
+    h1.peptalk == I18n.t("index.peptalk")
+
+- content_for :scripts do
+  javascript:
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.hero').addClass('peptalk-is-visible');
+      }, 1000)
+    });
 
 section#company
   .container

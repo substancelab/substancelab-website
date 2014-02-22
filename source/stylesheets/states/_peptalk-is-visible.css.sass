@@ -1,0 +1,19 @@
+.masthead
+  .tagline, .peptalk
+    +transition(2s opacity ease)
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translateY(-50%) translateX(-50%)
+
+  .tagline
+    opacity: 1
+  .peptalk
+    opacity: 0
+    width: 90%
+
+.peptalk-is-visible
+  .tagline
+    opacity: 0
+  .peptalk
+    opacity: 1

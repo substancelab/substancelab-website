@@ -3,6 +3,11 @@ task :deploy => "middleman:deploy"
 namespace :images do
   task :optimize => ["optimize:all"]
 
+  desc "Removes colors from all masthead images"
+  task :desaturate_mastheads do
+    system 'find source/images -name masthead.jpg -exec mogrify -grayscale Brightness {} \;'
+  end
+
   namespace :optimize do
     task :all => [:jpg, :png]
 

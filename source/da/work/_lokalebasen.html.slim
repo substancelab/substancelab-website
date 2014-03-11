@@ -3,86 +3,160 @@
     h1 "Ambitionen er at skabe en portal, der samler alle erhvervslejemål i Danmark"
 
 article
-  .container
+  section.intro
+    .container
+      markdown:
+        Når målet er at bliver Danmarks førende portal for formidling af
+        erhvervslokaler, bygger man ikke sin forretning på en standard hyldevare.
 
-    markdown:
-      Når målet er at bliver Danmarks førende portal for formidling af
-      erhvervslokaler, bygger man ikke sin forretning på en standard hyldevare.
+        Substance Lab byggede nøjagtigt den platform, der passer til Lokalebasen.dk's
+        forretning, og der blev bygget fremtidssikret.
 
-      Der skal bygges nøjagtigt det, der passer til ens forretning, og der skal
-      bygges til fremtiden.
+  section.process
+    .container
+      markdown:
+        ## Iterativ udvikling
 
-      ## Iterativ udvikling
+        Lokalebasen.dk ved, at det bedste produkt udvikles ved at få idéer
+        realiseret hurtigt og placeret på skærmene foran rigtige brugere. Feedback
+        fra de personer, der faktisk bruger og betaler for ens løsning, er
+        uvurderlig.
 
-      Lokalebasen.dk ved, at det bedste produkt udvikles ved at få idéer
-      realiseret hurtigt og placeret på skærmene foran rigtige brugere. Feedback
-      fra de personer, der faktisk bruger og betaler for ens løsning, er
-      uvurderlig.
+        Ved dagligt at lægge ændringer i drift har Substance Lab sikret at
+        Lokalebasen.dk konstant har kunne drage erfaringer fra deres kunder og
+        løbende forbedre deres webløsning.
 
-      Ved dagligt at lægge ændringer i drift har Substance Lab sikret at
-      Lokalebasen.dk konstant har kunne drage erfaringer fra deres kunder og
-      løbende forbedre deres webløsning.
+  section.collaboration
+    .container
+      markdown:
+        ## Lokal erfaring
 
+        For Lokalebasen.dk var det vigtigt at finde en lokal leverandør med bred
+        erfaring fra udvikling af webløsninger.
 
-      ## 5 år, samme platform
+        Det fandt de i Substance Lab og fik samtidig en samarbejdspartner, der var
+        i stand til at udfordre de forretningsmæssige antagelser og skære igennem
+        til den enkle tekniske løsning.
 
-      For Lokalebasen.dk har det været vigtigt at få webløsning, der er stabil
-      og fremtidsikret; Når der er tale om ens forretningsgrundlag, kan det
-      ikke betale sig at springe over, hvor gærdet er lavest.
+  section.code
+    .container
+      markdown:
+        ## 5 år, samme platform
 
-      Lokalebasens platform er udviklet med automatiske tests og kritiske
-      øjne på kvaliteten af koden. Det betyder, at den samme kode, der blev sat
-      i drift i 2009, stadig kører store dele af Lokalebasen.dk i 2014.
+        For Lokalebasen.dk har det været vigtigt at få webløsning, der er stabil
+        og fremtidsikret; Når der er tale om ens forretningsgrundlag, kan det
+        ikke betale sig at springe over, hvor gærdet er lavest.
 
-
-      ## Lokal erfaring
-
-      For Lokalebasen.dk var det vigtigt at finde en lokal leverandør med bred
-      erfaring fra udvikling af webløsninger.
-
-      Det fandt de i Substance Lab og fik samtidig en samarbejdspartner, der var
-      i stand til at udfordre de forretningsmæssige antagelser og skære igennem
-      til den enkle tekniske løsning.
+        Lokalebasens platform er udviklet med automatiske tests og kritiske
+        øjne på kvaliteten af koden. Det betyder, at den samme kode, der blev sat
+        i drift i 2009, stadig kører store dele af Lokalebasen.dk i 2014.
 
   section.graph
     .graph-mask
       canvas#gross-profit
 
-  .container
-    markdown:
+  section.results
+    .container
+      markdown:
+        ## Resultatet
 
-      ## Resultatet
+        5 år efter lancering er Lokalebasen.dk blevet en succesfuld forretning.
+        Den oprindelige kodebase danner stadigt grundlag.
 
-      5 år efter lancering er Lokalebasen.dk blevet en succesfuld forretning.
-      Den oprindelige kodebase danner stadigt grundlag.
+      .fact-figure
+        .counter 3
+        .label lande
 
-      * 3 lande
-      * 5 udviklere
-      * 10 ansatte
-      * 750 udlejninger om året [1]
-      * 70.000 månedlige besøgende [1]
+      .fact-figure
+        .counter 5
+        .label udviklere
 
+      .fact-figure
+        .counter 10
+        .label ansatte
 
-      ## Udbygning af teamet
+      .fact-figure
+        .counter 750
+        .label udlejninger om året [1]
 
-      ## Internationalt
+      .fact-figure
+        .counter 70.000
+        .label månedlige beøgende [1]
 
-      ## Integrationer
+      markdown:
+        ## Udbygning af teamet
 
-      ## Resultatet
+        ## Internationalt
 
-      10+ ansatte, tilstedeværelse i 5 lande.
+        ## Integrationer
 
-      * Omsætning
-      * Antal ansatte
-      * Flere lande
+        ## Resultatet
 
-      [1]: http://www.lokalebasen.dk/nyheder/fortsat-stigende-udlejningstal-og-markant-omsaetningsfremgang-i-2013
+        10+ ansatte, tilstedeværelse i 5 lande.
+
+        * Omsætning
+        * Antal ansatte
+        * Flere lande
+
+        [1]: http://www.lokalebasen.dk/nyheder/fortsat-stigende-udlejningstal-og-markant-omsaetningsfremgang-i-2013
 
 
 == javascript_include_tag "Chart.min.js"
 
 css:
+  section {
+    background-size: cover;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .code {
+    background-image:
+      -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5)),
+      url(/images/work/lokalebasen/code.jpg);
+    color: #dddddd;
+    text-shadow: #000000 0 0 2px;
+  }
+
+  .code h2 {
+    color: #ffffff
+  }
+
+  .intro {
+    font-size: 1.4em;
+    line-height: 1.6em;
+    padding: 0;
+    padding-bottom: 3rem;
+  }
+
+  .intro .container {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2em;
+    text-align: justify;
+    width: 90%;
+  }
+  @media screen and (max-width: 800px) {
+    .intro {
+      padding-bottom: 0;
+    }
+    .intro .container {
+      text-align: left;
+      -webkit-column-count: 1;
+    }
+  }
+
+  .process {
+    background-image:
+      -webkit-linear-gradient(top, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)),
+      url(/images/work/lokalebasen/whiteboard.jpg);
+  }
+
+  .results {
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+  }
+
   .graph-mask {
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;

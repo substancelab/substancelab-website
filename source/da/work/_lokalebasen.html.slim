@@ -82,28 +82,48 @@ article
 
 == javascript_include_tag "Chart.min.js"
 
+css:
+  .graph-mask {
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    overflow: hidden;
+    width: 0%;
+  }
+
+  .in .graph-mask {
+    width: 100%;
+  }
+
 - content_for :scripts do
   javascript:
     function GrossProfitGraph(element, labels, values) {
-      this.hasBeenAnimated = function(element) {
-        return $(element).hasClass('in');
+      this.hasBeenAnimated = function() {
+        this.element.hasClass('in');
       };
 
       this.resetAnimation = function() {
+        this.element.removeClass('in');
       };
 
       this.setupWaypoint = function() {
+        var graph = this;
+        graph.resetAnimation();
+        graph.element.waypoint(function(direction) {
+          graph.startAnimation();
+        }, {
+          offset: "75%"
+        });
       };
 
       this.startAnimation = function() {
-        if (this.hasBeenAnimated(this.element())) {
+        if (this.hasBeenAnimated(this.element)) {
           return false;
         };
 
-        this.element().addClass('in');
+        this.element.addClass('in');
       };
 
-
+      // -----------
       // Constructor
 
       this.values = values;
@@ -136,10 +156,12 @@ article
 
       var options = {
         bezierCurve: false,
-        scaleShowLabels: false,
+        scaleShowLabels: false
       };
 
       var grossProfitChart = new Chart(context).Line(data, options);
+
+      this.setupWaypoint()
     };
 
     $(document).ready(function() {

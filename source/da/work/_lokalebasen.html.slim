@@ -1,3 +1,6 @@
+- content_for :stylesheets do
+  == stylesheet_link_tag "case_studies/lokalebasen"
+
 - content_for :masthead do
   .container
     h1 "Ambitionen er at skabe en portal, der samler alle erhvervslejemål i Danmark"
@@ -91,71 +94,6 @@ article
 
 
 == javascript_include_tag "Chart.min.js"
-
-css:
-  section {
-    background-size: cover;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
-  }
-
-  .code {
-    background-image:
-      -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5)),
-      url(/images/work/lokalebasen/code.jpg);
-    color: #dddddd;
-    text-shadow: #000000 0 0 2px;
-  }
-
-  .code h2 {
-    color: #ffffff
-  }
-
-  .intro {
-    font-size: 1.4em;
-    line-height: 1.6em;
-    padding: 0;
-    padding-bottom: 3rem;
-  }
-
-  .intro .container {
-    -webkit-column-count: 2;
-    -webkit-column-gap: 2em;
-    text-align: justify;
-    width: 90%;
-  }
-  @media screen and (max-width: 800px) {
-    .intro {
-      padding-bottom: 0;
-    }
-    .intro .container {
-      text-align: left;
-      -webkit-column-count: 1;
-    }
-  }
-
-  .process {
-    background-image:
-      -webkit-linear-gradient(top, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)),
-      url(/images/work/lokalebasen/whiteboard.jpg);
-  }
-
-  .results {
-    -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
-  }
-
-  .graph-mask {
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    overflow: hidden;
-    width: 0%;
-  }
-
-  .in .graph-mask {
-    width: 100%;
-  }
 
 - content_for :scripts do
   javascript:

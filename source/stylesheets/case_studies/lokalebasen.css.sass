@@ -1,3 +1,6 @@
+@import "compass/css3/columns"
+@import "compass/css3/images"
+
 .lokalebasen
   article
     section
@@ -8,7 +11,7 @@
       padding-top: 3rem
 
     .code
-      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5)), url(/images/work/lokalebasen/code.jpg)
+      +background-image(linear-gradient(top, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5)), url(/images/work/lokalebasen/code.jpg))
       color: #dddddd
       text-shadow: #000000 0 0 2px
 
@@ -16,8 +19,8 @@
       color: #ffffff
 
     .intro .container
-      -webkit-column-count: 2
-      -webkit-column-gap: 4em
+      +column-count(2)
+      +column-gap(4em)
       text-align: justify
       width: 90%
 
@@ -27,13 +30,13 @@
 
       .intro .container
         text-align: left
-        -webkit-column-count: 1
+        +column-count(1)
 
     .process
-      background-image: -webkit-linear-gradient(top, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)), url(/images/work/lokalebasen/whiteboard.jpg)
+      +background-image(linear-gradient(top, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)), url(/images/work/lokalebasen/whiteboard.jpg))
 
     .results
-      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+      +background-image(linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)))
 
     .graph
       margin-top: -4rem
@@ -47,4 +50,3 @@
 
     .in .graph-mask
       width: 100%
-

@@ -8,4 +8,5 @@ gem "middleman-minify-html"
 
 gem "activesupport"
 gem "builder"
+gem "json", "<= 1.8.0"
 gem "slim"

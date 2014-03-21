@@ -2,8 +2,9 @@
 
 // Generic masthead element. This wraps the title and subtitle
 .masthead
-  background: #dddddd
-  +background-image(linear-gradient(top, #eeeeee, #dddddd))
+  background: #777777
+  +background-image(linear-gradient(top, #ffffff, #666666, #333333))
+  color: #ffffff
   +full-width
   margin:
     bottom: 2em
@@ -11,9 +12,6 @@
     right: 0
   padding-bottom: 2em
   text-align: center
-
-  @media #{$breakpoint-desktop}
-    padding-top: 1em
 
   .masthead-container
     @extend .container

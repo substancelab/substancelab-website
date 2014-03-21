@@ -1,26 +1,26 @@
+@import "compass/css3/images"
+
 // Generic masthead element. This wraps the title and subtitle
 .masthead
+  background: #dddddd
+  +background-image(linear-gradient(top, #eeeeee, #dddddd))
   +full-width
-  background:
-    color: $substance_lab_blue
-    image: url(/images/wedge.png)
-    position: 50% 50%
-    repeat: no-repeat
-    size: 100% 100%
   margin:
     bottom: 2em
     left: 0
     right: 0
   padding-bottom: 2em
+  text-align: center
 
   @media #{$breakpoint-desktop}
     padding-top: 1em
 
   .masthead-container
     @extend .container
+    max-width: 600px
     padding:
       bottom: 2em
-      top: 2em
+      top: 5em
     position: relative
 
   h1, .subtitle

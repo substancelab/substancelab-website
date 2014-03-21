@@ -6,6 +6,8 @@ priority: 1
     h1.tagline Grow online
     h1.peptalk == I18n.t("index.peptalk")
 
+- masthead_image("/images/masthead/index.jpg")
+
 - content_for :scripts do
   javascript:
     $(document).ready(function() {
@@ -90,3 +92,4 @@ section#map
       $('.sliding_quotes').quoteSlider();
     })
   == javascript_include_tag 'substance_lab.js'
+

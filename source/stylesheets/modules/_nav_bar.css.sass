@@ -4,7 +4,6 @@
   +border-radius(1em)
   color: $body_text_color
   display: block
-  font-weight: 300
   padding: 0 1em
   text-decoration: none
   &:hover, &:focus
@@ -13,7 +12,7 @@
     background-color: inherit
     color: $body_text_color
   &:hover
-    background-color: $substance_lab_blue / 2
+    background-color: $base_color
     color: #ffffff
     text-decoration: none
 
@@ -25,16 +24,27 @@
   overflow: hidden
   padding: 1em 0
 
-  a
-    @extend %nav-bar-link
-
   .logo
-    color: $body_text_color
+    bottom: 0.5em
+    display: block
     font-weight: bold
+    text-align: center
+    position: absolute
+    width: 100%
 
   .branding
+    +curve
+    color: $body_text_color
+    display: block
     float: left
-    margin-left: -1em
+    height: 8.5em
+    margin-top: -20px
+    position: absolute
+    width: 8.5em
+    z-index: 1000
+    &:hover
+      border: 0
+      color: #ffffff
 
   nav
     float: right
@@ -44,7 +54,5 @@
     li
       float: left
       margin-left: 1px
-
-  a.current
-    background-color: $substance_lab_blue
-
+    a
+      @extend %nav-bar-link

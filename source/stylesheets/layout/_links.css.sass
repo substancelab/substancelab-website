@@ -1,18 +1,18 @@
 /* Links */
 a
-  color: $link_color
+  color: $link-color
   font-weight: bold
   text-decoration: none
   +transition(0.2s all ease)
 
   &:visited
-    color: $link_visited_color
+    color: $link-visited-color
 
   &:focus,
   &:hover
-    color: $link_hover_color
+    color: $link-hover-color
     +transition(none)
-    border-bottom: 2px solid $link_hover_color
+    border-bottom: 2px solid $link-hover-color
 
   &.image
     background: inherit
@@ -20,7 +20,7 @@ a
     +border-radius(inherit)
 
 .more
-  background-color : $substance_lab_blue
+  background-color : $base-color
   color: #ffffff
   display: block
   font-weight: bold

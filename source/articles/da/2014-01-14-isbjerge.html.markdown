@@ -1,6 +1,7 @@
 ---
 title: Isbjerge
 tags: software, udvikling, prioritering, eksterne tjenester
+image: iceberg.jpg
 ---
 Der findes en kategori af features, som du næsten uundgåeligt møder under udviklingen af applikationer af en hvis størrelse. Det kan være features som udsending af mails, abonnementsbetaling, nyhedsbrevsudsending, fakturering, søgning.
 READMORE
@@ -20,3 +21,5 @@ Lad nu være med at bruge tid og penge på at bygge et nyhedsbrevssystem, der ku
 ## Fokusér på _din_ kerneforretning
 
 Brug din energi og udviklingskroner på at lave de features, der er nødvendige for at levere værdi til dine kunder. Brug eksterne tjenester til alt det andet -- især i starten, hvor pengene er små og fokus er ultravigtigt.
+
+[Foto taget af NOAA's National Ocean Service](https://www.flickr.com/photos/40322276@N04/8290528771/in/photolist-dCB8ne-8Zm9W4-cXSgjA-cXSery-9RoCUm-88ea6G-btyQiz-9irVQv-9ipY5r-d3UzjQ-aeYe5A-9cQyXV-9Q1Y4X-dzQbE4-7zehD5-dMgaBS-9muk1c-dMWfcf-dMQQ2P-dMQSqx-dMWiFC-dMWkLS-aPiHBx-fD7Pag-dziWpx-dzpsfb-dzprk1-dzpsA3-aeKqrb-aeKoS9-cEiZud-a6XjJ7-9FmwC3-dMc1Lj-9dUPjh-9dRU6F-9dRJ66-9dRUMa-9dULZW-9dUWSU-9dRTva-9dUNDU-dt48mM-9u2Vyu-9DHQPZ-dqT1k8-dUaPst-cfGHpq-dqTb1j)

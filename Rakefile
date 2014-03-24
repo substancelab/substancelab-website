@@ -5,7 +5,7 @@ namespace :images do
 
   desc "Removes colors from all masthead images"
   task :desaturate_mastheads do
-    system 'find source/images -name masthead.jpg -exec mogrify -grayscale Brightness {} \;'
+    system 'find source/images -name masthead.jpg -exec ./scripts/mastheadify {} \;'
   end
 
   namespace :optimize do

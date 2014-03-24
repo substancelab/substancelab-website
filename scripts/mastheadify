@@ -1,0 +1,1 @@
+mogrify -fill black -colorize 33% -grayscale Rec709Luma $1

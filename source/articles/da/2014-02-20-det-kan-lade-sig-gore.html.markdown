@@ -1,6 +1,11 @@
 ---
 title: Det kan lade sig gøre
 tags: features, software, udvikling
+photo:
+  credits:
+    name: "Paul"
+    url: https://www.flickr.com/photos/81265351@N00/5700609302
+  filename: "thumbs_up.jpg"
 ---
 
 Når en udvikler fortæller dig, "beklager, det kan ikke lade sig gøre", er det tit en løgn - eller i bedste fald en tilpasning af sandheden til en ønsket virkelighed.

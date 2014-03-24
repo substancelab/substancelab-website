@@ -1,6 +1,11 @@
 ---
 title: www er ligegyldigt
 tags: domæner, www, server
+photo:
+  credits:
+    name: Barry Skeates
+    url: https://www.flickr.com/photos/barryskeates/6296025486/
+  filename: web.jpg
 ---
 I World Wide Webs spæde start var "www" i starten af en website-adresse med til at signalere, at "her kommer et af disse nymodens domænenavne, hvor du kan læse informationer". Nu til dags er det absolut overflødigt.
 

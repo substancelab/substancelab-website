@@ -1,9 +1,22 @@
 module ArticleHelpers
+  def article_data(article)
+    article.metadata.fetch(:page, {})
+  end
+
   def article_image(article)
-    image = article.metadata.fetch(:page, {}).fetch("image", nil)
+    image = article_photo_data(article, "filename")
     if image
       article_image_path = File.join(article_images_path(article), image)
       image_path(article_image_path)
+    end
+  end
+
+  def article_photo_data(article, key = nil)
+    photo_data = article_data(article).fetch("photo", {})
+    if key
+      photo_data.fetch(key, nil)
+    else
+      photo_data
     end
   end
 

@@ -10,6 +10,10 @@ article.blog-article
       == current_article.body
 
     aside
+      - if photo_credits = article_photo_data(current_article, "credits")
+        ul.credits
+          li = link_to(I18n.t("articles.show.photo_credits", :name => photo_credits["name"]), photo_credits["url"])
+
       nav
         .previous
           - if article = current_article.previous_article

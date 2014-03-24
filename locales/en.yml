@@ -5,6 +5,7 @@ en:
       meta_data: "%{author} wrote this on %{date}"
       sound_interesting: Did this sound interesting?
       personal_conversation: Let us talk about how Substance Lab can help you.
+      photo_credits: "Photo by %{name}"
 
   contact_details:
     email: "Send an email to %{email_link}"

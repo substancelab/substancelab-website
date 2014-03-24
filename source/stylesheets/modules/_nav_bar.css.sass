@@ -33,18 +33,28 @@
     width: 100%
 
   .branding
+    $_size: 8.5em
     +curve
     color: $body-text-color
     display: block
     float: left
-    height: 8.5em
+    height: $_size
     margin-top: -20px
     position: absolute
-    width: 8.5em
+    width: $_size
     z-index: 1000
     &:hover
       border: 0
       color: #ffffff
+    @media #{$breakpoint-desktop}
+      margin-top: -6.3em
+    @media #{$breakpoint-phone}
+      $_size: 1.5em
+      height: $_size
+      margin-top: 0px
+      width: $_size
+      .logo
+        display: none
 
   nav
     float: right

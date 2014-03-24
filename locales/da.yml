@@ -3,8 +3,6 @@ da:
   articles:
     show:
       meta_data: "Skrevet af %{author} d. %{date}"
-      sound_interesting: Lyder det interessant?
-      personal_conversation: Lad os snakke om hvad Substance Lab kan hjælpe dig med.
       photo_credits: "Billede taget af %{name}"
 
   contact_details:

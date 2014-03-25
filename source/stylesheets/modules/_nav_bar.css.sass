@@ -25,12 +25,18 @@
   padding: 1em 0
 
   .logo
-    bottom: 0.5em
+    bottom: 0
     display: block
     font-weight: bold
+    font-size: 1.45em
+    line-height: 1em
     text-align: center
+    padding: 0.5em // Controls the spacing to the edges of the branding box
     position: absolute
+    text-indent: 0.15em
     width: 100%
+    .substance, .lab
+      text-align: left
 
   .branding
     $_size: 8.5em
@@ -46,8 +52,6 @@
     &:hover
       border: 0
       color: #ffffff
-    @media #{$breakpoint-desktop}
-      margin-top: -6.3em
     @media #{$breakpoint-phone}
       $_size: 1.5em
       height: $_size

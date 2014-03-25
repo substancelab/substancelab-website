@@ -35,7 +35,9 @@ html lang="#{current_locale}"
       .nav-bar
         .container
           == link_to("/", :class => 'branding', :title => "Substance Lab | Carefully crafting websites and web applications") do
-            .logo Substance Lab
+            .logo
+              .substance Substance
+              .lab Lab
           nav
             ul
               li== link_to I18n.t("navigation.home"), "/"

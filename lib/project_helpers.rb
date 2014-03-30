@@ -40,9 +40,29 @@ module ProjectHelpers
     }
   end
 
-  def project_bubble(project)
-    image = asset_url("/images/work/#{project.slug}/square.jpg")
-    link_to(I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name), project_url(project), :class => 'site', :style => "background-image: url(#{image})")
+  def project_tile(project)
+    description = capture do
+      content_tag(:h2, project.name) +
+      content_tag(:p, localized(project.description))
+    end
+
+    tile = capture do
+      content_tag(
+        :div,
+        "",
+        :class => "site",
+        :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+      ) + content_tag(
+        :div, description, :class => "description"
+      )
+    end
+
+    url = case_study?(project) ? project_url(project) : nil
+    if url
+      link_to(tile, url, :class => "project block-link")
+    else
+      content_tag(:div, tile, :class => "project")
+    end
   end
 
   def portfolio_projects

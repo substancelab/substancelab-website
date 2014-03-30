@@ -22,9 +22,10 @@ section#company
 
 section.featured-work
   .container
-    - featured_projects.first(3).each_with_index do |project, index|
-      - url = case_study?(project) ? project_url(project) : projects_url
-      == link_to(I18n.t("index.web_application_work_by_substance_lab"), url, :class => "site nth-child-#{index + 1}", :style => "background-image: url(/images/work/#{project.slug}/square.jpg)")
+    .columns
+      - featured_projects.first(3).each_with_index do |project, index|
+          .column
+            == project_tile(project)
 
 section#person
   .container

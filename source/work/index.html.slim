@@ -14,25 +14,8 @@ section.portfolio
     - portfolio_projects.in_groups_of(3).each do |projects|
       .columns
         - projects.reject(&:nil?).each do |project|
-          article.project.column id=project.slug
-            - if case_study?(project)
-              == project_bubble(project)
-            -else
-              .site style="background-image: url(/images/work/#{project.slug}/square.jpg)"
-            .description
-              h2= project.name
-
-              p== localized(project.description)
-
-              - unless project.services.blank?
-                h3= I18n.t("work.index.substance_lab_did")
-                p= project_services(project)
-
-              ul.link-list
-                - if case_study?(project)
-                  li== link_to(I18n.t("work.index.case_study"), project_url(project), :class => 'case_study', :title => I18n.t("work.index.link_to_case_study", :client => project.client, :project => project.name))
-                - unless project.website.blank?
-                  li== link_to(I18n.t("work.index.project_website"), project.website, :class => 'external')
+          .column
+            == project_tile(project)
 
   section.clients
     .container

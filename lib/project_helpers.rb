@@ -92,18 +92,30 @@ module ProjectHelpers
   end
 
   def project_image(project)
-    image = File.join("work", project.slug, "project.jpg")
-    if image_exists?(image)
-      content_tag(
-        :section,
-        content_tag(
-          :div,
-          image_tag(image, :alt => I18n.t("work.show.screenshot_of_project", :project_name => project.name)),
-          :class => "container"
-        ),
-        :class => 'display-project'
+    image_path = File.join("work", project.slug, "project.jpg")
+    return nil unless image_exists?(image_path)
+    image = image_tag(image_path, :alt => I18n.t("work.show.screenshot_of_project", :project_name => project.name))
+
+    url = project.website
+    image_with_link = if url
+      link_to(
+        image,
+        url,
+        :title => I18n.t("work.index.project_website")
       )
+    else
+      image
     end
+
+    content_tag(
+      :section,
+      content_tag(
+        :div,
+        image_with_link,
+        :class => "container"
+      ),
+      :class => 'display-project'
+    )
   end
 
   def project_services(project)

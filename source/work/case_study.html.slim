@@ -12,10 +12,7 @@ priority: 1
   section
     == localized_partial File.join("work", project.slug), :locals => {:project => project}
 
-    - if project.website.blank?
-      == project_image(project)
-    - else
-      == link_to(project_image(project), project.website, :title => I18n.t("work.index.project_website"))
+    == project_image(project)
 
   section.details
     .container

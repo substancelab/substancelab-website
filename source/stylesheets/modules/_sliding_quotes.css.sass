@@ -1,5 +1,7 @@
 .quotes
   +full-width
+  background: #666666
+  color: #ffffff
 
 .sliding_quotes
   height: 13em
@@ -8,21 +10,17 @@
   position: relative
   width: 90%
   blockquote
+    left: 0
     opacity: 0
     position: absolute
-    top: 5em
-    left: 0
-    -moz-transition: all 1s ease
-    -webkit-transition: all 1s ease
-    transition: all 1s ease
-    .author
-      -moz-transition: all 1s ease 0.5s
-      -webkit-transition: all 1s ease 0.5s
-      transition: all 1s ease 0.5s
-      margin-top: 2em
+    top: 55%
+    -webkit-transform: translateY(-50%)
+    -moz-transition: all 2s ease
+    -webkit-transition: all 2s ease
+    transition: all 2s ease
     &.current
       opacity: 1
-      top: 0
+      top: 50%
       .author
         margin-top: 0
 

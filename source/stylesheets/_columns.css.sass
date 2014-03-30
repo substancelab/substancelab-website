@@ -21,9 +21,6 @@ $column_width: ($columns_total_width - ($columns_amount - 1) * $column_spacing) 
 
 .columns
   clear: both
-
-  margin-bottom: 40px
-
   +clear
 
   h1,
@@ -39,7 +36,7 @@ h1 + .columns
 .column
   float: left
   margin-left: $column_spacing
-  display: inline /* Avoid IE double margin bug - TODO: Move to ie6.css */
+  margin-top: $grid_column_spacing
   width: $column_width
 
   @media #{$breakpoint-desktop}
@@ -49,6 +46,14 @@ h1 + .columns
 
 .column:first-child, .first-child
   margin-left: 0
+
+.columns:first-child .column
+  margin-top: 0
+
+  @media #{$breakpoint-desktop}
+    margin-top: $column_spacing
+    &:first-child
+      margin-top: 0
 
 .single.columns .column
   /*: 3 columns with spacing between */

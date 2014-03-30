@@ -1,5 +1,7 @@
 p
   margin-bottom: 1.8em
+  &:last-child
+    margin-bottom: 0
 
 strong
   font-weight: bold
@@ -41,14 +43,19 @@ nav
 
 article,
 section
-  margin-bottom: 3rem
-  margin-top: 3rem
   .container
     max-width: 42em
     width: 66%
 
     @media #{$breakpoint-desktop}
       width: 90%
+
+section
+  margin: 0
+  padding:
+    bottom: $spacing
+    top: $spacing
+
 
 .columns
   h1,
@@ -105,6 +112,3 @@ footer
   .network
     clear: left
     float: left
-
-.vcard
-  margin-bottom: 1em

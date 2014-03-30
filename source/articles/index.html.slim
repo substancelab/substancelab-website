@@ -6,10 +6,8 @@
 section.article-list
   .container
     - articles = blog.articles
-
-    section
-      - articles.each do |article|
-        article.article-list-article
-          h2.entry-title== link_to article.title, article
-          == article.summary
-          p== link_to "Læs artiklen '#{article.title}'", article
+    - articles.each do |article|
+      article.article-list-article
+        h2.entry-title== link_to article.title, article
+        == article.summary
+        p== link_to "Læs artiklen '#{article.title}'", article

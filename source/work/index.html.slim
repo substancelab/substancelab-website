@@ -9,13 +9,14 @@ section: portfolio
   .subtitle== I18n.t("work.index.featured_works")
 - masthead_image("/images/masthead/office.jpg")
 
-section.portfolio
-  .container
-    - portfolio_projects.in_groups_of(3).each do |projects|
-      .columns
-        - projects.reject(&:nil?).each do |project|
-          .column
-            == project_tile(project)
+article.portfolio
+  section.projects
+    .container
+      - portfolio_projects.in_groups_of(3).each do |projects|
+        .columns
+          - projects.reject(&:nil?).each do |project|
+            .column
+              == project_tile(project)
 
   section.clients
     .container

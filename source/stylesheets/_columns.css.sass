@@ -35,8 +35,8 @@ h1 + .columns
 /* Basic columns == .tripple columns */
 .column
   float: left
+  margin-bottom: $grid_column_spacing
   margin-left: $column_spacing
-  margin-top: $grid_column_spacing
   width: $column_width
 
   @media #{$breakpoint-desktop}
@@ -47,8 +47,8 @@ h1 + .columns
 .column:first-child, .first-child
   margin-left: 0
 
-.columns:first-child .column
-  margin-top: 0
+.columns:last-child .column
+  margin-bottom: 0
 
   @media #{$breakpoint-desktop}
     margin-top: $column_spacing

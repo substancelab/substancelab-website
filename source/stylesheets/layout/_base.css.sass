@@ -45,16 +45,19 @@ article,
 section
   .container
     max-width: 42em
+    margin:
+      bottom: $spacing
+      top: $spacing
     width: 66%
 
     @media #{$breakpoint-desktop}
       width: 90%
 
+  &.filled
+    border: 1px solid red
+
 section
   margin: 0
-  padding:
-    bottom: $spacing
-    top: $spacing
 
 
 .columns

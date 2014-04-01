@@ -54,38 +54,23 @@ section#person
       li== link_to 'Twitter', 'http://twitter.com/mentalizer', :title => 'Jakob on Twitter', :rel => 'me'
       li== link_to 'WWR', 'http://workingwithrails.com/person/4796-jakob-skjerning', :title => 'Jakob on Working With Rails', :rel => 'me'
 
-section#contact
+section.call-to-action.vcard
   .container
-    h2= I18n.t("index.contact_us")
-    .columns.double.vcard
-      .column
-        div
-          == link_to 'Substance Lab ApS', '/', :title => I18n.t("footer.link_to_substance_lab"), :class => 'fn org url'
-
-        .adr
-          .street-address Jernbanegade 27
-          div
-            span.postal-code
-              ' 6000
-            span.locality Kolding
-          .country-name= I18n.t("index.address.country")
-
-      .column
-        .adr
-          .email
-            == link_to 'info@substancelab.com', 'mailto:info@substancelab.com'
-          .tel
-            ' #{I18n.t("index.phone")}:
-            abbr title="+4571990999"
-              = I18n.t("contact_details.phone_number")
-
-        p
-          ' #{I18n.t("index.vat_id_name")}:
-          == link_to I18n.t("index.vat_id"), 'http://cvr.dk/Site/Forms/PublicService/DisplayCompany.aspx?cvrnr=33371942', :title => 'Official Substance Lab registration details'
-
-section#map
-  .map
-    iframe height="350" src="http://maps.google.dk/maps?f=q&amp;source=s_q&amp;hl=da&amp;geocode=&amp;q=Jernbanegade+27,+Kolding&amp;aq=&amp;sll=55.510892,9.514085&amp;sspn=0.009477,0.01354&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Jernbanegade+27,+6000+Kolding&amp;ll=55.495874,9.480085&amp;spn=0.017017,0.030041&amp;z=14&amp;iwloc=A&amp;output=embed"
+    .primary-contact-methods
+      span.tel.contact-method
+        abbr title="+4571990999"
+          == link_to I18n.t("contact_details.phone_number"), "tel:#{I18n.t("contact_details.phone_number")}"
+      span.email.contact-method
+        == link_to 'hi@substancelab.com', 'mailto:hi@substancelab.com'
+    ol.address.adr
+      li == link_to 'Substance Lab ApS', '/', :title => I18n.t("footer.link_to_substance_lab"), :class => 'fn org url'
+      li.street-address Jernbanegade 27
+      li
+        span.postal-code 6000
+        '
+        span.locality Kolding
+      li
+        span.country-name = I18n.t("index.address.country")
 
 - content_for :scripts do
   javascript:

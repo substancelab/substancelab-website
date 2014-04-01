@@ -9,6 +9,7 @@
     left: 0
     right: 0
   padding-bottom: 2em
+  position: relative
   text-align: center
 
   .masthead-container
@@ -17,7 +18,6 @@
     padding:
       bottom: 2em
       top: 5em
-    position: relative
 
   h1, .subtitle
     color: inherit
@@ -31,3 +31,24 @@
   .work
     margin-left: 0
     margin-right: 0
+
+  .photo-credits
+    bottom: 0
+    font-size: 0.7em
+    right: 0
+    opacity: 0.5
+    position: absolute
+    a
+      background: #000000
+      background: rgba(0,0,0,0.5)
+      color: #ffffff
+      display: inline-block
+      font-weight: normal
+      padding: 0 0.5em
+      &:hover
+        border: 0
+        text-decoration: underline
+
+  &:hover
+    .photo-credits
+      opacity: 1

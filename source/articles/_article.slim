@@ -3,6 +3,8 @@
     h1.blog-article-headline== current_article.title
     .blog-article-meta
       = I18n.t("articles.show.meta_data", :author => "Jakob", :date => I18n.l(current_article.date.to_date, :format => :long))
+  - if photo_credits = article_photo_data(current_article, "credits")
+    .photo-credits = link_to(I18n.t("articles.show.photo_credits", :name => photo_credits["name"]), photo_credits["url"])
 
 article.blog-article
   .container
@@ -10,10 +12,6 @@ article.blog-article
       == current_article.body
 
     aside
-      - if photo_credits = article_photo_data(current_article, "credits")
-        ul.credits
-          li = link_to(I18n.t("articles.show.photo_credits", :name => photo_credits["name"]), photo_credits["url"])
-
       nav
         .previous
           - if article = current_article.previous_article

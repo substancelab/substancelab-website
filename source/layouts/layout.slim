@@ -42,7 +42,10 @@ html lang="#{current_locale}"
               li== link_to I18n.t("navigation.work"), projects_url
               - if blog.articles.any?
                 li== link_to I18n.t("navigation.articles"), articles_path
-
+              li
+                ul.locale-switcher class="#{current_locale}"
+                  li.locale.en == link_to "en", "http://substancelab.com", :title => "We also speak english", :hreflang => "en"
+                  li.locale.da == link_to "da", "http://substancelab.dk", :title => "Vi snakker også dansk", :hreflang => "da"
       - if content_for?(:masthead)
         .masthead-container
           == yield_content(:masthead)

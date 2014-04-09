@@ -16,9 +16,17 @@
       &:hover
         background: none
         text-decoration: underline
+      &:visited
+        color: inherit
 
+  // Style current locales
   &.da .da,
   &.en .en
     a
-      color: #cccccc
-      color: rgba(255,255,255,0.5)
+      color: lighten($link-color, 30%)
+
+  &:hover
+    a
+      &:link,
+      &:visited
+        color: #ffffff

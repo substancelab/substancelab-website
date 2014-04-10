@@ -50,18 +50,18 @@ module ProjectHelpers
       content_tag(
         :div,
         "",
-        :class => "site",
+        :class => "tile-image",
         :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
       ) + content_tag(
-        :div, description, :class => "description"
+        :div, description, :class => "tile-text"
       )
     end
 
     url = case_study?(project) ? project_url(project) : nil
     if url
-      link_to(tile, url, :class => "project block-link")
+      link_to(tile, url, :class => "block-link tile")
     else
-      content_tag(:div, tile, :class => "project")
+      content_tag(:div, tile, :class => "tile")
     end
   end
 

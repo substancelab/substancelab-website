@@ -11,9 +11,6 @@ html lang="#{current_locale}"
     -# One stylesheet to import them all
     == stylesheet_link_tag "layout.css", :media => "all"
 
-    -# And one to make my life easier
-    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="/stylesheets/ie6.css" /><![endif]-->
-
     -# And one to make printing pretty
     == stylesheet_link_tag 'print.css', :media => "print"
 

@@ -1,25 +1,2 @@
-@import "mixins/separator"
-
 .article-list
-  overflow: hidden
-
-  .article-list-article
-    +separator-bottom
-    margin-bottom: $spacing
-    padding-bottom: $spacing
-  .entry-title
-    margin-top: 0
-  .published
-    color: lighten($body-text-color, 50%)
-    &:after
-      content: ": "
-
-  .more
-    &:link, &:visited
-      color: #ffffff
-    display: inline-block
-    text-shadow: none
-
-.block-link
-  .entry-title:hover
-    border: 0
+  @extend %columns-double

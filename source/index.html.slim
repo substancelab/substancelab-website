@@ -35,11 +35,14 @@ section.quotes
 - if blog.articles.any?
   section.article-list
     .container
-      h2== I18n.t("index.blog_headline", :link_to_blog => link_to("Substance Lab bloggen", "/articles"))
-      - blog.articles.first(1).each do |article|
-        - link_to article, :class => 'block-link' do
-          h3.entry-title== article.title
-          p== strip_tags(article.summary)
+      .columns
+        - blog.articles.first(2).each do |article|
+            .column
+              - link_to article, :class => "tile block-link" do
+                .tile-image style="background-image: url(#{article_image(article)})"
+                .tile-text
+                  h2.entry-title == article.title
+                  p == strip_tags(article.summary)
 
 section#person
   .container

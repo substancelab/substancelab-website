@@ -1,0 +1,22 @@
+@import "mixins/clear"
+
+.tile
+  background: #ffffff
+  +clear
+  padding-bottom: 1em
+
+  .tile-text // .description
+    font-weight: normal
+    margin: 1em
+
+  .tile-image //.site
+    background:
+      size: cover
+    display: block
+    height: 10em
+    text-indent: -999em
+    width: 100%
+
+  &.block-link:hover
+    background-color: $link-hover-color
+    border: 0

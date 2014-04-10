@@ -19,6 +19,10 @@ $columns_amount: 3
 $column_spacing: 5%
 $column_width: ($columns_total_width - ($columns_amount - 1) * $column_spacing) / $columns_amount
 
+%columns-double
+  .column
+    width: (($columns_total_width - $column_spacing) / 2)
+
 .columns
   clear: both
   +clear
@@ -59,8 +63,8 @@ h1 + .columns
   /*: 3 columns with spacing between */
   width: ($column_width * 3 + $column_spacing * 2)
 
-.double.columns .column
-  width: (($columns_total_width - $column_spacing) / 2)
+.double.columns
+  @extend %columns-double
 
 .columns
   .span2

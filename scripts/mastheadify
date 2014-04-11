@@ -1,1 +1,4 @@
-mogrify -fill black -colorize 33% -grayscale Rec709Luma $1
+# -contrast autoenhances the contrast
+# -grayscale converts to grayscale (duh)
+# -module changes the brightness to 75%
+mogrify -grayscale Rec709Luma -contrast -modulate 75 $1

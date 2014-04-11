@@ -9,6 +9,9 @@
     font-weight: normal
     margin: 1em
 
+  .tile-title
+    @extend h3
+
   .tile-image //.site
     background:
       size: cover
@@ -17,8 +20,12 @@
     text-indent: -999em
     width: 100%
 
-  &.block-link:hover
-    border: 0
+  &.block-link
     .tile-title
-      color: $link-hover-color
-      text-decoration: underline
+      color: $link-color
+
+    &:hover
+      border: 0
+      .tile-title
+        color: $link-hover-color
+        text-decoration: underline

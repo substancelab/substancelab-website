@@ -1,5 +1,7 @@
 /* Headlines */
 
+$_headlines_ratio: 1.2em
+
 h1, h2, h3, .subtitle
   +geogrotesque
   font-weight: bold
@@ -7,7 +9,7 @@ h1, h2, h3, .subtitle
 h1,
 .subtitle,
   margin-top: 0
-  font-size: 3.24em /* ~33.28px */
+  font-size: $_headlines_ratio * 3
   line-height: 1.1em /* ~36.608px */
   padding-bottom: 2px
   padding-top: 9px
@@ -17,7 +19,7 @@ h1,
     margin: 0
 
 h2
-  font-size: 1.8em
+  font-size: $_headlines_ratio * 2
   line-height: 1.6em
   margin-top: 1.9em
   margin-bottom: 0.5em
@@ -25,6 +27,7 @@ h2
   padding-top: 0px
 
 h3
+  font-size: $_headlines_ratio * 1
   line-height: 1.8em
   margin-top: 1.4em
   margin-bottom: 0

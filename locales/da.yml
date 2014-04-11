@@ -24,7 +24,7 @@ da:
     about_substance_lab: Substance Lab
     address:
       country: Danmark
-    blog_headline: "Seneste fra %{link_to_blog}"
+    blog_headline: "Seneste fra bloggen"
     contact_us: Kontaktoplysninger
     peptalk: Substance Lab er et <strong>digitalt udviklingshus</strong> som realiserer <strong>online forretningsidéer</strong>
     phone: Telefon

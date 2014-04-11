@@ -35,6 +35,7 @@ section.quotes
 - if blog.articles.any?
   section.article-list
     .container
+      h2== I18n.t("index.blog_headline")
       .columns
         - blog.articles.first(2).each do |article|
             .column

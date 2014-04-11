@@ -3,9 +3,13 @@ task :deploy => "middleman:deploy"
 namespace :images do
   task :optimize => ["optimize:all"]
 
-  desc "Removes colors from all masthead images"
-  task :desaturate_mastheads do
-    system 'find source/images -name masthead.jpg -exec ./scripts/mastheadify {} \;'
+  namespace :masthead do
+    desc "Creates masthead images from originals"
+    task :convert do
+      system 'find originals -name "*.jpg" -print -exec ./scripts/mastheadify {} \;'
+    end
+
+    task :create => [:convert, "optimize:jpg"]
   end
 
   namespace :optimize do

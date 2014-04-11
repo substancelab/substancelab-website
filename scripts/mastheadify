@@ -1,4 +1,25 @@
+#!/usr/bin/env ruby
+require 'pathname'
+
+path = Pathname.new(ARGV[0])
+raise "File not found: #{path}" unless path.exist?
+
+source_filename = path.basename
+source_path = path.dirname
+source_folder = source_path.split.last
+
+destination_path = File.expand_path(File.join(
+  source_path,
+  "../..",
+  "source",
+  "images",
+  source_folder
+))
+destination_file = File.join(destination_path, source_filename)
+
+system("cp", path.to_s, destination_file)
+
 # -contrast autoenhances the contrast
 # -grayscale converts to grayscale (duh)
-# -module changes the brightness to 75%
-mogrify -grayscale Rec709Luma -contrast -modulate 75 $1
+# -module changes the brightness (100 being normal, 0 being black)
+exec("mogrify -grayscale Rec709Luma -modulate 90 #{destination_file}")

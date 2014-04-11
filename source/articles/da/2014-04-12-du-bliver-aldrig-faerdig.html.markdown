@@ -2,10 +2,10 @@
 title: Du bliver aldrig færdig
 tags: agile, backlog, features, software, udvikling
 photo:
-  name: 
   credits:
     name: Pete
     url: http://www.flickr.com/photos/23408922@N07/9320845849
+  filename: finishing_line.jpg
 ---
 Jeg kender ikke mange succesfulde software produkter, der er blevet færdige. De er måske blevet lancerede eller afsluttede, men aldrig færdige.
 READMORE

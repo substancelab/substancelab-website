@@ -1,2 +1,8 @@
+@import "mixins/separator"
+
 .article-list
   @extend %columns-double
+
+.article-list-article
+  +separator-bottom
+  margin-bottom: $spacing

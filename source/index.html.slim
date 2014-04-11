@@ -41,7 +41,7 @@ section.quotes
               - link_to article, :class => "tile block-link" do
                 .tile-image style="background-image: url(#{article_image(article)})"
                 .tile-text
-                  h2.entry-title == article.title
+                  h2.tile-title == article.title
                   p == strip_tags(article.summary)
 
 section#person

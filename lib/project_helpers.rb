@@ -42,7 +42,7 @@ module ProjectHelpers
 
   def project_tile(project)
     description = capture do
-      content_tag(:h2, project.name) +
+      content_tag(:h2, project.name, :class => "tile-title") +
       content_tag(:p, localized(project.description))
     end
 

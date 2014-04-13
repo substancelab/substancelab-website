@@ -1,8 +1,8 @@
+@import "mixins/spacing"
+
 // Use this to add padding to sections that have a background fill.
 @mixin filled-section
-  padding:
-    top: $spacing
-    bottom: $spacing
+  +default-padding
   .container
     margin:
       top: 0

@@ -22,6 +22,9 @@ $column_width: ($columns_total_width - ($columns_amount - 1) * $column_spacing) 
 %columns-double
   .column
     width: (($columns_total_width - $column_spacing) / 2)
+  @media #{$breakpoint-phone}
+    .column
+      width: 100%
 
 .columns
   clear: both

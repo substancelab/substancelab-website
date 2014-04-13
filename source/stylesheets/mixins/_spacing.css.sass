@@ -1,0 +1,29 @@
+@import "breakpoints"
+
+@mixin default-margin
+  +default-margin-bottom
+  +default-margin-top
+
+@mixin default-margin-bottom
+  margin-bottom: $spacing
+  @media #{$breakpoint-phone}
+    margin-bottom: $spacing-phone
+
+@mixin default-margin-top
+  margin-top: $spacing
+  @media #{$breakpoint-phone}
+    margin-top: $spacing-phone
+
+@mixin default-padding
+  +default-padding-bottom
+  +default-padding-top
+
+@mixin default-padding-bottom
+  padding-bottom: $spacing
+  @media #{$breakpoint-phone}
+    padding-bottom: $spacing-phone
+
+@mixin default-padding-top
+  padding-top: $spacing
+  @media #{$breakpoint-phone}
+    padding-top: $spacing-phone

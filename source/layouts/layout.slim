@@ -46,11 +46,11 @@ html lang="#{current_locale}"
               .lab Lab
           nav
             ul
-              li== link_to I18n.t("navigation.home"), "/"
-              li== link_to I18n.t("navigation.work"), projects_url
+              li.home== link_to I18n.t("navigation.home"), "/"
+              li.work== link_to I18n.t("navigation.work"), projects_url
               - if blog.articles.any?
-                li== link_to I18n.t("navigation.articles"), articles_path
-              li
+                li.articles== link_to I18n.t("navigation.articles"), articles_path
+              li.locales
                 ul.locale-switcher class="#{current_locale}"
                   li.locale.en == link_to "en", "http://substancelab.com", :title => "We also speak english", :hreflang => "en"
                   li.locale.da == link_to "da", "http://substancelab.dk", :title => "Vi snakker også dansk", :hreflang => "da"

@@ -4,10 +4,17 @@
     +separator-top
 
   text-align: center
+
   .primary-contact-methods
-    font-size: 1.8em
     margin-bottom: 1rem
+
   .contact-method
+    font-size: 1.8em
     padding: 0.5em
+    @media #{$breakpoint-phone}
+      display: block
+      font-size: 1.3em
+      padding: 0
+
   .address
     @extend .inline-list

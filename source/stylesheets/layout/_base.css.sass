@@ -1,3 +1,5 @@
+@import "mixins/separator"
+
 p
   margin-bottom: 1.8em
   &:last-child
@@ -31,6 +33,7 @@ li
   margin-right: auto
 
 article,
+footer,
 section
   .container
     +default-margin
@@ -74,21 +77,14 @@ body
   line-height: 1.8em
 
 footer
-  background: #f4f5ed url("/images/horizontal_divider.png") 50% 0 no-repeat
-  clear: both
-  color: #888888
-  display: block
-  font-size: 11px
-  padding: 14px 0
-  margin-top: 0
+  +full-width
 
   .container
-    min-width: 736px
-    max-width: 1156px
-    padding: 0 5%
-
+    +separator-top
+    padding-top: 1em
   .contents, .legalese, .network
     float: left
+    font-size: 0.6em
     width: 42%
 
   .contents

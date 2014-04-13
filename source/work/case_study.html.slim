@@ -41,13 +41,4 @@ priority: 1
           .column
             == project_tile(case_study)
 
-section.contact
-  .container
-    .columns.double
-      .column
-        h2= I18n.t("work.show.want_something_like_this")
-        p= I18n.t("work.show.success_starts_with_communication")
-      .column
-        == partial "modules/contact_details"
-
 - masthead_image(project_masthead_image_path(project))

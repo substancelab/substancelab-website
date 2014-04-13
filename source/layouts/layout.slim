@@ -54,11 +54,30 @@ html lang="#{current_locale}"
                 ul.locale-switcher class="#{current_locale}"
                   li.locale.en == link_to "en", "http://substancelab.com", :title => "We also speak english", :hreflang => "en"
                   li.locale.da == link_to "da", "http://substancelab.dk", :title => "Vi snakker også dansk", :hreflang => "da"
+
       - if content_for?(:masthead)
         .masthead-container
           == yield_content(:masthead)
 
     == yield
+
+    section.call-to-action.vcard
+      .container
+        .primary-contact-methods
+          span.tel.contact-method
+            abbr title="+4571990999"
+              == link_to I18n.t("contact_details.phone_number"), "tel:#{I18n.t("contact_details.phone_number")}"
+          span.email.contact-method
+            == link_to 'hi@substancelab.com', 'mailto:hi@substancelab.com'
+        ol.address.adr
+          li == link_to 'Substance Lab ApS', '/', :title => I18n.t("footer.link_to_substance_lab"), :class => 'fn org url'
+          li.street-address Jernbanegade 27
+          li
+            span.postal-code 6000
+            '
+            span.locality Kolding
+          li
+            span.country-name = I18n.t("index.address.country")
 
     footer
       .container

@@ -58,24 +58,6 @@ section#person
       li== link_to 'Twitter', 'http://twitter.com/mentalizer', :title => 'Jakob on Twitter', :rel => 'me'
       li== link_to 'WWR', 'http://workingwithrails.com/person/4796-jakob-skjerning', :title => 'Jakob on Working With Rails', :rel => 'me'
 
-section.call-to-action.vcard
-  .container
-    .primary-contact-methods
-      span.tel.contact-method
-        abbr title="+4571990999"
-          == link_to I18n.t("contact_details.phone_number"), "tel:#{I18n.t("contact_details.phone_number")}"
-      span.email.contact-method
-        == link_to 'hi@substancelab.com', 'mailto:hi@substancelab.com'
-    ol.address.adr
-      li == link_to 'Substance Lab ApS', '/', :title => I18n.t("footer.link_to_substance_lab"), :class => 'fn org url'
-      li.street-address Jernbanegade 27
-      li
-        span.postal-code 6000
-        '
-        span.locality Kolding
-      li
-        span.country-name = I18n.t("index.address.country")
-
 - content_for :scripts do
   javascript:
     $(document).ready(function() {

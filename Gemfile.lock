@@ -99,6 +99,8 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     sass (3.2.14)
+    sassy-math (1.5)
+      compass (~> 0.11)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -137,4 +139,5 @@ DEPENDENCIES
   middleman-favicon-maker
   middleman-minify-html
   nokogiri
+  sassy-math
   slim

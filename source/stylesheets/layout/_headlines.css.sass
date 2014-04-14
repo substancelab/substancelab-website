@@ -1,7 +1,12 @@
 /* Headlines */
 
-$_headlines-ratio: 1.2em
-$_headlines-ratio-phone: 1.2
+@mixin headline-font-size($level)
+  $_headlines-ratio: 1.6
+  $_headlines-ratio-phone: 1.2
+
+  font-size: +power($_headlines-ratio, $level) * 1em
+  @media #{$breakpoint-phone}
+    font-size: +power($_headlines-ratio-phone, $level) * 1em
 
 h1, h2, h3, .subtitle
   +geogrotesque
@@ -10,34 +15,27 @@ h1, h2, h3, .subtitle
 h1,
 .subtitle,
   margin-top: 0
-  font-size: $_headlines-ratio * 3
+  +headline-font-size(3)
   line-height: 1.1em /* ~36.608px */
   padding-bottom: 2px
   padding-top: 9px
   @media #{$breakpoint-desktop}
     padding: 0.2em 0
     margin: 0
-  @media #{$breakpoint-phone}
-    font-size: 1em * $_headlines-ratio-phone * $_headlines-ratio-phone * $_headlines-ratio-phone
-
 h2
-  font-size: $_headlines-ratio * 2
+  +headline-font-size(2)
   line-height: 1.6em
   margin-top: 1.9em
   margin-bottom: 0.5em
   padding-bottom: 1px
   padding-top: 0px
-  @media #{$breakpoint-phone}
-    font-size: 1em * $_headlines-ratio-phone * $_headlines-ratio-phone
 
 h3
-  font-size: $_headlines-ratio * 1
+  +headline-font-size(1)
   line-height: 1.8em
   margin-top: 1.4em
   margin-bottom: 0
   padding-top: 1px
-  @media #{$breakpoint-phone}
-    font-size: 1em * $_headlines-ratio-phone
 
 h2:first-child
   line-height: 1

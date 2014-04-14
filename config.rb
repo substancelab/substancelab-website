@@ -17,6 +17,8 @@ SITE_SETTINGS.each do |key, value|
   self.set(key.intern, value)
 end
 
+require "sassy-math"
+
 require 'slim'
 Slim::Engine.set_default_options({
   :format => :html5,

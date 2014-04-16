@@ -1,7 +1,6 @@
 doctype html
 html lang="#{current_locale}"
   head
-    meta charset='utf-8'
     title== page_title
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"

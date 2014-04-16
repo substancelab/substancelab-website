@@ -16,6 +16,9 @@
 
   # Make sure proxies don't deliver the wrong content
   Header append Vary User-Agent env=!dont-vary
+
+  # We like UTF-8
+  AddDefaultCharset utf-8
 </IfModule>
 
 <IfModule expires_module>

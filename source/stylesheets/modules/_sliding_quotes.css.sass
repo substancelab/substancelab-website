@@ -9,6 +9,9 @@
     image: url(/images/noise.png)
   color: #ffffff
 
+  @media #{$breakpoint-desktop}
+    display: none
+
 .sliding_quotes
   height: 13em
   margin: auto
@@ -27,6 +30,3 @@
       top: 50%
       .author
         margin-top: 0
-
-  @media #{$breakpoint-desktop}
-    display: none

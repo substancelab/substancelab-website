@@ -47,16 +47,9 @@ section.quotes
 
 section#person
   .container
-    h2= I18n.t("index.the_person")
-    == image_tag('people/jakob.jpg', :class => "jakob", :alt => "Jakob Skjerning", :width => "80", :height => "113")
-    == localized_partial("index/about_jakob")
+    h2= I18n.t("index.the_team") 
+    == partial("index/people_behind")
 
-    ul.link-list
-      li== link_to 'Website', 'http://mentalized.net', :title => 'Jakobs website', :rel => 'me'
-      li== link_to 'Github', 'http://github.com/koppen', :title => 'Jakob on Github', :rel => 'me'
-      li== link_to 'LinkedIn', 'http://www.linkedin.com/in/jakobskjerning', :title => 'Jakob on LinkedIn', :rel => 'me'
-      li== link_to 'Twitter', 'http://twitter.com/mentalizer', :title => 'Jakob on Twitter', :rel => 'me'
-      li== link_to 'WWR', 'http://workingwithrails.com/person/4796-jakob-skjerning', :title => 'Jakob on Working With Rails', :rel => 'me'
 
 - content_for :scripts do
   javascript:

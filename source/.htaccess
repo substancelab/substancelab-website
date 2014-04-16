@@ -35,4 +35,9 @@
   <FilesMatch "\.(css)">
     ExpiresDefault "access plus 1 year"
   </FilesMatch>
+
+  # Expiry for fonts
+  <FilesMatch "\.(woff)">
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
 </IfModule>

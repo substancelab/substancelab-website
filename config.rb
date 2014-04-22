@@ -3,11 +3,9 @@ LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 # Configure site
 SETTINGS = {
   "da" => {
-    "deploy_path" => "/public_html/",
     "domain" => "substancelab.dk"
   },
   "en" => {
-    "deploy_path" => "/substancelab.com/",
     "domain" => "substancelab.com"
   }
 }
@@ -39,22 +37,6 @@ activate :blog do |blog|
   blog.prefix = "articles"
 end
 page "articles/*", :layout => :articles
-
-# Deployment
-if LOCALE
-  # Deploy to UnoEuro
-  DEPLOYMENT_PATHS = {
-    'da' => "/public_html/",
-    'en' => "/substancelab.com/"
-  }
-  activate :deploy do |deploy|
-    deploy.method = :ftp
-    deploy.user = "substancelab.dk"
-    deploy.host = "linux41.unoeuro.com"
-    deploy.path = DEPLOYMENT_PATHS[LOCALE]
-    deploy.password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
-  end
-end
 
 # Pretty URLs
 activate :directory_indexes

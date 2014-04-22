@@ -37,6 +37,26 @@ namespace :middleman do
 
   desc "Deploys the site to whatever host is configured in middleman"
   task :deploy => [:clean, :build] do
-    system 'middleman deploy'
+    host = "linux41.unoeuro.com"
+    user = "substancelab.dk"
+    password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
+    ftp_url = "ftp://#{user}:#{password}@#{host}"
+
+    local_dir = File.join(Dir.pwd, "build")
+
+    LOCALE = (ENV[LOCALE] || "en").to_s
+    remote_dir = {
+      'da' => "/public_html/",
+      'en' => "/substancelab.com/"
+    }
+
+    ftp_script = <<-EOS
+      set ftp:list-options -a;
+      open #{ftp_url};
+      lcd #{local_dir};
+      cd #{remote_dir};
+      mirror --reverse --verbose"
+    EOS
+    system "lftp", "-c #{ftp_script}"
   end
 end

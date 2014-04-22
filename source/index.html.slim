@@ -55,9 +55,8 @@ section#person
   javascript:
     $(document).ready(function() {
       $('.sliding_quotes').quoteSlider();
-      adjustEqualHeights(['.featured-work .tile', '.article-list .tile']);
+      $(['.featured-work .tile', '.article-list .tile']).adjustEqualHeights();
     });
  
   == javascript_include_tag 'substance_lab.js'
   == javascript_include_tag 'ensure_equal_heights.js'
-  

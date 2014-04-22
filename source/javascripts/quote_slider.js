@@ -5,6 +5,11 @@
         var $this = $(this);
         $this.quoteSlider('setTimeout');
         $this.quoteSlider('showNextQuote');
+
+        // Return this to ensure chainability
+        return this.each(function() {
+          var $this = $(this);
+        });
       },
 
       setTimeout: function() {
@@ -68,11 +73,5 @@
      } else {
        $.error('Method ' +  method + ' does not exist on jQuery.quoteSlider');
      };
-
-
-    // Return this to ensure chainability
-    return this.each(function() {
-      var $this = $(this);
-    });
   };
 })( jQuery );

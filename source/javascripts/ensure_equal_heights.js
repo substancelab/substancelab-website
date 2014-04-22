@@ -5,6 +5,11 @@
     var methods = {
       init: function(options) {
         $(this).adjustEqualHeights('bindEvents');
+
+        // Return this to ensure chainability
+        return this.each(function() {
+          var $this = $(this);
+        });
       },
 
       adjustHeights: function() {
@@ -40,10 +45,5 @@
     } else {
       $.error('Method ' +  method + ' does not exist on jQuery.adjustEqualHeights');
     };
-
-    // Return this to ensure chainability
-    return this.each(function() {
-      var $this = $(this);
-    });
   };
 })( jQuery );

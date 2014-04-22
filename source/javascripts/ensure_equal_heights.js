@@ -4,26 +4,30 @@
   $.fn.adjustEqualHeights = function(method) {
     var methods = {
       init: function(options) {
-        var $this = $(this);
-        $this.adjustEqualHeights('adjustEqualHeights');
+        $(this).adjustEqualHeights('bindEvents');
       },
 
-      adjustEqualHeights: function() {
+      adjustHeights: function() {
+        $(this).each(function(index, element) {
+          $(element).equalHeights();
+        });
+      },
+
+      bindEvents: function() {
         var $this = $(this);
 
         $(document).ready(function() {
-          $this.adjustEqualHeights('adjustOnAction');
+          $this.adjustEqualHeights('adjustHeights');
         });
         $(window).resize(function() {
-          $this.adjustEqualHeights('adjustOnAction');
+          $this.adjustEqualHeights('resetHeights');
+          $this.adjustEqualHeights('adjustHeights');
         });
       },
 
-      adjustOnAction: function() {
-        var $this = $(this);
-
-        $this.each(function(index, element) {
-          $(element).css({height: ""}).equalHeights();
+      resetHeights: function() {
+        $(this).each(function(index, element) {
+          $(element).css({height: ""});
         });
       }
     };

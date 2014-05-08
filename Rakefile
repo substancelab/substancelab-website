@@ -44,11 +44,11 @@ namespace :middleman do
 
     local_dir = File.join(Dir.pwd, "build")
 
-    LOCALE = (ENV[LOCALE] || "en").to_s
+    LOCALE = (ENV["LOCALE"] || "en").to_s
     remote_dir = {
       'da' => "/public_html/",
       'en' => "/substancelab.com/"
-    }
+    }[LOCALE]
 
     ftp_script = <<-EOS
       set ftp:list-options -a;

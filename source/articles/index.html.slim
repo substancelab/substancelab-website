@@ -8,6 +8,6 @@ section.article-list
     - articles = blog.articles
     - articles.each do |article|
       article.article-list-article
-        h2.entry-title== link_to article.title, article
+        h2.article-list-entry-title== link_to article.title, article
         == article.summary
         p== link_to "Læs artiklen '#{article.title}'", article

@@ -26,7 +26,7 @@ module LayoutHelpers
     end
 
     if title.blank?
-      "Substance Lab - Carefully crafted web applications and websites"
+      "Substance Lab - Grow online"
     else
       "#{title} | Substance Lab"
     end

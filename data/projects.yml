@@ -181,6 +181,21 @@ gamekillers:
   - Ruby
   - Ruby on Rails
 
+gomore:
+  client: GoMore, Denmark
+  client_website: http://gomore.dk
+  featured: false
+  name: GoMore
+  position: 2
+  services:
+  - web_application_development
+  slug: gomore
+  technologies:
+  - CSS
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+
 iiamo:
   client: Loop Associates, Denmark
   client_website: http://www.loopassociates.com/

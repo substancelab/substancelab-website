@@ -38,6 +38,10 @@ activate :blog do |blog|
 end
 page "articles/*", :layout => :articles
 
+# Ignore articles from other locales than the current
+articles_not_in_current_locale = /^(articles(?!\/#{LOCALE}\/))/
+ignore(articles_not_in_current_locale)
+
 # Pretty URLs
 activate :directory_indexes
 

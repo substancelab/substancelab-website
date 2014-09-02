@@ -39,7 +39,8 @@ end
 page "articles/*", :layout => :articles
 
 # Ignore articles from other locales than the current
-articles_not_in_current_locale = /^(articles(?!\/#{LOCALE}\/))/
+other_locales = SETTINGS.keys.reject { |key, values| key == LOCALE }
+articles_not_in_current_locale = /^articles\/(#{other_locales.join("|")})\/\d{4}-\d{2}-\d{2}/
 ignore(articles_not_in_current_locale)
 
 # Pretty URLs

@@ -24,7 +24,7 @@ biq:
     en: BiQ is business intelligence database with 25 years of information about 400.000 danish companies and their board members, directors, owners and more.
   featured: true
   name: BiQ
-  position: 5
+  position: 4
   services:
   - api_development
   - web_application_development
@@ -325,7 +325,7 @@ rp_lookups:
     en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
   featured: true
   name: Internal analysis tool
-  position: 4
+  position: 5
   services:
   - automation
   - project_management

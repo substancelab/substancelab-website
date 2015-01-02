@@ -122,6 +122,7 @@ ejendomsstatistik:
 
 eventzonen:
   case_studies:
+  - da
   - en
   client: Underholdningsbureauet, Denmark
   client_website: http://eventzonen.dk

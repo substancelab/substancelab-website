@@ -1,0 +1,55 @@
+---
+title: "2014"
+tags: året der gik, 2014
+photo:
+  credits:
+    name: "Neal Fowler"
+    url: https://www.flickr.com/photos/31878512@N06/4945216951
+  filename: starstruck_bokeh.jpg
+
+---
+2014 har på mange måder været et fantastisk år for os her i Substance Lab. Ikke mindst fordi, vi er gået fra "jeg" til "vi".
+
+READMORE
+
+## Den første ansatte
+
+I april fordobledes medarbejderstaben i Substance Lab, da jeg ansatte Ole som medarbejder nummer 1 (jeg er naturligvis [nummer 0](http://www.electronicsweekly.com/mannerisms/yarns/apples-employee-no-0-2008-11/)). Ole er nyuddannet datamatiker og kommer med en baggrund indenfor den grafiske branche, en kombination der passer vældigt godt til vores opgaver.
+
+Tilløbet til den første ansatte har været temmeligt lang. Substance Lab har eksisteret siden 2006 og de sidste par år har jeg luret på at få ansat en, der kunne hjælpe mig i produktionen. Det er dog ikke altid lige let at finde den rigtige.
+
+Oprindeligt var min plan ikke at ansætte en udvikler frisk fra skolen, og det har naturligvis krævet en investering i form af tid, der er blevet brugt på at træne og forme Ole til at være en kvalitetsudvikler i Substance Labs ånd. Men det har vist sig at fungere rigtigt fint, og jeg er sikker på, at investeringen kommer til at betale sig.
+
+
+## Responsivt
+
+Hvis jeg skal finde en teknisk overskrift for året må det næsten blive "responsivt".
+
+Smartphones og enheder med forskellige skærmstørrelser er kommet for at blive.Flere af vores kunder oplever nu, at mere end halvdelen af deres besøgende bruger mobile enheder. I sagens natur bliver det så meget interessant, at sikre sig, at ens løsning tilpasser sig den enhed, som brugeren sidder med.
+
+Derfor har vi også i løbet af året implementeret responsive designs for [Børn i byen](http://bornibyen.dk) i januar, [Lokalebasen](http://lokalebasen.dk) i maj, og [Eventzonen](http://eventzonen.dk) i december.
+
+Det er stadig en af vores yndlingsopgaver og det er en lækker fornemmelse at se en webløsning tilpasse sig den enhed, den nu engang bruges på.
+
+
+## Nye kunder
+
+2014 blev året, hvor Substance Lab blev del af den fremadstormende deleøkonomi. Det skete, da vi indgik samarbejde med [GoMore](http://gomore.dk), Danmarks førende portal for samkørsel og privat biludlejning om at udvide og lede deres eksisterende udviklingsteam.
+
+
+## Farvel til gamle kunder
+
+En af de sværere beslutninger i 2014 var at sige farvel til vores største, længstvarende kunde. Vi har fra starten været med til at forme Lokalebasen.dk fra en omgang løse idéer på 3 stykker papir til en succesfuld virksomhed med adskillige medarbejdere og et solidt udviklerteam.
+
+Og netop det solide udviklerteam var grund til at det var på tide for os at bevæge os videre. Teamet og produktet var blevet voksent og der var ikke længere behov for os. Konsulentens fornemste opgave var opfyldt; at gøre sig selv overflødig.
+
+
+## Fremtiden
+
+Retter vi i stedet blikket fremad ser det lyst ud. Vi har allerede nye kunder, der står klar, og de eksisterende kunder har spændende opgaver i pipelinen.
+
+På medarbejderfronten forventer jeg at ansætte endnu en medarbejder i 2015. Som verden ser ud nu og her bliver det en senior-udvikler type, som kan aflaste mig i produktionen. Det skulle gerne frigive noget af min tid til at fokusere mere på forretningen og projektstyring for kunderne.
+
+Et andet mål for 2015 er at få etableret en eller anden form for (mere eller mindre) passiv indkomst-strøm. Den nøjagtige form af dette er jeg ikke helt afklaret med endnu, men vi har lidt forskellige muligheder. Vi har både tilløb til e-bøger og SaaS produkter på lager, men jeg lurer også på mulighederne for noget productized consulting.
+
+2015 bliver et vildt år. Vi glæder os til at dele det med jer.

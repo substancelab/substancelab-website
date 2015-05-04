@@ -182,6 +182,8 @@ gamekillers:
   - Ruby on Rails
 
 gomore:
+  case_studies:
+  - da
   client: GoMore, Denmark
   client_website: http://gomore.dk
   description:
@@ -196,6 +198,7 @@ gomore:
   slug: gomore
   technologies:
   - CSS
+  - Elasticsearch
   - Javascript
   - Ruby
   - Ruby on Rails

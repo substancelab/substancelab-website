@@ -16,7 +16,7 @@ namespace :images do
       source_path = task.name.sub(MASTHEAD_DESTINATION.to_s, MASTHEAD_ORIGINALS.to_s)
       puts source_path.to_s
       system "scripts/mastheadify", source_path.to_s
-      system "jpegoptim", task.name
+      system "jpegoptim --strip-all", task.name
     end
 
     desc "Creates masthead images from originals"
@@ -27,7 +27,7 @@ namespace :images do
     task :all => [:jpg, :png]
 
     task :jpg do
-      system 'find source/images -name *.jpg -exec jpegoptim {} \;'
+      system 'find source/images -name *.jpg -exec jpegoptim --strip-all {} \;'
     end
 
     task :png do

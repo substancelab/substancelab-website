@@ -1,0 +1,92 @@
+- content_for :stylesheets do
+  == stylesheet_link_tag "case_studies/lokalebasen"
+  css:
+    .masthead {
+      background-image: url(/images/work/gomore/ridesharing.jpg);
+      background-position: 50% 100%;
+      background-size: cover;
+    }
+
+    .international {
+      background-image: url(/images/work/gomore/all_countries.png);
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: 1240px auto;
+      padding-bottom: 230px;
+    }
+
+- content_for :masthead do
+  .container
+    h1 Deleøkonomi der fungerer
+
+section
+  .container
+    p
+      |
+        GoMore har succes. Med 30+ medarbejdere og millioner af venturekapital i
+        ryggen skal ting gå hurtigt. Og med mere end en million brugere skal ting
+        blive ved med at fungere.
+
+    p
+      |
+        Successen er kommet på nogle få år, og væksten resulterede i et lettere
+        kaotisk udviklingsforløb. Der var flaskehalse i forbindelse beskrivelse
+        og tildeling af opgaver, forvirring og risiko for spildt tid.
+
+section
+  .container
+    h2 Målet: Struktur og gennemsigtighed
+
+    p
+      |
+        Substance Lab blev involveret i projektet for at gøre udviklingsteamet
+        på 6 dygtige udviklere til et selvkørende, effektivt og motiveret team,
+        der samarbejdede som én enhed.
+
+    p
+      |
+        I samarbejde med teamet fik Substance Lab etableret og udviklet en
+        proces, hvor alle har indblik i, hvad der laves og hvem der laver hvad.
+        Det blev muligt for forretningen at vedholde fremgangen og væksten, og
+        udviklerne fik mulighed for at placere de enkelte opgaver i den store
+        sammenhæng.
+
+    = image_tag "work/gomore/floating_search.png", :width => "100%"
+
+section.international
+  .container
+    h2 En global spiller
+
+    p
+      |
+        Mens Substance Lab var en del af GoMores team blev produktet bredt ud
+        fra kun at være i Danmark til at fylde hele Skandinavien og indtage
+        Spanien og Frankrig.
+
+    p
+      |
+        Udvidelse og vækst af den slags er ikke noget, man bare gør fra den ene
+        dag til den anden. Det kræver planlægning og en sans for de detaljer,
+        som ikke nødvendigvis er synlige, når man udvikler til bare ét land.
+
+    p
+      |
+        Her kunne GoMore drage fordel af Substance Labs erfaring med lignende
+        udvidelser og internationaliseringer fra andre projekter, som fx
+        #{link_to("Eventzonen", "/work/eventzonen-dk")} og
+        #{link_to("Lokalebasen", "/work/lokalebasen")}.
+
+section
+  .container
+    .statistics
+      .statistics-figure
+        .statistics-number 5
+        .statistics-label Lande
+
+      .statistics-figure
+        .statistics-number 30
+        .statistics-label Medarbejdere
+
+      .statistics-figure
+        .statistics-number 1.000.000+
+        .statistics-label Brugere

@@ -17,6 +17,7 @@ da:
       short: "%d-%m-%Y"
 
   footer:
+    link_to_jobs: "Bliv en del af Substance Lab teamet"
     link_to_portfolio: "Webudviklingsprojekter programmeret af Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails udvikling og programmering i Kolding, Danmark"
 

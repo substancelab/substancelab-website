@@ -16,6 +16,7 @@ en:
       long: "%B %-d, %Y"
 
   footer:
+    link_to_jobs: "Become part of Substance Lab"
     link_to_portfolio: "Web application development projects by Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails application development in Kolding, Denmark, Europe"
 

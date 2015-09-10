@@ -26,7 +26,11 @@ article.portfolio
 
       ul.client-list
         - clients.each do |client|
-          li== link_to client.name, client.website, :title => client.name
+          li
+            - if client.website
+              == link_to client.name, client.website, :title => client.name
+            - else
+              == client.name
 
   section.technology
     .container

@@ -221,7 +221,6 @@ justitsministeriet:
 
 kailas:
   client: Kailas, Denmark
-  client_website: http://www.kailas.dk
   position: 11
   services:
   - webdesign
@@ -283,7 +282,6 @@ mitbarnsnavn:
 
 nethunters:
   client: Nethunters, Denmark
-  client_website: http://dusorjob.dk
   position: 20
   services:
   - frontend_development
@@ -292,7 +290,6 @@ nethunters:
 
 pluggd:
   client: Pluggd, USA
-  client_website: http://pluggd.com
   position: 13
   services:
   - webdesign

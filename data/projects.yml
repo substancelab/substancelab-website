@@ -212,7 +212,7 @@ iiamo:
 
 justitsministeriet:
   client: Danish Ministry of Justice, Denmark
-  client_website: http://www.justitsministeriet.dk/english.html
+  client_website: http://www.justitsministeriet.dk
   position: 25
   services:
   - web_application_development

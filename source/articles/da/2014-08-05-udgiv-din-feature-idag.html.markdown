@@ -8,7 +8,7 @@ photo:
     url: https://www.flickr.com/photos/ann-arbor-give-camp/7997839345/
   filename: "completed_scrum_board.jpg"
 ---
-Engang var en software-release noget, man frygtede. Var der en fejl i softwaren, var der andet at gøre end leve med den indtil næste release. Sådan er det heldigvis ikke længere.
+Engang var en software-release noget, man frygtede. Var der en fejl i softwaren, var der ikke andet at gøre end leve med den indtil næste release. Sådan er det heldigvis ikke længere.
 
 READMORE
 

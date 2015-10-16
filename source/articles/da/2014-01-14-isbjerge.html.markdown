@@ -12,7 +12,7 @@ READMORE
 
 ## "Det er jo bare..."
 
-Fælles for dem alle er, at featuren lyder dejligt enkel, når man snakker om den. "Vi skal bare sende en mail", "det er jo bare en række linier med et beløb", "den skal bare finde det, jeg leder efter".
+Fælles for dem alle er, at featuren lyder dejligt enkel, når man snakker om den. "Vi skal bare sende en mail", "det er jo bare en række linjer med et beløb", "den skal bare finde det, jeg leder efter".
 
 Problemet er, at den synlige del kun udgør en lille del af det samlede arbejde. Under overfladen gemmer resten af featuren sig, og du ser den ofte ikke før du har har fuld fart på og er igang med at udvikle den.
 

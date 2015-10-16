@@ -28,7 +28,7 @@ Oprindeligt designede vi et simpelt visitkort-website, men senere udviklede vi e
 
 I 2009 begyndte Substance Lab at samarbejde med udviklingsteamet i Wildfire på at videreudvikle deres Facebook markedsføringsplatform.
 
-Senere hen har Wildfire udvidet deres produktlinie med adskillige relaterede produkter indenfor social medier, og det gjorde de så godt, at Google fik øjnene op for dem og købte firmaet for den nette sum af [350 millioner USD](http://techcrunch.com/2012/07/31/google-acquires-wildfire/).
+Senere hen har Wildfire udvidet deres produktlinje med adskillige relaterede produkter indenfor social medier, og det gjorde de så godt, at Google fik øjnene op for dem og købte firmaet for den nette sum af [350 millioner USD](http://techcrunch.com/2012/07/31/google-acquires-wildfire/).
 
 ## Og alle de andre
 

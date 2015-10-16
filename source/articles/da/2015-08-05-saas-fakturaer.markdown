@@ -16,9 +16,9 @@ READMORE
 
 Det her er helt basalt, og alligevel er der tjenester, der ikke formår det: Send en e-mail til kunden, når du trækker penge på deres kort.
 
-## 2. En sigende emne-linie
+## 2. En sigende emne-linje
 
-Det er vigtigt, hvad der står i emne-linien i e-mailen. "Faktura" er ikke godt nok, "Faktura for MinTjeneste" er bedre, "MinTjeneste Faktura 1234 for august 2015" er bedst.
+Det er vigtigt, hvad der står i emne-linjen i e-mailen. "Faktura" er ikke godt nok, "Faktura for MinTjeneste" er bedre, "MinTjeneste Faktura 1234 for august 2015" er bedst.
 
 ## 3. Inkluder fakturaen direkte i e-mailen
 
@@ -40,7 +40,7 @@ Bevares, det kan godt være, du mener det er trendy med sort baggrund på dine d
 
 ## 6. Relevant info i filnavnet
 
-Det er vigtigt, et emnelinien i e-mailen er gennemtænkt, ligeledes er det vigtigt at filnavnet på den vedhæftede PDF-faktura er gennemtænkt.
+Det er vigtigt, et emnelinjen i e-mailen er gennemtænkt, ligeledes er det vigtigt at filnavnet på den vedhæftede PDF-faktura er gennemtænkt.
 
 Hvis du bare kalder filen for "faktura.pdf" risikerer du at den forsvinder mellem alle de andre faktura-filer på disken - eller endnu værre du risikerer, at den bliver overskrevet af en anden fil med samme navn.
 

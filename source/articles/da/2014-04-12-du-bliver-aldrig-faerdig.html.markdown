@@ -18,7 +18,7 @@ Det er bestemt en god ting. Jo flere features, der er at vælge imellem, jo stø
 
 ## Husk at fejre de små sejre
 
-Til gengæld giver det også en voksende følelse af, at man aldrig kommer til mållinien. Derfor er det vigtigt løbende at fejre de små sejre, så man ikke overser den fremgang, der rent faktisk er.
+Til gengæld giver det også en voksende følelse af, at man aldrig kommer til mållinjen. Derfor er det vigtigt løbende at fejre de små sejre, så man ikke overser den fremgang, der rent faktisk er.
 
 Det er oplagt at gøre lidt mere ud af sprintpræsentationen så den fungerer som en fest for teamet og de features, der er blevet implementeret.
 

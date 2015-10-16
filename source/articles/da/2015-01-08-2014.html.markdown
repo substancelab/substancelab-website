@@ -25,7 +25,7 @@ Oprindeligt var min plan ikke at ansætte en udvikler frisk fra skolen, og det h
 
 Hvis jeg skal finde en teknisk overskrift for året må det næsten blive "responsivt".
 
-Smartphones og enheder med forskellige skærmstørrelser er kommet for at blive.Flere af vores kunder oplever nu, at mere end halvdelen af deres besøgende bruger mobile enheder. I sagens natur bliver det så meget interessant, at sikre sig, at ens løsning tilpasser sig den enhed, som brugeren sidder med.
+Smartphones og enheder med forskellige skærmstørrelser er kommet for at blive. Flere af vores kunder oplever nu, at mere end halvdelen af deres besøgende bruger mobile enheder. I sagens natur bliver det så meget interessant, at sikre sig, at ens løsning tilpasser sig den enhed, som brugeren sidder med.
 
 Derfor har vi også i løbet af året implementeret responsive designs for [Børn i byen](http://bornibyen.dk) i januar, [Lokalebasen](http://lokalebasen.dk) i maj, og [Eventzonen](http://eventzonen.dk) i december.
 

@@ -8,13 +8,13 @@ photo:
   filename: "coins.jpg"
 ---
 
-Alle har ret til et fedt design, for nu at omskrive et køkken-reklame-slogan. Men når først røgen har lagt sig og webdesigneren har lagt Photoshop-penslen, skal det hele implementeres, og den slags koster tid og penge. Her er en række tips, der kan være med til at holde implementations-prisen for dit nye, lækre design nede på et overkommeligt niveau.
+Alle har ret til et fedt design, for nu at omskrive et køkken-reklame-slogan. Men når først røgen har lagt sig og webdesigneren har lagt Photoshop-penslen, skal det hele implementeres, og den slags koster tid og penge. Her er en række tips, der kan være med til at holde implementerings-prisen for dit nye, lækre design nede på et overkommeligt niveau.
 
 READMORE
 
 ## Konsistens
 
-Hvis du har et element, der går igen på flere sider, så lad det være ens på alle sider. Browsere (og computere generelt) har det rigtigt godt med regler, undtagelser gør implementation sværere og dyrere.
+Hvis du har et element, der går igen på flere sider, så lad det være ens på alle sider. Browsere (og computere generelt) har det rigtigt godt med regler, undtagelser gør implementeringen sværere og dyrere.
 
 Det samme gælder ting som skriftstørrelser - hold dem ensartede. Er overskriften på en side 24 pixels giver det god mening også at lade den være 24 pixels på en anden side.
 

@@ -1,5 +1,5 @@
 ---
-title: Udgiv din feature idag
+title: Udgiv din feature i dag
 date: 2014-08-05 08:52 UTC
 tags: software, udvikling, proces, releases
 photo:

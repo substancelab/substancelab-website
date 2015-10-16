@@ -9,7 +9,7 @@ photo:
 
 ---
 
-Vi kender det allesammen. Man har udfyldt en online formular, trykker "Gem" og venter nu spændt på, om serveren nu vil acceptere det vi har skrevet. Har vi lige ramt de mystiske formater, som udvikleren har valgt at ville acceptere idag?
+Vi kender det allesammen. Man har udfyldt en online formular, trykker "Gem" og venter nu spændt på, om serveren nu vil acceptere det vi har skrevet. Har vi lige ramt de mystiske formater, som udvikleren har valgt at ville acceptere i dag?
 
 READMORE
 

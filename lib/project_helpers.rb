@@ -2,9 +2,10 @@ require "active_support/core_ext/array/grouping"
 
 module ProjectHelpers
   def all_projects
-    data.projects.map { |_slug, values|
+    projects = data.projects.map { |_slug, values|
       build_project(values)
-    }.sort_by { |project|
+    }
+    projects.sort_by { |project|
       [project.position, project.name.try(:downcase)]
     }
   end
@@ -44,12 +45,14 @@ module ProjectHelpers
       content_tag(:p, localized(project.description))
     end
 
+    background_image = ["images", "work", project.slug, "square.jpg"].join("/")
+
     tile = capture do
       content_tag(
         :div,
         "",
         :class => "tile-image",
-        :style => "background-image: url(/images/work/#{project.slug}/square.jpg)"
+        :style => "background-image: url(#{background_image})"
       ) + content_tag(
         :div, description, :class => "tile-text"
       )
@@ -65,7 +68,9 @@ module ProjectHelpers
 
   def portfolio_projects
     projects = case_studies
-    projects += featured_projects.select { |project| !projects.include?(project) }
+    projects += featured_projects.select do |project|
+      !projects.include?(project)
+    end
 
     # Always return in tripples
     projects = projects.first(projects.size - projects.size % 3)
@@ -92,7 +97,13 @@ module ProjectHelpers
   def project_image(project)
     image_path = File.join("work", project.slug, "project.jpg")
     return nil unless image_exists?(image_path)
-    image = image_tag(image_path, :alt => I18n.t("work.show.screenshot_of_project", :project_name => project.name))
+    image = image_tag(
+      image_path,
+      :alt => I18n.t(
+        "work.show.screenshot_of_project",
+        :project_name => project.name
+      )
+    )
 
     url = project.website
     image_with_link = if url

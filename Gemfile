@@ -9,7 +9,7 @@ gem "middleman-livereload", "~> 3.3.0"
 gem "middleman-minify-html"
 
 gem "builder"
-gem "html-scanner", :github => "koppen/html-scanner"
+gem "rails-html-sanitizer"
 gem "json", "<= 1.8.0"
 gem "nokogiri"
 gem "sassy-math"

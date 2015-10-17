@@ -1,15 +1,6 @@
-GIT
-  remote: git://github.com/koppen/html-scanner.git
-  revision: 1cb30ba98536c0f9e3f3f98d546c6c172eedd7ac
-  specs:
-    html-scanner (0.5.3)
-      actionpack
-      activesupport
-
 GEM
   remote: http://rubygems.org/
   specs:
-    actionpack (1.4.0)
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
@@ -48,6 +39,8 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
     middleman (3.2.2)
       coffee-script (~> 2.2.0)
       compass (>= 0.12.2)
@@ -96,6 +89,8 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-html-sanitizer (1.0.2)
+      loofah (~> 2.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -134,7 +129,6 @@ PLATFORMS
 
 DEPENDENCIES
   builder
-  html-scanner!
   json (<= 1.8.0)
   middleman (~> 3.2.2)
   middleman-blog
@@ -142,5 +136,9 @@ DEPENDENCIES
   middleman-livereload (~> 3.3.0)
   middleman-minify-html
   nokogiri
+  rails-html-sanitizer
   sassy-math
   slim
+
+BUNDLED WITH
+   1.10.6

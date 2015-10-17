@@ -1,8 +1,8 @@
-require 'active_support/core_ext/array/grouping'
+require "active_support/core_ext/array/grouping"
 
 module ProjectHelpers
   def all_projects
-    data.projects.map { |slug, values|
+    data.projects.map { |_slug, values|
       build_project(values)
     }.sort_by { |project|
       [project.position, project.name.try(:downcase)]
@@ -25,19 +25,17 @@ module ProjectHelpers
   def case_study_masthead(project)
     content_for(:masthead) do
       content_tag(:h1, project.name) +
-      content_tag(:div, localized(project.description), :class => "subtitle")
+        content_tag(:div, localized(project.description), :class => "subtitle")
     end
   end
 
   # Returns true if project has a case study in the current locale
   def case_study?(project)
-      Array(project.case_studies).include?(current_locale)
+    Array(project.case_studies).include?(current_locale)
   end
 
   def featured_projects
-    all_projects.select { |project|
-      project.featured
-    }
+    all_projects.select(&:featured)
   end
 
   def project_tile(project)
@@ -114,7 +112,7 @@ module ProjectHelpers
         image_with_link,
         :class => "container"
       ),
-      :class => 'display-project'
+      :class => "display-project"
     )
   end
 
@@ -126,12 +124,12 @@ module ProjectHelpers
 
   def project_url(project)
     slug = project.slug
-    raise "Slug for #{project.inspect} cannot be blank" if slug.blank?
+    fail "Slug for #{project.inspect} cannot be blank" if slug.blank?
     File.join(projects_url, slug)
   end
 
   def technologies
-    data.projects.collect { |slug, values|
+    data.projects.collect { |_slug, values|
       values.technologies
     }.flatten.compact.uniq.sort
   end

@@ -12,7 +12,7 @@ namespace :images do
       file.sub(MASTHEAD_ORIGINALS.to_s, MASTHEAD_DESTINATION.to_s)
     }
 
-    rule Regexp.new("^#{MASTHEAD_DESTINATION.join("articles")}/.+\\.jpg") do |task|
+    rule Regexp.new("^#{MASTHEAD_DESTINATION.join('articles')}/.+\\.jpg") do |task|
       source_path = task.name.sub(MASTHEAD_DESTINATION.to_s, MASTHEAD_ORIGINALS.to_s)
       puts source_path.to_s
       system "scripts/mastheadify", source_path.to_s
@@ -39,11 +39,11 @@ end
 namespace :middleman do
   desc "Builds the website files into the build directory"
   task :build do
-    system 'middleman build --clean'
+    system "middleman build --clean"
   end
 
   task :clean do
-    system 'rm -rf build'
+    system "rm -rf build"
   end
 
   desc "Deploys the site to whatever host is configured in middleman"
@@ -57,8 +57,8 @@ namespace :middleman do
 
     LOCALE = (ENV["LOCALE"] || "en").to_s
     remote_dir = {
-      'da' => "/public_html/",
-      'en' => "/substancelab.com/"
+      "da" => "/public_html/",
+      "en" => "/substancelab.com/"
     }[LOCALE]
 
     ftp_script = <<-EOS

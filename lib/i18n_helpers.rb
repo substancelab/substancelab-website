@@ -1,5 +1,4 @@
 module I18nHelpers
-
   def current_locale
     I18n.locale.to_s
   end
@@ -33,7 +32,7 @@ module I18nHelpers
     partial_path = paths.shift
     partial(partial_path, locals)
   rescue Middleman::CoreExtensions::Rendering::TemplateNotFound
-    fail if paths.empty?
+    raise if paths.empty?
     puts "#{partial_path.inspect} not found. Falling back to #{paths.inspect}"
     partial_with_fallbacks(paths, locals)
   end

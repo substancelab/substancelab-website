@@ -1,5 +1,4 @@
 module LayoutHelpers
-
   def body_attributes
     data = current_page.data
     attrs = {}
@@ -44,5 +43,4 @@ module LayoutHelpers
       "url('#{image_url}')"
     )
   end
-
 end

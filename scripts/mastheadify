@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
-require 'pathname'
+require "pathname"
 
 path = Pathname.new(ARGV[0])
-raise "File not found: #{path}" unless path.exist?
+fail "File not found: #{path}" unless path.exist?
 
 source_filename = path.basename
 source_path = path.dirname

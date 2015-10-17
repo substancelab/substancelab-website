@@ -8,13 +8,15 @@ source_filename = path.basename
 source_path = path.dirname
 source_folder = source_path.split.last
 
-destination_path = File.expand_path(File.join(
-  source_path,
-  "../..",
-  "source",
-  "images",
-  source_folder
-))
+destination_path = File.expand_path(
+  File.join(
+    source_path,
+    "../..",
+    "source",
+    "images",
+    source_folder
+  )
+)
 destination_file = File.join(destination_path, source_filename)
 
 system("cp", path.to_s, destination_file)

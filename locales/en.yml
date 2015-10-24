@@ -1,6 +1,8 @@
 ---
 en:
   articles:
+    index:
+      page_title: "Substance Lab writes about online products, business, user experience"
     show:
       meta_data: "%{author} wrote this on %{date}"
       photo_credits: "Photo by %{name}"

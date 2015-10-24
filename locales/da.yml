@@ -1,6 +1,8 @@
 ---
 da:
   articles:
+    index:
+      page_title: "Artikler om online produkter, forretning, brugervenlighed"
     show:
       meta_data: "Skrevet af %{author} d. %{date}"
       photo_credits: "Billede taget af %{name}"

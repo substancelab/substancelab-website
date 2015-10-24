@@ -1,3 +1,5 @@
+- content_for(:page_title)
+  = t("articles.index.page_title")
 - wrap_layout :layout do
   - if is_blog_article?
     == partial "articles/article"

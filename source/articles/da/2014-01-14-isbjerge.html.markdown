@@ -20,7 +20,7 @@ Problemet er, at den synlige del kun udgør en lille del af det samlede arbejde.
 
 Den simpleste måde at undgå isbjergene er at lade andre om at håndtere dem. Der findes adskillige virksomheder, der har gjort det til deres kerneforretning at lave den bedste version af netop det isbjerg, du står over for.
 
-Lad nu være med at bruge tid og penge på at bygge et nyhedsbrevssystem, der kun kommer til at fungere en brøkdel så godt som [Mailchimp](http://mailchimp.com/). Jeg er sikker på, at [Recurly](http://recurly.com/) har løst flere problemer med abonnementsbetalinger, end du endnu har opdaget findes.
+Lad nu være med at bruge tid og penge på at bygge et system til at sende nyhedsbreve, der kun kommer til at fungere en brøkdel så godt som [Mailchimp](http://mailchimp.com/). Jeg er sikker på, at [Recurly](http://recurly.com/) har løst flere problemer med abonnementsbetalinger, end du endnu har opdaget findes.
 
 ## Fokusér på _din_ kerneforretning
 

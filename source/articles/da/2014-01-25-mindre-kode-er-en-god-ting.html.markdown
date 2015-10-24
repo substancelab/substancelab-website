@@ -12,7 +12,7 @@ READMORE
 
 Jo mere kode dit projekt indeholder, jo sværere er det for udviklerne at overskue. Dermed bliver det også sværere for dem at overskue konsekvenserne af deres ændringer, hvilket medfører øget risiko for fejl eller dobbelt arbejde.
 
-Programmører er - selv om de gerne vil udstråle noget andet - mennesker, og der er begrænsninger for hvor meget vi mennesker kan rumme i vores hovede på én gang. Når en kodebase bliver for stor at have i hovedet på samme tid, går udviklingshastigheden ned:
+Programmører er - selv om de gerne vil udstråle noget andet - mennesker, og der er begrænsninger for hvor meget vi mennesker kan rumme i vores hoved på én gang. Når en kodebase bliver for stor at have i hovedet på samme tid, går udviklingshastigheden ned:
 
 * Programmøren bliver nødt til at slå op, hvordan det nu lige var en given funktion fungerer i stedet for bare at bruge den.
 * Hvis det vil tage lang tid at finde en eksisterende funktion, skriver programmøren den muligvis bare igen. Det er dobbelt arbejde - ikke bare nu, men også i fremtiden, hvor begge funktioner skal vedligeholdes.

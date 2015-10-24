@@ -16,7 +16,7 @@ READMORE
 
 Den primære årsag til at man ikke viser alle resultater på én lang side er performance. Skulle en stor webshop vise alle deres varer på én side ville den side næppe kunne leveres indenfor en acceptabel tidsramme. Derfor deler de resultaterne ud på flere sider.
 
-En bedre løsning ville være at optimere visningshastigheden, og enten helt skrotte side-inddelingen eller hvertfald øge antallet af resultater pr side; det er alt andet lige nemmere at scrolle end at klikke sig videre til flere resultater.
+En bedre løsning ville være at optimere visningshastigheden, og enten helt skrotte side-inddelingen eller i hvert fald øge antallet af resultater pr side; det er alt andet lige nemmere at scrolle end at klikke sig videre til flere resultater.
 
 ## Det kan hjælpe på overskueligheden
 

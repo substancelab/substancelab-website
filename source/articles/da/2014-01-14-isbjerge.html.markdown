@@ -7,7 +7,7 @@ photo:
     url: "https://www.flickr.com/photos/40322276@N04/8290528771"
   filename: iceberg.jpg
 ---
-Der findes en kategori af features, som du næsten uundgåeligt møder under udviklingen af applikationer af en hvis størrelse. Det kan være features som udsending af mails, abonnementsbetaling, nyhedsbrevsudsending, fakturering, søgning.
+Der findes en kategori af features, som du næsten uundgåeligt møder under udviklingen af applikationer af en hvis størrelse. Det kan være features som udsending af mails, abonnementsbetaling, udsending af nyhedsbreve, fakturering, søgning.
 READMORE
 
 ## "Det er jo bare..."

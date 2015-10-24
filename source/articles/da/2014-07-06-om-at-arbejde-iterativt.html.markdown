@@ -24,4 +24,4 @@ Hvis det viser sig, at featuren ikke løser et reelt problem - eller løser prob
 
 Venter du med at lancere en featuren til vision og implementering matcher, risikerer du at kaste penge efter det forkerte. Du vil være mere tilbøjelig til at beholde featuren og mindre villig til at ændre den, for nu "har vi jo brugt en masse penge på den".
 
-Få de pinlige versioner implementeret og lanceret. Vi kan altid gøre dem bedre, når vi ved, hvad brugerene rent faktisk har behov for. Det gør featuren bedre, dit produkt bedre, og dine kunder gladere. Og det er essencen i at arbejde iterativt.
+Få de pinlige versioner implementeret og lanceret. Vi kan altid gøre dem bedre, når vi ved, hvad brugerne rent faktisk har behov for. Det gør featuren bedre, dit produkt bedre, og dine kunder gladere. Og det er essensen i at arbejde iterativt.

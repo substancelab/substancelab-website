@@ -1,3 +1,6 @@
+- content_for(:page_title)
+  = current_article.title
+
 - content_for :masthead do
   h1.blog-article-headline== current_article.title
   .blog-article-meta

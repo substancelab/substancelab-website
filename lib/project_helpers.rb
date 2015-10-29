@@ -45,7 +45,7 @@ module ProjectHelpers
       content_tag(:p, localized(project.description))
     end
 
-    background_image = ["images", "work", project.slug, "square.jpg"].join("/")
+    background_image = ["/images", "work", project.slug, "square.jpg"].join("/")
 
     tile = capture do
       content_tag(

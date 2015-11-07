@@ -1,5 +1,6 @@
 ---
 title: De første kunder - hvor er de nu?
+description: Jakob kigger tilbage på nogle af vores mest succesfulde kunder
 tags: kunder, cases, exits
 photo:
   credits:

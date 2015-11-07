@@ -1,5 +1,6 @@
 ---
 title: Send ikke dine egne e-mails
+description: Du bør lade eksperterne om at sørge for, at dine emails bliver leveret til dine kunder
 tags: eksterne tjenester, produktstyring, software
 photo:
   credits:

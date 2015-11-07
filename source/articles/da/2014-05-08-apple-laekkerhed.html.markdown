@@ -1,5 +1,6 @@
 ---
 title: Apple-lækkerhed
+description: For at få lækre interfaces og brugeroplevelser er du nødt til at ofre noget
 date: 2014-05-08 09:58 UTC
 tags: apple, design,  usability, product management, simplicity, prototyping
 photo:

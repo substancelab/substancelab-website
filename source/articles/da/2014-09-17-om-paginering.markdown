@@ -1,5 +1,6 @@
 ---
 title: Om paginering
+description: Er side-inddeling nødvendigt eller overhovedet en god ide?
 tags: design, usability, performance
 photo:
   credits:

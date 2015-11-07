@@ -1,5 +1,6 @@
 ---
 title: www er ligegyldigt
+description: Lad nu være med at kræve www foran dit domæne
 tags: domæner, www, server
 photo:
   credits:

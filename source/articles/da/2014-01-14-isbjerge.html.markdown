@@ -1,5 +1,6 @@
 ---
 title: Isbjerge
+description: En feature er ikke bare det du ser; der er ofte en masse under overfladen
 tags: software, udvikling, prioritering, eksterne tjenester
 photo:
   credits:

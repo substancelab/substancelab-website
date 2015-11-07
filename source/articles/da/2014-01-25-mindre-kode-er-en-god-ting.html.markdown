@@ -1,5 +1,6 @@
 ---
 title: Mindre kode er en god ting
+description: Kode er en investering, men det kommer med en række risici.
 tags: software, udvikling, produktstyring
 photo:
   filename: code_sass.jpg

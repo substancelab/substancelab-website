@@ -1,5 +1,6 @@
 ---
 title: 4 tips til billigere website designs
+description: Vi vil alle have lækre designs, og holder du nogle få ting i baghovedet behøver de ikke koste kassen at implementere
 tags: design, product management
 photo:
   credits:

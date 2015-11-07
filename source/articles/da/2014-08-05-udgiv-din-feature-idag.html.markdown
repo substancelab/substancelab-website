@@ -1,5 +1,6 @@
 ---
 title: Udgiv din feature i dag
+description: Få din feature ud til dine kunder nu med hurtigere feedback og bedre kvalitet til følge
 date: 2014-08-05 08:52 UTC
 tags: software, udvikling, proces, releases
 photo:

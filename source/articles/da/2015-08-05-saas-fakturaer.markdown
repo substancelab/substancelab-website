@@ -1,5 +1,6 @@
 ---
 title: "Vejen til bedre fakturaer"
+description: En række tips til at sørge for at dine kunder ser frem til at få fakturaer fra din webløsning
 tags: SaaS, forretning, fakturaer, betalinger
 photo:
   credits:

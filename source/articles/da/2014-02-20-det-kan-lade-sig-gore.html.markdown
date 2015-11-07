@@ -1,5 +1,6 @@
 ---
 title: Det kan lade sig gøre
+description: '"Det kan ikke lade sig gøre" er sjældent den fulde historie'
 tags: features, software, udvikling
 photo:
   credits:

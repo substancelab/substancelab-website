@@ -5,7 +5,7 @@ html lang="#{current_locale}"
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
     - unless current_page.data.description.blank?
-      meta name="description" content="#{current_page.data.description}"
+      meta name="description" content="#{h(current_page.data.description)}"
 
     -# One stylesheet to import them all
     == stylesheet_link_tag "layout.css", :media => "all"

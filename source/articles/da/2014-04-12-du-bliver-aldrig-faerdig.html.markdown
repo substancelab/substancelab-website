@@ -1,5 +1,6 @@
 ---
 title: Du bliver aldrig færdig
+description: At bygge en succesfuld SaaS-forretning er et evigt marathon
 tags: agile, backlog, features, software, udvikling
 photo:
   credits:

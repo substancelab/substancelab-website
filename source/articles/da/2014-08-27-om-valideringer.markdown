@@ -1,5 +1,6 @@
 ---
 title: Om valideringer
+description: Validering af bruger-data er svært. Her er lidt tips til at gøre oplevelsen bedre
 tags: design, forms, usability
 photo:
   credits:

@@ -1,5 +1,6 @@
 ---
 title: "2014"
+description: Få indblik i 2014, som det tog sig ud for os her i Substance Lab
 tags: året der gik, 2014
 photo:
   credits:

@@ -1,5 +1,6 @@
 ---
 title: "Hvad er kvalitets-kode?"
+description: 'Hvad er det der "god kode", som vi hele tiden snakker om, egentligt?'
 tags: SaaS, forretning, fakturaer, betalinger
 photo:
   filename: code-keyboard.jpg

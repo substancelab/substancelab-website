@@ -4,7 +4,10 @@ html lang="#{current_locale}"
     title== page_title
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
-    - unless current_page.data.description.blank?
+
+    - if content_for?(:meta_description)
+      meta name="description" content="#{h(yield_content(:meta_description))}"
+    - elsif current_page.data.description.present?
       meta name="description" content="#{h(current_page.data.description)}"
 
     -# One stylesheet to import them all

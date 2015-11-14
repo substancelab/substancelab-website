@@ -2,7 +2,8 @@
 en:
   articles:
     index:
-      page_title: "Substance Lab writes about online products, business, user experience"
+      meta_description: "Substance Lab writes about online products, business, user experience"
+      page_title: "Articles"
     show:
       meta_data: "%{author} wrote this on %{date}"
       photo_credits: "Photo by %{name}"
@@ -28,6 +29,7 @@ en:
       country: Denmark
     blog_headline: "Substantial articles from the blog"
     contact_us: Get in touch
+    meta_description: We build and grow the tech behind successful SaaS startups.
     peptalk: Handcrafted <strong>web applications</strong> and <strong>online software</strong> with a focus on <strong>simplicity</strong> and <strong>profitability</strong>
     phone: Phone
     the_team: The team
@@ -62,6 +64,7 @@ en:
       link_to_case_study: "Learn how Substance Lab helped %{client} build %{project}"
       list_of_companies_worked_with: "The full list of companies and organizations Substance Lab has worked with:"
       list_of_technologies: "Substance Lab routinely works with a wide variety of technologies:"
+      meta_description: "We have built a lot of web applications by now. We're proud of them all and want to show them off"
       portfolio: Portfolio
       project_website: Project website
       substance_lab_did: Substance Lab did

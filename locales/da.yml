@@ -2,7 +2,8 @@
 da:
   articles:
     index:
-      page_title: "Artikler om online produkter, forretning, brugervenlighed"
+      meta_description: "Artikler om online produkter, forretning, brugervenlighed"
+      page_title: "Artikler"
     show:
       meta_data: "Skrevet af %{author} d. %{date}"
       photo_credits: "Billede taget af %{name}"
@@ -29,6 +30,7 @@ da:
       country: Danmark
     blog_headline: "Seneste fra bloggen"
     contact_us: Kontaktoplysninger
+    meta_description: Vi er eksperter i at udvikle teknikken bag succesfulde online startups - måske også dit?
     peptalk: Substance Lab er et <strong>digitalt udviklingshus</strong> som realiserer <strong>online forretningsidéer</strong>
     phone: Telefon
     the_team: Personerne bag
@@ -64,6 +66,7 @@ da:
       link_to_case_study: "Læs hvordan Substance Lab hjalp %{client} med at lave %{project}"
       list_of_companies_worked_with: "Den samlede liste med selskaber, som Substance Lab har samarbejdet med:"
       list_of_technologies: "Substance Lab har erfaringer med en lang række teknologier:"
+      meta_description: Udvalgte arbejder lavet af Substance Lab. Vi er stolte af det vi laver og viser det gerne frem.
       portfolio: Portfolio
       project_website: Se resultatet
       substance_lab_did: Substance Lab lavede

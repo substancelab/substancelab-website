@@ -14,7 +14,7 @@ READMORE
 
 Det er næsten selvsagt, at god kode er korrekt kode. Koden skal gør det, der er meningen og den gør det rigtigt. Definitionen af, hvad der korrekt afgøres i samarbejde med produkt-ejeren før en feature udvikles og løbende under udviklingen af udviklerne, når der opdages grænsetilfælde.
 
-For at sikre at kode er korrekt forsøger vi at fange alle detaljer om hvordan den skal bruges i user stories før udviklingen går igang. Under udviklingen bruges teknikker som automatiske tests, og en gennemgang af den endelige feature sikrer, at koden der ryger i drift er korrekt.
+For at sikre at kode er korrekt forsøger vi at fange alle detaljer om hvordan den skal bruges i user stories før udviklingen går i gang. Under udviklingen bruges teknikker som automatiske tests, og en gennemgang af den endelige feature sikrer, at koden der ryger i drift er korrekt.
 
 ## Læsbar: Man kan forstå, hvordan den fungerer
 

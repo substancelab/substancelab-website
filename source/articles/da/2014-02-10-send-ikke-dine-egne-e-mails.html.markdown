@@ -22,9 +22,9 @@ Tidligere på ugen modtag en af mine kunder e-mail fra [Postmark](http://www.pos
 
 Mailen indeholdt [tydelige instrukser og forklaringer](http://blog.postmarkapp.com/post/51224968159/upgrading-and-rotating-dkim-keys) og problemet var rettet på meget kort tid.
 
-Det problem havde vi ikke selv opdaget endnu. Godt nok havde vi fået nogle rapporter om at e-mails fra Web applikationen var begyndt at havne i Gmails spamfilter, men det var ikke noget, der virkede suspekt eller systematisk, så vi havde ikke bidt specielt mærke i det.
+Det problem havde vi ikke selv opdaget endnu. Godt nok havde vi fået nogle rapporter om at e-mails fra Web applikationen var begyndt at havne i Gmail's spamfilter, men det var ikke noget, der virkede suspekt eller systematisk, så vi havde ikke bidt specielt mærke i det.
 
-Og selv hvis vi havde opdaget det, ville vi nok først have fundet frem til DKIM problemet efter en lang og dyr fejlfindingsprocess. Det er den slags viden, der kræver eksperter, som gør nøjagtigt det, de er gode til.
+Og selv hvis vi havde opdaget det, ville vi nok først have fundet frem til DKIM problemet efter en lang og dyr fejlfindingsproces. Det er den slags viden, der kræver eksperter, som gør nøjagtigt det, de er gode til.
 
 De eksperter får du nemmest og billigst ved at leje dem via en tredjepartstjeneste.
 

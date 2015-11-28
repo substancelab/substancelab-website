@@ -20,7 +20,7 @@ For at sikre at kode er korrekt forsøger vi at fange alle detaljer om hvordan d
 
 Udviklere bruger mere tid på at læse kode end på at skrive det. For at kunne danne en slagplan for en ændring bruger vi lang tid på at sætte os ind i den eksisterende kode og finde ud af, hvordan det fungerer. For at kunne rette fejl, bruger vi lang tid på at undersøge den eksisterende kode.
 
-Web applikationer er komplekse systemer, og det er ikke uset, at løsningen på en opgave består af timers gennemgang af koden for at finde frem til roden af et problem, hvorefter rettelsen klares på 1 minut og 1 linie kode.
+Web applikationer er komplekse systemer, og det er ikke uset, at løsningen på en opgave består af timers gennemgang af koden for at finde frem til roden af et problem, hvorefter rettelsen klares på 1 minut og 1 linje kode.
 
 Læsbar og forståelig kode bidrager til at reducere tiden, der skal bruges til at finde frem til et problem, og minimerer risikoen for at introducere fejl.
 

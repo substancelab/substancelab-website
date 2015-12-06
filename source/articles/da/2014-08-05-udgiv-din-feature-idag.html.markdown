@@ -40,7 +40,7 @@ Og det er den eneste måde, du kan få [værdifuld feedback](http://substancelab
 
 ### Nemmere at gå tilbage
 
-Skulle det gå helt galt, og du har lagt noget online, som får alting til at brage ned, har du behov for at tage et hurtigt valg: Skal du rulle releasen tilbage, eller forsøge at panik-rette problemerne?
+Skulle det gå helt galt, og du har lagt noget online, som får alting til at brage ned, har du behov for at tage et hurtigt valg: Skal du rulle din release tilbage, eller forsøge at panik-rette problemerne?
 
 Har du udgivet en mastodont af en release er det meget svært at vælge det første. For selv om det kun er en enkelt feature i kæmpe-releasen, der giver problemer, vil du være nødt til at rulle alt tilbage. Det er aldrig sjovt at forklare kunderne, at feature X er forsvundet igen, fordi en ikke relateret feature gav problemer.
 

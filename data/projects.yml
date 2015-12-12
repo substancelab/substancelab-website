@@ -240,6 +240,32 @@ kontrakten:
   - Javascript
   - Ruby on Rails
 
+kreditregisteret:
+  client: Kreditregisteret, Denmark
+  client_website: http://www.kreditregisteret.dk
+  description:
+    da: "Kreditregisteret hjælper banker, finansieringsvirksomheder og kreditgivere med at føre en ansvarlig lånepolitik"
+    en: "Kreditregisteret (The Credit Registry) provides financial institutions and debt providers with credit information"
+  featured: false
+  name: Kreditregisteret
+  position: 4
+  services:
+  - api_development
+  - project_management
+  - server_management
+  - web_application_development
+  - webdesign
+  slug: biq
+  technologies:
+  - Ansible
+  - CSS
+  - Javascript
+  - JSON API
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  website: http://biq.dk
+
 lokalebasen:
   case_studies:
   - da

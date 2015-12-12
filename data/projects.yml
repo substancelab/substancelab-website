@@ -200,6 +200,17 @@ gomore:
   - Ruby
   - Ruby on Rails
 
+grundfos-biobooster:
+  client: Grundfos Biobooster, Denmark
+  client_website: http://www.grundfos.com/
+  position: 22
+  services:
+  - training
+  - web_application_development
+  technologies:
+  - Javascript
+  - Ruby on Rails
+
 iiamo:
   client: Loop Associates, Denmark
   client_website: http://www.loopassociates.com/

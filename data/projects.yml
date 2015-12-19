@@ -284,8 +284,8 @@ lokalebasen:
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
   description:
-    da: Lokalebasen.dk er Danmarks førende portal for udlejning af kontorlokaler, produktions- og lagerbygninger og butikker. Substance Lab har været med fra starten, og bygget sitet under anvendelse af agile metoder.
-    en: Lokalebasen is a danish portal for renting and selling offices, warehouses, and production facilities. Substance Lab was hired to build the site from the ground up, using Agile and Test Driven Development.
+    da: "Vi har bygget Danmarks førende portal for udlejning af erhvervslokaler. Sitet blev til under anvendelse af Rails, testdreven udvikling og agile metoder."
+    en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
   featured: true
   name: Lokalebasen
   position: 2

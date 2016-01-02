@@ -1,6 +1,6 @@
 ---
 title: Vi støtter Kræftens Bekæmpelse
-description: Substance Lab støtter Kræftens Bekæmpelse
+description: Substance Lab støtter Kræftens Bekæmpelse kamp for børn og unge
 tags: velgørenhed
 photo:
   filename: kraeftens_bekaempelse_diplom.jpg

@@ -11,5 +11,5 @@ READMORE
 
 Vi er stolte af at kunne være med til at gøre en forskel i fremtiden, så andre ikke behøver dele vores oplevelser.
 
-<figure><img src="/images/articles/kraeftens_bekaempelse_2014.png" alt=""></figure>
+<figure><img src="/images/articles/kraeftens_bekaempelse_2014.png" alt="Vi støtter børn, unge &amp; kræft, 2015"></figure>
 

@@ -1,0 +1,22 @@
+---
+title: "Vi fylder 10"
+description: 'Hvad er det der "god kode", som vi hele tiden snakker om, egentligt?'
+tags: Substance Lab
+photo:
+  credits:
+    name: Will Clayton
+    url: https://www.flickr.com/photos/spool32/5045502202
+  filename: happy_birthday_cake.jpg
+---
+
+Januar 2016 markerer 10 års jubilæet for Substance Labs eksistens. 10 år med op- og nedture, udfordringer og ikke mindst, rigtigt lækre løsninger.
+
+READMORE
+
+Da jeg stiftede den første, enkeltmands-inkarnation af firmaet havde jeg næppe forestillet mig at det skulle vare så lang tid.
+
+Men selvfølgeligt skulle det da det. Med en lang række af fantastiske kunder, som vi har kunne hjælpe med at tage fra idé til fungerende forretning på solide webløsninger, har der bestemt ikke været nogen grund til at stoppe.
+
+Vi er stolte af vores kunders resultater, og vi ved, at uden dem ville vi ikke stadig være her. Det er fantastisk at vide, at der er forretninger med omsætninger og resultater i millionklassen, som kører på platforme, vi har bygget.
+
+Stor tak til alle jer, der har været med til at gøre Substance Lab til en succes; kunder, venner, familiemedlemmer, samarbejdspartnere, leverandører, rådgivere. Vi glæder os til at fejre 20 års jubilæum med jer.

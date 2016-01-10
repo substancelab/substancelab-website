@@ -19,6 +19,10 @@ Typisk er den ønskede feature eller ændring teknisk mulig, men der er en rækk
 * Idéen er dårlig, og det er nemmere at stemple den som en teknisk umulighed end at forklare hvorfor idéen er dårlig.
 * Det er rent faktisk ikke muligt - givet de krav og den viden, der pt er.
 
+## Hvad bliver reelt sagt
+
 Næste gang en udvikler fortæller dig, at noget ikke er muligt, prøv at høre hende, hvilken af ovenstående har affødt det svar. Udvikleren har muligvis ret, men i det mindste kender du nu den reelle årsag.
+
+## Det kan næsten altid lade sig gøre
 
 Mit standardsvar på spørgsmålet, "er det muligt at X" har længe været "Ja, alt er muligt - givet nok penge og tid. Hvor meget har du af begge?". Fra tid til anden er jeg så desværre nødt til at følge op med en "Oh, i det tilfælde er det ikke muligt".

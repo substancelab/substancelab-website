@@ -402,7 +402,6 @@ test_cloud:
 
 wildfire:
   client: Wildfire, USA
-  client_website: http://wildfireapp.com
   description:
     da: "Wildfire gør det nemt for firmaer at lancere og håndtere marketing kampagner på tværs af sociale medier som Facebook og Twitter. Substance Lab arbejde som en del af Wildfires distribuerede team."
     en: With Wildfire companies can easily launch marketing campaigns on social networks like Facebook and Twitter. Substance Lab worked with the virtual development team to build out the featureset of Wildfire.
@@ -418,4 +417,3 @@ wildfire:
   - Liquid
   - MySQL
   - Ruby on Rails
-  website: http://wildfireapp.com

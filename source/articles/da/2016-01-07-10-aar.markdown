@@ -1,6 +1,6 @@
 ---
 title: "Vi fylder 10"
-description: 'Hvad er det der "god kode", som vi hele tiden snakker om, egentligt?'
+description: 'Vi har nu i 10 år lavet webløsninger på vores måde; brugervenlige og af høj teknisk kvalitet.'
 tags: Substance Lab
 photo:
   credits:

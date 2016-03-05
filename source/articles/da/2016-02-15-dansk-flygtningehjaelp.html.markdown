@@ -13,6 +13,8 @@ Hvert år donerer vi et beløb til en velgørende organisation, som vi synes er 
 
 READMORE
 
+## En del af verden
+
 Selv nørder som os, der foretrækker at koncentrere os om, hvad der foregår inde bag skærmen, er ikke blinde for de massive udfordringer som rigtigt mange mennesker rundt om i verden desværre er udsat for.
 
 Det her er vores forsøg på at give et bidrag til at gøre deres hverdag bedre.

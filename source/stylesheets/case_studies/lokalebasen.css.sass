@@ -19,20 +19,6 @@
     .code h2
       color: #ffffff
 
-    .intro .container
-      +column-count(2)
-      +column-gap(4em)
-      text-align: justify
-      width: 90%
-
-    @media screen and (max-width: 800px)
-      .intro
-        padding-bottom: 0
-
-      .intro .container
-        text-align: left
-        +column-count(1)
-
     .process
       +background-image(linear-gradient(top, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)), url(/images/work/lokalebasen/whiteboard.jpg))
       +filled-section

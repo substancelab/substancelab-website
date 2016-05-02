@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
@@ -141,4 +141,4 @@ DEPENDENCIES
   slim
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

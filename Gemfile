@@ -6,6 +6,7 @@ gem "middleman-favicon-maker"
 gem "middleman-livereload", "~> 3.3.0"
 gem "middleman-minify-html"
 
+gem "activesupport", "> 3.2.16"
 gem "builder"
 gem "rails-html-sanitizer"
 gem "json"

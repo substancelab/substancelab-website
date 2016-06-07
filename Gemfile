@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem "middleman", "~>3.2.2"
+gem "middleman", "~> 3.4.1"
 gem "middleman-blog"
-gem "middleman-favicon-maker"
+# gem "middleman-favicon-maker"
 gem "middleman-livereload"
-gem "middleman-minify-html"
+# gem "middleman-minify-html"
 
-gem "activesupport", "> 3.2.16"
-gem "builder"
-gem "json"
-gem "nokogiri"
-gem "rails-html-sanitizer"
+# gem "activesupport", "> 3.2.16"
+# gem "builder"
+# gem "rails-html-sanitizer", :require => false
+# gem "json"
+# gem "nokogiri"
 gem "sassy-math"
 gem "slim"

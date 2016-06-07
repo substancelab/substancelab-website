@@ -8,7 +8,7 @@ gem "middleman-minify-html"
 
 gem "builder"
 gem "rails-html-sanitizer"
-gem "json", "<= 1.8.0"
+gem "json"
 gem "nokogiri"
 gem "sassy-math"
 gem "slim"

@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "middleman", "~>3.2.2"
 gem "middleman-blog"
 gem "middleman-favicon-maker"
-gem "middleman-livereload", "~> 3.3.0"
+gem "middleman-livereload"
 gem "middleman-minify-html"
 
 gem "activesupport", "> 3.2.16"

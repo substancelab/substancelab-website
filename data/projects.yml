@@ -131,7 +131,7 @@ eventzonen:
     en: eventzonen.dk puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
   featured: true
   name: eventzonen.dk
-  position: 1
+  position: 2
   services:
   - web_application_development
   - project_management
@@ -291,7 +291,7 @@ lokalebasen:
     en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
   featured: true
   name: Lokalebasen
-  position: 2
+  position: 3
   services:
   - api_development
   - economic_integration

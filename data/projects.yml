@@ -403,6 +403,18 @@ test_cloud:
   - Angular
   - Ruby on Rails
 
+urbanwinebox:
+  client: UrbanWineBox, Denmark
+  client_website: http://urbanwinebox.com
+  name: UrbanWineBox
+  position: 14
+  services:
+  - project_management
+  - web_application_development
+  technologies:
+  - PostgreSQL
+  - Ruby on Rails
+
 wildfire:
   client: Wildfire, USA
   description:

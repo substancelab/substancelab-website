@@ -1,16 +1,16 @@
 .quote
+  $_spacing: 2.4rem
   font-family: palatino, georgia, times, serif
   font-size: 1.6em
   line-height: 1.67em
+  padding-left: $_spacing
   p
     margin-top: 1.8em
     margin-bottom: 0
-    margin-left: 2.4rem
     &:first-child
       margin-top: 0
   .author
     font-size: 12px
-    margin-left: 2.4rem
     &:before
       content: '\2014'
   &:before
@@ -19,3 +19,4 @@
     font-size: 2em
     float: left
     line-height: 1em
+    margin-left: -$_spacing

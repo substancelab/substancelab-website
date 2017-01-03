@@ -9,7 +9,7 @@ gem "middleman-livereload"
 
 # gem "activesupport", "> 3.2.16"
 # gem "builder"
-# gem "rails-html-sanitizer", :require => false
+gem "rails-html-sanitizer", :require => false
 # gem "json"
 # gem "nokogiri"
 gem "sassy-math"

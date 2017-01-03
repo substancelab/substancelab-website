@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+
+require "rails-html-sanitizer"
+
 module HtmlHelpers
   def strip_tags(html)
-    puts "strip_tags currently does nothing."
-    # Rails::Html::FullSanitizer.new.sanitize(html)
-    html
+    Rails::Html::FullSanitizer.new.sanitize(html)
   end
 end

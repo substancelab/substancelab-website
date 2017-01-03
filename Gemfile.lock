@@ -50,6 +50,8 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    loofah (2.0.3)
+      nokogiri (>= 1.5.9)
     middleman (3.4.1)
       coffee-script (~> 2.2)
       compass (>= 1.0.0, < 2.0.0)
@@ -105,6 +107,8 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-html-sanitizer (1.0.3)
+      loofah (~> 2.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -144,6 +148,7 @@ DEPENDENCIES
   middleman (~> 3.4.1)
   middleman-blog
   middleman-livereload
+  rails-html-sanitizer
   sassy-math
   slim
 

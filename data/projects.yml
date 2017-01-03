@@ -78,6 +78,7 @@ change-healthcare:
   position: 7
   services:
   - web_application_development
+  slug: change-healthcare
   technologies:
   - Ruby
   - Ruby on Rails

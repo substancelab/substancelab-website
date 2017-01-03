@@ -21,7 +21,7 @@ end
 require "sassy-math"
 
 require "slim"
-Slim::Engine.set_default_options(:format => :html5,
+Slim::Engine.set_default_options(:format => :html,
                                  :pretty => true)
 
 set :css_dir, "stylesheets"

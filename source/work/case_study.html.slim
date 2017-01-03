@@ -15,7 +15,7 @@ priority: 1
   article
     == localized_partial File.join("work", project.slug), :locals => {:project => project}
 
-    == project_image(project)
+    = "project_image(project)"
 
     section.details
       .container
@@ -44,4 +44,4 @@ priority: 1
           .column
             == project_tile(case_study)
 
-- masthead_image(project_masthead_image_path(project))
+- "masthead_image(project_masthead_image_path(project))"

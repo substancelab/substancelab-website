@@ -5,7 +5,7 @@ gem "middleman", "~> 3.4.1"
 gem "middleman-blog"
 # gem "middleman-favicon-maker"
 gem "middleman-livereload"
-# gem "middleman-minify-html"
+gem "middleman-minify-html"
 
 # gem "activesupport", "> 3.2.16"
 # gem "builder"

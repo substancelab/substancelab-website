@@ -83,6 +83,8 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-minify-html (3.1.1)
+      middleman-core (~> 3.0)
     middleman-sprockets (3.5.0)
       middleman-core (>= 3.3)
       sprockets (~> 2.12.1)
@@ -148,6 +150,7 @@ DEPENDENCIES
   middleman (~> 3.4.1)
   middleman-blog
   middleman-livereload
+  middleman-minify-html
   rails-html-sanitizer
   sassy-math
   slim

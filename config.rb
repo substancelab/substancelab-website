@@ -56,30 +56,6 @@ I18n.locale = LOCALE
 # Reload automatically when stuff changes
 activate :livereload, :host => "localhost"
 
-require "lib/i18n_helpers"
-helpers I18nHelpers
-
-require "lib/article_helpers"
-helpers ArticleHelpers
-
-require "lib/asset_helpers"
-helpers AssetHelpers
-
-require "lib/client_helpers"
-helpers ClientHelpers
-
-require "lib/html_helpers"
-helpers HtmlHelpers
-
-require "lib/i18n_helpers"
-helpers I18nHelpers
-
-require "lib/layout_helpers"
-helpers LayoutHelpers
-
-require "lib/project_helpers"
-helpers ProjectHelpers
-
 data.projects.each do |key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
   next unless case_study

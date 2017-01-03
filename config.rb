@@ -80,12 +80,15 @@ helpers LayoutHelpers
 require "lib/project_helpers"
 helpers ProjectHelpers
 
-case_studies.each do |case_study|
+data.projects.each do |key, attributes|
+  case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
+  next unless case_study
+
   proxy \
-    File.join("/work", case_study.slug, "index.html"),
+    File.join("/work", attributes.slug, "index.html"),
     "/work/case_study.html",
-    :ignore => true,
-    :locals => {:project => case_study}
+    :locals => {:project => attributes},
+    :ignore => true
 end
 
 # Used for generating absolute URLs

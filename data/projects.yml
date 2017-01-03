@@ -160,6 +160,27 @@ fab-it:
   - Ruby
   - Ruby on Rails
 
+flaym:
+  case_studies:
+  - da
+  client: LEO Innovation Lab, Denmark
+  client_website: https://leoinnovationlab.com/
+  description:
+    da: Flaym er et socialt netværk for personer, der lider af psoriasis. Det skulle bygges under tidspres og LEO Innovation Lab havde brug for en partner, der kunne arbejde iterativt og tæt sammen med deres designere.
+    en: Flaym is on a mission to connect psoriasis sufferers from all over the world. And they needed a development partner who could deliver iteratively and in close cooperation with inhouse designers.
+  featured: false
+  name: Flaym
+  position: 1
+  services:
+  - web_application_development
+  slug: flaym
+  technologies:
+  - Javascript
+  - Knockout
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+
 gamekillers:
   case_studies:
   - en

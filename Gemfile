@@ -10,5 +10,6 @@ gem "middleman-minify-html"
 # gem "activesupport", "> 3.2.16"
 
 gem "rails-html-sanitizer", :require => false
+gem "sassc"
 gem "sassy-math"
 gem "slim"

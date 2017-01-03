@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem "middleman", "~> 3.4.1"
+gem "middleman", "~> 4.0"
 gem "middleman-blog"
 gem "middleman-favicon-maker"
 gem "middleman-livereload"

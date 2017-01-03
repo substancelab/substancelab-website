@@ -32,7 +32,7 @@ module I18nHelpers
   def partial_with_fallbacks(paths, locals = {})
     partial_path = paths.shift
     partial(partial_path, locals)
-  rescue Middleman::CoreExtensions::Rendering::TemplateNotFound
+  rescue Middleman::TemplateRenderer::TemplateNotFound
     raise if paths.empty?
     puts "#{partial_path.inspect} not found. Falling back to #{paths.inspect}"
     partial_with_fallbacks(paths, locals)

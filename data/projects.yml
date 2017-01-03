@@ -307,6 +307,28 @@ lokalebasen:
   - Ruby on Rails
   website: http://lokalebasen.dk
 
+minder-for-altid:
+  client: Minder for Altid ApS, Denmark
+  client_website: https://minderforaltid.dk
+  description:
+    da: "Med en usikker forretnings-model og et behov for høj brugervenlighed har Minder for Altid brug for en erfaren partner. Derfor kontaktede de Substance Lab."
+    en: "When the businessmodel isn't proven and user experience quality is a priority, you need an experienced partner. That's why Substance Lab was contacted."
+  featured: false
+  name: Minder for Altid
+  position: 4
+  services:
+  - ios_application_development
+  - web_application_development
+  slug: minder-for-altid
+  technologies:
+  - Javascript
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  - Turbolinks
+  - Wordpress
+  website: https://minderforaltid.dk
+
 mitbarnsnavn:
   client: Babysteps, Denmark
   client_website: http://mitbarnsnavn.dk

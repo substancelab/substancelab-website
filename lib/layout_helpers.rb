@@ -34,6 +34,8 @@ module LayoutHelpers
   end
 
   def css_for_masthead_image(image_url)
+    puts "css_for_masthead_image not yet implemented"
+    return ""
     css = render_individual_file(
       "stylesheets/modules/_masthead_image.css.sass"
     )

@@ -85,7 +85,7 @@ html lang="#{current_locale}"
       .container
         .legalese
           ' &copy;
-          ==' "#{[2008, Time.now.year].uniq.join("-")}"
+          => "#{[2008, Time.now.year].uniq.join("-")}"
           == link_to('Substance Lab', "/", :title => I18n.t("footer.link_to_substance_lab"))
         .contents
           ul.link-list

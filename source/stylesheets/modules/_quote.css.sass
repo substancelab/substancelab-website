@@ -20,3 +20,28 @@
     float: left
     line-height: 1em
     margin-left: -$_spacing
+
+  @mixin pull-quote
+    margin: 0
+    padding: 1rem
+    padding-left: $_spacing // Extend the box behind the quotation mark
+    width: 12rem
+
+    @media #{$breakpoint-desktop}
+      float: none
+      width: auto
+      margin: 0
+
+  &.pull-left
+    +pull-quote
+    float: left
+    margin:
+      left: -6rem
+      right: 2rem
+
+  &.pull-right
+    +pull-quote
+    float: right
+    margin:
+      right: -6rem
+      left: 2rem

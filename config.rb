@@ -3,10 +3,12 @@ LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 # Configure site
 SETTINGS = {
   "da" => {
-    "domain" => "substancelab.dk"
+    "domain" => "substancelab.dk",
+    "protocol" => "http://"
   },
   "en" => {
-    "domain" => "substancelab.com"
+    "domain" => "substancelab.com",
+    "protocol" => "http://"
   }
 }
 SITE_SETTINGS = SETTINGS[LOCALE]
@@ -79,8 +81,18 @@ case_studies.each do |case_study|
   proxy File.join("/work", case_study.slug, "index.html"), "/work/case_study.html", :locals => {:project => case_study}, :ignore => true
 end
 
+# Used for generating absolute URLs
+configure :development do
+  config[:protocol] = "http://"
+  config[:host] = Middleman::PreviewServer.host
+  config[:port] = Middleman::PreviewServer.port
+end
+
 # Build-specific configuration
 configure :build do
+  config[:protocol] = SITE_SETTINGS["protocol"]
+  config[:host] = SITE_SETTINGS["domain"]
+
   activate :favicon_maker, :icons => {
     "/images/favicon_template.png" =>   [
       {:icon => "/images/apple-touch-icon-152x152-precomposed.png"},

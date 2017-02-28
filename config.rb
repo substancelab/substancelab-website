@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 
 # Configure site
@@ -10,7 +11,7 @@ SETTINGS = {
     "domain" => "substancelab.com",
     "protocol" => "http://"
   }
-}
+}.freeze
 SITE_SETTINGS = SETTINGS[LOCALE]
 # Expose configuration to the entire Middleman application
 SITE_SETTINGS.each do |key, value|

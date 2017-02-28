@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "active_support/core_ext/array/grouping"
 
 module ProjectHelpers
@@ -42,7 +43,7 @@ module ProjectHelpers
   def project_tile(project)
     description = capture do
       content_tag(:h2, project.name, :class => "tile-title") +
-      content_tag(:p, localized(project.description))
+        content_tag(:p, localized(project.description))
     end
 
     background_image = ["/images", "work", project.slug, "square.jpg"].join("/")
@@ -135,7 +136,7 @@ module ProjectHelpers
 
   def project_url(project)
     slug = project.slug
-    fail "Slug for #{project.inspect} cannot be blank" if slug.blank?
+    raise "Slug for #{project.inspect} cannot be blank" if slug.blank?
     File.join(projects_url, slug)
   end
 

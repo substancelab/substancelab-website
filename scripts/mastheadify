@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 require "pathname"
 
 path = Pathname.new(ARGV[0])
-fail "File not found: #{path}" unless path.exist?
+raise "File not found: #{path}" unless path.exist?
 
 source_filename = path.basename
 source_path = path.dirname

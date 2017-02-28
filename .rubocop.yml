@@ -15,11 +15,12 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Exclude:
     - 'config/**/*.rb'
+    - 'lib/**/*.rake'
+    - 'Rakefile'
 
 Metrics/MethodLength:
   Exclude:
     - 'db/migrate/*'
-    - 'lib/**/*.rake'
 
 Rails/DynamicFindBy:
   Enabled: false

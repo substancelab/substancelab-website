@@ -83,11 +83,8 @@ module ProjectHelpers
 
   def project_masthead_image_path(project)
     image = File.join("work", project.slug, "masthead.jpg")
-    if image_exists?(image)
-      image_path(image)
-    else
-      return nil
-    end
+    return nil unless image_exists?(image)
+    image_path(image)
   end
 
   def show_code_image_in_header(code_image)

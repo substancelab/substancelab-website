@@ -9,11 +9,10 @@ module LayoutHelpers
   end
 
   def masthead_image(image_url)
-    if image_url
-      content_for(:page_specific_style) do
-        content_tag(:style) do
-          css_for_masthead_image(image_url)
-        end
+    return unless image_url
+    content_for(:page_specific_style) do
+      content_tag(:style) do
+        css_for_masthead_image(image_url)
       end
     end
   end

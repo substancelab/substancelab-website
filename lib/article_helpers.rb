@@ -6,10 +6,9 @@ module ArticleHelpers
 
   def article_image(article)
     image = article_photo_data(article, "filename")
-    if image
-      article_image_path = File.join(article_images_path(article), image)
-      image_path(article_image_path)
-    end
+    return nil unless image
+    article_image_path = File.join(article_images_path(article), image)
+    image_path(article_image_path)
   end
 
   def article_photo_data(article, key = nil)

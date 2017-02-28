@@ -53,7 +53,8 @@ namespace :middleman do
     password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
     ftp_url = "ftp://#{user}:#{password}@#{host}"
 
-    local_dir = File.join(Dir.pwd, "build")
+    local_dir = Pathname.new(File.join(Dir.pwd, "build"))
+    raise "Build directory not found at #{local_dir}" unless local_dir.exist?
 
     LOCALE = (ENV["LOCALE"] || "en").to_s
     remote_dir = {

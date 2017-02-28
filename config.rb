@@ -41,7 +41,8 @@ page "articles/*", :layout => :articles
 
 # Ignore articles from other locales than the current
 other_locales = SETTINGS.keys.reject { |key, _values| key == LOCALE }
-articles_not_in_current_locale = /^articles\/(#{other_locales.join("|")})\/\d{4}-\d{2}-\d{2}/
+articles_not_in_current_locale = \
+  %r|^articles\/(#{other_locales.join("|")})\/\d{4}-\d{2}-\d{2}|
 ignore(articles_not_in_current_locale)
 
 # Pretty URLs
@@ -79,7 +80,11 @@ require "lib/project_helpers"
 helpers ProjectHelpers
 
 case_studies.each do |case_study|
-  proxy File.join("/work", case_study.slug, "index.html"), "/work/case_study.html", :locals => {:project => case_study}, :ignore => true
+  proxy \
+    File.join("/work", case_study.slug, "index.html"),
+    "/work/case_study.html",
+    :ignore => true,
+    :locals => {:project => case_study}
 end
 
 # Used for generating absolute URLs

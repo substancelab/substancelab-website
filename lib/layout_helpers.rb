@@ -4,7 +4,9 @@ module LayoutHelpers
     data = current_page.data
     attrs = {}
     attrs[:id] = data.section if data.section
-    attrs[:class] = data.body_classes.join(" ") if data.body_classes && data.body_classes.any?
+    if data.body_classes && data.body_classes.any?
+      attrs[:class] = data.body_classes.join(" ")
+    end
     attrs
   end
 

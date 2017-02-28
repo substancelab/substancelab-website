@@ -8,13 +8,20 @@ namespace :images do
     MASTHEAD_ORIGINALS = Pathname.new("originals")
     MASTHEAD_DESTINATION = Pathname.new("source/images")
 
-    masthead_article_images = Rake::FileList.new(MASTHEAD_ORIGINALS.join("articles/*.jpg").to_s)
+    masthead_article_images = Rake::FileList.new(
+      MASTHEAD_ORIGINALS.join("articles/*.jpg").to_s
+    )
     masthead_article_originals = masthead_article_images.collect { |file|
       file.sub(MASTHEAD_ORIGINALS.to_s, MASTHEAD_DESTINATION.to_s)
     }
 
-    rule Regexp.new("^#{MASTHEAD_DESTINATION.join('articles')}/.+\\.jpg") do |task|
-      source_path = task.name.sub(MASTHEAD_DESTINATION.to_s, MASTHEAD_ORIGINALS.to_s)
+    article_mastheads = \
+      Regexp.new("^#{MASTHEAD_DESTINATION.join('articles')}/.+\\.jpg")
+    rule article_mastheads do |task|
+      source_path = task.name.sub(
+        MASTHEAD_DESTINATION.to_s,
+        MASTHEAD_ORIGINALS.to_s
+      )
       puts source_path.to_s
       system "scripts/mastheadify", source_path.to_s
       system "jpegoptim --strip-all", task.name

@@ -1,0 +1,42 @@
+---
+title: "Om spam og spammere"
+description: "Selv om open source er gratis, betyder det ikke, at det ikke koster nogets"
+tags: spam, teknologi
+photo:
+  credits:
+    name: "Michael Guthmann"
+    url: https://www.flickr.com/photos/goodi/7442274988
+  filename: "trash_can.jpg"
+---
+
+"Byg det og de vil komme" lyder et gammel ordsprog. Desværre tyder det på, at online er det kun spam og bots, det er dækkende for.
+
+READMORE
+
+Har du lavet en online tjeneste, vil du komme til at stifte bekendtskab med en del af internettets bagside; spammere, der drøner rundt på websider og udfylder alle de signup formularer og kommentarfelter, de kan finde, i håbet om at nogen klikker eller at deres Google-juice øges.
+
+Når det sker melder spørgsmålet sig hurtigt, hvordan undgår vi det? Desværre er det korte svar, at det gør vi ikke - det længere svar er, at der er 2 måder at angribe problemet på:
+
+## 1. Undgå spam signups
+
+At forhindre signups er formentligt det sværeste at gøre noget ved. Vi vil gerne bevare signup processen så let og simpel som mulig for rigtige brugere. Det betyder at løsninger som captchas eller andre quizzer ved signup ikke er gode løsninger.
+
+Vi kunne kræve, at brugeren bekræfter sin email adresse eller et telefonnummer før de kan skrive noget på sitet, men det er begrænsende for oplevelse for rigtige brugere. Og lur mig, om ikke de fleste spam-centre har automatiseret den slags alligevel.
+
+Et muligt alternativ er at indføre en "honeypot" på signup siden; altså et felt, der ikke kan ses af menneskelige brugere, men som spambots udfylder alligevel. Hvis det felt er udfyldt er der formentligt tale om en spam-bruger. Vi kan dog ikke afvise vedkommende på stedet, da det ville gøre det for tydeligt og resultere i at de omgår, men vi er nødt til at acceptere signup og evt. bare flagge brugeren. Dette vil dog kun fange fuldt automatiske signups.
+
+## 2. Undgå spamposts
+
+At opdage og forhindre spamposts er umiddelbart nemmere, da der er mere indhold at hive fat i her end ved en signup. Den naive løsning er at lave indholdsanalyse efter bestemte sætning/ord, som man vurderer værende suspekte.
+
+Det kunne gøres mere intelligent ved at bruge en tjeneste som [Akismet](https://akismet.com/), der har en hel del erfaring med at blokere spam-kommentarer. Risikoen er selvfølgeligt at fjerne rigtigt indhold, plus det vil næppe aldrig fjerne alt.
+
+Derudover vil det skabe et behov for at din applikation får en moderationskø, hvor du kan se, hvad der flagges som spam og markere det som værende ikke-spam, hvis det er en falsk positiv.
+
+## Note om sletning/ban af brugere
+
+Det er tillokkende at slette eller banne brugere, der opdages som værende spammere, så er problemet løst, ikke? Det viser sig dog at være problematisk, da de typisk vender tilbage.
+
+Traditionalt plejer den bedste måde at håndtere misbrugere på være at "hel-banne" dem. Det vil sige, at for spambrugeren ser alt ud til at fungere; de kan logge ind, skrive og gemme deres junk indhold osv, men ingen andre end dem selv kan se deres aktivitet. Det perfekte fængsel.
+
+Spam og misbrug kan næppe helt undgås, men kan med få tekniske hjælpemidler mindske problemet.

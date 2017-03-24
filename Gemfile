@@ -7,6 +7,7 @@ gem "middleman-compass"
 gem "middleman-favicon-maker"
 gem "middleman-livereload"
 gem "middleman-minify-html"
+gem "middleman-sprockets"
 
 # gem "activesupport", "> 3.2.16"
 

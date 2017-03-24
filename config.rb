@@ -56,6 +56,9 @@ I18n.locale = LOCALE
 # Reload automatically when stuff changes
 activate :livereload, :host => "localhost"
 
+# Use a familiar asset pipeline...
+activate :sprockets
+
 data.projects.each do |key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
   next unless case_study

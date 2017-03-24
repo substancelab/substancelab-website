@@ -5,14 +5,14 @@ module ArticleHelpers
   end
 
   def article_image(article)
-    image = article_photo_data(article, "filename")
+    image = article_photo_data(article, :filename)
     return nil unless image
     article_image_path = File.join(article_images_path(article), image)
     image_path(article_image_path)
   end
 
   def article_photo_data(article, key = nil)
-    photo_data = article_data(article).fetch("photo", {})
+    photo_data = article_data(article).fetch(:photo, {})
     if key
       photo_data.fetch(key, nil)
     else

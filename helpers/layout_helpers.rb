@@ -34,11 +34,10 @@ module LayoutHelpers
   end
 
   def css_for_masthead_image(image_url)
-    puts "css_for_masthead_image not yet implemented"
-    return ""
-    css = render_individual_file(
-      "stylesheets/modules/_masthead_image.css.sass"
-    )
+    template_path = "source/stylesheets/modules/_masthead_image.sass"
+    template = File.readlines(template_path).join
+    renderer = Sass::Engine.new(template)
+    css = renderer.render
 
     # We can't pass variables to the template, so using low-level string
     # replacement to get the image in there

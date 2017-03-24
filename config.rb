@@ -67,13 +67,6 @@ data.projects.each do |key, attributes|
     :ignore => true
 end
 
-# Used for generating absolute URLs
-configure :development do
-  config[:protocol] = "http://"
-  config[:host] = Middleman::PreviewServer.host
-  config[:port] = Middleman::PreviewServer.port
-end
-
 # Build-specific configuration
 configure :build do
   config[:protocol] = SITE_SETTINGS["protocol"]

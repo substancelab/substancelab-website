@@ -34,11 +34,11 @@ activate :asset_hash
 
 # Blogging
 activate :blog do |blog|
+  blog.layout = "articles"
   blog.permalink = ":title"
   blog.sources = File.join(LOCALE, ":year-:month-:day-:title.html")
   blog.prefix = "articles"
 end
-page "articles/*", :layout => :articles
 
 # Ignore articles from other locales than the current
 other_locales = SETTINGS.keys.reject { |key, _values| key == LOCALE }

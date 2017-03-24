@@ -15,7 +15,7 @@ priority: 1
   article
     == localized_partial File.join("work", project.slug), :locals => {:project => project}
 
-    = "project_image(project)"
+    = project_image(project)
 
     section.details
       .container

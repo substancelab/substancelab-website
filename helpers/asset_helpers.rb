@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 module AssetHelpers
   def image_exists?(path)
-    File.exist?(File.join(source, images_dir, path))
+    File.exist?(File.join(config[:source], config[:images_dir], path))
   end
 
   # Returns an absolute URL to the specified image

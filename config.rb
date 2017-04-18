@@ -50,7 +50,7 @@ ignore(articles_not_in_current_locale)
 activate :directory_indexes
 
 # Hello World
-activate :i18n, :mount_at_root => LOCALE
+activate :i18n, :mount_at_root => LOCALE.intern
 I18n.locale = LOCALE
 
 # Reload automatically when stuff changes

@@ -14,7 +14,7 @@ module ArticleHelpers
   def article_photo_data(article, key = nil)
     photo_data = article_data(article).fetch(:photo, {})
     if key
-      photo_data.fetch(key, nil)
+      photo_data.fetch(key.intern, nil)
     else
       photo_data
     end

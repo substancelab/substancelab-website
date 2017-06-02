@@ -20,17 +20,17 @@ article
 section.overview
   .container
     .columns.tripple
-      .column
-        h2 Roadmap
-        .subtitle Fra idé til plan
+      = link_to "/services/roadmapping", :class => "block-link column", :title => "Roadmapping sessions for startups og nye projekter" do
+          h2 Roadmap
+          .subtitle Fra idé til plan
 
-        p
-          | Du har en idé om, hvad din løsning skal kunne og hvem der skal købe den. Måske har du endda nogle skitser til hvordan den skal fungere.
+          p
+            | Du har en idé om, hvad din løsning skal kunne og hvem der skal købe den. Måske har du endda nogle skitser til hvordan den skal fungere.
 
-        p
-          | Med et <a href="/services/roadmapping" title="Roadmapping sessions for startups og nye projekter">Roadmap</a> får du styr på tankerne og lagt en plan; et solidt fundament for den videre udvikling.
+          p
+            | Med et <strong class="block-link-highlight">Roadmap</strong> får du styr på tankerne og lagt en plan; et solidt fundament for den videre udvikling.
 
-      .column
+      = link_to "/services/development", :class => "block-link column" do
         h2 Udviklingsaftale
         .subtitle Jagten på den første kunde
 
@@ -38,9 +38,9 @@ section.overview
          | Din vision begynder at tage form. Der udvikles MVP'er og prototyper og de første testbrugere inviteres. Planen forfines og tilpasses og inden du er klar til det, er det tid til lanceringen - jagten på det første salg er gået igang.
 
         p
-         | En #{link_to("udviklingsaftale", "/services/development")} er til dig, der vil have fart på uden at gå på kompromis med kvaliteten. Løbende leveringer, der hele tiden bringer dig tættere på dit mål.
+         | En <strong class="block-link-highlight">udviklingsaftale</strong> er til dig, der vil have fart på uden at gå på kompromis med kvaliteten. Løbende leveringer, der hele tiden bringer dig tættere på dit mål.
 
-      .column
+      = link_to "/services/maintenance", :class => "block-link column" do
         h2 Vedligeholdelsesaftale
         .subtitle Flere kunder og mere vækst
 
@@ -48,7 +48,7 @@ section.overview
           | Med kunder på løsningen ændrer fokus sig. Stabilitet og performance bliver vigtigere, features skal måske laves om for at passe til kundernes behov, og samtidig arbejder vi stadig hen mod den fulde vision.
 
         p
-          | Med en #{link_to("vedligeholdelses&shy;aftale", "/services/maintenance")} får du stabilitet og ro i maven. Du og dit team fokuserer på at lave de nye features, mens vi sørger for at kodebasen er vedligeholdt.
+          | Med en <strong class="block-link-highlight">vedligeholdelses&shy;aftale</strong> får du stabilitet og ro i maven. Du og dit team fokuserer på at lave de nye features, mens vi sørger for at kodebasen er vedligeholdt.
 
 article
   section

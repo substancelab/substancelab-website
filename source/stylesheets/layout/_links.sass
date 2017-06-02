@@ -1,4 +1,9 @@
 /* Links */
+%link-hover
+  color: $link-hover-color
+  +transition(none)
+  border-bottom: 2px solid $link-hover-color
+
 a
   color: $link-color
   text-decoration: none
@@ -9,9 +14,7 @@ a
 
   &:focus,
   &:hover
-    color: $link-hover-color
-    +transition(none)
-    border-bottom: 2px solid $link-hover-color
+    @extend %link-hover
 
   &.image
     background: inherit

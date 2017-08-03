@@ -50,6 +50,7 @@ html lang="#{current_locale}"
             ul
               li.home== link_to I18n.t("navigation.home"), "/"
               li.work== link_to I18n.t("navigation.work"), projects_url
+              li.services== link_to_services
               - if blog.articles.any?
                 li.articles== link_to I18n.t("navigation.articles"), articles_path
               li.locales

@@ -50,9 +50,8 @@ html lang="#{current_locale}"
             ul
               li.home== link_to I18n.t("navigation.home"), "/"
               li.work== link_to I18n.t("navigation.work"), projects_url
-              li.services== link_to_services
-              - if blog.articles.any?
-                li.articles== link_to I18n.t("navigation.articles"), articles_path
+              = nav_bar_link_to_services
+              = nav_bar_link_to_blog
               li.locales
                 ul.locale-switcher class="#{current_locale}"
                   li.locale.en == link_to "en", "http://substancelab.com", :title => "We also speak english", :hreflang => "en"

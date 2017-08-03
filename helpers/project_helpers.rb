@@ -77,10 +77,6 @@ module ProjectHelpers
     projects = projects.first(projects.size - projects.size % 3)
   end
 
-  def projects_url
-    "/work/"
-  end
-
   def project_masthead_image_path(project)
     image = File.join("work", project.slug, "masthead.jpg")
     return nil unless image_exists?(image)

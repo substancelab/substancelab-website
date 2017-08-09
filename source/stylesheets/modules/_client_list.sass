@@ -1,9 +1,7 @@
-@import "compass/css3/columns"
-
 .client-list
   /* Give capable browsers a little more */
-  +column-count(4)
-  +column-gap(4%)
+  column-count: 4
+  column-gap: 4%
   @media #{$breakpoint-desktop}
-    +column-count(1)
+    column-count: 1
   margin-bottom: 0

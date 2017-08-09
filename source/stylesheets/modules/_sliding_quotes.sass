@@ -1,5 +1,4 @@
 @import "compass/css3/transform"
-@import "compass/css3/transition"
 
 .quotes
   +filled-section
@@ -24,7 +23,7 @@
     position: absolute
     top: 55%
     +transform(translateY(-50%))
-    +transition(all 2s ease)
+    transition: all 2s ease
     &.current
       opacity: 1
       top: 50%

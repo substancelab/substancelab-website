@@ -1,5 +1,4 @@
 @import "compass/css3/columns"
-@import "compass/css3/images"
 @import "compass/css3/transition"
 @import "settings"
 @import "mixins/filled_section"
@@ -11,7 +10,7 @@
 
     .code
       background-image: url(/images/work/lokalebasen/code.jpg)
-      +background-image(linear-gradient(top, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5)), url(/images/work/lokalebasen/code.jpg))
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5)), url(/images/work/lokalebasen/code.jpg)
       color: #dddddd
       +filled-section
       text-shadow: #000000 0 0 2px
@@ -20,11 +19,11 @@
       color: #ffffff
 
     .process
-      +background-image(linear-gradient(top, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)), url(/images/work/lokalebasen/whiteboard.jpg))
+      background-image: linear-gradient(to bottom, rgba(244, 245, 237, 1), rgba(244, 245, 237, 0.6)), url(/images/work/lokalebasen/whiteboard.jpg)
       +filled-section
 
     .results
-      +background-image(linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)))
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
       +filled-section
 
     .graph

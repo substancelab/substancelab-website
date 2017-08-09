@@ -13,5 +13,4 @@ gem "middleman-sprockets"
 
 gem "rails-html-sanitizer", :require => false
 gem "sassc"
-gem "sassy-math"
 gem "slim"

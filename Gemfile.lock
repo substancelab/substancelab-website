@@ -135,8 +135,6 @@ GEM
       bundler
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
-    sassy-math (1.5.1)
-      compass (>= 0.11)
     servolux (0.13.0)
     slim (3.0.7)
       temple (~> 0.7.6)
@@ -166,8 +164,7 @@ DEPENDENCIES
   middleman-sprockets
   rails-html-sanitizer
   sassc
-  sassy-math
   slim
 
 BUNDLED WITH
-   1.12.5
+   1.15.3

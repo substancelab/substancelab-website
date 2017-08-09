@@ -1,12 +1,10 @@
-@import "compass/css3/transform"
-
 .masthead
   .tagline, .peptalk
     position: absolute
     top: 50%
     transition: 2s opacity ease
     left: 50%
-    +transform(translateY(-50%) translateX(-50%))
+    transform: translateY(-50%) translateX(-50%)
 
   .tagline
     opacity: 1

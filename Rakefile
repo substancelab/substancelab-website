@@ -1,5 +1,19 @@
 # frozen_string_literal: true
-task :deploy => "middleman:deploy"
+
+desc "Build and publish the website"
+task :deploy => ["middleman:build", "deploy:publish"]
+
+namespace :deploy do
+  desc "Publish contents of the build directory"
+  task :publish do
+    target_host = {
+      "da" => "substancelab.dk",
+      "en" => "substancelab.com"
+    }.fetch(ENV["LOCALE"])
+
+    sh "scp", "-r", "build", "#{target_host}:public_html/"
+  end
+end
 
 namespace :images do
   task :optimize => ["optimize:all"]

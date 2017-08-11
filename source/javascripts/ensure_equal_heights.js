@@ -1,4 +1,4 @@
-//= require jquery.equalheights.min.js
+import * from 'jquery'
 
 (function($) {
   $.fn.adjustEqualHeights = function(method) {

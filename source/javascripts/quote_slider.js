@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 (function($) {
   $.fn.quoteSlider = function(method) {
     var methods = {
@@ -37,7 +39,7 @@
         var current_quote = $this.quoteSlider('currentQuote');
         var next = current_quote.next();
 
-        if (next.size() > 0) {
+        if (next.length > 0) {
           return next;
         } else {
           return $this.quoteSlider('quotes').first();

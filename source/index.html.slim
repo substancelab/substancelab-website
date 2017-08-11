@@ -56,9 +56,7 @@ section#person
 - content_for :scripts do
   javascript:
     $(document).ready(function() {
-      $('.sliding_quotes').quoteSlider();
-      $(['.article-list .tile']).adjustEqualHeights();
+      setupHomepage()
     });
  
   == javascript_include_tag 'substance_lab.js'
-  == javascript_include_tag 'ensure_equal_heights.js'

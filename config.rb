@@ -54,8 +54,19 @@ I18n.locale = LOCALE
 # Reload automatically when stuff changes
 activate :livereload, :host => "localhost"
 
-# Use a familiar asset pipeline...
-activate :sprockets
+# # Use a familiar asset pipeline...
+# activate :sprockets
+
+# Use Webpack for building our assets
+activate :external_pipeline,
+  :name => :webpack,
+  :command => if build?
+    "./node_modules/webpack/bin/webpack.js --bail -p"
+  else
+    "./node_modules/webpack/bin/webpack.js --watch -d --progress --color"
+  end,
+  :source => ".tmp/webpack-build",
+  :latency => 1
 
 data.projects.each do |key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)

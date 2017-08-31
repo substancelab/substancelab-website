@@ -36,7 +36,10 @@ Det kan være en begrænsende oplevelse for rigtige brugere, der nu skal vente p
 
 En af de mere kendte løsninger er [Googles reCAPTCHA](https://www.google.com/recaptcha/intro/android.html). Du kender den sikkert godt; de der fjollede checkbokse med “I am not a robot”.
 
-<figure><img src="/images/articles/i_am_not_a_robot.jpg" alt="Google reCAPTCHA in action"></figure>
+![Google reCAPTCHA in action](/images/articles/i_am_not_a_robot.jpg)
+
+<figure><img src="/images/articles/i_am_not_a_robot.jpg" alt="Vi støtter børn, unge &amp; kræft, 2015"></figure>
+
 
 Idéen er, at reCAPTCHA ud fra et ukendt sæt af kriterier vurderer at den nuværende bruger ikke opfører sig som et menneske, og derfor giver den en opgave, som kun mennesker kan udføre.
 

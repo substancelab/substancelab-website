@@ -18,7 +18,15 @@
 
   figure
     img
+      border-radius: 0.2rem
+      margin-left: 0
+      margin-bottom: 1rem
       width: 100%
+
+      @media #{$breakpoint-desktop}
+        $_growth: 5%
+        margin-left: -$_growth
+        width: 100% + $_growth * 2
 
   nav
     overflow: hidden

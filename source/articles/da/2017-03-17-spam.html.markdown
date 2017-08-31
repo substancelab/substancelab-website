@@ -9,15 +9,20 @@ photo:
   filename: "trash_can.jpg"
 ---
 
-"Byg det og de vil komme" lyder et gammel ordsprog. Desværre tyder det på, at online er det kun spam og bots, det er dækkende for.
+"Byg det og de vil komme" lyder et gammel ordsprog. Desværre tyder noget på, at online er det kun spam og bots, det er dækkende for.
 
 READMORE
 
-Har du lavet en online tjeneste, vil du komme til at stifte bekendtskab med en del af internettets bagside; spammere, der drøner rundt på websider og udfylder alle de signup formularer og kommentarfelter, de kan finde, i håbet om at nogen klikker eller at deres Google-juice øges.
+Har du lavet en online tjeneste, vil du komme til at stifte bekendtskab med en del af internettets bagside; bots. Bots er automatiserede scripts og programmer, der drøner rundt på websider og udfylder alle de signup formularer og kommentarfelter, de kan finde.
+
+Typisk er håbet at nogen klikker på et link eller at afsenderens Google-juice øges. Andre gange er det mere udspekuleret og bruges til spredning af politisk propagande eller [Nigeria-breve](http://www.forbrugerbloggen.dk/svindelgalleriet/nigeriabreve/).
 
 Når det sker melder spørgsmålet sig hurtigt, hvordan undgår vi det? Desværre er det korte svar, at det gør vi ikke - det længere svar er, at der er 2 måder at angribe problemet på:
 
-## 1. Undgå spam signups
+1. Undgå spam-signups
+2. Undgå spam-indhold
+
+## Undgå spam-signups
 
 At forhindre signups er formentligt det sværeste at gøre noget ved. Vi vil gerne bevare signup processen så let og simpel som mulig for rigtige brugere. Det betyder at løsninger som captchas eller andre quizzer ved signup ikke er gode løsninger.
 
@@ -25,7 +30,7 @@ Vi kunne kræve, at brugeren bekræfter sin email adresse eller et telefonnummer
 
 Et muligt alternativ er at indføre en "honeypot" på signup siden; altså et felt, der ikke kan ses af menneskelige brugere, men som spambots udfylder alligevel. Hvis det felt er udfyldt er der formentligt tale om en spam-bruger. Vi kan dog ikke afvise vedkommende på stedet, da det ville gøre det for tydeligt og resultere i at de omgår, men vi er nødt til at acceptere signup og evt. bare flagge brugeren. Dette vil dog kun fange fuldt automatiske signups.
 
-## 2. Undgå spamposts
+## Undgå spam-indhold
 
 At opdage og forhindre spamposts er umiddelbart nemmere, da der er mere indhold at hive fat i her end ved en signup. Den naive løsning er at lave indholdsanalyse efter bestemte sætning/ord, som man vurderer værende suspekte.
 

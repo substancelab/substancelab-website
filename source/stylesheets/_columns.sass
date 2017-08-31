@@ -21,10 +21,10 @@ $column_width: ($columns_total_width - ($columns_amount - 1) * $column_spacing) 
 
 %columns-double
   .column
-    width: (($columns_total_width - $column_spacing) / 2)
-  @media #{$breakpoint-desktop}
+    width: 100%
+  @media #{$breakpoint-tablet-and-smaller}
     .column
-      width: 100%
+      width: (($columns_total_width - $column_spacing) / 2)
 
 .columns
   clear: both
@@ -46,7 +46,7 @@ h1 + .columns
   margin-left: $column_spacing
   width: $column_width
 
-  @media #{$breakpoint-desktop}
+  @media #{$breakpoint-tablet-and-smaller}
     float: none
     margin-left: 0
     width: auto
@@ -57,7 +57,7 @@ h1 + .columns
 .columns:last-child .column
   margin-bottom: 0
 
-  @media #{$breakpoint-desktop}
+  @media #{$breakpoint-tablet-and-smaller}
     margin-top: $column_spacing
     &:first-child
       margin-top: 0

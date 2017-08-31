@@ -24,15 +24,41 @@ Når det sker melder spørgsmålet sig hurtigt, hvordan undgår vi det? Desværr
 
 ## Undgå spam-signups
 
-At forhindre signups er formentligt det sværeste at gøre noget ved. Vi vil gerne bevare signup processen så let og simpel som mulig for rigtige brugere. Det betyder at løsninger som captchas eller andre quizzer ved signup ikke er gode løsninger.
+Det mest oplagte sted at tage fat i problemet er at sørge for, at bots ikke tilmelder sig din tjeneste. Det er formentligt også det sværeste at gøre noget ved, da vi gerne vil bevare signup processen så let og simpel som mulig for rigtige brugere.
 
-Vi kunne kræve, at brugeren bekræfter sin email adresse eller et telefonnummer før de kan skrive noget på sitet, men det er begrænsende for oplevelse for rigtige brugere. Og lur mig, om ikke de fleste spam-centre har automatiseret den slags alligevel.
+### Bekræftelse af e-mail adresse
 
-Et muligt alternativ er at indføre en "honeypot" på signup siden; altså et felt, der ikke kan ses af menneskelige brugere, men som spambots udfylder alligevel. Hvis det felt er udfyldt er der formentligt tale om en spam-bruger. Vi kan dog ikke afvise vedkommende på stedet, da det ville gøre det for tydeligt og resultere i at de omgår, men vi er nødt til at acceptere signup og evt. bare flagge brugeren. Dette vil dog kun fange fuldt automatiske signups.
+En simpel løsning, som er i brug rigtigt mange steder er at kræve, at brugeren bekræfter sin e-mail adresse før de fx kan skrive noget på sitet.
+
+Det kan være en begrænsende oplevelse for rigtige brugere, der nu skal vente på en e-mail med risiko for at den havner i spam-mappen og klikke på et link der. Det er dog noget, som de fleste er vant til. Til gengæld betyder det også, at mange spam-scripts garanteret har automatiseret den proces allerede.
+
+### reCAPTCHA
+
+En af de mere kendte løsninger er [Googles reCAPTCHA](https://www.google.com/recaptcha/intro/android.html). Du kender den sikkert godt; de der fjollede checkbokse med “I am not a robot”.
+
+Idéen er, at reCAPTCHA ud fra et ukendt sæt af kriterier vurderer at den nuværende bruger ikke opfører sig som et menneske, og derfor giver den en opgave, som kun mennesker kan udføre.
+
+Nogle gange kan det være den simple checkbox, andre gange skal man fx vælge områder på et billeder, der indeholder noget bestemt, eller skrive 2 ulæselige ord.
+
+Ulempen er så, at det risikerer man også at udsætte sine rigtige kunder for, hvilket ikke nødvendigvis er den lækre førstehåndsoplevelse, man gerne vil give dem.
+
+### Honeypots
+
+Et muligt alternativ er at indføre en "honeypot" på signup siden. En honeypot et felt, der ikke kan ses af menneskelige brugere, men som bots udfylder alligevel.
+
+Hvis det felt er udfyldt er der formentligt tale om en spam-bruger. Vi kan dog ikke afvise vedkommende på stedet, da det ville gøre det for tydeligt og resultere i at de omgår, men vi er nødt til at acceptere signup og evt. bare flagge brugeren.
+
+Dette vil dog kun fange fuldt automatiske signups og der er noget, der tyder på, at nogle bots i virkeligheden er lavt-betalte mennesker, der manuelt signer op.
+
+### Clearbit Risk
+
+En mere kompleks løsning er at bruge et risiko-vurderingsværktøj som [Clearbits Risk API](https://clearbit.com/risk). Når det er implementeret betyder det grundlæggende, at hver bruger tildeles en procentsats for, hvor sandsynligt det er, at den bruger er fusk.
+
+Det er en elegant løsning, som brugerne aldrig opdager, men det kræver at man kan lave noget arbejde på backenden. Det betyder potentielt også, at man kan være nødt til manuelt at løbe igennem de brugere, der ligger i en gråzone, hvor de ikke med sikkerhed kan afvises.
 
 ## Undgå spam-indhold
 
-At opdage og forhindre spamposts er umiddelbart nemmere, da der er mere indhold at hive fat i her end ved en signup. Den naive løsning er at lave indholdsanalyse efter bestemte sætning/ord, som man vurderer værende suspekte.
+At opdage og forhindre spam-indhold er umiddelbart nemmere, da der er mere indhold at hive fat i her end ved en signup. Den naive løsning er at lave indholdsanalyse efter bestemte sætning/ord, som man vurderer værende suspekte.
 
 Det kunne gøres mere intelligent ved at bruge en tjeneste som [Akismet](https://akismet.com/), der har en hel del erfaring med at blokere spam-kommentarer. Risikoen er selvfølgeligt at fjerne rigtigt indhold, plus det vil næppe aldrig fjerne alt.
 
@@ -44,4 +70,4 @@ Det er tillokkende at slette eller banne brugere, der opdages som værende spamm
 
 Traditionalt plejer den bedste måde at håndtere misbrugere på være at "hel-banne" dem. Det vil sige, at for spambrugeren ser alt ud til at fungere; de kan logge ind, skrive og gemme deres junk indhold osv, men ingen andre end dem selv kan se deres aktivitet. Det perfekte fængsel.
 
-Spam og misbrug kan næppe helt undgås, men kan med få tekniske hjælpemidler mindske problemet.
+Spam og misbrug kan næppe helt undgås, men man kan med få tekniske hjælpemidler mindske problemet.

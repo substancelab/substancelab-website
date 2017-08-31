@@ -11,7 +11,7 @@ namespace :deploy do
       "en" => "substancelab.com"
     }.fetch(ENV["LOCALE"])
 
-    sh "scp", "-r", "build", "#{target_host}:public_html/"
+    sh "scp -r build/* #{target_host}:public_html"
   end
 end
 

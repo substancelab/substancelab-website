@@ -13,8 +13,8 @@ section: portfolio
 - masthead_image("/images/masthead/office.jpg")
 
 article.portfolio
-  section.projects
-    .container
+  .container
+    section.projects
       - portfolio_projects.each do |project|
         == project_tile(project)
 

@@ -41,29 +41,24 @@ module ProjectHelpers
   end
 
   def project_tile(project)
+    shortened_description = localized(project.description).split(".").first
     description = capture do
       content_tag(:h2, project.name, :class => "tile-title") +
-        content_tag(:p, localized(project.description))
+        content_tag(:p, localized(shortened_description))
     end
 
-    background_image = ["/images", "work", project.slug, "square.jpg"].join("/")
+    background_image = ["/images", "work", project.slug, "masthead.jpg"].join("/")
+    background_style = "background-image: url(#{background_image})"
 
-    tile = capture do
-      content_tag(
-        :div,
-        "",
-        :class => "tile-image",
-        :style => "background-image: url(#{background_image})"
-      ) + content_tag(
-        :div, description, :class => "tile-text"
-      )
+    tile_contents = capture do
+      content_tag(:div, description, :class => "tile-text")
     end
 
     url = case_study?(project) ? project_url(project) : nil
     if url
-      link_to(tile, url, :class => "block-link tile")
+      link_to(tile_contents, url, :class => "block-link tile", :style => background_style)
     else
-      content_tag(:div, tile, :class => "tile")
+      content_tag(:div, tile_contents, :class => "tile", :style => background_style)
     end
   end
 

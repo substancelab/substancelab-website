@@ -1,21 +1,34 @@
 @import "mixins/clear"
 
 .tile
-  background: #ffffff
   +clear
+  background: #ffffff
+  height: 400px
+  overflow: hidden
+  position: relative
 
   .tile-text
-    margin: 1em
+    background: rgba(0, 0, 0, 0.6)
+    bottom: 0
+    box-sizing: border-box
+    color: #fff
+    padding: 1em
+    position: absolute
+    width: 100%
 
   .tile-title
     @extend h3
+    color: #fff
 
   .tile-image
     background:
+      position: 50% 0
+      repeat: no-repeat
       size: cover
     display: block
     height: 10em
     text-indent: -999em
+    position: absolute
     width: 100%
 
   &.block-link
@@ -27,3 +40,6 @@
       .tile-title
         color: $link-hover-color
         text-decoration: underline
+
+      .tile-text
+        background: rgba(0, 0, 0, 0.75)

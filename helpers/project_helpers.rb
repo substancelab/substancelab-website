@@ -63,13 +63,7 @@ module ProjectHelpers
   end
 
   def portfolio_projects
-    projects = case_studies
-    projects += featured_projects.select do |project|
-      !projects.include?(project)
-    end
-
-    # Always return in tripples
-    projects = projects.first(projects.size - projects.size % 3)
+    case_studies
   end
 
   def project_masthead_image_path(project)

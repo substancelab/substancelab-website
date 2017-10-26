@@ -36,14 +36,13 @@ priority: 1
 
 - other_case_studies = case_studies.reject { |case_study| case_study.slug == project.slug }
 - if other_case_studies.any?
-  section.portfolio
+  section.featured-work
     .container
       .columns.double.case_studies
         .column
           h2= I18n.t("work.show.other_case_studies")
-      .columns.case_studies
+      .projects
         - other_case_studies.shuffle.first(3).each do |case_study|
-          .column
-            == project_tile(case_study)
+          == project_tile(case_study)
 
 - masthead_image(project_masthead_image_path(project))

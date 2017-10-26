@@ -46,8 +46,8 @@ born-i-byen:
   client: "Børn i byen, Denmark"
   client_website: http://bornibyen.dk
   description:
-    da: "Børn i byen er forældrenes guide til København og Aarhus. Her finder du anmeldelser, børnevenlige arrangementer og meget andet."
-    en: "Børn i byen (Children in the city) is a community driven guide to Copenhagen focusing on parents and their children."
+    da: "Forældrenes guide til København og Aarhus. Her finder du anmeldelser, børnevenlige arrangementer og meget andet."
+    en: "Community driven guide to Copenhagen and Aarhus focusing on parents and their children."
   featured: true
   name: "Børn i byen"
   position: 4
@@ -129,7 +129,7 @@ eventzonen:
   client_website: http://eventzonen.dk
   description:
     da: Markedsplads for kunstnere og foredragsholdere. Websitet er bygget fra bunden af Substance Lab.
-    en: eventzonen.dk puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
+    en: Marketplace that puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
   featured: true
   name: eventzonen.dk
   position: 3
@@ -308,7 +308,7 @@ lokalebasen:
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
   description:
-    da: "Vi har bygget Danmarks førende portal for udlejning af erhvervslokaler. Sitet blev til under anvendelse af Rails, testdreven udvikling og agile metoder."
+    da: "Danmarks førende portal for udlejning af erhvervslokaler. Sitet blev til under anvendelse af Rails, testdreven udvikling og agile metoder."
     en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
   featured: true
   name: Lokalebasen

@@ -13,10 +13,17 @@ section: portfolio
 - masthead_image("/images/masthead/office.jpg")
 
 article.portfolio
-  .container
-    section.projects
-      - portfolio_projects.each do |project|
-        == project_tile(project)
+  section
+    .container
+      h2= I18n.t("work.index.case_studies")
+
+      p= I18n.t("work.index.list_of_case_studies")
+
+  section.featured-work
+    .container
+      .projects
+        - portfolio_projects.each do |project|
+          == project_tile(project)
 
   section.clients
     .container

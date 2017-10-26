@@ -58,10 +58,12 @@ en:
 
   work:
     index:
+      case_studies: Case studies
       case_study: Case study
       client_list: Client list
       featured_works: Featured works by Substance Lab
       link_to_case_study: "Learn how Substance Lab helped %{client} build %{project}"
+      list_of_case_studies: "We are proud of the success our customers have and the products we craft for them. Here's a selection of some of them."
       list_of_companies_worked_with: "The full list of companies and organizations Substance Lab has worked with:"
       list_of_technologies: "Substance Lab routinely works with a wide variety of technologies:"
       meta_description: "We have built a lot of web applications by now. We're proud of them all and want to show them off"

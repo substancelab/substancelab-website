@@ -61,10 +61,12 @@ da:
 
   work:
     index:
+      case_studies: Case studies
       case_study: Læs casen
       client_list: Kunder
       featured_works: Udvalgt arbejde fra Substance Labs hånd
       link_to_case_study: "Læs hvordan Substance Lab hjalp %{client} med at lave %{project}"
+      list_of_case_studies: "Vi er stolte af vores kunders successer og vi er stolte af de webløsninger, vi har lavet for dem. Her er et udvalg af nogle af dem."
       list_of_companies_worked_with: "Den samlede liste med selskaber, som Substance Lab har samarbejdet med:"
       list_of_technologies: "Substance Lab har erfaringer med en lang række teknologier:"
       meta_description: Udvalgte arbejder lavet af Substance Lab. Vi er stolte af det vi laver og viser det gerne frem.

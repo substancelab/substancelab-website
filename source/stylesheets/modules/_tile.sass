@@ -3,17 +3,13 @@
 .tile
   +clear
   background: #ffffff
-  height: 400px
   overflow: hidden
   position: relative
 
   .tile-text
-    background: rgba(0, 0, 0, 0.6)
     bottom: 0
     box-sizing: border-box
-    color: #fff
     padding: 1em
-    position: absolute
     width: 100%
 
   .tile-title
@@ -28,7 +24,6 @@
     display: block
     height: 10em
     text-indent: -999em
-    position: absolute
     width: 100%
 
   &.block-link
@@ -40,6 +35,3 @@
       .tile-title
         color: $link-hover-color
         text-decoration: underline
-
-      .tile-text
-        background: rgba(0, 0, 0, 0.75)

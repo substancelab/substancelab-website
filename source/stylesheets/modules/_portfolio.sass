@@ -24,10 +24,11 @@
     height: 400px
 
     @media #{$breakpoint-tablet}
-      width: 45%
+      min-width: 45%
 
     @media #{$breakpoint-phone}
-      width: auto
+      box-sizing: border-box
+      width: 100%
 
     &:hover
       border: 0

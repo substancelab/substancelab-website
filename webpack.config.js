@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'lokalebasen.js': './source/javascripts/work/lokalebasen.js',
+    'lokalebasen': './source/javascripts/work/lokalebasen.js',
     'site.js': './source/javascripts/site.js'
   },
 

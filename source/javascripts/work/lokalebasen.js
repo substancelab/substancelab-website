@@ -1,36 +1,6 @@
 import Chart from 'chart.js'
-import 'waypoints/lib/noframework.waypoints'
 
 function GrossProfitGraph(element, labels, values) {
-  this.hasBeenAnimated = function() {
-    this.element.hasClass('in');
-  };
-
-  this.resetAnimation = function() {
-    this.element.removeClass('in');
-  };
-
-  this.setupWaypoint = function() {
-    var graph = this;
-    graph.resetAnimation();
-
-    var waypoint = new Waypoint({
-      element: graph.element[0],
-      handler: function(direction) {
-        graph.startAnimation();
-      },
-      offset: "75%"
-    });
-  };
-
-  this.startAnimation = function() {
-    if (this.hasBeenAnimated(this.element)) {
-      return false;
-    };
-
-    this.element.addClass('in');
-  };
-
   // -----------
   // Constructor
 
@@ -67,6 +37,8 @@ function GrossProfitGraph(element, labels, values) {
     legend: {
       display: false
     },
+    maintainAspectRatio: false,
+    responsive: true,
     scales: {
       yAxes: [{
         ticks: {
@@ -84,8 +56,6 @@ function GrossProfitGraph(element, labels, values) {
       options: options
     }
   );
-
-  this.setupWaypoint()
 };
 
 $(document).ready(function() {

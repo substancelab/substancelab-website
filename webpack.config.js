@@ -7,6 +7,19 @@ module.exports = {
     'substance_lab': './assets/javascripts/substance_lab.js'
   },
 
+  module: {
+    loaders: [
+      {
+        test: /assets\/javascripts\/.*\.js$/,
+        exclude: /node_modules|\.tmp|vendor/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env']
+        },
+      }
+    ]
+  },
+
   resolve: {
     modules: [
       __dirname + '/node_modules',

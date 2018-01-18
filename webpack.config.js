@@ -2,15 +2,15 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'lokalebasen': './source/javascripts/work/lokalebasen.js',
-    'site.js': './source/javascripts/site.js'
+    'lokalebasen': './assets/javascripts/work/lokalebasen.js',
+    'site': './assets/javascripts/site.js',
+    'substance_lab': './assets/javascripts/substance_lab.js'
   },
 
   resolve: {
     modules: [
-      __dirname,
-      'node_modules',
-      __dirname + '/source/javascripts',
+      __dirname + '/node_modules',
+      __dirname + '/assets/javascripts',
     ],
   },
 

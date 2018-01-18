@@ -37,7 +37,7 @@ module LayoutHelpers
     stylesheets_source_path = File.join(app.config.source, app.config.css_dir)
     options = {:load_paths => [stylesheets_source_path]}
 
-    template_path = "source/stylesheets/modules/_masthead_image.sass"
+    template_path = "assets/stylesheets/modules/_masthead_image.sass"
     template = File.readlines(template_path).join
     renderer = Sass::Engine.new(template, options)
 

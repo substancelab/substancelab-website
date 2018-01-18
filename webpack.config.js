@@ -2,6 +2,9 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
+    'layout': './assets/stylesheets/layout.sass',
+    'print': './assets/stylesheets/print.sass',
+
     'lokalebasen': './assets/javascripts/work/lokalebasen.js',
     'site': './assets/javascripts/site.js',
     'substance_lab': './assets/javascripts/substance_lab.js'
@@ -16,6 +19,33 @@ module.exports = {
         query: {
           presets: ['env']
         },
+      },
+
+      {
+        test: /assets\/stylesheets\/.*(\.scss|\.sass)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'stylesheets/[name].css'
+            }
+          },
+          {
+            loader: 'extract-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'resolve-url-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -24,6 +54,7 @@ module.exports = {
     modules: [
       __dirname + '/node_modules',
       __dirname + '/assets/javascripts',
+      __dirname + '/assets/stylesheets',
     ],
   },
 

@@ -6,12 +6,12 @@ task :deploy => ["middleman:build", "deploy:publish"]
 namespace :deploy do
   desc "Publish contents of the build directory"
   task :publish do
-    target_host = {
-      "da" => "substancelab.dk",
+    target_folder = {
+      "da" => "public_html",
       "en" => "substancelab.com"
     }.fetch(ENV["LOCALE"])
 
-    sh "scp -r build/* #{target_host}:public_html"
+    sh "scp -r build/* substancelab.dk@linux41.unoeuro.com:#{target_folder}"
   end
 end
 

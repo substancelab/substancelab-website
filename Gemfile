@@ -9,5 +9,6 @@ gem "middleman-minify-html"
 gem "middleman-sprockets"
 
 gem "rails-html-sanitizer", :require => false
+gem "rake"
 gem "sassc"
 gem "slim"

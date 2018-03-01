@@ -25,6 +25,7 @@ biq:
   position: 6
   services:
   - api_development
+  - maintenance
   - web_application_development
   - webdesign
   slug: biq
@@ -52,6 +53,7 @@ born-i-byen:
   services:
   - api_development
   - google_maps
+  - maintenance
   - payment_gateway_integration
   - responsive_design
   - web_application_development
@@ -75,6 +77,7 @@ change-healthcare:
   name: change:healthcare
   position: 7
   services:
+  - maintenance
   - web_application_development
   slug: change-healthcare
   technologies:
@@ -107,7 +110,9 @@ ejendomsstatistik:
   featured: false
   name: Ejendomsstatistik.dk
   services:
+  - maintenance
   - project_management
+  - web_application_development
   slug: ejendomsstatistik
   technologies:
   - Ruby on Rails
@@ -129,6 +134,7 @@ eventzonen:
   name: eventzonen.dk
   position: 3
   services:
+  - maintenance
   - web_application_development
   - project_management
   - youtube_integration
@@ -175,6 +181,7 @@ flaym:
   name: Flaym
   position: 1
   services:
+  - maintenance
   - web_application_development
   slug: flaym
   technologies:
@@ -216,7 +223,9 @@ gomore:
   name: GoMore
   position: 2
   services:
+  - maintenance
   - project_management
+  - tech_lead
   - web_application_development
   slug: gomore
   technologies:
@@ -282,6 +291,7 @@ kreditregisteret:
   position: 4
   services:
   - api_development
+  - maintenance
   - project_management
   - server_management
   - web_application_development
@@ -314,6 +324,7 @@ lokalebasen:
   - economic_integration
   - google_maps
   - internationalization
+  - maintenance
   - web_application_development
   slug: lokalebasen
   technologies:
@@ -336,6 +347,7 @@ minder-for-altid:
   position: 4
   services:
   - ios_application_development
+  - roadmapping
   - web_application_development
   slug: minder-for-altid
   technologies:
@@ -369,7 +381,8 @@ patentlog:
   client_website: http://patentact.company
   name: PatentLog
   services:
-    - MVP
+    - roadmapping
+    - web_application_development
   technologies:
     - CSS
     - HTML
@@ -381,6 +394,7 @@ personal_business_plan:
   client_website: https://www.thepersonalbusinessplan.com
   name: The Personal Business Plan
   services:
+    - maintenance
     - web_application_development
   technologies:
     - CSS
@@ -475,6 +489,7 @@ urbanwinebox:
   name: UrbanWineBox
   services:
   - project_management
+  - roadmapping
   - web_application_development
   technologies:
   - PostgreSQL
@@ -485,6 +500,7 @@ verisure:
   client_website: https://verisure.dk
   name: Mere Tryg
   services:
+    - maintenance
     - project_management
     - web_application_development
   technologies:

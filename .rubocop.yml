@@ -3,7 +3,31 @@ AllCops:
   Exclude:
     - 'bin/*'
     - 'db/schema.rb'
-    - 'node_modules/**/*.rb'
+    - 'lib/templates/**/*.rb'
+    - 'node_modules/**/*'
+  TargetRubyVersion: 2.4
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
 
 Lint/EndAlignment:
   EnforcedStyleAlignWith: variable
@@ -16,28 +40,32 @@ Metrics/BlockLength:
   Exclude:
     - 'config/**/*.rb'
     - 'lib/**/*.rake'
+    - 'Guardfile'
     - 'Rakefile'
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'app/dashboards/*'
+
+Metrics/LineLength:
+  Exclude:
+    - 'app/dashboards/*'
 
 Metrics/MethodLength:
   Exclude:
     - 'db/migrate/*'
 
-Rails/DynamicFindBy:
+Naming/FileName:
   Enabled: false
 
-Style/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
+Rails/DynamicFindBy:
+  Enabled: false
 
 Style/BlockDelimiters:
   Enabled: false
 
 Style/Documentation:
-  Enabled: false
-
-Style/DotPosition:
-  EnforcedStyle: trailing
-
-Style/FileName:
   Enabled: false
 
 Style/HashSyntax:
@@ -46,17 +74,14 @@ Style/HashSyntax:
 Style/IfUnlessModifier:
   Enabled: false
 
-Style/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-
-Style/MultilineOperationIndentation:
-  EnforcedStyle: indented
-
-Style/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
+Style/SafeNavigation:
+  Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
 
 Style/WordArray:
   EnforcedStyle: brackets

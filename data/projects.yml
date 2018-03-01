@@ -1,7 +1,6 @@
 37signals:
   client: 37signals, USA
   client_website: http://37signals.com
-  position: 24
   services:
   - internationalization
   - web_application_development
@@ -12,7 +11,6 @@
 agency-fusion:
   client: Agency Fusion, USA
   client_website: http://agencyfusion.com
-  position: 17
   services:
   - ux
 
@@ -87,7 +85,6 @@ change-healthcare:
 collaboraid:
   client: Collaboraid, Denmark
   client_website: http://collaboraid.net
-  position: 18
   technologies:
   - Javascript
   - Ruby on Rails
@@ -95,7 +92,6 @@ collaboraid:
 daily-rush:
   client: Daily Rush, Denmark
   client_website: http://dailyrush.dk
-  position: 21
   services:
   - web_application_development
   - webdesign
@@ -110,7 +106,6 @@ ejendomsstatistik:
   client_website: http://lokalebasen.dk
   featured: false
   name: Ejendomsstatistik.dk
-  position: 1
   services:
   - project_management
   slug: ejendomsstatistik
@@ -150,7 +145,6 @@ eventzonen:
 fab-it:
   client: Fab:IT, Denmark
   client_website: http://fab-it.dk
-  position: 23
   services:
   - economic_integration
   - frontend_development
@@ -164,7 +158,6 @@ fab-it:
 falconeer:
   client: Applied Investment Research, Denmark
   name: Falconeer
-  position: 28
   services:
     - web_application_development
   technologies:
@@ -200,7 +193,6 @@ gamekillers:
     en: SBS Radio wanted a campaign website to promote their upcoming TV show, Gamekillers - a production by AXE known from MTV.
   featured: true
   name: Gamekillers
-  position: 6
   services:
   - web_application_development
   - webdesign
@@ -237,7 +229,6 @@ gomore:
 grundfos-biobooster:
   client: Grundfos Biobooster, Denmark
   client_website: http://www.grundfos.com/
-  position: 22
   services:
   - training
   - web_application_development
@@ -248,7 +239,6 @@ grundfos-biobooster:
 iiamo:
   client: Loop Associates, Denmark
   client_website: http://www.loopassociates.com/
-  position: 22
   services:
   - frontend_development
   technologies:
@@ -257,7 +247,6 @@ iiamo:
 justitsministeriet:
   client: Danish Ministry of Justice, Denmark
   client_website: http://www.justitsministeriet.dk
-  position: 25
   services:
   - web_application_development
   technologies:
@@ -265,7 +254,6 @@ justitsministeriet:
 
 kailas:
   client: Kailas, Denmark
-  position: 11
   services:
   - webdesign
   - frontend_development
@@ -275,7 +263,6 @@ kailas:
 
 kontrakten:
   client: Learning Lab, Denmark
-  position: 16
   services:
   - web_application_development
   technologies:
@@ -363,7 +350,6 @@ minder-for-altid:
 mitbarnsnavn:
   client: Babysteps, Denmark
   client_website: http://mitbarnsnavn.dk
-  position: 9
   services:
   - frontend_development
   technologies:
@@ -373,7 +359,6 @@ mitbarnsnavn:
 
 nethunters:
   client: Nethunters, Denmark
-  position: 20
   services:
   - frontend_development
   technologies:
@@ -383,7 +368,6 @@ patentlog:
   client: PatentAct, Denmark
   client_website: http://patentact.company
   name: PatentLog
-  position: 28
   services:
     - MVP
   technologies:
@@ -396,7 +380,6 @@ personal_business_plan:
   client: Bruyant-Langer, Denmark
   client_website: https://www.thepersonalbusinessplan.com
   name: The Personal Business Plan
-  position: 28
   services:
     - web_application_development
   technologies:
@@ -407,7 +390,6 @@ personal_business_plan:
 
 pluggd:
   client: Pluggd, USA
-  position: 13
   services:
   - webdesign
   technologies:
@@ -420,7 +402,6 @@ quickpay-invoicing:
   client: Quickpay, Denmark
   client_website: https://quickpay.net
   name: Quickpay
-  position: 28
   services:
     - web_application_development
   technologies:
@@ -430,7 +411,6 @@ region_syddanmark:
   client: Region Syddanmark, Denmark
   client_website: http://regionsyddanmark.dk/
   name: Fundingguiden
-  position: 27
   services:
   - frontend_development
   - project_management
@@ -473,7 +453,6 @@ smartphoneguide:
   client: KanKom Online, Denmark
   client_website: http://kankom.dk
   name: SmartphoneGuide
-  position: 26
   services:
   - web_application_development
   technologies:
@@ -483,7 +462,6 @@ test_cloud:
   client: Xamarin Europe, Denmark
   client_website: http://xamarin.com
   name: Xamarin Test Cloud
-  position: 3
   services:
   - api_development
   - web_application_development
@@ -495,7 +473,6 @@ urbanwinebox:
   client: UrbanWineBox, Denmark
   client_website: http://urbanwinebox.com
   name: UrbanWineBox
-  position: 14
   services:
   - project_management
   - web_application_development
@@ -507,7 +484,6 @@ verisure:
   client: Verisure, Denmark
   client_website: https://verisure.dk
   name: Mere Tryg
-  position: 28
   services:
     - project_management
     - web_application_development
@@ -525,7 +501,6 @@ wildfire:
     en: With Wildfire companies can easily launch marketing campaigns on social networks like Facebook and Twitter. Substance Lab worked with the virtual development team to build out the featureset of Wildfire.
   featured: false
   name: Wildfire
-  position: 2
   services:
   - facebook_integration
   - web_application_development

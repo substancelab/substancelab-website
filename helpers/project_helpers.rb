@@ -7,7 +7,7 @@ module ProjectHelpers
       build_project(values)
     }
     projects.sort_by { |project|
-      [project.position, project.name.try(:downcase).to_s]
+      [project.position || 9999, project.name.try(:downcase).to_s]
     }
   end
 

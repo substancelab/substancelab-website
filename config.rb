@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 
 # Configure site
@@ -21,7 +22,8 @@ end
 require "slim"
 Slim::Engine.set_options(
   :format => :html,
-  :pretty => true)
+  :pretty => true
+)
 
 set :css_dir, "stylesheets"
 set :js_dir, "javascripts"
@@ -61,14 +63,14 @@ activate :livereload, :host => "localhost"
 activate :external_pipeline,
   :name => :webpack,
   :command => if build?
-    "./node_modules/webpack/bin/webpack.js --bail -p"
-  else
-    "./node_modules/webpack/bin/webpack.js --watch -d --progress --color"
+                "./node_modules/webpack/bin/webpack.js --bail -p"
+              else
+                "./node_modules/webpack/bin/webpack.js --watch -d --progress --color"
   end,
   :source => ".tmp/webpack-build",
   :latency => 1
 
-data.projects.each do |key, attributes|
+data.projects.each do |_key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
   next unless case_study
 

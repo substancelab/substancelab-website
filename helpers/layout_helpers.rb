@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module LayoutHelpers
   def body_attributes
     data = current_page.data

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module ArticleHelpers
   def article_data(article)
     article.metadata.fetch(:page, {})

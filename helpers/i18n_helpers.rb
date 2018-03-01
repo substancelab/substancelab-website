@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module I18nHelpers
   def current_locale
     I18n.locale.to_s

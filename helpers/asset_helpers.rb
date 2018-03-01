@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module AssetHelpers
   def image_exists?(path)
     File.exist?(File.join(config[:source], config[:images_dir], path))

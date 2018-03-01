@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module ClientHelpers
   def clients
     projects = data.projects.values.collect { |project|

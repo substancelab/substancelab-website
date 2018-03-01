@@ -161,6 +161,15 @@ fab-it:
   - Ruby
   - Ruby on Rails
 
+falconeer:
+  client: Applied Investment Research, Denmark
+  name: Falconeer
+  position: 28
+  services:
+    - web_application_development
+  technologies:
+    - Ruby on Rails
+
 flaym:
   case_studies:
   - da
@@ -370,6 +379,32 @@ nethunters:
   technologies:
   - Ruby on Rails
 
+patentlog:
+  client: PatentAct, Denmark
+  client_website: http://patentact.company
+  name: PatentLog
+  position: 28
+  services:
+    - MVP
+  technologies:
+    - CSS
+    - HTML
+    - Javascript
+    - Ruby on Rails
+
+personal_business_plan:
+  client: Bruyant-Langer, Denmark
+  client_website: https://www.thepersonalbusinessplan.com
+  name: The Personal Business Plan
+  position: 28
+  services:
+    - web_application_development
+  technologies:
+    - CSS
+    - React
+    - Ruby on Rails
+    - Wordpress
+
 pluggd:
   client: Pluggd, USA
   position: 13
@@ -380,6 +415,16 @@ pluggd:
   - HTML
   - Javascript
   - Ruby on Rails
+
+quickpay-invoicing:
+  client: Quickpay, Denmark
+  client_website: https://quickpay.net
+  name: Quickpay
+  position: 28
+  services:
+    - web_application_development
+  technologies:
+    - Ruby
 
 region_syddanmark:
   client: Region Syddanmark, Denmark
@@ -457,6 +502,21 @@ urbanwinebox:
   technologies:
   - PostgreSQL
   - Ruby on Rails
+
+verisure:
+  client: Verisure, Denmark
+  client_website: https://verisure.dk
+  name: Mere Tryg
+  position: 28
+  services:
+    - project_management
+    - web_application_development
+  technologies:
+    - CSS
+    - HTML
+    - Knockout
+    - PostgreSQL
+    - Ruby on Rails
 
 wildfire:
   client: Wildfire, USA

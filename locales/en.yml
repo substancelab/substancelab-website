@@ -48,10 +48,13 @@ en:
     economic_integration: E-conomic integration
     google_maps: Google Maps integration
     internationalization: Internationalization
+    maintenance: Maintenance
     payment_gateway_integration: Payment gateway integration
     project_management: Project management
     recurring_billing: Recurring billing
     rejseplanen_integration: Rejseplanen integration
+    roadmapping: Roadmapping
+    tech_lead: Technical management
     web_application_development: Programming
     webdesign: Webdesign
     youtube_integration: YouTube integration

@@ -162,7 +162,11 @@ fab-it:
   - Ruby on Rails
 
 falconeer:
-  client: Applied Investment Research, Denmark
+  client:  Kapitalforeningen Falcon Invest, Denmark
+  client_website: https://falconinvest.dk
+  description:
+    da: Investerings-portefølje-værktøj der gør det muligt for Falcon Invest at overvåge og optimere deres investings-strategier.
+    en: Portfolio management tool that allows Falcon Invest to monitor and optimize their investment strategies across all their funds.
   name: Falconeer
   services:
     - web_application_development

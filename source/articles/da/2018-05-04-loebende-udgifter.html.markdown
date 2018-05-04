@@ -33,6 +33,7 @@ Følgende er et konkret eksempel for en mindre forretning med en tilstedeværels
 | Spamhåndtering              | [Akismet](https://akismet.com/) |  30 |
 | Support/helpdesk            | [HelpScout](https://www.helpscout.net/) | 125 |
 | Transaktions emails         | [Mandrill](https://www.mandrill.com/) | 175 |
+|                             | | 5.710 |
 
 Dertil kommer løbende udgifter til [udvikling](/services/development) og [vedligehold](/services/maintenance) af løsningen, der skal betales for annoncer og SEO - for slet ikke at tale om de driftsmæssige udgifter til advokater, kontor, medarbejdere osv osv.
 

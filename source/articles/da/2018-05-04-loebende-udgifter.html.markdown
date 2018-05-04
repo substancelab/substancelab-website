@@ -13,7 +13,7 @@ Hvad koster det egentligt at drive en SaaS-forretning? Er det bare et spørgsmå
 
 READMORE
 
-Desværre er virkeligheden ikke helt så simpel. Selv hvis din løsning kunne blive [færdig](/articles/du-bliver-aldrig-faerdig/) og udviklingsomkostningerne reduceret til ingenting, er der en lang række områder, hvor det stadig tikker regninger ind.
+Desværre er virkeligheden ikke helt så simpel. Selv hvis din løsning kunne blive [færdig](/articles/du-bliver-aldrig-faerdig/) og udviklingsomkostningerne reduceret til ingenting, er der en lang række områder, hvor der stadig tikker regninger ind.
 
 ## Løbende udgifter
 

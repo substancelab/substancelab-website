@@ -13,7 +13,7 @@ SETTINGS = {
     "protocol" => "http://"
   }
 }.freeze
-SITE_SETTINGS = SETTINGS[LOCALE]
+SITE_SETTINGS = SETTINGS.fetch(LOCALE)
 # Expose configuration to the entire Middleman application
 SITE_SETTINGS.each do |key, value|
   set(key.intern, value)

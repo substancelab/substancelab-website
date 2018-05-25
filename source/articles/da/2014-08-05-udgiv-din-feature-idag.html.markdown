@@ -36,7 +36,7 @@ Features, der ikke er lagt i produktion, findes ikke. Længere er den ikke. Indt
 
 Hyppige releases sikrer, at features kommer ud og bliver brugt i den virkelige verden. Ikke noget med udviklingsmiljøer, kunstige brugertests eller staging servere, men den brutale, virkelige verden.
 
-Og det er den eneste måde, du kan få [værdifuld feedback](http://substancelab.dk/articles/om-at-arbejde-iterativt/) fra dine brugere; kan de bruge featuren? Løser den deres problemer? Forstår de den?
+Og det er den eneste måde, du kan få [værdifuld feedback](https://substancelab.dk/articles/om-at-arbejde-iterativt/) fra dine brugere; kan de bruge featuren? Løser den deres problemer? Forstår de den?
 
 ### Nemmere at gå tilbage
 
@@ -46,7 +46,7 @@ Har du udgivet en mastodont af en release er det meget svært at vælge det før
 
 ## Det er ikke så svært
 
-De fleste af [vores kunder](http://substancelab.com/work) udgiver nye versioner af deres webløsninger adskillige gange hver dag og høster ovenstående fordele.
+De fleste af [vores kunder](https://substancelab.com/work) udgiver nye versioner af deres webløsninger adskillige gange hver dag og høster ovenstående fordele.
 
 Med de rigtige processer og praksisser er det slet ikke så svært at komme væk fra en forældet og ufleksibel måde at udgive software, og i stedet løbende lave mange, små udgivelser.
 

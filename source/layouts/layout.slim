@@ -50,8 +50,8 @@ html lang="#{current_locale}"
               = nav_bar_link_to_blog
               li.locales
                 ul.locale-switcher class="#{current_locale}"
-                  li.locale.en == link_to "en", "http://substancelab.com", :title => "We also speak english", :hreflang => "en"
-                  li.locale.da == link_to "da", "http://substancelab.dk", :title => "Vi snakker også dansk", :hreflang => "da"
+                  li.locale.en == link_to "en", "https://substancelab.com", :title => "We also speak english", :hreflang => "en"
+                  li.locale.da == link_to "da", "https://substancelab.dk", :title => "Vi snakker også dansk", :hreflang => "da"
 
       - if content_for?(:masthead)
         .masthead-container
@@ -90,8 +90,8 @@ html lang="#{current_locale}"
             li== link_to 'Client login', "http://work.substancelab.com", :title => "Substance Lab client extranet"
           ul.link-list
             li== link_to "mentalized", "http://mentalized.net", :title => "The personal website of Jakob Skjerning, an independent web developer in Kolding, Denmark"
-            li== link_to "substancelab.com", "http://substancelab.com", :title => "Carefully crafted web applications and websites with Ruby, Rails, HTML5, CSS3, Javascript", :hreflang => "en"
-            li== link_to "substancelab.dk", "http://substancelab.dk", :title => "Udvikling af kundespecifikke websites i Ruby, Rails, HTML5, CSS3, Javascript", :hreflang => "da"
+            li== link_to "substancelab.com", "https://substancelab.com", :title => "Carefully crafted web applications and websites with Ruby, Rails, HTML5, CSS3, Javascript", :hreflang => "en"
+            li== link_to "substancelab.dk", "https://substancelab.dk", :title => "Udvikling af kundespecifikke websites i Ruby, Rails, HTML5, CSS3, Javascript", :hreflang => "da"
 
     == javascript_include_tag "site.js"
 

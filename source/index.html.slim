@@ -11,14 +11,6 @@ priority: 1
 
 - masthead_image("/images/masthead/table.jpg")
 
-- content_for :scripts do
-  javascript:
-    $(document).ready(function() {
-      setTimeout(function() {
-        $('.hero').addClass('peptalk-is-visible');
-      }, 1000)
-    });
-
 section#company
   .container
     == localized_partial("index/about_substance_lab")
@@ -55,8 +47,6 @@ section#person
 
 - content_for :scripts do
   javascript:
-    $(document).ready(function() {
-      setupHomepage()
-    });
- 
+    setupHomepage()
+
   == javascript_include_tag 'substance_lab.js'

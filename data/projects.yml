@@ -215,6 +215,24 @@ gamekillers:
   - Ruby
   - Ruby on Rails
 
+gas-detection:
+  client: Danfoss Cooling, Denmark
+  client_website: http://refrigerationandairconditioning.danfoss.dk/
+  description:
+    da: I Danfoss første forsøg med IoT havde de brug for en fleksibel partner, der kunne levere en brugervenlig applikation.
+    en: Danfoss wanted to venture into the IoT space and needed a flexible partner to build out a userfriendly frontend for their devices.
+  name: Gas Detection
+  services:
+  - web_application_development
+  - webdesign
+  slug: danfoss-gas-detection
+  technologies:
+  - CSS
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+  - Stimulus
+
 gomore:
   case_studies:
   - da

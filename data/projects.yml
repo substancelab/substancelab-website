@@ -39,6 +39,30 @@ biq:
   - Wordpress
   website: http://biq.dk
 
+bomae:
+  client: "Bomae ApS, Denmark"
+  client_website: https://www.bomae.dk/
+  description:
+    da: "Dokument-håndtering og sagsstyringsværktøj til Danmarks måske mest ambitiøse købermæglere."
+    en: "Document-sharing and case management tool for the most ambitious home buyer's agents in Denmark."
+  featured: true
+  name: "Bomae"
+  position: 4
+  services:
+  - dropbox_integration
+  - responsive_design
+  - roadmapping
+  - web_application_development
+  slug: bomae
+  technologies:
+  - CSS
+  - Dropbox
+  - Javascript
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  website: https://www.bomae.dk/
+
 born-i-byen:
   case_studies:
   - da

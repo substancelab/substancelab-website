@@ -37,7 +37,7 @@ namespace :images do
         MASTHEAD_ORIGINALS.to_s
       )
       puts source_path.to_s
-      system "scripts/mastheadify", source_path.to_s
+      system "script/mastheadify", source_path.to_s
       system "jpegoptim --strip-all", task.name
     end
 

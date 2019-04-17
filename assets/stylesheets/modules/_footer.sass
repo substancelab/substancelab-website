@@ -5,6 +5,7 @@
     +separator-top
 
     display: flex
+    flex-direction: row-reverse
     justify-content: space-between
 
     margin-top: 0
@@ -17,3 +18,14 @@
     .link-list
       margin: 0
       text-align: right
+
+  @media #{$breakpoint-phone}
+    .container
+      display: block
+      flex-direction: column
+
+      .legalese
+        text-align: center
+
+      .link-list
+        text-align: center

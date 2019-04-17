@@ -22,6 +22,13 @@ en:
     link_to_jobs: "Become part of Substance Lab"
     link_to_portfolio: "Web application development projects by Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails application development in Kolding, Denmark, Europe"
+    services:
+      maintenance:
+        description: "Focus on your business knowing that we make sure your platform is in tip top shape"
+      development:
+        description: "Continuous delivery of programming tasks that bring you ever closer to your success"
+      roadmapping:
+        description: "Get a solid plan and overview over your technical challenges"
 
   index:
     about_substance_lab: About Substance Lab

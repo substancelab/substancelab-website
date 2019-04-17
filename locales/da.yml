@@ -23,6 +23,13 @@ da:
     link_to_jobs: "Bliv en del af Substance Lab teamet"
     link_to_portfolio: "Webudviklingsprojekter programmeret af Substance Lab"
     link_to_substance_lab: "Substance Lab - freelance Ruby on Rails udvikling og programmering i Kolding, Danmark"
+    services:
+      maintenance:
+        description: "Læn dig tilbage med sikkerhed for at nogen passer på din tekniske platform"
+      development:
+        description: "Løbende levering af programmeringsopgaver, der bringer dig stadig tættere på din succes"
+      roadmapping:
+        description: "Få styr på tankerne med et solidt fundament for dit digitale produkt"
 
   index:
     about_substance_lab: Substance Lab

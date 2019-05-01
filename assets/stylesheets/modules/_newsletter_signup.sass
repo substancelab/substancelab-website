@@ -12,26 +12,24 @@
       border-color: #333
   .button
     clear: both
-    background-color: #aaa
+    background-color: $base-color
     border: 0 none
     border-radius: 4px
     transition: all 0.23s ease-in-out 0s
     color: #FFFFFF
     cursor: pointer
     display: inline-block
-    font-size: 15px
+    font-size: 1em
     font-weight: normal
-    height: 32px
-    line-height: 32px
     margin: 0 5px 10px 0
-    padding: 0 22px
+    padding: 0.5em 1em
     text-align: center
     text-decoration: none
     vertical-align: top
     white-space: nowrap
     width: auto
     &:hover
-      background-color: #777
+      background-color: $accent-color
   .mc-field-group
     clear: left
     position: relative
@@ -49,9 +47,9 @@
     input
       box-sizing: border-box
       display: block
+      font-size: 1em
+      padding: 0.5em
       width: 100%
-      padding: 8px 0
-      text-indent: 2%
   .clear
     clear: both
   .mc-field-group.input-group
@@ -94,10 +92,9 @@
   label.error
     display: block
     float: none
-    width: auto
-    margin-left: 1.05em
+    padding: 0.25em 0
     text-align: left
-    padding: .5em 0
+    width: auto
 
 #mc-embedded-subscribe
   clear: both
@@ -109,8 +106,7 @@
   #mc-embedded-subscribe-form
     div.mce_inline_error
       display: inline-block
-      margin: 2px 0 1em 0
-      padding: 5px 10px
+      padding: 0.25em 0
       background-color: rgba(255, 255, 255, 0.85)
       -webkit-border-radius: 3px
       -moz-border-radius: 3px

@@ -10,8 +10,10 @@ en:
 
   contact_details:
     email: "Send an email to %{email_link}"
+    headline: "The best time is now"
     phone: "Give Jakob a call on %{phone_number}"
     phone_number: +45 7199 0999
+    teaser: "Get in touch today so we can help you make the best possible digital product business"
     twitter: "Tweet at %{twitter_link}"
 
   date:

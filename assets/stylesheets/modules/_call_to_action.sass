@@ -1,17 +1,66 @@
+$breakpoint-where-call-to-action-breaks: "screen and (max-width: 810px)"
+
+@mixin full-width-call-to-action
+  margin-left: auto
+  margin-right: auto
+  max-width: 100%
+  padding: 0
+
+@mixin half-width-call-to-action
+  margin-left: 0
+  margin-right: 0
+  max-width: 48%
+  text-align: left
+
 .call-to-action
   +full-width
+
   .container
     +separator-top
 
-  text-align: center
+    display: flex
+    justify-content: space-between
 
   .primary-contact-methods
     margin-bottom: 1rem
 
+  .contact-details,
+  .newsletter-signup
+    +half-width-call-to-action
+
+  // Contact details standing on their own
+  //
+  // Ie when we display them without a newsletter signup next to them.
+  .contact-details
+    +full-width-call-to-action
+    text-align: center
+
+    .contact-method
+      display: inline
+
   .contact-method
     font-size: 1.8em
     padding: 0.5em
-    @media #{$breakpoint-phone}
+
+  // Contact details module shown next to a newsletter signup
+  .newsletter-signup + .contact-details
+    +half-width-call-to-action
+
+    @media #{$breakpoint-where-call-to-action-breaks}
+      +full-width-call-to-action
+
+    .contact-method
       display: block
-      font-size: 1.3em
-      padding: 0
+      text-align: center
+
+  @media #{$breakpoint-where-call-to-action-breaks}
+    .container
+      // Disable flex-box
+      display: block
+
+    .contact-details,
+    .newsletter-signup
+      +full-width-call-to-action
+
+    .newsletter-signup
+      margin-bottom: 2em

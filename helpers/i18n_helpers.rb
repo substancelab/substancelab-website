@@ -12,12 +12,28 @@ module I18nHelpers
   # Renders a partial path for current locale. If the partial doesn't exist for
   # the current locale it will be looked for in the fallback_locale. If it does
   # not exist there either, it will be looked for without a specific locale
+  #
+  # If the partial cannot be found in the current locale, the fallback locale,
+  # nor without a specific locale, Middleman::TemplateRenderer::TemplateNotFound
+  # is raised.
   def localized_partial(partial_path, locals = {})
     paths = [
       File.join(current_locale, partial_path),
       File.join(fallback_locale, partial_path)
     ]
     partial_with_fallbacks(paths, locals)
+  end
+
+  # Renders a partial path for current locale. If the partial doesn't exist for
+  # the current locale it will be looked for in the fallback_locale. If it does
+  # not exist there either, it will be looked for without a specific locale.
+  #
+  # If the partial cannot be found in the current locale, the fallback locale,
+  # nor without a specific locale, a blank string is returned.
+  def localized_partial_if_present(partial_path, locals = {})
+    localized_partial(partial_path, locals)
+  rescue Middleman::TemplateRenderer::TemplateNotFound
+    ""
   end
 
   # Returns content in current locale. If content has no translation for

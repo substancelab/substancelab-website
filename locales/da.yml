@@ -10,8 +10,10 @@ da:
 
   contact_details:
     email: "Send en e-mail til %{email_link}"
+    headline: "Gør noget ved det nu"
     phone: "Ring til Jakob på %{phone_number}"
     phone_number: 7199 0999
+    teaser: "Tag fat i os allerede i dag, så vi kan skabe et solidt fundament for dit online produkt."
     twitter: "Tweet til %{twitter_link}"
 
   date:

@@ -1,0 +1,23 @@
+---
+title: "Fokus"
+description: "Fokus er essentielt i digitale produkter"
+tags: software, prioritering, produktstyring
+photo:
+  credits:
+    name: "Elena Taranenko"
+    url: https://unsplash.com/photos/hCUA4xtxVTA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  filename: "eyeglasses.jpg"
+---
+Det er svært at sige "nej". Især når man siger nej til ens egen idé, som jo i sagens natur er absolut fantastisk. Og hvad nu, hvis det lige er den idé, der vil gøre din web app til en succes?
+
+READMORE
+
+Som produkt-ejer er det fristende at ville lave lidt af det hele. Du har en vision om, hvordan det komplette digitale produkt skal opføre sig og løfte din virksomhed op i verdensklassen. Og det er rigtigt, at du på den måde ender med flere features i dit produkt.
+
+Men du risikerer at de enkelte features bliver halvhjertede, eller endnu værre, ikke-fungerende. Og den slags features kan du ikke vise frem eller glæde nogen med. Især når du er i et prototype- eller MVP-forløb, eller på anden måde er begrænset af budget eller tid, er det vigtigt at tage nogle hårde valg og fokusere på det vigtigste.
+
+Fokuserer du og laver den vigtigste feature først, får du hurtigere noget du kan vise frem og få feedback på. Og samtidigt med at dine kunder får glæde af den vigtigste feature, kan du arbejde på den nu vigtigste feature.
+
+Det er alt andet lige bedre at stå med én fungerende feature end 3 næsten-fungerende.
+
+Og husk; Det betyder jo ikke, at de andre ønsker _ikke_ bliver lavet. De bliver bare ikke lavet _nu_.

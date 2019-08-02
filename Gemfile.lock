@@ -18,7 +18,7 @@ GEM
     concurrent-ruby (1.1.5)
     contracts (0.13.0)
     crass (1.0.4)
-    docile (1.1.5)
+    docile (1.3.2)
     dotenv (2.7.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -84,7 +84,7 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
-    middleman-favicon-maker (4.0.4)
+    middleman-favicon-maker (4.1.0)
       favicon_maker (~> 1.3, >= 1.3.1)
       middleman-core (~> 4.0)
     middleman-livereload (3.4.6)

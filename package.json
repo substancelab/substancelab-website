@@ -4,7 +4,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "chart.js": "^2.8.0",
-    "css-loader": "^0.28.9",
+    "css-loader": "^0.28.11",
     "extract-loader": "^3.1.0",
     "file-loader": "^2.0.0",
     "jquery": "^3.3.1",

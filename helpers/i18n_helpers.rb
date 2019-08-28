@@ -32,7 +32,8 @@ module I18nHelpers
   # nor without a specific locale, a blank string is returned.
   def localized_partial_if_present(partial_path, locals = {})
     localized_partial(partial_path, locals)
-  rescue Middleman::TemplateRenderer::TemplateNotFound
+  rescue Middleman::TemplateRenderer::TemplateNotFound => error
+    STDERR.puts [error, error.backtrace].join("\n")
     ""
   end
 

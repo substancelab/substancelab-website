@@ -64,7 +64,7 @@ html lang="#{current_locale}"
 
     section.call-to-action.vcard
       .container
-        == localized_partial_if_present "layouts/mailchimp_signup.erb", :locals => {:audience_id => "63e2b402de"}
+        == localized_partial_if_present "layouts/mailchimp/signup.erb", :locals => {:audience_id => "63e2b402de"}
 
         .contact-details
           h2 = I18n.translate("contact_details.headline")

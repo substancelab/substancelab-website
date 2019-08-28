@@ -1,0 +1,60 @@
+---
+title: "Bliv klogere"
+description: "Vi bygger webløsninger, der gør dine drømme til forretning"
+---
+- content_for :masthead do
+  .container
+    h1 Fra idé til forretning
+
+- masthead_image("/images/masthead/keyboard.jpg")
+
+article
+  .container
+    .article-intro
+      p
+        | Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før &mdash; mange gange.
+
+    p
+      | Du er ekspert i din virksomhed, ikke i programmering eller webudvikling, så forløbet fra idé til succes kan være lang og forvirrende. Det behøver den ikke være; vi har taget rejsen før og kan guide og hjælpe dig gennem alle faserne af dit projekt.
+
+    p
+      | Vi har hjulpet adskillige iværksættere med at gå fra en idé i deres notesbog til at have et produkt online, som kører år efter år og til stadighed bliver en bedre forretnign. Vi er stolte af at have været en væsentlig del af deres successer:
+
+    h2 Læn dig tilbage og bliv klogere
+
+    p
+      | Tilmeld dig vores nyhedsbrev, og vi sender dig ekspert-viden om at bygge digitale produkter og webløsninger; viden der ruster dig til dit næste skridt mod en succesfuld online forretning.
+
+    #mc_embed_signup.newsletter-signup
+      == localized_partial_if_present "layouts/mailchimp/signup_form.erb", :locals => {:audience_id => "63e2b402de"}
+
+= if blog.articles.any?
+  section.article-list
+    .container
+      h2 Hvad skriver vi om?
+
+      p
+        | Tag et kig på <a href="/articles" title="Læs mere om det, vi ved mest om">vores artikler</a>. Der har vi allerede et fint arkiv af emner, som garanteret er relevante for dig, og som du kan lære af nu og her:
+
+      .columns
+        - blog.articles.first(2).each do |article|
+            .column
+              = link_to article, :class => "tile block-link" do
+                .tile-image style="background-image: url(#{article_image(article)})"
+                .tile-text
+                  h2.tile-title == article.title
+                  p == strip_tags(article.summary)
+
+section.quotes
+  .container
+    .sliding_quotes
+      == localized_partial("index/quotes")
+
+section#person
+  .container
+    h2= I18n.t("index.the_team")
+    == partial("index/people_behind")
+
+- content_for :scripts do
+  javascript:
+    setupHomepage()

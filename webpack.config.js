@@ -11,7 +11,7 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /assets\/javascripts\/.*\.js$/,
         exclude: /node_modules|\.tmp|vendor/,

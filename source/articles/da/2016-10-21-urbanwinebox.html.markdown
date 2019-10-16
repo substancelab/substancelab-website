@@ -3,7 +3,7 @@ title: "Launch: UrbanWineBox"
 description: "Substance Lab har leveret backend til UrbanWineBox; Danmarks første deleøkonomiske vinkælder og -markedsplads"
 tags: launch, urbanwinebox
 photo:
-  filename: "urbanwinebox_cellar.jpg"
+  cloudinary: "v1571230629/substancelab-website/urbanwinebox_cellar.jpg"
 ---
 
 Vin skal drikkes i godt selskab og gode oplevelser skal deles. [UrbanWineBox](http://www.urbanwinebox.com) tilbyder en peer-to-peer markedsplads hvor vinelskere, entusiaster og professionelle køber og sælger vin.

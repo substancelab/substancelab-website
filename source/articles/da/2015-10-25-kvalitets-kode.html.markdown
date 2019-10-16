@@ -3,7 +3,7 @@ title: "Hvad er kvalitets-kode?"
 description: 'Hvad er det der "god kode", som vi hele tiden snakker om, egentligt?'
 tags: SaaS, forretning, fakturaer, betalinger
 photo:
-  filename: code-keyboard.jpg
+  cloudinary: "v1571230808/substancelab-website/code-keyboard.jpg"
 ---
 
 Programmører kan diskutere til evighed, hvad god kode er, og hvordan man laver god kode. Her er et forsøg på at forklare, hvorfor du overhovedet bør bekymre dig om kvaliteten af koden i din web applikation.

@@ -3,10 +3,10 @@ title: "Software er som puslespil"
 description: Softwareudvikling handler om at få en masse brikker til at hænge sammen
 tags: software, udvikling, produktstyring
 photo:
+  cloudinary: "v1571230684/substancelab-website/puzzle.jpg"
   credits:
     name: Kevin Dooley
     url: https://www.flickr.com/photos/pagedooley/14555354976/
-  filename: puzzle.jpg
 ---
 
 Der er mange analogier, der forsøger at beskrive softwareudvikling. De er alle dårlige. Men det skal ikke forhindre mig i at føje endnu én til listen.

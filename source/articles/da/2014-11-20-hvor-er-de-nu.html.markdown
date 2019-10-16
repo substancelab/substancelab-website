@@ -3,10 +3,10 @@ title: De første kunder - hvor er de nu?
 description: Jakob kigger tilbage på nogle af vores mest succesfulde kunder
 tags: kunder, cases, exits
 photo:
+  cloudinary: "v1571231019/substancelab-website/dollars.jpg"
   credits:
     name: 401kcalculator
     url: http://www.401kcalculator.org/
-  filename: dollars.jpg
 ---
 
 I de 8 år Substance Lab har eksisteret har vi været glade for at arbejde sammen med en lang række [spændende og succesfulde kunder](https://substancelab.dk/work/). Enkelte af kunderne har været heldige (og dygtige) og har vundet i startup-lotteriet med en exit. Dem kigger vi på her.

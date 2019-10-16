@@ -3,10 +3,10 @@ title: "Om spam og spammere"
 description: "Selv om open source er gratis, betyder det ikke, at det ikke koster nogets"
 tags: spam, teknologi
 photo:
+  cloudinary: "v1571230532/substancelab-website/trash_can.jpg"
   credits:
     name: "Michael Guthmann"
     url: https://www.flickr.com/photos/goodi/7442274988
-  filename: "trash_can.jpg"
 ---
 
 "Byg det og de vil komme" lyder et gammel ordsprog. Desværre tyder noget på, at online er det kun spam og bots, det er dækkende for.

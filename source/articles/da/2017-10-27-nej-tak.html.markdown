@@ -3,10 +3,10 @@ title: "100.000 kr? Nej, tak"
 description: "Penge er ikke alt, så derfor er der kunder, vi siger nej tak til"
 tags: software, forretning
 photo:
+  cloudinary: "v1571230402/substancelab-website/dandelion.jpg"
   credits:
     name: "Dawid Zawiła"
     url: https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-  filename: "dandelion.jpg"
 ---
 
 “Kan du selv finde ud?”, spørger jeg ham, mens jeg trykker hans hånd. Det kan han godt, så vi siger farvel og han får et “held og lykke” med på vejen. Mens døren lukker efter ham, slår en tanke mig; “Der sagde jeg farvel til 100.000 kr”.

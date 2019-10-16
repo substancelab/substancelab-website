@@ -3,10 +3,10 @@ title: Om paginering
 description: Er side-inddeling nødvendigt eller overhovedet en god ide?
 tags: design, usability, performance
 photo:
+  cloudinary: "v1571231053/substancelab-website/pages.jpg"
   credits:
     name: "Horia Varlan"
     url: https://www.flickr.com/photos/horiavarlan/4268896468
-  filename: "pages.jpg"
 ---
 
 Side-inddeling er en af de features man nærmest bare tager for givet på websider. “Vi har en lang liste her, lad os vise X elementer pr side med en bunke links til at hoppe mellem siderne”. Men hvorfor?

@@ -3,10 +3,10 @@ title: Send ikke dine egne e-mails
 description: Du bør lade eksperterne om at sørge for, at dine emails bliver leveret til dine kunder
 tags: eksterne tjenester, produktstyring, software
 photo:
+  cloudinary: "v1571231365/substancelab-website/mailboxes.jpg"
   credits:
     name: Liz West
     url: https://www.flickr.com/photos/calliope/2314902551/
-  filename: mailboxes.jpg
 ---
 
 Jeg er - som den trofaste læser, nok har bemærket - stor fortaler for at lade eksterne tjenester håndtere så meget som muligt af din web applikation. Et af de områder, der er oplagt, er udsending af e-mail.

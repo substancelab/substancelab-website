@@ -3,10 +3,10 @@ title: Om valideringer
 description: Validering af bruger-data er svært. Her er lidt tips til at gøre oplevelsen bedre
 tags: design, forms, usability
 photo:
+  cloudinary: "v1571231132/substancelab-website/padlock.jpg"
   credits:
     name: "Sten Dueland"
     url: https://www.flickr.com/photos/stendueland/12911356713
-  filename: "padlock.jpg"
 
 ---
 

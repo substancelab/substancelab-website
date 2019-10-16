@@ -3,10 +3,10 @@ title: "De løbende udgifter"
 description: ""
 tags: software, forretning
 photo:
+  cloudinary: "v1571230322/substancelab-website/beach.jpg"
   credits:
     name: "whitehart1882"
     url: https://www.flickr.com/photos/harryh1882/27306771119/
-  filename: "beach.jpg"
 ---
 
 Hvad koster det egentligt at drive en SaaS-forretning? Er det bare et spørgsmål om at investere et 6-cifret beløb og så ellers læne sig tilbage og se pengene vælte ind på kontoen?

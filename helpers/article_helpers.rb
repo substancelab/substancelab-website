@@ -6,10 +6,17 @@ module ArticleHelpers
   end
 
   def article_image(article)
-    image = article_photo_data(article, :filename)
+    article_image_from_cloudinary(article) || article_image_from_disk(article)
+  end
+
+  def article_image_from_cloudinary(article)
+    image = article_photo_data(article, :cloudinary)
     return nil unless image
-    article_image_path = File.join(article_images_path(article), image)
-    image_path(article_image_path)
+
+    base_url = "https://res.cloudinary.com/substancelab/image/upload"
+    transformation = "t_masthead"
+
+    [base_url, transformation, image].join("/")
   end
 
   def article_photo_data(article, key = nil)
@@ -19,6 +26,19 @@ module ArticleHelpers
     else
       photo_data
     end
+  end
+
+  def article_image_from_disk(article)
+    image = article_photo_data(article, :filename)
+    return nil unless image
+
+    article_image_path = if image.start_with?("http")
+      image
+    else
+      File.join(article_images_path(article), image)
+    end
+
+    image_path(article_image_path)
   end
 
   # Returns the path where images for the current article are stored

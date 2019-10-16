@@ -36,11 +36,14 @@ module LayoutHelpers
 
   def css_for_masthead_image(image_url)
     stylesheets_source_path = File.join(app.config.source, app.config.css_dir)
-    options = {:load_paths => [stylesheets_source_path]}
+    options = {
+      :load_paths => [stylesheets_source_path],
+      :syntax => :sass
+    }
 
     template_path = "assets/stylesheets/modules/_masthead_image.sass"
     template = File.readlines(template_path).join
-    renderer = Sass::Engine.new(template, options)
+    renderer = SassC::Engine.new(template, options)
 
     css = renderer.render
 

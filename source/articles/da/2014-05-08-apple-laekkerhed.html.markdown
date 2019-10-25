@@ -4,10 +4,10 @@ description: For at få lækre interfaces og brugeroplevelser er du nødt til at
 date: 2014-05-08 09:58 UTC
 tags: apple, design,  usability, product management, simplicity, prototyping
 photo:
+  cloudinary: "v1571231255/substancelab-website/apple_laptop_lid.jpg"
   credits:
     name: "Kim Manley Ort"
     url: https://www.flickr.com/photos/kimmanleyort/11174603473
-  filename: "apple_laptop_lid.jpg"
 
 ---
 

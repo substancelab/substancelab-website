@@ -3,10 +3,10 @@ title: 4 tips til billigere website designs
 description: Vi vil alle have lækre designs, og holder du nogle få ting i baghovedet behøver de ikke koste kassen at implementere
 tags: design, product management
 photo:
+  cloudinary: "v1571231085/substancelab-website/coins.jpg"
   credits:
     name: "James Cridland"
     url: https://www.flickr.com/photos/jamescridland/3244096925
-  filename: "coins.jpg"
 ---
 
 Alle har ret til et fedt design, for nu at omskrive et køkken-reklame-slogan. Men når først røgen har lagt sig og webdesigneren har lagt Photoshop-penslen, skal det hele implementeres, og den slags koster tid og penge. Her er en række tips, der kan være med til at holde implementerings-prisen for dit nye, lækre design nede på et overkommeligt niveau.

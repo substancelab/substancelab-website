@@ -3,10 +3,10 @@ title: "Vejen til bedre fakturaer"
 description: En række tips til at sørge for at dine kunder ser frem til at få fakturaer fra din webløsning
 tags: SaaS, forretning, fakturaer, betalinger
 photo:
+  cloudinary: "v1571230844/substancelab-website/invoice.jpg"
   credits:
     name: "miguelb"
     url: https://www.flickr.com/photos/mig/8689212/
-  filename: invoice.jpg
 
 ---
 Brugervenlighed er vigtigt. Det gælder ikke kun ved det daglige brug af din online tjeneste, men også når du sender fakturaer til dine abonnenter. Disse få tips kan være med til at tage din løsning fra en, som kunderne bare bruger, til en de elsker.

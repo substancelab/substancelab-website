@@ -3,10 +3,10 @@ title: "Søgemaskiner"
 description: ""
 tags: software
 photo:
+  cloudinary: "v1571230259/substancelab-website/searching_folders.jpg"
   credits:
     name: "Annie Theby"
     url: https://unsplash.com/photos/EXCeGbyolPY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-  filename: "searching_folders.jpg"
 ---
 
 På et tidspunkt får din løsning så meget indhold, at du ikke længere kan overskue det på et par sider. Derfor melder ønsket sig om en søgemaskine sig - så kan vi jo bare indtaste det, vi leder efter og så finder maskinen det for os!

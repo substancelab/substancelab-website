@@ -3,10 +3,10 @@ title: Isbjerge
 description: En feature er ikke bare det du ser; der er ofte en masse under overfladen
 tags: software, udvikling, prioritering, eksterne tjenester
 photo:
+  cloudinary: "v1571231452/substancelab-website/iceberg.jpg"
   credits:
     name: "NOAA's National Ocean Service"
     url: "https://www.flickr.com/photos/40322276@N04/8290528771"
-  filename: iceberg.jpg
 ---
 Der findes en kategori af features, som du næsten uundgåeligt møder under udviklingen af applikationer af en hvis størrelse. Det kan være features som udsending af mails, abonnementsbetaling, udsending af nyhedsbreve, fakturering, søgning.
 READMORE

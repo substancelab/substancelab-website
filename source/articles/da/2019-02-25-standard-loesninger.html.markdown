@@ -3,10 +3,10 @@ title: "Standardløsninger"
 description: "Standardløsninger er fremragende til standard problemer"
 tags: software
 photo:
+  cloudinary: "v1571230095/substancelab-website/supermarket_shelf.jpg"
   credits:
     name: "Fancycrave"
     url: https://unsplash.com/photos/5KdoPHiq3vA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-  filename: "supermarket_shelf.jpg"
 ---
 
 Selv om vi er specialister i at skræddersy software til lige nøjagtigt dine forretningskrav, betyder det ikke, at vi ser "standardløsning" som et fy-ord.

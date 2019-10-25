@@ -3,10 +3,10 @@ title: "Udsæt til i morgen..."
 description: "Hvis du udvikler features, som ikke løser det problem, du har nu og her, spilder du tiden"
 tags: software, udvikling, produktstyring
 photo:
+  cloudinary: "v1571230459/substancelab-website/parla_laser.jpg"
   credits:
     name: "G.Hüdepohl"
     url: http://www.atacamaphoto.com
-  filename: "parla_laser.jpg"
 ---
 
 Konventionel visdom byder os at vi ikke skal udsætte til i morgen, hvad vi kan gøre i dag. Det er der fornuft i, men i softwareudvikling giver det modsatte ofte mening.

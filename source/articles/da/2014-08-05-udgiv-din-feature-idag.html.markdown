@@ -4,10 +4,10 @@ description: Få din feature ud til dine kunder nu med hurtigere feedback og bed
 date: 2014-08-05 08:52 UTC
 tags: software, udvikling, proces, releases
 photo:
+  cloudinary: "v1571231162/substancelab-website/completed_scrum_board.jpg"
   credits:
     name: "Ann Arbor Give Camp"
     url: https://www.flickr.com/photos/ann-arbor-give-camp/7997839345/
-  filename: "completed_scrum_board.jpg"
 ---
 Engang var en software-release noget, man frygtede. Var der en fejl i softwaren, var der ikke andet at gøre end leve med den indtil næste release. Sådan er det heldigvis ikke længere.
 

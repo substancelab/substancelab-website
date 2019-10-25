@@ -1,0 +1,26 @@
+---
+title: "Launch: Tumlino"
+description: "Substance Lab har leveret en tilpasset Sharetribe-løsning til Tumlino"
+tags: launch, tumlino
+photo:
+  cloudinary: "v1572009875/substancelab-website/tumlino_baby"
+
+---
+
+Hvor går du hen som nybagt forælder, når du har brug for hjælp og vejledning ud over hvad det offentlige giver dig i forbindelse med fødslen? Det spørgsmål vil <a href="https://www.tumlino.dk">Tumlino</a> være svaret på.
+
+READMORE
+
+[Tumlino](https://www.tumlino.dk) er en markedplads for privat sundhedshjælp til din graviditet, fødsel, baby og barsel. Her kan du i ro og mag finde en række [private fagpersoner](https://www.tumlino.dk/s), som kan hjælpe dig med alle sider af det at være forælder. Når du har fundet den perfekte person, booker du vedkommende, betaler online, og skal derefter "bare" møde op.
+
+Som fagperson får du et udstillingsvindue til motiverede, potentielle kunder, uden at skulle bekymre dig om at lave et website, opsætte en kalender, eller andet teknisk bøvl. Kunderne kommer af sig selv, betaler på forhånd, og alt er fuldautomatisk.
+
+## Remote firma
+
+Som startup-virksomhed er Tumlino en interessant case. De kom til os med et spørgsmål; "vi har meget begrænsede midler, hvordan udnytter vi dem bedst med så lidt teknisk risiko som muligt?"
+
+For Tumlino blev svaret at basere deres software på [en standardløsning](/articles/standard-loesninger). Deres setup er en variant af [Sharetribe](https://sharetribe.com), som vi har udvidet og ændret de steder, hvor standardløsningen ikke var tilstrækkelig.
+
+Det har givet Tumlino en kæmpe fordel i forhold til at komme i markedet og teste konceptet af, da de har været i stand til at invitere fagpersoner og brugere omkring en fuldt fungerende løsning flere måneder før, de ellers ville have kunnet.
+
+<div class="call-to-action"><a href="https://www.tumlino.dk/" title="Tumlino">Besøg Tumlino</a></div>

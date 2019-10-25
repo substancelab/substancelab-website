@@ -529,6 +529,19 @@ test_cloud:
   - Angular
   - Ruby on Rails
 
+tumlino:
+  client: Tumlino, Denmark
+  client_website: https://www.tumlino.dk
+  name: Tumlino
+  services:
+  - project_management
+  - web_application_development
+  technologies:
+  - Javascript
+  - MySQL
+  - Ruby on Rails
+  - Sharetribe
+
 urbanwinebox:
   client: UrbanWineBox, Denmark
   client_website: http://urbanwinebox.com

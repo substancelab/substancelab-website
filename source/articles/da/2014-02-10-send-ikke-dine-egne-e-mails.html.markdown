@@ -3,7 +3,7 @@ title: Send ikke dine egne e-mails
 description: Du bør lade eksperterne om at sørge for, at dine emails bliver leveret til dine kunder
 tags: eksterne tjenester, produktstyring, software
 photo:
-  cloudinary: "v1571231365/substancelab-website/mailboxes.jpg"
+  cloudinary: "v1571231365/substancelab-website/mailboxes"
   credits:
     name: Liz West
     url: https://www.flickr.com/photos/calliope/2314902551/

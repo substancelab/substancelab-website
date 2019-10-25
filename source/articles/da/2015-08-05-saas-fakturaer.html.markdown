@@ -3,7 +3,7 @@ title: "Vejen til bedre fakturaer"
 description: En række tips til at sørge for at dine kunder ser frem til at få fakturaer fra din webløsning
 tags: SaaS, forretning, fakturaer, betalinger
 photo:
-  cloudinary: "v1571230844/substancelab-website/invoice.jpg"
+  cloudinary: "v1571230844/substancelab-website/invoice"
   credits:
     name: "miguelb"
     url: https://www.flickr.com/photos/mig/8689212/

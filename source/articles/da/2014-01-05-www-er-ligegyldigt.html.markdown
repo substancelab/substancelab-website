@@ -3,7 +3,7 @@ title: www er ligegyldigt
 description: Lad nu være med at kræve www foran dit domæne. Det er ligegyldigt og overflødigt.
 tags: domæner, www, server
 photo:
-  cloudinary: "/substancelab-website/web.jpg"
+  cloudinary: "/substancelab-website/web"
   credits:
     name: Barry Skeates
     url: https://www.flickr.com/photos/barryskeates/6296025486/

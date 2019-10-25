@@ -3,7 +3,7 @@ title: Det kan lade sig gøre
 description: '"Det kan ikke lade sig gøre" er sjældent den fulde historie'
 tags: features, software, udvikling
 photo:
-  cloudinary: "v1571231339/substancelab-website/napping_with_bike.jpg"
+  cloudinary: "v1571231339/substancelab-website/napping_with_bike"
   credits:
     name: "Rodrigo Suriani"
     url: https://www.flickr.com/photos/rodrigo_suriani/1605319376

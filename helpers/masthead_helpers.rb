@@ -28,13 +28,15 @@ module MastheadHelpers
     if cloudinary_image_path?(image_url)
       # Cloudinary image identifier formatted like
       #
-      #   "v1571230808/substancelab-website/code-keyboard.jpg"
+      #   "v1571230808/substancelab-website/code-keyboard"
       #
       # Run the masthead transformation on it
       transformations = [
         "t_masthead", # Masthead art-direction
         "w_1000", # Reduce image weight,
+        "f_auto",
       ]
+      image_url = image_url.split(".").first
       image_url = cloudinary_image_url(image_url, transformations)
     end
 

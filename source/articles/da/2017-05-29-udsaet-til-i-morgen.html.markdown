@@ -3,7 +3,7 @@ title: "Udsæt til i morgen..."
 description: "Hvis du udvikler features, som ikke løser det problem, du har nu og her, spilder du tiden"
 tags: software, udvikling, produktstyring
 photo:
-  cloudinary: "v1571230459/substancelab-website/parla_laser.jpg"
+  cloudinary: "v1571230459/substancelab-website/parla_laser"
   credits:
     name: "G.Hüdepohl"
     url: http://www.atacamaphoto.com

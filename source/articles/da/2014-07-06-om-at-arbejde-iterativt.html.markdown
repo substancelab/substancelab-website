@@ -4,7 +4,7 @@ description: Iterative processer lyder godt på papiret, men de kan være svære
 date: 2014-07-06 19:10 UTC
 tags: software, udvikling, projektstyring, proces
 photo:
-  cloudinary: "v1571231213/substancelab-website/recycle_bin_with_drafts.jpg"
+  cloudinary: "v1571231213/substancelab-website/recycle_bin_with_drafts"
   credits:
     name: "Sebastien Wiertz"
     url: https://www.flickr.com/photos/wiertz/6952472683

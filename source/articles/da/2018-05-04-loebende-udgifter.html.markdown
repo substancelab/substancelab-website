@@ -3,7 +3,7 @@ title: "De løbende udgifter"
 description: ""
 tags: software, forretning
 photo:
-  cloudinary: "v1571230322/substancelab-website/beach.jpg"
+  cloudinary: "v1571230322/substancelab-website/beach"
   credits:
     name: "whitehart1882"
     url: https://www.flickr.com/photos/harryh1882/27306771119/

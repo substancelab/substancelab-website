@@ -25,7 +25,7 @@ module MastheadHelpers
   def masthead_image(image_url)
     return unless image_url
 
-    if image_url.match?(/\Av\d+\/substancelab-website\//)
+    if cloudinary_image_path?(image_url)
       # Cloudinary image identifier formatted like
       #
       #   "v1571230808/substancelab-website/code-keyboard.jpg"

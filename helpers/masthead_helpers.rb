@@ -24,6 +24,16 @@ module MastheadHelpers
 
   def masthead_image(image_url)
     return unless image_url
+
+    if image_url.match?(/\Av\d+\/substancelab-website\//)
+      # Cloudinary image identifier formatted like
+      #
+      #   "v1571230808/substancelab-website/code-keyboard.jpg"
+      #
+      # Run the masthead transformation on it
+      image_url = cloudinary_image_url(image_url, "t_masthead")
+    end
+
     content_for(:page_specific_style) do
       content_tag(:style) do
         css_for_masthead_image(image_url)

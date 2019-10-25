@@ -31,7 +31,11 @@ module MastheadHelpers
       #   "v1571230808/substancelab-website/code-keyboard.jpg"
       #
       # Run the masthead transformation on it
-      image_url = cloudinary_image_url(image_url, "t_masthead")
+      transformations = [
+        "t_masthead", # Masthead art-direction
+        "w_1000", # Reduce image weight,
+      ]
+      image_url = cloudinary_image_url(image_url, transformations)
     end
 
     content_for(:page_specific_style) do

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 module CloudinaryHelpers
-  def cloudinary_image_url(image_path, transformation = nil)
+  def cloudinary_image_url(image_path, transformations = [])
     base_url = "https://res.cloudinary.com/substancelab/image/upload"
-    [base_url, transformation, image_path].compact.join("/")
+
+    transformations = Array(transformations)
+    [base_url, transformations, image_path].flatten.compact.join("/")
   end
 
   # Returns true if path looks like a Cloudinary image identifier

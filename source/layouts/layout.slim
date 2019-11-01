@@ -1,6 +1,9 @@
 doctype html
 html lang="#{current_locale}"
   head
+    link rel="preconnect" href="https://www.google-analytics.com"
+    link rel="preconnect" href="https://www.googletagmanager.com"
+
     title== page_title
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"

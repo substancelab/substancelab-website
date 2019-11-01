@@ -3,7 +3,7 @@ title: "Fokus"
 description: "Fokus er essentielt i digitale produkter"
 tags: software, prioritering, produktstyring
 photo:
-  cloudinary: "v1571228659/substancelab-website/eyeglasses.jpg"
+  cloudinary: "v1571228659/substancelab-website/eyeglasses"
   credits:
     name: "Elena Taranenko"
     url: https://unsplash.com/photos/hCUA4xtxVTA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

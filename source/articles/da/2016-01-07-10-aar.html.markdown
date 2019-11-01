@@ -3,7 +3,7 @@ title: "Vi fylder 10"
 description: 'Vi har nu i 10 år lavet webløsninger på vores måde; brugervenlige og af høj teknisk kvalitet.'
 tags: Substance Lab
 photo:
-  cloudinary: "v1571230766/substancelab-website/happy_birthday_cake.jpg"
+  cloudinary: "v1571230766/substancelab-website/happy_birthday_cake"
   credits:
     name: Will Clayton
     url: https://www.flickr.com/photos/spool32/5045502202

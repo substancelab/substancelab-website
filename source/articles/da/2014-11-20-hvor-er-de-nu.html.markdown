@@ -3,7 +3,7 @@ title: De første kunder - hvor er de nu?
 description: Jakob kigger tilbage på nogle af vores mest succesfulde kunder
 tags: kunder, cases, exits
 photo:
-  cloudinary: "v1571231019/substancelab-website/dollars.jpg"
+  cloudinary: "v1571231019/substancelab-website/dollars"
   credits:
     name: 401kcalculator
     url: http://www.401kcalculator.org/

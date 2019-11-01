@@ -3,7 +3,7 @@ title: Om paginering
 description: Er side-inddeling nødvendigt eller overhovedet en god ide?
 tags: design, usability, performance
 photo:
-  cloudinary: "v1571231053/substancelab-website/pages.jpg"
+  cloudinary: "v1571231053/substancelab-website/pages"
   credits:
     name: "Horia Varlan"
     url: https://www.flickr.com/photos/horiavarlan/4268896468

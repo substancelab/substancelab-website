@@ -3,7 +3,7 @@ title: Vi støtter Kræftens Bekæmpelse
 description: Substance Lab støtter Kræftens Bekæmpelse kamp for børn og unge
 tags: velgørenhed
 photo:
-  cloudinary: "v1571230952/substancelab-website/kraeftens_bekaempelse_diplom.jpg"
+  cloudinary: "v1571230952/substancelab-website/kraeftens_bekaempelse_diplom"
 ---
 Alle her på kontoret har på forskellig vis haft oplevelser med cancer tæt inde på livet. Derfor var der ikke meget tvivl om, at [Kræftens Bekæmpelse](http://www.cancer.dk/) skulle være modtager af Substance Labs jule-donation i 2014.
 

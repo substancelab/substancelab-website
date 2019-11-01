@@ -3,7 +3,7 @@ title: "Om spam og spammere"
 description: "Selv om open source er gratis, betyder det ikke, at det ikke koster nogets"
 tags: spam, teknologi
 photo:
-  cloudinary: "v1571230532/substancelab-website/trash_can.jpg"
+  cloudinary: "v1571230532/substancelab-website/trash_can"
   credits:
     name: "Michael Guthmann"
     url: https://www.flickr.com/photos/goodi/7442274988

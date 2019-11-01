@@ -28,7 +28,7 @@ module MastheadHelpers
     if cloudinary_image_path?(image_url)
       # Cloudinary image identifier formatted like
       #
-      #   "v1571230808/substancelab-website/code-keyboard.jpg"
+      #   "v1571230808/substancelab-website/code-keyboard"
       #
       # Run the masthead transformation on it
       transformations = [

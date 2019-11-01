@@ -3,7 +3,7 @@ title: Vi støtter Dansk Flygtningehjælp
 description: Substance Lab støtter flygtninge via Dansk Flygtningehjælp
 tags: velgørenhed
 photo:
-  cloudinary: "v1571230734/substancelab-website/refugees.jpg"
+  cloudinary: "v1571230734/substancelab-website/refugees"
   credits:
     name: "Dansk Flygtningehjælp"
     url: https://flygtning.dk

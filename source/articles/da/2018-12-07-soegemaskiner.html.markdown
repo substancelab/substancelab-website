@@ -3,7 +3,7 @@ title: "Søgemaskiner"
 description: ""
 tags: software
 photo:
-  cloudinary: "v1571230259/substancelab-website/searching_folders.jpg"
+  cloudinary: "v1571230259/substancelab-website/searching_folders"
   credits:
     name: "Annie Theby"
     url: https://unsplash.com/photos/EXCeGbyolPY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

@@ -3,7 +3,7 @@ title: Mindre kode er en god ting
 description: Kode er en investering, men det kommer med en række risici.
 tags: software, udvikling, produktstyring
 photo:
-  cloudinary: "v1571231400/substancelab-website/code_sass.jpg"
+  cloudinary: "v1571231400/substancelab-website/code_sass"
 ---
 
 Man skulle tro, at jeg er fortaler for endnu mere kode i projekter. Det er jeg sådan set også, men kode kommer med en række risici, som er værd at være opmærksom på.

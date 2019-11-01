@@ -3,7 +3,7 @@ title: "Ruby Together"
 description: "Selv om open source er gratis, betyder det ikke, at det ikke koster nogets"
 tags: open source, velgørenhed
 photo:
-  cloudinary: "v1571230578/substancelab-website/rubytogether.jpg"
+  cloudinary: "v1571230578/substancelab-website/rubytogether"
 ---
 
 Selv om open source er gratis, betyder det ikke, at det ikke koster noget.

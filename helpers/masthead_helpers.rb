@@ -34,7 +34,9 @@ module MastheadHelpers
       transformations = [
         "t_masthead", # Masthead art-direction
         "w_1000", # Reduce image weight,
+        "f_auto",
       ]
+      image_url = image_url.split(".").first
       image_url = cloudinary_image_url(image_url, transformations)
     end
 

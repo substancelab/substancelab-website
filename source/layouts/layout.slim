@@ -54,10 +54,6 @@ html lang="#{current_locale}"
               li.work== link_to I18n.t("navigation.work"), projects_url
               = nav_bar_link_to_services
               = nav_bar_link_to_blog
-              li.locales
-                ul.locale-switcher class="#{current_locale}"
-                  li.locale.en == link_to "en", "https://substancelab.com", :title => "We also speak english", :hreflang => "en"
-                  li.locale.da == link_to "da", "https://substancelab.dk", :title => "Vi snakker også dansk", :hreflang => "da"
 
       - if content_for?(:masthead)
         .masthead-container

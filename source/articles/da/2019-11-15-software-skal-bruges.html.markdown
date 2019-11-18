@@ -19,7 +19,7 @@ Vi er nogle [iterationer](/services/development) inde i et spændende projekt fo
 
 Kunden har gennem alle demoer været glad og tilfreds og syntes at det hele så godt ud. Med andre ord, alt er godt og projektet kører bare. Dog har det af forskellige årsager ikke været muligt at give kunden adgang til demo-sitet før efter den seneste demo, men det gør vi selvfølgeligt så hurtigt som muligt.
 
-Og nu har kunden pludseligt en anden oplevelse af løsningen. De er stadigt glade, men nu er der pludseligt en række ting, som kan forbedres og de har meget specifikke spørgsmål og forslag. Kunden er blevet markant mere involveret.
+Og nu har kunden pludseligt en anden oplevelse af løsningen. De er stadig glade, men nu er der pludseligt en række ting, som kan forbedres og de har meget specifikke spørgsmål og forslag. Kunden er blevet markant mere involveret.
 
 ## Noget har ændret sig
 

@@ -16,10 +16,10 @@ article.blog-article
     aside
       nav
         .previous
-          - if article = current_article.previous_article
+          - if article = current_article.article_previous
             == link_to_article(article)
         .next
-          - if article = current_article.next_article
+          - if article = current_article.article_next
             == link_to_article(article)
 
 - masthead_image(article_image(current_article))

@@ -4,9 +4,9 @@
 - content_for :masthead do
   h1.blog-article-headline== current_article.title
   .blog-article-meta
-    = I18n.t("articles.show.meta_data", :author => "Jakob", :date => I18n.l(current_article.date.to_date, :format => :long))
+    = I18n.translate("articles.show.meta_data", :author => "Jakob", :date => I18n.localize(current_article.date.to_date, :format => :long))
   - if photo_credits = article_photo_data(current_article, "credits")
-    .photo-credits = link_to(I18n.t("articles.show.photo_credits", :name => photo_credits[:name]), photo_credits[:url])
+    .photo-credits = link_to(I18n.translate("articles.show.photo_credits", :name => photo_credits[:name]), photo_credits[:url])
 
 article.blog-article
   .container

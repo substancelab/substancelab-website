@@ -9,7 +9,7 @@ photo:
     url: "https://unsplash.com/@kirillz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---
 
-Mødelokaler er en knap resource i mange kontorfællesskaber.  <a href="https://www.frontlobby.dk" title="Kalenderstyring af mødelokaler i kontorhoteller">FrontLobby</a> sikrer at der ikke bliver lavet dobbelt bookinger, og gør det på så lejerne selv kan håndtere deres reserveringer uden at personalet skal bruge ekstra tid på det.
+Mødelokaler er en knap resource i mange kontorfællesskaber.  <a href="https://www.frontlobby.dk" title="Kalenderstyring af mødelokaler i kontorhoteller">FrontLobby</a> sikrer at der ikke bliver lavet dobbelt bookinger, og gør det så lejerne selv kan håndtere deres reserveringer uden at personalet skal bruge ekstra tid på det.
 
 READMORE
 

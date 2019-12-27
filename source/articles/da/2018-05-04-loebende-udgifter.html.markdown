@@ -45,3 +45,4 @@ Ikke to forretninger er ens, og ovenstående er naturligvis kun et eksempel. And
 * [Running Costs - Cushion](https://cushionapp.com/running-costs)
 * [Omkostninger - 10er](https://10er.dk/open)
 * [A bootstrapped SaaS cost teardown](https://blog.checklyhq.com/bootstrapped-developer-saas-cost-teardown/)
+* [Baremetrics Engineering Expenses](https://www.notion.so/bbf18630e4154072a538485f45a9a6e2?v=0e2a6e82b0bf4c008c92412a4e942e1b)

@@ -1,7 +1,7 @@
 ---
 title: "Launch: Front Lobby"
-description: "Substance Lab har leveret en tilpasset Sharetribe-løsning til Tumlino"
-tags: launch, tumlino
+description: "Front Lobby er den komplette løsning til håndtering af mødelokaler i kontorfællesskaber"
+tags: launch, frontlobby
 photo:
   cloudinary: "v1575642507/substancelab-website/wooden_counter"
   credits:

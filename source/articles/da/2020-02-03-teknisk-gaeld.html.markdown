@@ -46,7 +46,7 @@ Løbende code reviews, par-programmering, automatiserede tests og kodestil-kontr
 
 ### Gør det synligt
 
-Da teknisk nok ikke helt kan undgås giver det god mening til gengæld at gøre det synligt. På den måde bliver det ikke en skjult bombe under dit system.
+Da teknisk gæld nok ikke helt kan undgås giver det god mening til gengæld at gøre det synligt. På den måde bliver det ikke en skjult bombe under dit system.
 
 Hver gang du foretager et bevidst valg om teknisk gæld oprettes en sag i projektstyringsværktøjet med detaljer om de oprydninger, der stadig mangler at blive lavet.
 

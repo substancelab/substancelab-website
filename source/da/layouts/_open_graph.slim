@@ -1,5 +1,5 @@
-meta property="og:description" content="#{strip_tags(yield_content(:open_graph_description))&.strip || "Eksperter i at udvikle teknikken bag succesfulde online startups."}"
+meta property="og:description" content="#{current_page.metadata.dig(:page, :description) || "Eksperter i at udvikle teknikken bag succesfulde online startups."}"
 meta property="og:image" content="#{yield_content(:open_graph_image) || image_url('/images/logos/substance_lab.png')}"
 meta property="og:locale" content="da_DK"
-meta property="og:title" content="#{yield_content(:open_graph_title) || "Substance Lab"}"
+meta property="og:title" content="#{current_page.metadata.dig(:page, :title) || "Substance Lab"}"
 meta property="og:url" content="#{config.protocol}#{config.domain}#{current_page.url}"

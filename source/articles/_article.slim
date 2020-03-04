@@ -1,12 +1,6 @@
 - content_for(:page_title)
   = current_article.title
 
-- content_for(:open_graph_title)
-  = current_article.title
-
-- content_for(:open_graph_description)
-  = current_article.summary
-
 - content_for(:open_graph_image)
   = masthead_image_url(article_image(current_article))
 

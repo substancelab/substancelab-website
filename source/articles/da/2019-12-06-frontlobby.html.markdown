@@ -1,7 +1,7 @@
 ---
-title: "Launch: FrontLobby"
-description: "Substance Lab har leveret en tilpasset Sharetribe-løsning til Tumlino"
-tags: launch, tumlino
+title: "Launch: Front Lobby"
+description: "Front Lobby er den komplette løsning til håndtering af mødelokaler i kontorfællesskaber"
+tags: launch, frontlobby
 photo:
   cloudinary: "v1575642507/substancelab-website/wooden_counter"
   credits:
@@ -9,13 +9,13 @@ photo:
     url: "https://unsplash.com/@kirillz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---
 
-Mødelokaler er en knap resource i mange kontorfællesskaber.  <a href="https://www.frontlobby.dk" title="Kalenderstyring af mødelokaler i kontorhoteller">FrontLobby</a> sikrer at der ikke bliver lavet dobbelt bookinger, og gør det så lejerne selv kan håndtere deres reserveringer uden at personalet skal bruge ekstra tid på det.
+Mødelokaler er en knap resource i mange kontorfællesskaber.  <a href="https://www.frontlobby.dk" title="Kalenderstyring af mødelokaler i kontorhoteller">Front Lobby</a> sikrer at der ikke bliver lavet dobbelt bookinger, og gør det så lejerne selv kan håndtere deres reserveringer uden at personalet skal bruge ekstra tid på det.
 
 READMORE
 
 ## Gør det selv
 
-Indrømmet, FrontLobby er en lidt speciel launch for os. For en gangs skyld er kunden nemligt os selv. Vi har mange års erfaring med at hjælpe iværksættere med at tage de rigtige valg i forbindelse med programmering af deres løsninger og udvikling af deres online forretning, nu er det på tide at vi tager vores egen medicin.
+Indrømmet, Front Lobby er en lidt speciel launch for os. For en gangs skyld er kunden nemlig os selv. Vi har mange års erfaring med at hjælpe iværksættere med at tage de rigtige valg i forbindelse med programmering af deres løsninger og udvikling af deres online forretning, nu er det på tide at vi tager vores egen medicin.
 
 
 ## Første kunde var på plads inden udviklingen gik igang
@@ -30,4 +30,4 @@ Det har været interessant at opleve forløbet fra den anden side af bordet for 
 
 ## Prøv det
 
-Lige nu er første måned gratis, så der er ikke rigtigt nogen undskyldning for ikke at tage et nærmere kig på <a href="https://www.frontlobby.dk" title="Mødebooking af lokaler i kontorhoteller">FrontLobby</a> - og har du mødelokaler, du vil have styr på, håber vi selvfølgeligt at du bliver hængende.
+Lige nu er første måned gratis, så der er ikke rigtigt nogen undskyldning for ikke at tage et nærmere kig på <a href="https://www.frontlobby.dk" title="Mødebooking af lokaler i kontorhoteller">Front Lobby</a> - og har du mødelokaler, du vil have styr på, håber vi selvfølgeligt at du bliver hængende.

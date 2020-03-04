@@ -15,7 +15,7 @@ READMORE
 
 ## Gør det selv
 
-Indrømmet, Front Lobby er en lidt speciel launch for os. For en gangs skyld er kunden nemligt os selv. Vi har mange års erfaring med at hjælpe iværksættere med at tage de rigtige valg i forbindelse med programmering af deres løsninger og udvikling af deres online forretning, nu er det på tide at vi tager vores egen medicin.
+Indrømmet, Front Lobby er en lidt speciel launch for os. For en gangs skyld er kunden nemlig os selv. Vi har mange års erfaring med at hjælpe iværksættere med at tage de rigtige valg i forbindelse med programmering af deres løsninger og udvikling af deres online forretning, nu er det på tide at vi tager vores egen medicin.
 
 
 ## Første kunde var på plads inden udviklingen gik igang

@@ -1,6 +1,9 @@
 - content_for(:page_title)
   = current_article.title
 
+- content_for(:open_graph_image)
+  = masthead_image_url(article_image(current_article))
+
 - content_for :masthead do
   h1.blog-article-headline== current_article.title
   .blog-article-meta

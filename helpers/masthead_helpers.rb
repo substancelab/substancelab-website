@@ -25,6 +25,17 @@ module MastheadHelpers
   def masthead_image(image_url)
     return unless image_url
 
+    image_url = masthead_image_url(image_url)
+
+    content_for(:page_specific_style) do
+      content_tag(:style) do
+        css_for_masthead_image(image_url)
+      end
+    end
+  end
+
+  # Returns image_url transformed with our masthead styling
+  def masthead_image_url(image_url)
     if cloudinary_image_path?(image_url)
       # Cloudinary image identifier formatted like
       #
@@ -37,13 +48,9 @@ module MastheadHelpers
         "f_auto",
       ]
       image_url = image_url.split(".").first
-      image_url = cloudinary_image_url(image_url, transformations)
-    end
-
-    content_for(:page_specific_style) do
-      content_tag(:style) do
-        css_for_masthead_image(image_url)
-      end
+      cloudinary_image_url(image_url, transformations)
+    else
+      image_url
     end
   end
 end

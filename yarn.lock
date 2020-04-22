@@ -1816,13 +1816,14 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-loader@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-5.0.0.tgz#4d720435234adf2dbb0bd9fae2c682b375aa381a"
-  integrity sha512-+bGc23TUU+3ncubodxPfi91o1kFAOpRSbBXrHz0+2ut3DeLMAmoD8scR2cQwnAilvITdKUJ3Yk1nJZwaVfQVwA==
+extract-loader@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-5.0.1.tgz#df894d34dfeb11e67fca1869d8e641b2454fb7af"
+  integrity sha512-p56EW0JubEQp1cKuPq12O/iREGYChOCniUZzfnQLx+XbnHfqENvirN2Eb9eVhE3IHp7at6jpJKN1VlhhBMbQ8w==
   dependencies:
     babel-core "^6.26.3"
     babel-plugin-add-module-exports "^1.0.2"
+    babel-preset-env "^1.7.0"
     babel-runtime "^6.26.0"
     btoa "^1.2.1"
     loader-utils "^1.1.0"

@@ -10,7 +10,7 @@
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "resolve-url-loader": "^3.1.1",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.2",
     "waypoints": "^4.0.1",
     "webpack": "^4.44.0",
     "webpack-cli": "^3.3.12"

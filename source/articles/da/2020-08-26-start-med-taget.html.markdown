@@ -1,6 +1,6 @@
 ---
 title: "Start med taget"
-description: ""
+description: "På mange punkter kan det at udvikle en ny softwareløsning sammenlignes med at skulle bygge et hus. På mange andre punkter, kan det slet ikke."
 tags: prioritering, software, udvikling, estimat, pris
 photo:
   cloudinary: "v1598450681/substancelab-website/architect_at_work"

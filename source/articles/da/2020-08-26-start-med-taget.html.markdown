@@ -3,10 +3,11 @@ title: "Start med taget"
 description: ""
 tags: prioritering, software, udvikling, estimat, pris
 photo:
-  cloudinary: "v1583221510/substancelab-website/ocean_horizon_from_jetty"
+  cloudinary: "v1598450681/substancelab-website/architect_at_work"
   credits:
-    name: "Joshua Earle"
-    url: "https://unsplash.com/@isaiahiz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+    name: "Daniel McCullough"
+    url: "https://unsplash.com/@d_mccullough?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+
 ---
 
 Der er mange analogier og metaforer, der forsøger at beskrive softwareudvikling, og som alle gode modeller er de altid forkerte, men af og til brugbare. Ikke desto mindre vil jeg gøre et forsøg her.

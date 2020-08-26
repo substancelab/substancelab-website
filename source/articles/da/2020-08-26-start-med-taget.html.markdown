@@ -11,7 +11,7 @@ photo:
 
 Der er mange analogier og metaforer, der forsøger at beskrive softwareudvikling, og som alle gode modeller er de altid forkerte, men af og til brugbare. Ikke desto mindre vil jeg gøre et forsøg her.
 
-På mange punkter kan det at udvikle en ny softwareløsning sammenlignes med at skulle købe et hus. Det er en stor investering, de færreste har prøvet det før, og der er masser specialviden involveret.
+På mange punkter kan det at udvikle en ny softwareløsning sammenlignes med at skulle købe et hus. Det er en stor investering, de færreste har prøvet det før, og der er masser af specialviden involveret.
 
 READMORE
 
@@ -39,6 +39,6 @@ Men det kan også være, at du vurderer at bordpladen ikke rigtigt behøver at v
 
 ## Accepter at du ved mindst i starten af projektet
 
-Det siger næsten sig selv, at langt de bedste løsninger bygges, når så mange beslutninger som muligt tages på så informeret et grundlag som muligt. Det opnår du kun, hvis du indser, at dit software-projekt er en løbende process, og ikke et hus, der er nødt til at blive bygget fra fundamentet op og ikke er brugbart før alt er bygget færdigt.
+Det siger næsten sig selv, at langt de bedste løsninger bygges, når så mange beslutninger som muligt tages på så informeret et grundlag som muligt. Det opnår du kun, hvis du indser, at dit software-projekt er en løbende proces, og ikke et hus, der er nødt til at blive bygget fra fundamentet op og ikke er brugbart før alt er bygget færdigt.
 
 Med andre ord, start med det simple køkken og udvid det, når du ved at det er nødvendigt - det giver den rigtige løsning hurtigst og billigst.

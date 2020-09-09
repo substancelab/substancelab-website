@@ -38,7 +38,7 @@ Højst sandsynligt vil din kommende tekniske partner ikke være placeret fysisk 
 
 ## Evne til at udfordre dig
 
-At bygge den første version af et digitalt produkt, hvad end det er en MVP, en beta-version, en prototype, handler om at lave det absolut nødvendige og ikke mere. Desværre har vi som produkt-personer en tendens til at ville fylde stadig mere på vores løsning.
+At bygge den første version af et digitalt produkt, hvad end det er en MVP, en beta-version, en prototype, handler om at [lave det absolut nødvendige og ikke mere](/articles/fokus/). Desværre har vi som produkt-personer en tendens til at ville fylde stadig mere på vores løsning.
 
 Du har brug for en samarbejdspartner, der er i stand til at udfordre dine antagelser og sikre at de ting, I bygger, faktisk er de vigtigste på det tidspunkt. "Hvorfor" og "nej" er nøgleord som du skal forvente og forlange fra din tekniske partner.
 
@@ -52,7 +52,7 @@ Du har brug for en alt-mulig-person, som kan gøre mange ting godt, og ikke en s
 
 Nåh ja, og så skal de naturligvis kunne levere et fungerende digitalt produkt, der bringer dig tættere på din vision. Hvordan de gør det er mindre relevant her, især hvis vi taler MVP og prototyper, der alligevel ender med at blive ændret - er der tale om en løsning af mere varig karakter, er de tekniske evner det mere vigtige.
 
-Det er desværre stort set umuligt at vurdere en teknisk partners tekniske evner uden at have arbejdet sammen med dem. Men generelt set, hvis de har en historik for at kunne producere og levere løsninger, er det godt nok. Her er det vigtigt at bide mærke i løsninger, de har lavet selv, og ikke kun som del af et større team - husk, du går efter alt-mulig-personen.
+Det er desværre stort set umuligt at vurdere en teknisk partners tekniske evner uden at have arbejdet sammen med dem. Men generelt set, hvis de har en historik for at kunne [producere og levere løsninger](/cases/), er det godt nok. Her er det vigtigt at bide mærke i løsninger, de har lavet selv, og ikke kun som del af et større team - husk, du går efter alt-mulig-personen.
 
 ## Der er ikke noget universal-svar
 
@@ -65,4 +65,4 @@ Leder du efter følgende går det nok ikke helt skævt, dog:
 - Vedkommende kan gøre mange ting godt, og er ikke en specialist, der kun gør én ting perfekt.
 - Vedkommende har en historik for at kunne producere og levere fungerende digitale løsninger.
 
-Og ja, det er klart, at jeg synes vi scorer ret højt på ovenstående punkter, men det endelige resultat vil altid afhænge af, hvem du er, og hvad din mave siger dig.
+Og ja, det er klart, at jeg synes, [vi](/) scorer ret højt på ovenstående punkter, men det endelige resultat vil altid afhænge af, hvem du er, og hvad din mave siger dig.

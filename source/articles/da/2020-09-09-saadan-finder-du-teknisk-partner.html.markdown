@@ -3,10 +3,10 @@ title: "Sådan vælger du din tekniske partner"
 description: "Hvis du, som de fleste, aldrig har lavet en digital løsning før og ikke er teknisk anlagt, er det meget svært at vide, hvad du skal kigge efter i en teknisk partner."
 tags: software, udvikling, produktstyring, opstart
 photo:
-  cloudinary: "v1598450681/substancelab-website/architect_at_work"
+  cloudinary: "v1599645169/substancelab-website/touring-nyc"
   credits:
-    name: "Daniel McCullough"
-    url: "https://unsplash.com/@d_mccullough?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+    name: "Freddy Marschall"
+    url: "https://unsplash.com/@freddymarschall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 
 ---
 

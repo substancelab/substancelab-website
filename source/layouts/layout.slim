@@ -1,9 +1,6 @@
 doctype html
 html lang="#{current_locale}"
   head
-    link rel="preconnect" href="https://www.google-analytics.com"
-    link rel="preconnect" href="https://www.googletagmanager.com"
-
     title== page_title
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
@@ -27,8 +24,6 @@ html lang="#{current_locale}"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
 
-    == partial("layouts/google_tag_manager/script")
-
     link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png"
     link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png"
     link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png"
@@ -40,7 +35,6 @@ html lang="#{current_locale}"
     == localized_partial "layouts/open_graph"
 
   body *body_attributes
-    == partial("layouts/google_tag_manager/pixel")
     header.masthead
       .nav-bar
         .container

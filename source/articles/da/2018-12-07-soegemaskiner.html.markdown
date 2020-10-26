@@ -1,6 +1,6 @@
 ---
 title: "Søgemaskiner"
-description: ""
+description: "Søgemaskiner ser simple ud udefra; det er jo bare et enkelt felt! Men kompleksiteten gemmer sig under overfladen..."
 tags: software
 photo:
   cloudinary: "v1571230259/substancelab-website/searching_folders"
@@ -50,8 +50,8 @@ Men der findes fremragende løsninger til at lave fri-tekst-søgning og lave rel
 
 ## Vores erfaringer
 
-I sidstnævnte kategori har vi haft gode erfaringer med [Elastic Search](https://www.elastic.co/products/elasticsearch), der har vist sig at kunne tilpasses til guldmedalje og levere gode og hurtige resultater. Den findes både i en hosted version, så man slipper for at skulle holde en server kørende til det, og en, hvor man selv har den liggende. Det sagt, så betaler man for kvaliteten og det kan blive en dyrere løsning. 
+I sidstnævnte kategori har vi haft gode erfaringer med [Elastic Search](https://www.elastic.co/products/elasticsearch), der har vist sig at kunne tilpasses til guldmedalje og levere gode og hurtige resultater. Den findes både i en hosted version, så man slipper for at skulle holde en server kørende til det, og en, hvor man selv har den liggende. Det sagt, så betaler man for kvaliteten og det kan blive en dyrere løsning.
 
-Til gengæld det er lykkedes os at lave ganske gode søgemaskiner baseret på de udvidelser, der findes i eksisterende databaser. 
+Til gengæld det er lykkedes os at lave ganske gode søgemaskiner baseret på de udvidelser, der findes i eksisterende databaser.
 
 Vores generelle anbefaling er at starte med det, din database allerede kan tilbyde dig. Hvis det viser sig at ønsket om at kunne fin-tune relevansen bliver stor nok kan man overveje at gå videre til en "rigtig" søgemaskine, som fx Elastic Search.

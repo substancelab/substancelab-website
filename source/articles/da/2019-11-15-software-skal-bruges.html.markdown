@@ -13,7 +13,7 @@ Lad mig invitere dig med bag kulisserne og dele en historie fra den virkelige, r
 
 READMORE
 
-Vi er nogle [iterationer](/services/development) inde i et spændende projekt for en kunde og har afholdt de første mange demoer for kunden. Projektet er blevet vist frem og vi har demonstreret de udviklede funktioner og brugergrænseflader.
+Vi er nogle [iterationer](/services/development/) inde i et spændende projekt for en kunde og har afholdt de første mange demoer for kunden. Projektet er blevet vist frem og vi har demonstreret de udviklede funktioner og brugergrænseflader.
 
 ## Kunden er glad
 

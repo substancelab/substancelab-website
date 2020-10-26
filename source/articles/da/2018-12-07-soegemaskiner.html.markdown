@@ -1,6 +1,6 @@
 ---
 title: "Søgemaskiner"
-description: ""
+description: "Søgemaskiner ser simple ud udefra; det er jo bare et enkelt felt! Men kompleksiteten gemmer sig under overfladen..."
 tags: software
 photo:
   cloudinary: "v1571230259/substancelab-website/searching_folders"

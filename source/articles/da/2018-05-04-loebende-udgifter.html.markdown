@@ -1,6 +1,6 @@
 ---
 title: "De løbende udgifter"
-description: ""
+description: "Det er ikke helt gratis at drive en SaaS-virksomhed. Se eksempler på driftsomkostninger fra faktiske virksomheder"
 tags: software, forretning
 photo:
   cloudinary: "v1571230322/substancelab-website/beach"

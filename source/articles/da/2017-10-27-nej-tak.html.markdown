@@ -23,4 +23,4 @@ Og software til webshops findes - og der findes masser af leverandører, der er 
 
 Og jo, det gør lidt ondt at sige nej tak til muligheden for at tjene et 6-cifret beløb. Men det ville gøre endnu mere ondt at sige ja og stå med en kunde, der ender med en følelse af, at han kunne have brugt pengene mere optimalt hos en anden leverandør.
 
-Vi [skaber lækre, unikke løsninger](/services/development), der matcher kundens unikke forretning. Er det ikke en mulighed, siger vi hellere nej tak til projektet.
+Vi [skaber lækre, unikke løsninger](/services/development/), der matcher kundens unikke forretning. Er det ikke en mulighed, siger vi hellere nej tak til projektet.

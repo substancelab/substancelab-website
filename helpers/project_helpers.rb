@@ -120,7 +120,7 @@ module ProjectHelpers
   def project_url(project)
     slug = project.slug
     raise "Slug for #{project.inspect} cannot be blank" if slug.blank?
-    File.join(projects_url, slug)
+    File.join(projects_url, slug) + "/"
   end
 
   def technologies

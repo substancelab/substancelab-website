@@ -21,10 +21,10 @@ module NavigationHelpers
   end
 
   def projects_url
-    "/work"
+    "/work/"
   end
 
   def services_url
-    "/services"
+    "/services/"
   end
 end

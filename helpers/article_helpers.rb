@@ -14,9 +14,9 @@ module ArticleHelpers
     return nil unless image
 
     base_url = "https://res.cloudinary.com/substancelab/image/upload"
-    transformation = "t_masthead"
+    transformations = ["t_masthead", "f_auto"]
 
-    [base_url, transformation, extra_transformations, image].flatten.join("/")
+    [base_url, transformations, extra_transformations, image].flatten.join("/")
   end
 
   def article_photo_data(article, key = nil)

@@ -5,18 +5,17 @@ module ArticleHelpers
     article.metadata.fetch(:page, {})
   end
 
-  def article_image(article)
-    article_image_from_cloudinary(article) || article_image_from_disk(article)
+  def article_image(article, transformations = [])
+    article_image_from_cloudinary(article, transformations) || article_image_from_disk(article)
   end
 
-  def article_image_from_cloudinary(article)
+  def article_image_from_cloudinary(article, extra_transformations = [])
     image = article_photo_data(article, :cloudinary)
     return nil unless image
 
-    base_url = "https://res.cloudinary.com/substancelab/image/upload"
-    transformation = "t_masthead"
-
-    [base_url, transformation, image].join("/")
+    default_transformations = ["t_masthead", "f_auto"]
+    all_transformations = default_transformations + Array(extra_transformations)
+    cloudinary_image_url(image, all_transformations.sort)
   end
 
   def article_photo_data(article, key = nil)

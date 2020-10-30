@@ -13,10 +13,9 @@ module ArticleHelpers
     image = article_photo_data(article, :cloudinary)
     return nil unless image
 
-    base_url = "https://res.cloudinary.com/substancelab/image/upload"
-    transformations = ["t_masthead", "f_auto"]
-
-    [base_url, transformations, extra_transformations, image].flatten.join("/")
+    default_transformations = ["t_masthead", "f_auto"]
+    all_transformations = default_transformations + Array(extra_transformations)
+    cloudinary_image_url(image, all_transformations.sort)
   end
 
   def article_photo_data(article, key = nil)

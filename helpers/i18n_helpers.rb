@@ -9,6 +9,10 @@ module I18nHelpers
     "en"
   end
 
+  def has_services?
+    I18n.translate("navigation").key?(:services)
+  end
+
   # Renders a partial path for current locale. If the partial doesn't exist for
   # the current locale it will be looked for in the fallback_locale. If it does
   # not exist there either, it will be looked for without a specific locale

@@ -9,7 +9,7 @@ photo:
     url: https://flygtning.dk
 ---
 
-Hvert år donerer vi et beløb til en velgørende organisation, som vi synes er værd at støtte op om. Sidste år var det [kampen mod kræft](/articles/kraeftens-bekaempelse), i år er valget faldet på [Dansk Flygtningehjælp](https://flygtning.dk/).
+Hvert år donerer vi et beløb til en velgørende organisation, som vi synes er værd at støtte op om. Sidste år var det [kampen mod kræft](/articles/kraeftens-bekaempelse/), i år er valget faldet på [Dansk Flygtningehjælp](https://flygtning.dk/).
 
 READMORE
 

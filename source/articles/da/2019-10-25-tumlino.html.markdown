@@ -19,7 +19,7 @@ Som fagperson får du et udstillingsvindue til motiverede, potentielle kunder, u
 
 Som startup-virksomhed er Tumlino en interessant case. De kom til os med et spørgsmål; "vi har meget begrænsede midler, hvordan udnytter vi dem bedst med så lidt teknisk risiko som muligt?"
 
-For Tumlino blev svaret at basere deres software på [en standardløsning](/articles/standard-loesninger). Deres setup er en variant af [Sharetribe](https://sharetribe.com), som vi har udvidet og ændret de steder, hvor standardløsningen ikke var tilstrækkelig.
+For Tumlino blev svaret at basere deres software på [en standardløsning](/articles/standard-loesninger/). Deres setup er en variant af [Sharetribe](https://sharetribe.com), som vi har udvidet og ændret de steder, hvor standardløsningen ikke var tilstrækkelig.
 
 Det har givet Tumlino en kæmpe fordel i forhold til at komme i markedet og teste konceptet af, da de har været i stand til at invitere fagpersoner og brugere omkring en fuldt fungerende løsning flere måneder før, de ellers ville have kunnet.
 

@@ -25,7 +25,7 @@ Vi har udviklet bookingsystemet i tæt samarbejde med det kontorfællesskab, vi 
 
 ## Egen medicin
 
-Det har været interessant at opleve forløbet fra den anden side af bordet for en gangs skyld. At finde ud af, hvor svært det egentligt er at <a href="/articles/fokus/" title="Det er svært at sige nej til ens egn idéer">sige "nej"</a>, hvor ondt det egentligt gør at <a href="/articles/om-at-arbejde-iterativt" title="Det må godt gøre lidt ondt at lancere">præsentere noget, der ikke er perfekt</a> og at <a href="/articles/isbjerge" title="Nogle features er meget større end man skulle tro">styre uden om isbjergene</a>.
+Det har været interessant at opleve forløbet fra den anden side af bordet for en gangs skyld. At finde ud af, hvor svært det egentligt er at <a href="/articles/fokus/" title="Det er svært at sige nej til ens egn idéer">sige "nej"</a>, hvor ondt det egentligt gør at <a href="/articles/om-at-arbejde-iterativt/" title="Det må godt gøre lidt ondt at lancere">præsentere noget, der ikke er perfekt</a> og at <a href="/articles/isbjerge/" title="Nogle features er meget større end man skulle tro">styre uden om isbjergene</a>.
 
 
 ## Prøv det

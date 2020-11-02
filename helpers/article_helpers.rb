@@ -47,7 +47,7 @@ module ArticleHelpers
   end
 
   def articles_path
-    blog.options.prefix
+    blog.options.prefix + "/"
   end
 
   def link_to_article(article)

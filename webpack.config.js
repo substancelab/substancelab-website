@@ -31,12 +31,6 @@ module.exports = {
             }
           },
           {
-            loader: 'extract-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
             loader: 'resolve-url-loader'
           },
           {

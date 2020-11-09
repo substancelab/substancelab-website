@@ -12,6 +12,6 @@ module AssetHelpers
     port = config[:port]
     hostname = config[:host]
     hostname = "#{hostname}:#{port}" if port && port.to_i != 80
-    "http://#{hostname}#{path}"
+    "https://#{hostname}#{path}"
   end
 end

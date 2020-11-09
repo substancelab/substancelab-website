@@ -6,11 +6,11 @@ LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 SETTINGS = {
   "da" => {
     "domain" => "substancelab.dk",
-    "protocol" => "http://"
+    "protocol" => "https://"
   },
   "en" => {
     "domain" => "substancelab.com",
-    "protocol" => "http://"
+    "protocol" => "https://"
   }
 }.freeze
 SITE_SETTINGS = SETTINGS.fetch(LOCALE)

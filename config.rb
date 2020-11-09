@@ -85,6 +85,7 @@ end
 configure :build do
   config[:protocol] = SITE_SETTINGS["protocol"]
   config[:host] = SITE_SETTINGS["domain"]
+  config[:port] = 80
 
   activate :favicon_maker, :icons => {
     "images/favicon_template.png" =>   [

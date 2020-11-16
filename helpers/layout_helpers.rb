@@ -16,12 +16,16 @@ module LayoutHelpers
       yield_content :page_title
     else
       current_page.data.title
-    end
+    end.strip
 
-    if title.blank?
-      "Substance Lab - Grow online"
+    return "Substance Lab - Grow online" if title.blank?
+
+    max_page_title_length = 60
+    suffix = " | Substance Lab"
+    if title.length < max_page_title_length - suffix.length
+      "#{title}#{suffix}"
     else
-      "#{title} | Substance Lab"
+      title
     end
   end
 end

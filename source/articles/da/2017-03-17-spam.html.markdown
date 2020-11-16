@@ -1,6 +1,6 @@
 ---
 title: "Om spam og spammere"
-description: "Selv om open source er gratis, betyder det ikke, at det ikke koster nogets"
+description: "Spam er ikke bare forbeholdt email. Enhver løsning, der kan modtage data på internettet vil opleve at spammerne kigger forbi."
 tags: spam, teknologi
 photo:
   cloudinary: "v1571230532/substancelab-website/trash_can"

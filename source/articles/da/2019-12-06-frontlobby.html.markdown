@@ -1,6 +1,6 @@
 ---
 title: "Launch: Front Lobby"
-description: "Front Lobby er den komplette løsning til håndtering af mødelokaler i kontorfællesskaber"
+description: "Substance Lab præsenter: Front Lobby - en komplet løsning til booking og reservation af mødelokaler i kontorfællesskaber"
 tags: launch, frontlobby
 photo:
   cloudinary: "v1575642507/substancelab-website/wooden_counter"

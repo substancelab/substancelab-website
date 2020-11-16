@@ -1,6 +1,6 @@
 ---
 title: www er ligegyldigt
-description: Lad nu være med at kræve www foran dit domæne. Det er ligegyldigt og overflødigt.
+description: Lad nu være med at kræve www foran dit domæne. Det er ligegyldigt og overflødigt. Vi forklarer her hvad det betyder, og hvad du bør gøre.
 tags: domæner, www, server
 photo:
   cloudinary: "/substancelab-website/web"

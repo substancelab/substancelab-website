@@ -1,6 +1,6 @@
 ---
 title: Om paginering
-description: Er side-inddeling nødvendigt eller overhovedet en god ide?
+description: "Er side-inddeling nødvendigt eller overhovedet en god ide? Vi tager et kig på for og imod, og vurderer de gængse implementationer"
 tags: design, usability, performance
 photo:
   cloudinary: "v1571231053/substancelab-website/pages"

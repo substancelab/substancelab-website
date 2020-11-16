@@ -152,8 +152,8 @@ eventzonen:
   client: Underholdningsbureauet, Denmark
   client_website: http://eventzonen.dk
   description:
-    da: Markedsplads for kunstnere og foredragsholdere. Websitet er bygget fra bunden af Substance Lab.
-    en: Marketplace that puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
+    da: International markedsplads for kunstnere og foredragsholdere. Substance Lab har bygget løsningen fra bunden og været med til at forbedre og udvide den.
+    en: International marketplace that puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
   featured: true
   name: eventzonen.dk
   position: 3

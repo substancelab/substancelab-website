@@ -1,6 +1,6 @@
 ---
 title: "Vi fylder 10"
-description: 'Vi har nu i 10 år lavet webløsninger på vores måde; brugervenlige og af høj teknisk kvalitet.'
+description: 'Vi har nu i 10 år lavet pragmatiske webløsninger på vores måde; brugervenlige og af høj teknisk kvalitet og med fokus på profit'
 tags: Substance Lab
 photo:
   cloudinary: "v1571230766/substancelab-website/happy_birthday_cake"

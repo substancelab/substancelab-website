@@ -1,6 +1,6 @@
 ---
 title: Send ikke dine egne e-mails
-description: Du bør lade eksperterne om at sørge for, at dine emails bliver leveret til dine kunder
+description: Der er alt for mange faldgruber, du kan gå i, når du sender e-mail fra din løsning. Du bør lade eksperterne om at sørge for, at dine emails bliver leveret til dine kunder.
 tags: eksterne tjenester, produktstyring, software
 photo:
   cloudinary: "v1571231365/substancelab-website/mailboxes"

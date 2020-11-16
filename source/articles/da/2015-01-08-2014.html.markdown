@@ -1,6 +1,6 @@
 ---
 title: "2014"
-description: Få indblik i 2014, som det tog sig ud for os her i Substance Lab
+description: "Vi tager et kig tilbage på 2014, som det tog sig ud for os her i Substance Lab; første medarbejder, responsive design-projektet, og lækre løsninger."
 tags: året der gik, 2014
 photo:
   cloudinary: "v1571230896/substancelab-website/starstruck_bokeh"

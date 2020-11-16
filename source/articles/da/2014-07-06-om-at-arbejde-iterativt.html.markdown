@@ -1,6 +1,6 @@
 ---
 title: Om at arbejde iterativt
-description: Iterative processer lyder godt på papiret, men de kan være svære at acceptere, når man står i det
+description: Iterative processer lyder godt på papiret, men de kan være svære at acceptere, når man står i det. Er du klar til at lancere noget, du ved kan blive bedre?
 date: 2014-07-06 19:10 UTC
 tags: software, udvikling, projektstyring, proces
 photo:

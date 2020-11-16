@@ -1,6 +1,6 @@
 ---
 title: "Software er som puslespil"
-description: Softwareudvikling handler om at få en masse brikker til at hænge sammen
+description: "Softwareudvikling handler om at få en masse brikker til at hænge sammen. Vi hjælper dig at komme fra kaos til samlet billede."
 tags: software, udvikling, produktstyring
 photo:
   cloudinary: "v1571230684/substancelab-website/puzzle"

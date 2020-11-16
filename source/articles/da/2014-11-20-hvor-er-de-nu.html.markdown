@@ -1,6 +1,6 @@
 ---
 title: De første kunder - hvor er de nu?
-description: Jakob kigger tilbage på nogle af vores mest succesfulde kunder
+description: Med 10+ år på bagen og endnu flere lancerede projekter, tager Jakob et kig tilbage på nogle af vores mest succesfulde kunder.
 tags: kunder, cases, exits
 photo:
   cloudinary: "v1571231019/substancelab-website/dollars"

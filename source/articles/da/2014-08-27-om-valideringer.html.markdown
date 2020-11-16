@@ -1,6 +1,6 @@
 ---
 title: Om valideringer
-description: Validering af bruger-data er svært. Her er lidt tips til at gøre oplevelsen bedre
+description: "Validering af bruger-data er svært. Vi giver dig her tips til at lave formularer bedre, så dine brugere bliver gladere."
 tags: design, forms, usability
 photo:
   cloudinary: "v1571231132/substancelab-website/padlock"

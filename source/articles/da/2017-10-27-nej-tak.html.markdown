@@ -1,6 +1,6 @@
 ---
 title: "100.000 kr? Nej, tak"
-description: "Penge er ikke alt, så derfor er der kunder, vi siger nej tak til"
+description: "Penge er ikke alt, så derfor er der kunder, vi siger nej tak til. Vi vil hellere levere den rigtige løsning end at tage dine penge."
 tags: software, forretning
 photo:
   cloudinary: "v1571230402/substancelab-website/dandelion"

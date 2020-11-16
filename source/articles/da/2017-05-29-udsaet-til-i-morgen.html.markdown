@@ -1,6 +1,6 @@
 ---
 title: "Udsæt til i morgen..."
-description: "Hvis du udvikler features, som ikke løser det problem, du har nu og her, spilder du tiden"
+description: "Hvis du udvikler features, som reelt ikke løser det problem, du har nu og her, spilder du din tid og dine penge."
 tags: software, udvikling, produktstyring
 photo:
   cloudinary: "v1571230459/substancelab-website/parla_laser"

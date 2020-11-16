@@ -1,6 +1,6 @@
 ---
 title: "Teknisk gæld"
-description: "Hvad er det lige teknisk gæld egentligt er, og hvordan undgår du at have for meget af det"
+description: "Hvad er det lige teknisk gæld egentligt er, og hvordan undgår du at have for meget af det - og hvorfor er det vigtigt?"
 tags: kvalitet, prioritering, software, udvikling
 photo:
   cloudinary: "v1583221510/substancelab-website/ocean_horizon_from_jetty"

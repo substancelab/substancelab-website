@@ -1,6 +1,6 @@
 ---
 title: "Launch: Tumlino"
-description: "Substance Lab har leveret en tilpasset Sharetribe-løsning til Tumlino"
+description: "Substance Lab har leveret en tilpasset Sharetribe-løsning til Tumlino; Tumlino gør det nemt at finde privat sundhedshjælp til din graviditet, fødsel, baby og barsel."
 tags: launch, tumlino
 photo:
   cloudinary: "v1572009875/substancelab-website/tumlino_baby"

@@ -1,6 +1,6 @@
 ---
 title: Isbjerge
-description: En feature er ikke bare det du ser; der er ofte en masse under overfladen
+description: En feature er ikke bare det du ser; der er ofte en masse under overfladen - og det kan være overraskende hvor meget arbejde, der gemmer sig i simple features.
 tags: software, udvikling, prioritering, eksterne tjenester
 photo:
   cloudinary: "v1571231452/substancelab-website/iceberg"

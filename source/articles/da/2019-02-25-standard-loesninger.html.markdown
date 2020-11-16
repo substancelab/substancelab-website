@@ -1,6 +1,6 @@
 ---
 title: "Standardløsninger"
-description: "Standardløsninger er fremragende til standard problemer"
+description: "Standardløsninger er fremragende til standard problemer. Vi forklarer, hvornår det giver mening at vælge en standardløsning og hvad du skal være opmærksom på."
 tags: software
 photo:
   cloudinary: "v1571230095/substancelab-website/supermarket_shelf"

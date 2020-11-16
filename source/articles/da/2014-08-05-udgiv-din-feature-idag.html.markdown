@@ -1,6 +1,6 @@
 ---
 title: Udgiv din feature i dag
-description: Få din feature ud til dine kunder nu med hurtigere feedback og bedre kvalitet til følge
+description: "Jo hurtigere du lancerer din feature, jo hurtigere kan dine kunder bruge den og give dig  feedback, og jo bedre kvalitet får du ud af det."
 date: 2014-08-05 08:52 UTC
 tags: software, udvikling, proces, releases
 photo:

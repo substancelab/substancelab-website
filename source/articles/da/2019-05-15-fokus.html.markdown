@@ -1,6 +1,6 @@
 ---
 title: "Fokus"
-description: "Fokus er essentielt i digitale produkter"
+description: "Fokus er essentielt i digitale produkter. Hvis du vil have succes med dit digitale produkt er du nødt til at sige nej."
 tags: software, prioritering, produktstyring
 photo:
   cloudinary: "v1571228659/substancelab-website/eyeglasses"

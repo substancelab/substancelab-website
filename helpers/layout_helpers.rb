@@ -19,6 +19,7 @@ module LayoutHelpers
     end.strip
 
     return "Substance Lab - Grow online" if title.blank?
+    return title if title.include?("Substance Lab")
 
     max_page_title_length = 60
     suffix = " | Substance Lab"

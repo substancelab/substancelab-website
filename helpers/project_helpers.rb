@@ -114,9 +114,10 @@ module ProjectHelpers
   def project_services(project, max_length: nil)
     services = []
 
-    project.services.each { |service|
-      translated_service = I18n.translate(["services", service].join("."))
-
+    translated_services = project.services.map { |service|
+      I18n.translate(["services", service].join("."))
+    }
+    translated_services.sort_by(&:length).each { |translated_service|
       candidate = services + Array(translated_service)
       break if max_length && candidate.sort.to_sentence.length > max_length
 

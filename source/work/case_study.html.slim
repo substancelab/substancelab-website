@@ -5,8 +5,8 @@ section: portfolio
 priority: 1
 ---
 - content_for :page_title do
-  == project.name + ": "
-  == project_services(project)
+  == prepended = project.name + ": "
+  == project_services(project, :max_length => 44 - prepended.size)
 
 - content_for :meta_description do
   == project.description[current_locale]

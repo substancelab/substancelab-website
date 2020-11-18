@@ -17,11 +17,18 @@ module LayoutHelpers
     else
       current_page.data.title
     end
+    title = title.to_s.strip
 
-    if title.blank?
-      "Substance Lab - Grow online"
+    site_name = "Substance Lab"
+    return "#{site_name} - Grow online" if title.blank?
+    return title if title.include?(site_name)
+
+    max_page_title_length = 60
+    suffix = " | #{site_name}"
+    if title.length < max_page_title_length - suffix.length
+      "#{title}#{suffix}"
     else
-      "#{title} | Substance Lab"
+      title
     end
   end
 end

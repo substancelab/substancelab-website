@@ -16,7 +16,8 @@ module LayoutHelpers
       yield_content :page_title
     else
       current_page.data.title
-    end.strip
+    end
+    title = title.to_s.strip
 
     site_name = "Substance Lab"
     return "#{site_name} - Grow online" if title.blank?

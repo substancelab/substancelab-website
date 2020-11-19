@@ -1,3 +1,8 @@
 /*
+  # Only respond with documents of the correct MIME types, ie text/html for
+  # pages, text/css for styles, and one of the Javascript MIME types for
+  # scripts.
+  X-Content-Type-Options: nosniff
+
   # Only allow ourselves to embed our content in iframes etc
   X-Frame-Options: SAMEORIGIN

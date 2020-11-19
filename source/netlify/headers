@@ -1,4 +1,10 @@
 /*
+  # Send the origin, path, and querystring when performing a same-origin
+  # request, only send the origin when the protocol security level stays the
+  # same while performing a cross-origin request (HTTPS→HTTPS), and send no
+  # header to any less-secure destinations (HTTPS→HTTP).
+  Referrer-Policy: strict-origin-when-cross-origin
+
   # Only respond with documents of the correct MIME types, ie text/html for
   # pages, text/css for styles, and one of the Javascript MIME types for
   # scripts.

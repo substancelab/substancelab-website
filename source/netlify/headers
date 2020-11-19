@@ -1,7 +1,7 @@
 /*
   # Detect and mitigate certain types of attacks, including Cross Site Scripting
   # (XSS) and data injection attacks.
-  Content-Security-Policy: default-src 'self'; img-src *.cloudinary.com 'self'; font-src 'self' fonts.googleapis.com; object-src 'none'; style-src 'self' 'unsafe-inline';
+  Content-Security-Policy: default-src 'self'; img-src *.cloudinary.com 'self'; font-src 'self' fonts.gstatic.com; object-src 'none'; style-src 'self' 'unsafe-inline' fonts.googleapis.com;
 
   # Send the origin, path, and querystring when performing a same-origin
   # request, only send the origin when the protocol security level stays the

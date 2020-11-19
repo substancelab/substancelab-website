@@ -1,0 +1,3 @@
+/*
+  # Only allow ourselves to embed our content in iframes etc
+  X-Frame-Options: SAMEORIGIN

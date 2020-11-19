@@ -59,6 +59,12 @@ activate :livereload, :host => "localhost"
 # # Use a familiar asset pipeline...
 # activate :sprockets
 
+# Generate configuration files for Netlify. Netlify looks for these in the root
+# of the built site, but files starting with underscores are ignored by
+# Middleman.
+proxy "/_headers", "/netlify/headers"
+ignore "/netlify/headers"
+
 # Use Webpack for building our assets
 activate :external_pipeline,
   :name => :webpack,

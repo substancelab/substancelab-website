@@ -1,5 +1,5 @@
-meta property="og:description" content="#{current_page.metadata.dig(:page, :description).presence || 'We build and grow the tech behind successful SaaS startups.'}"
+meta property="og:description" content="#{current_page.metadata.dig(:page, :description).presence || config.description}"
 meta property="og:image" content="#{yield_content(:open_graph_image) || image_url('/images/logos/substance_lab.png')}"
-meta property="og:locale" content="en_US"
+meta property="og:locale" content=config.locale
 meta property="og:title" content="#{current_page.metadata.dig(:page, :title) || 'Substance Lab'}"
 meta property="og:url" content="#{config.protocol}#{config.domain}#{current_page.url}"

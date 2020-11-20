@@ -5,12 +5,16 @@ LOCALE = ENV["LOCALE"] || I18n.default_locale.to_s
 # Configure site
 SETTINGS = {
   "da" => {
+    "description" => "Eksperter i at udvikle teknikken bag succesfulde online startups.",
     "domain" => "substancelab.dk",
-    "protocol" => "https://"
+    "locale" => "da_DK",
+    "protocol" => "https://",
   },
   "en" => {
+    "description" => "We build and grow the tech behind successful SaaS startups.",
     "domain" => "substancelab.com",
-    "protocol" => "https://"
+    "locale" => "en_US",
+    "protocol" => "https://",
   }
 }.freeze
 SITE_SETTINGS = SETTINGS.fetch(LOCALE)

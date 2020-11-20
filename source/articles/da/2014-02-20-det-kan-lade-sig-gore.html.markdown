@@ -1,6 +1,6 @@
 ---
 title: Det kan lade sig gøre
-description: '"Det kan ikke lade sig gøre" er sjældent den fulde historie'
+description: '"Det kan ikke lade sig gøre" er sjældent den fulde historie - i hvert fald er det en god idé at grave i hvorfor det ikke kan lade sig gøre'
 tags: features, software, udvikling
 photo:
   cloudinary: "v1571231339/substancelab-website/napping_with_bike"

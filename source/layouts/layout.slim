@@ -5,6 +5,8 @@ html lang="#{current_locale}"
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
 
+    - set_meta_tags( \
+      :locale => config.locale)
     = auto_display_meta_tags
 
     - if content_for?(:meta_description)

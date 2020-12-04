@@ -41,6 +41,16 @@ module ProjectHelpers
     all_projects.select(&:featured)
   end
 
+  def project_page_title(project)
+    max_page_title_length = 60 - "Substance Lab ".length
+    prepended = project.name + ": "
+    services = project_services(
+      project,
+      :max_length => max_page_title_length - prepended.length
+    )
+    prepended + services
+  end
+
   def project_tile(project)
     shortened_description = localized(project.description).split(".").first
     description = capture do

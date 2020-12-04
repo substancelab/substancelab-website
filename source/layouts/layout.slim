@@ -6,7 +6,8 @@ html lang="#{current_locale}"
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
 
     - set_meta_tags( \
-      :locale => config.locale)
+      :locale => config.locale,
+      :url => "#{config.protocol}#{config.domain}#{current_page.url}")
     = auto_display_meta_tags
 
     - if content_for?(:meta_description)
@@ -34,8 +35,6 @@ html lang="#{current_locale}"
     link rel="apple-touch-icon" href="/images/apple-touch-icon-precomposed.png"
     link rel="shortcut icon" href="/images/favicon.png"
     link rel="icon" type="image/ico" href="/images/favicon.ico"
-
-    == partial "layouts/open_graph"
 
   body *body_attributes
     header.masthead

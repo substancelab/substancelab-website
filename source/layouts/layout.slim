@@ -1,18 +1,10 @@
 doctype html
 html lang="#{current_locale}"
   head
-    - unless current_page.data.keywords.blank?
-      meta name="keywords" content="#{current_page.data.keywords.join(',')}"
-
     - set_meta_tags( \
       :locale => config.locale,
       :url => "#{config.protocol}#{config.domain}#{current_page.url}")
     = auto_display_meta_tags
-
-    - if content_for?(:meta_description)
-      meta name="description" content="#{h(yield_content(:meta_description))}"
-    - elsif current_page.data.description.present?
-      meta name="description" content="#{h(current_page.data.description)}"
 
     -# One stylesheet to import them all
     == stylesheet_link_tag "layout.css", :media => "all"

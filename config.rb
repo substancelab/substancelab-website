@@ -60,6 +60,9 @@ I18n.locale = LOCALE
 # Reload automatically when stuff changes
 activate :livereload, :host => "localhost"
 
+# Generate meta tags from content
+activate :meta_tags
+
 # # Use a familiar asset pipeline...
 # activate :sprockets
 

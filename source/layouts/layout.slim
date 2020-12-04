@@ -5,6 +5,8 @@ html lang="#{current_locale}"
     - unless current_page.data.keywords.blank?
       meta name="keywords" content="#{current_page.data.keywords.join(',')}"
 
+    = auto_display_meta_tags
+
     - if content_for?(:meta_description)
       meta name="description" content="#{h(yield_content(:meta_description))}"
     - elsif current_page.data.description.present?

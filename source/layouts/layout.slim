@@ -1,14 +1,10 @@
 doctype html
 html lang="#{current_locale}"
   head
-    title== page_title
-    - unless current_page.data.keywords.blank?
-      meta name="keywords" content="#{current_page.data.keywords.join(',')}"
-
-    - if content_for?(:meta_description)
-      meta name="description" content="#{h(yield_content(:meta_description))}"
-    - elsif current_page.data.description.present?
-      meta name="description" content="#{h(current_page.data.description)}"
+    - set_meta_tags( \
+      :locale => config.locale,
+      :url => "#{config.protocol}#{config.domain}#{current_page.url}")
+    = auto_display_meta_tags
 
     -# One stylesheet to import them all
     == stylesheet_link_tag "layout.css", :media => "all"
@@ -21,7 +17,6 @@ html lang="#{current_locale}"
     - if content_for?(:page_specific_style)
       == yield_content(:page_specific_style)
 
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
 
     link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png"
@@ -31,8 +26,6 @@ html lang="#{current_locale}"
     link rel="apple-touch-icon" href="/images/apple-touch-icon-precomposed.png"
     link rel="shortcut icon" href="/images/favicon.png"
     link rel="icon" type="image/ico" href="/images/favicon.ico"
-
-    == partial "layouts/open_graph"
 
   body *body_attributes
     header.masthead

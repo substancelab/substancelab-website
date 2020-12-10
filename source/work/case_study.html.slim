@@ -4,12 +4,9 @@ body_classes:
 section: portfolio
 priority: 1
 ---
-- content_for :page_title do
-  == prepended = project.name + ": "
-  == project_services(project, :max_length => 44 - prepended.size)
-
-- content_for :meta_description do
-  == project.description[current_locale]
+- set_meta_tags( \
+  :description => project.description[current_locale],
+  :title => project_page_title(project))
 
 .case_study class=project.slug
   article

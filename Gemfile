@@ -6,6 +6,7 @@ gem "middleman", "~> 4.3"
 gem "middleman-blog"
 gem "middleman-favicon-maker"
 gem "middleman-livereload"
+gem "middleman-meta-tags"
 gem "middleman-minify-html"
 
 gem "rails-html-sanitizer", :require => false

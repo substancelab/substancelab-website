@@ -1,11 +1,9 @@
 ---
 section: portfolio
 ---
-- content_for :page_title do
-  == I18n.t("work.index.featured_works")
-
-- content_for :meta_description do
-  == I18n.t("work.index.meta_description")
+- set_meta_tags( \
+  :description => I18n.translate("work.index.meta_description"),
+  :title => I18n.translate("work.index.featured_works"))
 
 - content_for :masthead do
   h1== I18n.t("work.index.portfolio")

@@ -1,8 +1,7 @@
 ---
 priority: 1
 ---
-- content_for :meta_description
-  = t("index.meta_description")
+- set_meta_tags(:description => I18n.translate("index.meta_description"))
 
 - content_for :masthead do
   .hero

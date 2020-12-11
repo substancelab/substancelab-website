@@ -27,6 +27,8 @@ module MastheadHelpers
 
     image_url = masthead_image_url(image_url)
 
+    set_meta_tags(:thumbnail => image_url)
+
     content_for(:page_specific_style) do
       content_tag(:style) do
         css_for_masthead_image(image_url)

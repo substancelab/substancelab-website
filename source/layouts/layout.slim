@@ -1,6 +1,9 @@
 doctype html
 html lang="#{current_locale}"
   head
+    link rel="preload" href="#{asset_url("/fonts/medium.eot")}"
+    link rel="preload" href="#{asset_url("/fonts/ultralight.eot")}"
+
     - set_meta_tags( \
       :locale => config.locale,
       :url => "#{config.protocol}#{config.domain}#{current_page.url}")

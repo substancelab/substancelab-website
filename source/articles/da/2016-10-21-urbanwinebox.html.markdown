@@ -20,7 +20,7 @@ UrbanWineBox's tur gennem laboratoriet startede med en roadmapping session; en g
 
 Med roadmapping dokumentet i hånden kunne vi prioritere og planlægge de næste måneders udvikling, hvor vi stod for at udvikle backend med håndtering af medlemmer og vinkælderen og integration til betalingsgateway.
 
-Allerede nu er der [masser af spændende vin](https://www.urbanwinebox.com/da/markedsplads) at vælge mellem og de første handler mellem medlemmer er gået igennem.
+Allerede nu er der [masser af spændende vin](https://www.urbanwinebox.com/bottles.html) at vælge mellem og de første handler mellem medlemmer er gået igennem.
 
 ## Både fysisk og virtuel
 

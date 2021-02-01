@@ -21,3 +21,6 @@ Det her er vores forsøg på at give et bidrag til at gøre deres hverdag bedre.
 
 <figure><img src="/images/articles/dansk_flygtningehjaelp_2016.jpg" alt="Vi støtter flygtninge i verdens brændpunkter"></figure>
 
+## Vi støtter også...
+
+Tidligere har vi støttet op om velgørende organisationer som [Kræftens Bekæmpelse](http://www.cancer.dk/) og [Dansk Flygtningehjælp](https://flygtning.dk/), og vi bidrager også løbende til [Ruby Together](https://www.rubytogether.com).

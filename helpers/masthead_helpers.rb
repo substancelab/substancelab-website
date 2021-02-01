@@ -36,6 +36,13 @@ module MastheadHelpers
     end
   end
 
+  # Returns URL for a masthead-formatted image that represents the given
+  # article.
+  def masthead_image_for_article(article)
+    image = article_photo_data(article, :cloudinary)
+    masthead_image(image)
+  end
+
   # Returns image_url transformed with our masthead styling
   def masthead_image_url(image_url)
     if cloudinary_image_path?(image_url)

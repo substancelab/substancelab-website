@@ -1,5 +1,5 @@
 - set_meta_tags( \
-  :thumbnail => masthead_image_url(article_image(current_article)))
+  :thumbnail => masthead_image_for_article(current_article))
 
 - content_for :masthead do
   h1.blog-article-headline== current_article.title
@@ -22,4 +22,4 @@ article.blog-article
           - if article = current_article.article_next
             == link_to_article(article)
 
-- masthead_image(article_image(current_article))
+- masthead_image_for_article(current_article)

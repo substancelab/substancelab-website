@@ -6,7 +6,11 @@
   .blog-article-meta
     = I18n.translate("articles.show.meta_data", :author => "Jakob", :date => I18n.localize(current_article.date.to_date, :format => :long))
   - if photo_credits = article_photo_data(current_article, "credits")
-    .photo-credits = link_to(I18n.translate("articles.show.photo_credits", :name => photo_credits[:name]), photo_credits[:url])
+    .photo-credits
+      - if photo_credits[:url]
+        = link_to(I18n.translate("articles.show.photo_credits", :name => photo_credits[:name]), photo_credits[:url])
+      - else
+        = I18n.translate("articles.show.photo_credits", :name => photo_credits[:name])
 
 article.blog-article
   .container

@@ -4,61 +4,68 @@ description: "Vi hjælper ikke-tekniske iværksættere med at bygge den webløsn
 ---
 - content_for :masthead do
   .container
-    h1 Hvordan vi hjælper
+    h1 Vi kan også hjælpe dig
+    .subtitle Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at have forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før &mdash; mange gange.
 
 - masthead_image("v1571230808/substancelab-website/code-keyboard")
 
-article
-  .container
-    .article-intro
-      p
-        | Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at have forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før &mdash; mange gange.
-
-    p
-      | Du er ekspert i din virksomhed, ikke i programmering eller webudvikling, så forløbet fra idé til succes kan være lang og forvirrende. Det behøver den ikke være; vi har taget rejsen før og kan  guide og hjælpe dig gennem alle faserne:
-
 section.overview
   .container
-    = link_to "/services/seed/", :class => "block-link service", :title => "Seed" do
+    .columns.tripple
+      = link_to "/services/seed/", :class => "block-link column service", :title => "Seed" do
         h2 Seed
-        .subtitle Plant det første frø til din fremtidige forretning
+        .subtitle
+          | Det første frø til din fremtidige forretning
+
+        .price 95.000 kr.
 
         p
-         | Fra idé til digitalt produkt på én måned. Med vores <strong class="block-link-highlight">Seed-forløb</strong> får du skræddersyet, fungerende software, som du kan vise frem til banken, investorer og kommende kunder og bygge din fremtid på.
+         | Fra idé til digitalt produkt på én måned. Med vores <strong class="block-link-highlight">Seed-forløb</strong> får du en fungerende løsning, som dine kunder kan bruge, og som du kan vise frem til bank og investorer, skræddersyet til at bygge din fremtid på.
 
         p
-          | Din drøm om et digital produkt bliver kun til virkelighed, når du tager det første skridt. Et Seed-forløb hos Substance Lab er det skridt.
+          | Din drøm om et digitalt produkt bliver kun til virkelighed, når du tager det første skridt. Et Seed-forløb hos Substance Lab er det skridt.
 
         p
           <strong class="block-link-highlight">Læs mere om Seed projekter</strong>
 
-    = link_to "/services/development/", :class => "block-link service" do
-      h2 Grow
-      .subtitle Planen er lagt og skal udføres
+      = link_to "/services/development/", :class => "block-link column service" do
+        h2 Grow
+        .subtitle Til dig, der vil mere
 
-      p
-        | Din vision begynder at tage form. Der udvikles MVP'er og prototyper og de første testbrugere inviteres. Planen forfines og tilpasses og inden du er klar til det, er det tid til lanceringen - jagten på det første salg er gået igang.
+        .price 19.000 kr./uge
 
-      p
-        | En <strong class="block-link-highlight">udviklingsaftale</strong> er til dig, der vil have fart på uden at gå på kompromis med kvaliteten. Løbende leveringer, der hele tiden bringer dig tættere på dit mål.
+        p
+          | Har du planer om en større løsning, har du en eksisterende løsning, eller er du vokset fra din Seed-løsning? Grow er vores mest fleksible og alsidige udviklingsaftale.
 
-      p
-        <strong class="block-link-highlight">Læs mere om udviklingsaftalen</strong>
+        p
+          | En <strong class="block-link-highlight">udviklingsaftale</strong> er til dig, der vil have fart på uden at gå på kompromis med kvaliteten. Løbende leveringer, der hele tiden bringer dig tættere på dit mål.
 
-    = link_to "/services/maintenance/", :class => "block-link service" do
-      h2 Care
-      .subtitle Til dig, der allerede er etableret
+        p
+          <strong class="block-link-highlight">Læs mere om udviklingsaftalen</strong>
 
-      p
-        | Med kunder på løsningen ændrer fokus sig. Stabilitet og performance bliver vigtigere, features skal måske laves om for at passe til kundernes behov, samtidig med at vi arbejder hen mod din vision.
+      = link_to "/services/maintenance/", :class => "block-link column service" do
+        h2 Care
+        .subtitle Til dig, der allerede er etableret
 
-      p
-        | Med en <strong class="block-link-highlight">vedligeholdelses&shy;aftale</strong> får du stabilitet og ro i maven. Du og dit team fokuserer på at lave de nye features, mens vi sørger for at kodebasen er vedligeholdt.
+        .price 16.000 kr./måned
 
-      p
-        <strong class="block-link-highlight">Læs mere om vedligeholdelsesaftalen</strong>
+        p
+          |
+            Løsningen er i luften og hverdagen kalder. Det viser sig hurtigt, at der skal justeringer og rettelser til. Systemet skal holdes smidigt.
+
+        p
+          | Med en <strong class="block-link-highlight">vedligeholdelses&shy;aftale</strong> får du stabilitet og ro i maven. Vi tager os af din løsning og sørger for at den er vedligeholdt og optimeret, så du kan koncentrere dig om din forretning.
+
+        p
+          <strong class="block-link-highlight">Læs mere om vedligeholdelsesaftalen</strong>
 
 article
   section
     .container
       | Vi har bygget succesfulde forretninger i over 10 år. Vores software står bag webløsninger med mange millioner i omsætning hvert år. Vi glæder os til også at gøre din idé til en success.
+
+section.quotes
+  .container
+    blockquote.quote
+      p Jakob & co. er blandt de allerbedste herhjemme. Punktum. Jeg har sjældent mødt så erfarne, professionelle og generelt bare pisseseje (Rails)udviklere.
+      .author Casper Klenz-Kitenge &mdash; Creative Director, Pilot

@@ -1,27 +1,4 @@
-$_golden_ratio: 1.61803
-
-@mixin pull-left
-  margin-right: 100% - (100% / $_golden_ratio)
-
-  @media #{$breakpoint-tablet-and-smaller}
-    margin: inherit
-    width: auto
-
-@mixin pull-right
-  margin-left: 100% - (100% / $_golden_ratio)
-  width: 100% / $_golden_ratio
-
-  @media #{$breakpoint-tablet-and-smaller}
-    margin: inherit
-    width: auto
-
 .service
-  margin-bottom: 4em
-  margin-top: 4em
-
-  &:nth-child(2n)
-    +pull-right
-
-  &:nth-child(2n + 1)
-    +pull-left
-
+  .price
+    font-weight: bold
+    margin-bottom: 1em

@@ -73,7 +73,8 @@ html lang="#{current_locale}"
           ul.link-list
             li== link_to 'Homepage', "/", :title => I18n.t("footer.link_to_substance_lab")
             li== link_to 'Web application development', "/work/", :title => I18n.t("footer.link_to_portfolio")
-            li== link_to 'Jobs', "/jobs/", :title => I18n.t("footer.link_to_jobs")
+            - if sitemap.resources.find { |r| r.path == "jobs/index.html" }
+              li== link_to 'Jobs', "/jobs/", :title => I18n.t("footer.link_to_jobs")
 
           - if has_services?
             ul.link-list

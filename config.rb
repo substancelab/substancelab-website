@@ -83,7 +83,7 @@ activate :external_pipeline,
   :source => ".tmp/webpack-build",
   :latency => 1
 
-data.projects.each do |_key, attributes|
+data.projects.each do |key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
   next unless case_study
 
@@ -92,6 +92,11 @@ data.projects.each do |_key, attributes|
     "/work/case_study.html",
     :locals => {:project => attributes},
     :ignore => true
+rescue
+  $stderr.puts(
+    "Error went setting up proxy for #{key.inspect}"
+  )
+  raise
 end
 
 # Build-specific configuration

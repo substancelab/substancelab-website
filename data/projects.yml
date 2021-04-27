@@ -291,6 +291,27 @@ grundfos-biobooster:
   - Javascript
   - Ruby on Rails
 
+hhcomponents:
+  case_studies:
+  - da
+  client: HH Components, Denmark
+  client_website: https://hhcomponents.com/forside
+  description:
+    da: HH Components sparer penge og øger kvaliteten med en software robot udviklet af Substance Lab.
+    en: HH Components uses a CPA Software Robot built by Substance Lab to ensure quality and save money.
+  name: Shipmaster Robot
+  position: 5
+  services:
+  - cpa
+  - web_application_development
+  slug: hh-components
+  technologies:
+  - Capybara
+  - E-conomic
+  - Ruby
+  - Redis
+  - Resque
+
 iiamo:
   client: Loop Associates, Denmark
   client_website: http://www.loopassociates.com/
@@ -355,7 +376,6 @@ kreditregisteret:
 
 lokalebasen:
   case_studies:
-  - da
   - en
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk

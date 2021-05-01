@@ -61,6 +61,8 @@ html lang="#{current_locale}"
           p = I18n.translate("contact_details.teaser")
 
           .primary-contact-methods
+            .book.contact-method
+              == link_to I18n.t("contact_details.book_a_meeting"), "https://savvycal.com/substancelab/meet"
             .tel.contact-method
               abbr title="+4571990999"
                 == link_to I18n.t("contact_details.phone_number"), "tel:#{I18n.t("contact_details.phone_number")}"

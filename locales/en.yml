@@ -9,6 +9,7 @@ en:
       photo_credits: "Photo by %{name}"
 
   contact_details:
+    book_a_meeting: "Book an online meeting"
     email: "Send an email to %{email_link}"
     headline: "The best time is now"
     phone: "Give Jakob a call on %{phone_number}"

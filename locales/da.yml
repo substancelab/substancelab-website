@@ -9,6 +9,7 @@ da:
       photo_credits: "Billede taget af %{name}"
 
   contact_details:
+    book_a_meeting: "Book et online møde"
     email: "Send en e-mail til %{email_link}"
     headline: "Gør noget ved det nu"
     phone: "Ring til Jakob på %{phone_number}"

@@ -48,3 +48,11 @@ Ikke to forretninger er ens, og ovenstående er naturligvis kun et eksempel. And
 * [Baremetrics Engineering Expenses](https://www.notion.so/bbf18630e4154072a538485f45a9a6e2?v=0e2a6e82b0bf4c008c92412a4e942e1b)
 * [How a 2 person startup already uses 28 other tools](https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools)
 * [What does Unsplash cost in 2019?](https://medium.com/unsplash/what-does-unsplash-cost-in-2019-f499620a14d0)
+
+## Det giver mening at være åben
+
+Ovenstående virksomheder og markedspladser har været åbne omkring deres omkostninger, traditionelt ikke noget, man plejer at dele med hverken konkurrenter eller kunder.
+
+Men en [undersøgelse fra 2020](https://pubsonline.informs.org/doi/10.1287/mksc.2019.1200) har påvist, at det kan være med til at øge salget at åbne op. [I nogle tilfælde](https://tips.ariyh.com/p/show-costs-to-boost-sales) har produkter øget salget med mere end 20% ved at forklare, hvad det har kostet at producere produktet.
+
+Bevares, der er primært tale om fysiske produkter, men mon ikke digitale produkter også kan drage nytte af åbenheden?

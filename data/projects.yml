@@ -376,6 +376,7 @@ kreditregisteret:
 
 lokalebasen:
   case_studies:
+  - da
   - en
   client: Lokalebasen.dk, Denmark
   client_website: http://lokalebasen.dk
@@ -384,7 +385,7 @@ lokalebasen:
     en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
   featured: true
   name: Lokalebasen
-  position: 5
+  position: 6
   services:
   - api_development
   - economic_integration

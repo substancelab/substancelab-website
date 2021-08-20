@@ -33,6 +33,8 @@ da:
         description: "Løbende levering af programmeringsopgaver, der bringer dig stadig tættere på din succes"
       roadmapping:
         description: "Få styr på tankerne med et solidt fundament for dit digitale produkt"
+      seed:
+        description: "En skræddersyet fungerende web app, som du kan vise frem til banken, dine investorer og kommende kunder for en fast, lav pris"
 
   index:
     about_substance_lab: Substance Lab

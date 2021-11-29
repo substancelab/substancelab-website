@@ -2,7 +2,7 @@
 /*
   # Detect and mitigate certain types of attacks, including Cross Site Scripting
   # (XSS) and data injection attacks.
-  Content-Security-Policy: default-src 'self' plausible.io; img-src 'self' *.cloudinary.com *.cloudfront.net; font-src 'self' fonts.gstatic.com; object-src 'none'; script-src 'self' 'unsafe-inline' plausible.io s3.amazonaws.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+  Content-Security-Policy: default-src 'self' plausible.io; img-src 'self' *.cloudinary.com *.cloudfront.net; font-src 'self' fonts.gstatic.com; object-src 'none'; script-src 'self' 'unsafe-inline' plausible.io s3.amazonaws.com substancelab.us8.list-manage.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com;
 
   # Send the origin, path, and querystring when performing a same-origin
   # request, only send the origin when the protocol security level stays the

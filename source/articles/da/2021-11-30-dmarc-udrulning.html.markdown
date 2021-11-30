@@ -38,15 +38,15 @@ Når overvågningen har kørt i en måneds tid bør du have et godt overblik ove
 
 Har du styr på alle de tjenester, du sender emails fra, kan du springe det her trin over og gå direkte til trin 2. De fleste bliver dog overraskede og overser en enkelt afsender eller 2 - den der interne server, som sender status-rapporter hver uge fx?
 
-### 2. Autorisér reelle afsender-tjenester
+### 2. Giv tilladelse til reelle afsender-tjenester
 
-Nu skal du gennemgå de reelle tjenester og for hver af dem autorisere dem til at sende mails ved at sætte de SPF- og DKIM records op, som den konkrete tjeneste anbefaler dig.
+Nu skal du gennemgå de reelle tjenester og for hver af dem tillade at de sender mails for dig. Det gør du ved at sætte de SPF- og DKIM records op, som den konkrete tjeneste anbefaler dig.
 
 ### 3. Karantæne
 
-Når det er gjort, er det tid at ændre din DMARC politik til Quarantine - det vil sige, at du fortæller email-servere ude i verden, at hvis de modtager en email fra dit domæne, som ikke stammer fra en af de tjenester, du har autoriseret, skal de behandle emailen varsomt. Det kan være at de smider den i Spam-mappen eller skriver en advarsel på mailen eller noget helt tredje.
+Når det er gjort, er det tid at ændre din DMARC politik til Quarantine - det vil sige, at du fortæller email-servere ude i verden, at hvis de modtager en email fra dit domæne, som ikke stammer fra en af de tjenester, du har tilladt, skal de behandle emailen varsomt. Det kan være at de smider den i Spam-mappen eller skriver en advarsel på mailen eller noget helt tredje.
 
-Hvis du stadig er usikker på om du har autoriseret alle dine email udbydere kan du nøjes med at sætte en del af dine emails i karantæne, fx 10%. Efterhånden som tiden går og support ikke bliver overvældet af kunder som ikke modtager deres emails, kan du skrue procentsatsen op.
+Hvis du stadig er usikker på om du har givet tilladelse til alle dine email udbydere kan du nøjes med at sætte en del af dine emails i karantæne, fx 10%. Efterhånden som tiden går og support ikke bliver overvældet af kunder som ikke modtager deres emails, kan du skrue procentsatsen op.
 
 ### 4. Afvisning
 

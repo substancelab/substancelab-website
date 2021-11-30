@@ -56,4 +56,4 @@ Også her kan du gradvis øge andelen af, hvilke emails der afvises, så du ikke
 
 ## Målet er 100% reject
 
-Tillykke! Når du er nået hertil er du med til at gøre internettet sikrere og rarere at færdes på. Nå ja, og så har du også sikret dig selv imod phishning og dit brand imod at blive brugt til at sælge viagra. Godt gået.
+Tillykke! Når du er nået hertil er du med til at gøre internettet sikrere og rarere at færdes på. Nå ja, og så har du også sikret dig selv imod phishing og dit brand imod at blive brugt til at sælge viagra. Godt gået.

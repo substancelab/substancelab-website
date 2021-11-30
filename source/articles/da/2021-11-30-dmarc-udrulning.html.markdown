@@ -15,7 +15,7 @@ Det kan vi kun være rygende enige i. Men lad nu være med at drøne ud og blind
 
 READMORE
 
-Hvis du ikke gør det rigtigt, risikerer du at du ikke kan sende emails til dine brugere, kunder, og  nyhedsbrevsmodtagere. Det skulle jo gerne kun være de ondsindede phishere og scammere, som ikke kan sende.
+Hvis du ikke gør det rigtigt, risikerer du at du ikke kan sende emails til dine brugere, kunder, og nyhedsbrevsmodtagere. Det skulle jo gerne kun være de ondsindede phishere og scammere, som ikke kan sende.
 
 ## Det skal du have styr på
 
@@ -52,7 +52,7 @@ Hvis du stadig er usikker på om du har autoriseret alle dine email udbydere kan
 
 Når du er helt sikker på, at alle dine emails stadig når frem til deres modtagere er det tid at skifte til Reject policy. Forskellen mellem Quarantine og Reject er at ved Reject vil emailen blive afvist i stedet for at havne i spam e.l. - du kan altså ikke forvente at en rejected email kan findes nogle steder.
 
-Også her kan du gradvis øge andelen af, hvilke emails der afvises, så du ikke fra dag til anden får alle dine emails blokeret. Igen, start med 10% og øg det op til 100% efterhånden som du bliver sikker på, at alle relle emails kommer frem.
+Også her kan du gradvis øge andelen af, hvilke emails der afvises, så du ikke fra den ene dag til den anden får alle dine emails blokeret. Igen, start med 10% og øg det op til 100% efterhånden som du bliver sikker på, at alle relle emails kommer frem.
 
 ## Målet er 100% reject
 

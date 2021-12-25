@@ -25,8 +25,8 @@ article
     p
       | Tilmeld dig vores nyhedsbrev, og vi sender dig ekspert-viden om at bygge digitale produkter og webløsninger; viden der ruster dig til dit næste skridt mod en succesfuld online forretning.
 
-    #mc_embed_signup.newsletter-signup
-      == localized_partial_if_present "layouts/mailchimp/signup_form.erb", :locals => {:audience_id => "63e2b402de"}
+    .newsletter-signup
+      == localized_partial_if_present "layouts/mailerlite/signup_form.html.erb"
 
 = if blog.articles.any?
   section.article-list

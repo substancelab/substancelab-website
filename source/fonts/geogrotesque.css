@@ -22,9 +22,6 @@
  * © 2013 MyFonts Inc
 */
 
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/295c81");
-
 @font-face {
   font-display: swap;
   font-family: 'Geogrotesque';

@@ -22,10 +22,22 @@
  * © 2013 MyFonts Inc
 */
 
+@font-face {
+  font-display: swap;
+  font-family: 'Geogrotesque';
+  font-weight: bold;
+  src: url('/fonts/medium.eot');
+  src: url('/fonts/medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/medium.woff') format('woff'),
+    url('/fonts/medium.ttf') format('truetype');
+}
 
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/295c81");
-
-@font-face {font-family: 'Geogrotesque-Medium';src: url('webfonts/medium.eot');src: url('webfonts/medium.eot?#iefix') format('embedded-opentype'),url('webfonts/medium.woff') format('woff'),url('webfonts/medium.ttf') format('truetype'); font-display: swap; }
-
-@font-face {font-family: 'Geogrotesque-UltraLight';src: url('webfonts/ultralight.eot');src: url('webfonts/ultralight.eot?#iefix') format('embedded-opentype'),url('webfonts/ultralight.woff') format('woff'),url('webfonts/ultralight.ttf') format('truetype'); font-display: swap; }
+@font-face {
+  font-display: swap;
+  font-family: 'Geogrotesque';
+  font-weight: normal;
+  src: url('/fonts/ultralight.eot');
+  src: url('/fonts/ultralight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/ultralight.woff') format('woff'),
+    url('/fonts/ultralight.ttf') format('truetype');
+}

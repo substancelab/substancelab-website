@@ -73,7 +73,7 @@ born-i-byen:
     en: "Community driven guide to Copenhagen and Aarhus focusing on parents and their children."
   featured: true
   name: "Børn i byen"
-  position: 4
+  position: 1
   services:
   - api_development
   - google_maps
@@ -207,7 +207,7 @@ flaym:
     en: Flaym connects psoriasis sufferers from all over the world. They needed a development partner who could work iteratively and closely with their designers.
   featured: true
   name: Flaym
-  position: 1
+  position: 4
   services:
   - maintenance
   - web_application_development

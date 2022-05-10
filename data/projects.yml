@@ -116,6 +116,24 @@ collaboraid:
   - Javascript
   - Ruby on Rails
 
+comedykalenderen:
+  client: STØJ, Denmark
+  client_website: https://www.stoej.nu/
+  name: "ComedyKalenderen"
+  services:
+  - roadmap
+  - project_management
+  - seed
+  - web_application_development
+  technologies:
+  - CSS
+  - Google Maps
+  - HTML
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+  website: https://www.comedykalenderen.dk
+
 daily-rush:
   client: Daily Rush, Denmark
   client_website: http://dailyrush.dk

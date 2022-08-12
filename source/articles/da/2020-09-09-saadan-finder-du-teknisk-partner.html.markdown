@@ -1,6 +1,6 @@
 ---
 title: "Sådan vælger du din tekniske partner"
-description: "Hvis du, som de fleste, aldrig har lavet en digital løsning før og ikke er teknisk anlagt, er det meget svært at vide, hvad du skal kigge efter i en teknisk partner."
+description: "Har du aldrig lavet en digital løsning og er du ikke teknisk anlagt, er det svært at vide, hvad du skal kigge efter i en teknisk partner."
 tags: software, udvikling, produktstyring, opstart
 photo:
   cloudinary: "v1599645169/substancelab-website/touring-nyc"

@@ -15,3 +15,6 @@
 /.sass-cache
 originals
 node_modules
+
+# Ignore .DS_Store
+/.DS_Store

@@ -5,7 +5,7 @@
     "babel-preset-env": "^1.7.0",
     "chart.js": "^2.9.4",
     "file-loader": "^6.2.0",
-    "jquery": "^3.6.3",
+    "jquery": "^3.6.4",
     "node-sass": "^6.0.0",
     "resolve-url-loader": "^5.0.0",
     "sass-loader": "^10.2.0",

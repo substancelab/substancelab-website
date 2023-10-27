@@ -1,9 +1,10 @@
-  <div id="mlb2-5201786" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-5201786">
+<div id="mlb2-8869680" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-8869680">
+  <div class="ml-form-align-center ">
     <div class="ml-form-embedWrapper embedForm">
       <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-        <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/s9w9y9" data-code="s9w9y9" method="post" target="_blank">
+        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/663840/forms/103183792195241562/subscribe" data-code="" method="post" target="_blank">
           <div class="ml-form-formContent">
-            <div class="ml-form-fieldRow">
+            <div class="ml-form-fieldRow ">
               <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
                 <label>E-mail adresse</label>
                 <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
@@ -12,23 +13,45 @@
             <div class="ml-form-fieldRow ml-last-item">
               <div class="ml-field-group ml-field-name">
                 <label>Navn</label>
-                <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="" autocomplete="name">
+                <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="" autocomplete="given-name">
               </div>
             </div>
           </div>
+
           <input type="hidden" name="ml-submit" value="1">
+
           <div class="ml-form-embedSubmit">
             <button type="submit" class="primary">Send mig nyhedsbrevet</button>
-            <button disabled="disabled" style="display:none" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
+            <button disabled="disabled" style="display: none;" type="button" class="loading">
+              <div class="ml-form-embedSubmitLoad"></div>
+              <span class="sr-only">Loading...</span>
+            </button>
           </div>
+
           <input type="hidden" name="anticsrf" value="true">
         </form>
       </div>
-      <div class="ml-form-successBody row-success" style="display:none">
+
+      <div class="ml-form-successBody row-success" style="display: none">
         <div class="ml-form-successContent">
           <h4>Tak!</h4>
-          <p>Du hører fra os lige om lidt.</p>
+          <p>Du hører lige straks fra os.</p>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<script>
+  function ml_webform_success_8869680() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-8869680 .row-success').show();
+    $('.ml-subscribe-form-8869680 .row-form').hide();
+  }
+</script>
+
+
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v1f25ee4b05f240a833e02c19975434a4" type="text/javascript"></script>
+<script>
+    fetch("https://assets.mailerlite.com/jsonp/663840/forms/103183792195241562/takel")
+</script>

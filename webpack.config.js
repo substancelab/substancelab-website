@@ -15,9 +15,13 @@ module.exports = {
       {
         test: /assets\/javascripts\/.*\.js$/,
         exclude: /node_modules|\.tmp|vendor/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', {targets: "defaults"}]
+            ]
+          }
         },
       },
 

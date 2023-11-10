@@ -9,7 +9,7 @@ gem "middleman-livereload"
 gem "middleman-meta-tags"
 gem "middleman-minify-html"
 
-gem "contracts", "~> 0.13.0"
+gem "contracts", "~> 0.17"
 gem "rails-html-sanitizer", :require => false
 gem "rake"
 gem "slim"

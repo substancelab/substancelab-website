@@ -12,4 +12,6 @@ gem "middleman-minify-html"
 gem "contracts", "~> 0.13.0"
 gem "rails-html-sanitizer", :require => false
 gem "rake"
+
+gem "actionview"
 gem "slim"

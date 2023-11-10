@@ -23,6 +23,7 @@ SITE_SETTINGS.each do |key, value|
   set(key.intern, value)
 end
 
+require "action_view"
 require "slim"
 Slim::Engine.set_options(
   :format => :html,

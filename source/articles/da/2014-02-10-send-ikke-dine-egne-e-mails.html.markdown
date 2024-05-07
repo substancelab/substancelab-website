@@ -12,7 +12,7 @@ photo:
 Jeg er - som den trofaste læser, nok har bemærket - stor fortaler for at lade eksterne tjenester håndtere så meget som muligt af din web applikation. Et af de områder, der er oplagt, er udsending af e-mail.
 
 READMORE
-Umiddelbart virker e-mail udsending ikke som et stort problem og enhver udvikler kan sende en e-mail så let som ingenting. Det er også rigtigt, men når du skal sende tusindvis af mails og være sikker på, at de faktisk når frem, begynder du pludseligt at skulle kigge på baggrundskøer, throttling, graylists, SPF records, DKIM signatures og sikkert flere detaljer.
+Umiddelbart virker e-mail udsending ikke som et stort problem og enhver udvikler kan sende en e-mail så let som ingenting. Men vil du være sikker på, at de faktisk når frem, skal du kigge på baggrundskøer, throttling, graylists, SPF records, DKIM signatures og sikkert flere detaljer.
 
 Derfor anbefaler jeg, at du lader en tredjepartstjeneste om at håndtere dine e-mails.
 

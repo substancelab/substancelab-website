@@ -18,9 +18,9 @@ Derfor anbefaler jeg, at du lader en tredjepartstjeneste om at håndtere dine e-
 
 ## Eksempel
 
-Tidligere på ugen modtag en af mine kunder e-mail fra [Postmark](http://www.postmarkapp.com) - den tjeneste vi bruger til udsending af e-mails - om at Google havde ændret deres krav til DKIM nøgler, så den vi havde brugt hidtil ikke længere var god nok - hvilket bl.a. øger risikoen for at blive opfattet som spam.
+Tidligere på ugen modtag en af mine kunder e-mail fra [Postmark](https://postmarkapp.com/) - den tjeneste vi bruger til udsending af e-mails - om at Google havde ændret deres krav til DKIM nøgler, så den vi havde brugt hidtil ikke længere var god nok - hvilket bl.a. øger risikoen for at blive opfattet som spam.
 
-Mailen indeholdt [tydelige instrukser og forklaringer](http://blog.postmarkapp.com/post/51224968159/upgrading-and-rotating-dkim-keys) og problemet var rettet på meget kort tid.
+Mailen indeholdt [tydelige instrukser og forklaringer](https://postmarkapp.com/blog/upgrading-and-rotating-dkim-keys) og problemet var rettet på meget kort tid.
 
 Det problem havde vi ikke selv opdaget endnu. Godt nok havde vi fået nogle rapporter om at e-mails fra Web applikationen var begyndt at havne i Gmail's spamfilter, men det var ikke noget, der virkede suspekt eller systematisk, så vi havde ikke bidt specielt mærke i det.
 

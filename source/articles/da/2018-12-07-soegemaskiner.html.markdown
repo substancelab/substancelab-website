@@ -50,7 +50,7 @@ Men der findes fremragende løsninger til at lave fri-tekst-søgning og lave rel
 
 ## Vores erfaringer
 
-I sidstnævnte kategori har vi haft gode erfaringer med [Elastic Search](https://www.elastic.co/products/elasticsearch), der har vist sig at kunne tilpasses til guldmedalje og levere gode og hurtige resultater. Den findes både i en hosted version, så man slipper for at skulle holde en server kørende til det, og en, hvor man selv har den liggende. Det sagt, så betaler man for kvaliteten og det kan blive en dyrere løsning.
+I sidstnævnte kategori har vi haft gode erfaringer med [Elastic Search](https://www.elastic.co/elasticsearch), der har vist sig at kunne tilpasses til guldmedalje og levere gode og hurtige resultater. Den findes både i en hosted version, så man slipper for at skulle holde en server kørende til det, og en, hvor man selv har den liggende. Det sagt, så betaler man for kvaliteten og det kan blive en dyrere løsning.
 
 Til gengæld det er lykkedes os at lave ganske gode søgemaskiner baseret på de udvidelser, der findes i eksisterende databaser.
 

@@ -23,4 +23,4 @@ Det her er vores forsøg på at give et bidrag til at gøre deres hverdag bedre.
 
 ## Vi støtter også...
 
-Tidligere har vi støttet op om velgørende organisationer som [Kræftens Bekæmpelse](http://www.cancer.dk/) og [Dansk Flygtningehjælp](https://flygtning.dk/), og vi bidrager også løbende til [Ruby Together](https://www.rubytogether.com).
+Tidligere har vi støttet op om velgørende organisationer som [Kræftens Bekæmpelse](https://www.cancer.dk/) og [Dansk Flygtningehjælp](https://flygtning.dk/), og vi bidrager også løbende til [Ruby Together](https://www.rubytogether.com).

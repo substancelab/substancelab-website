@@ -28,7 +28,7 @@ Følgende er et konkret eksempel for en mindre forretning med en tilstedeværels
 | Hosting af websites/blogs   | [UnoEuro](https://www.unoeuro.com/) | 430 |
 | Håndtering af oversættelser | [PhraseApp](https://phraseapp.com/) | 400 |
 | Modtagelse af betalinger    | [Nets](https://www.nets.eu/dk-da) + [Quickpay](https://quickpay.net/dk/) | 1.600 |
-| Postadresser i udlandet     | [Clevvermail](https://www.clevvermail.com/) | 500 |
+| Postadresser i udlandet     | [Clevvermail](https://www.clevver.io/) | 500 |
 | SMS udsending               | [Compaya SMS](https://www.compaya.dk/) | 400 |
 | Spamhåndtering              | [Akismet](https://akismet.com/) |  30 |
 | Support/helpdesk            | [HelpScout](https://www.helpscout.net/) | 125 |
@@ -44,7 +44,7 @@ Ikke to forretninger er ens, og ovenstående er naturligvis kun et eksempel. And
 
 * [Running Costs - Cushion](https://cushionapp.com/running-costs)
 * [Omkostninger - 10er](https://10er.dk/open)
-* [A bootstrapped SaaS cost teardown](https://blog.checklyhq.com/bootstrapped-developer-saas-cost-teardown/)
+* [A bootstrapped SaaS cost teardown](https://www.checklyhq.com/blog/bootstrapped-developer-saas-cost-teardown/)
 * [Baremetrics Engineering Expenses](https://www.notion.so/bbf18630e4154072a538485f45a9a6e2?v=0e2a6e82b0bf4c008c92412a4e942e1b)
 * [How a 2 person startup already uses 28 other tools](https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools)
 * [What does Unsplash cost in 2019?](https://medium.com/unsplash/what-does-unsplash-cost-in-2019-f499620a14d0)

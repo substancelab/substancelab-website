@@ -5,7 +5,7 @@ tags: velgørenhed
 photo:
   cloudinary: "v1571230952/substancelab-website/kraeftens_bekaempelse_diplom"
 ---
-Alle her på kontoret har på forskellig vis haft oplevelser med cancer tæt inde på livet. Derfor var der ikke meget tvivl om, at [Kræftens Bekæmpelse](http://www.cancer.dk/) skulle være modtager af Substance Labs jule-donation i 2014.
+Alle her på kontoret har på forskellig vis haft oplevelser med cancer tæt inde på livet. Derfor var der ikke meget tvivl om, at [Kræftens Bekæmpelse](https://www.cancer.dk/) skulle være modtager af Substance Labs jule-donation i 2014.
 
 READMORE
 
@@ -17,4 +17,4 @@ Vi er stolte af at kunne være med til at gøre en forskel i fremtiden, så andr
 
 ## Vi støtter også...
 
-Tidligere har vi støttet op om velgørende organisationer som [Kræftens Bekæmpelse](http://www.cancer.dk/) og [Dansk Flygtningehjælp](https://flygtning.dk/), og vi bidrager også løbende til [Ruby Together](https://www.rubytogether.com).
+Tidligere har vi støttet op om velgørende organisationer som [Kræftens Bekæmpelse](https://www.cancer.dk/) og [Dansk Flygtningehjælp](https://flygtning.dk/), og vi bidrager også løbende til [Ruby Together](https://www.rubytogether.com).

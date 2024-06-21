@@ -463,7 +463,7 @@ nethunters:
 
 patentlog:
   client: PatentAct, Denmark
-  client_website: http://patentact.company
+  client_website: https://patentact.company
   name: PatentLog
   services:
     - roadmapping

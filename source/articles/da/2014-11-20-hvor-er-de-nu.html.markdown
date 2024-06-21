@@ -15,7 +15,7 @@ READMORE
 
 ## Pluggd ($10 millioner)
 
-Pluggd var Substance Labs første kunde. Dengang byggede de en [podcast platform](http://techcrunch.com/2006/06/22/pluggd-podcast-community-opens-for-use/). Det blev senere til en [søgemaskine for lyd- og videofiler](http://techcrunch.com/2006/09/24/pluggd-to-make-podcasts-chunkier-searchable/) og hedder nu [Delve Networks](http://techcrunch.com/2008/06/11/pluggd-targets-brightcove-with-delve-networks-a-new-video-delivery-platform/).
+Pluggd var Substance Labs første kunde. Dengang byggede de en [podcast platform](https://techcrunch.com/2006/06/22/pluggd-podcast-community-opens-for-use/). Det blev senere til en [søgemaskine for lyd- og videofiler](https://techcrunch.com/2006/09/24/pluggd-to-make-podcasts-chunkier-searchable/) og hedder nu [Delve Networks](https://techcrunch.com/2008/06/11/pluggd-targets-brightcove-with-delve-networks-a-new-video-delivery-platform/).
 
 Delve blev opkøbt i 2010 for omkring [10 millioner USD](https://gigaom.com/2010/08/02/419-limelight-acquires-cloud-based-video-platform-delve-networks/).
 
@@ -29,11 +29,10 @@ Oprindeligt designede vi et simpelt visitkort-website, men senere udviklede vi e
 
 I 2009 begyndte Substance Lab at samarbejde med udviklingsteamet i Wildfire på at videreudvikle deres Facebook markedsføringsplatform.
 
-Senere hen har Wildfire udvidet deres produktlinje med adskillige relaterede produkter indenfor social medier, og det gjorde de så godt, at Google fik øjnene op for dem og købte firmaet for den nette sum af [350 millioner USD](http://techcrunch.com/2012/07/31/google-acquires-wildfire/).
+Senere hen har Wildfire udvidet deres produktlinje med adskillige relaterede produkter indenfor social medier, og det gjorde de så godt, at Google fik øjnene op for dem og købte firmaet for den nette sum af [350 millioner USD](https://techcrunch.com/2012/07/31/google-acquires-wildfire/).
 
 ## Og alle de andre
 
 Selv om ovenstående er de historier, som typisk får mest opmærksomhed i pressen (store beløb er bare sjovere), har vi en række kunder, der ikke har solgt deres hjertebarn, men hvis historie er mindst lige så interessant.
 
 De fleste af dem er vokset fra ide og prototype til solide og stabile forretninger  med omsætning i millionklassen, der giver deres ejere økonomisk tryghed i hverdagen. Det er vi mindst lige så stolte af.
-

@@ -1,6 +1,6 @@
 37signals:
   client: 37signals, USA
-  client_website: http://37signals.com
+  client_website: https://37signals.com
   services:
   - internationalization
   - web_application_development
@@ -10,13 +10,13 @@
 
 agency-fusion:
   client: Agency Fusion, USA
-  client_website: http://agencyfusion.com
+  client_website: https://agencyfusion.com
   services:
   - ux
 
 biq:
   client: BiQ, Denmark
-  client_website: http://biq.dk
+  client_website: https://biq.dk
   description:
     da: BiQ er en database med fakta om mere end 500'000 firmaer og deres direktører, ejere, og bestyrelsesmedlemmer over de sidste 25 år.
     en: BiQ is business intelligence database with 25 years of information about 400.000 danish companies and their board members, directors, owners and more.
@@ -37,7 +37,7 @@ biq:
   - Ruby on Rails
   - SQL Server
   - Wordpress
-  website: http://biq.dk
+  website: https://biq.dk
 
 bomae:
   client: "Bomae, Denmark"
@@ -67,7 +67,7 @@ born-i-byen:
   case_studies:
   - da
   client: "Børn i byen, Denmark"
-  client_website: http://bornibyen.dk
+  client_website: https://bornibyen.dk
   description:
     da: "Forældrenes guide til København og Aarhus. Her finder du anmeldelser, børnevenlige arrangementer og meget andet."
     en: "Community driven guide to Copenhagen and Aarhus focusing on parents and their children."
@@ -89,11 +89,11 @@ born-i-byen:
   - MySQL
   - Ruby
   - Ruby on Rails
-  website: http://bornibyen.dk
+  website: https://bornibyen.dk
 
 change-healthcare:
   client: change:healthcare, USA
-  client_website: http://changehealthcare.com
+  client_website: https://changehealthcare.com
   description:
     da: "change:healthcare hjælper forbrugere i USA med at finde rundt i den jungle, der er deres sundhedssystem, med værktøjer til at holde styr på regninger og forsikringer sammenligning af priser på medicin og læger."
     en: "Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money."
@@ -107,11 +107,11 @@ change-healthcare:
   technologies:
   - Ruby
   - Ruby on Rails
-  website: http://changehealthcare.com
+  website: https://changehealthcare.com
 
 collaboraid:
   client: Collaboraid, Denmark
-  client_website: http://collaboraid.net
+  client_website: https://collaboraid.net
   technologies:
   - Javascript
   - Ruby on Rails
@@ -136,7 +136,7 @@ comedykalenderen:
 
 daily-rush:
   client: Daily Rush, Denmark
-  client_website: http://dailyrush.dk
+  client_website: https://dailyrush.dk
   services:
   - web_application_development
   - webdesign
@@ -148,7 +148,7 @@ daily-rush:
 
 ejendomsstatistik:
   client: Lokalebasen.dk, Denmark
-  client_website: http://lokalebasen.dk
+  client_website: https://lokalebasen.dk
   featured: false
   name: Ejendomsstatistik.dk
   services:
@@ -161,14 +161,14 @@ ejendomsstatistik:
   - CSS
   - Javascript
   - PostgreSQL
-  website: http://ejendomsstatistik.dk
+  website: https://ejendomsstatistik.dk
 
 eventzonen:
   case_studies:
   - da
   - en
   client: Underholdningsbureauet, Denmark
-  client_website: http://eventzonen.dk
+  client_website: https://eventzonen.dk
   description:
     da: International markedsplads for kunstnere og foredragsholdere. Substance Lab har bygget løsningen fra bunden og været med til at forbedre og udvide den.
     en: International marketplace that puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
@@ -188,11 +188,11 @@ eventzonen:
   - CSS
   - Javascript
   - PostgreSQL
-  website: http://eventzonen.dk
+  website: https://eventzonen.dk
 
 fab-it:
   client: Fab:IT, Denmark
-  client_website: http://fab-it.dk
+  client_website: https://fab-it.dk
   services:
   - economic_integration
   - frontend_development
@@ -259,7 +259,7 @@ gamekillers:
 
 gas-detection:
   client: Danfoss Cooling, Denmark
-  client_website: http://refrigerationandairconditioning.danfoss.dk/
+  client_website: https://refrigerationandairconditioning.danfoss.dk/
   description:
     da: I Danfoss første forsøg med IoT havde de brug for en fleksibel partner, der kunne levere en brugervenlig applikation.
     en: Danfoss wanted to venture into the IoT space and needed a flexible partner to build out a userfriendly frontend for their devices.
@@ -279,7 +279,7 @@ gomore:
   case_studies:
   - da
   client: GoMore, Denmark
-  client_website: http://gomore.dk
+  client_website: https://gomore.dk
   description:
     da: Samkørsel, privat biludlejning, og deleøkonomi. GoMore forbinder passagerer med bilister og lejere med private udlejere.
     en: Ridesharing and peer to peer car-rental done right. Connecting passengers with drivers, renters with car owners.
@@ -301,7 +301,7 @@ gomore:
 
 grundfos-biobooster:
   client: Grundfos Biobooster, Denmark
-  client_website: http://www.grundfos.com/
+  client_website: https://www.grundfos.com/
   services:
   - training
   - web_application_development
@@ -332,7 +332,7 @@ hhcomponents:
 
 iiamo:
   client: Loop Associates, Denmark
-  client_website: http://www.loopassociates.com/
+  client_website: https://www.loopassociates.com/
   services:
   - frontend_development
   technologies:
@@ -340,7 +340,7 @@ iiamo:
 
 justitsministeriet:
   client: Danish Ministry of Justice, Denmark
-  client_website: http://www.justitsministeriet.dk
+  client_website: https://www.justitsministeriet.dk
   services:
   - web_application_development
   technologies:
@@ -367,7 +367,7 @@ kontrakten:
 
 kreditregisteret:
   client: Kreditregisteret, Denmark
-  client_website: http://www.kreditregisteret.dk
+  client_website: https://www.kreditregisteret.dk
   description:
     da: "Kreditregisteret hjælper banker, finansieringsvirksomheder og kreditgivere med at føre en ansvarlig lånepolitik"
     en: "Kreditregisteret (The Credit Registry) provides financial institutions and debt providers with credit information"
@@ -390,14 +390,14 @@ kreditregisteret:
   - PostgreSQL
   - Ruby
   - Ruby on Rails
-  website: http://biq.dk
+  website: https://biq.dk
 
 lokalebasen:
   case_studies:
   - da
   - en
   client: Lokalebasen.dk, Denmark
-  client_website: http://lokalebasen.dk
+  client_website: https://lokalebasen.dk
   description:
     da: "Danmarks førende portal for udlejning af erhvervslokaler. Sitet blev til under anvendelse af Rails, testdreven udvikling og agile metoder."
     en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
@@ -419,7 +419,7 @@ lokalebasen:
   - PostgreSQL
   - Ruby
   - Ruby on Rails
-  website: http://lokalebasen.dk
+  website: https://lokalebasen.dk
 
 minder-for-altid:
   client: Minder for Altid ApS, Denmark
@@ -446,7 +446,7 @@ minder-for-altid:
 
 mitbarnsnavn:
   client: Babysteps, Denmark
-  client_website: http://mitbarnsnavn.dk
+  client_website: https://mitbarnsnavn.dk
   services:
   - frontend_development
   technologies:
@@ -508,7 +508,7 @@ quickpay-invoicing:
 
 region_syddanmark:
   client: Region Syddanmark, Denmark
-  client_website: http://regionsyddanmark.dk/
+  client_website: https://regionsyddanmark.dk/
   name: Fundingguiden
   services:
   - frontend_development
@@ -523,7 +523,7 @@ rp_lookups:
   case_studies:
   - en
   client: Mapicture, Denmark
-  client_website: http://mapicture.dk
+  client_website: https://mapicture.dk
   description:
     da: Det er ikke simpelt at indsamle og visualisere rejsetider mellem tusindvis af afgangssteder og destinationer. Men det er netop det Mapictures interne analyseværktøj gør.
     en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
@@ -550,7 +550,7 @@ rp_lookups:
 
 smartphoneguide:
   client: KanKom Online, Denmark
-  client_website: http://kankom.dk
+  client_website: https://kankom.dk
   name: SmartphoneGuide
   services:
   - web_application_development
@@ -559,7 +559,7 @@ smartphoneguide:
 
 test_cloud:
   client: Xamarin Europe, Denmark
-  client_website: http://xamarin.com
+  client_website: https://xamarin.com
   name: Xamarin Test Cloud
   services:
   - api_development
@@ -583,7 +583,7 @@ tumlino:
 
 urbanwinebox:
   client: UrbanWineBox, Denmark
-  client_website: http://urbanwinebox.com
+  client_website: https://urbanwinebox.com
   name: UrbanWineBox
   services:
   - project_management

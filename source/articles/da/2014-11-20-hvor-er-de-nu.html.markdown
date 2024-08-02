@@ -23,7 +23,7 @@ Delve blev opkøbt i 2010 for omkring [10 millioner USD](https://gigaom.com/2010
 
 Da vi først lærte Change Healthcare at kende hed de MedBillAdvisor og var et rådgivningsfirma, der rådgav folk om, hvordan de kunne spare på/håndtere deres regninger fra det amerikanske sundhedsvæsen.
 
-Oprindeligt designede vi et simpelt visitkort-website, men senere udviklede vi et værktøj under navnet MedBillManager. Det værktøj blev så endnu senere til [Change Healthcare](http://www.changehealthcare.com/), der nu er blevet [solgt for 135 millioner USD (plus det løse)](http://www.prnewswire.com/news-releases/emdeon-to-acquire-change-healthcare-283204591.html).
+Oprindeligt designede vi et simpelt visitkort-website, men senere udviklede vi et værktøj under navnet MedBillManager. Det værktøj blev så endnu senere til [Change Healthcare](https://www.changehealthcare.com/), der nu er blevet [solgt for 135 millioner USD (plus det løse)](https://www.prnewswire.com/news-releases/emdeon-to-acquire-change-healthcare-283204591.html).
 
 ## Wildfire ($350 millioner)
 

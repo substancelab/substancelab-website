@@ -6,7 +6,7 @@ photo:
   cloudinary: "v1571230629/substancelab-website/urbanwinebox_cellar"
 ---
 
-Vin skal drikkes i godt selskab og gode oplevelser skal deles. [UrbanWineBox](http://www.urbanwinebox.com) tilbyder en peer-to-peer markedsplads hvor vinelskere, entusiaster og professionelle køber og sælger vin.
+Vin skal drikkes i godt selskab og gode oplevelser skal deles. [UrbanWineBox](https://www.urbanwinebox.com) tilbyder en peer-to-peer markedsplads hvor vinelskere, entusiaster og professionelle køber og sælger vin.
 
 READMORE
 

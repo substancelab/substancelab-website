@@ -20,7 +20,7 @@ Indrømmet, Front Lobby er en lidt speciel launch for os. For en gangs skyld er 
 
 ## Første kunde var på plads inden udviklingen gik igang
 
-Vi har udviklet bookingsystemet i tæt samarbejde med det kontorfællesskab, vi selv bor i, <a href="https://www.houseofinnovation.dk" title="Kontorfællesskabet House of Innovation">House of Innovation</a>, så stor tak til dem. Det har blandt andet betydet at systemet har været brugt aktivt af 50-100 mennesker allerede inden lanceringen, og at vi har haft direkte adgang til brugere og domæne-eksperter.
+Vi har udviklet bookingsystemet i tæt samarbejde med det kontorfællesskab, vi selv bor i, <a href="https://houseofinnovation.dk" title="Kontorfællesskabet House of Innovation">House of Innovation</a>, så stor tak til dem. Det har blandt andet betydet at systemet har været brugt aktivt af 50-100 mennesker allerede inden lanceringen, og at vi har haft direkte adgang til brugere og domæne-eksperter.
 
 
 ## Egen medicin

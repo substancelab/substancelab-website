@@ -15,7 +15,7 @@ READMORE
 
 Har du lavet en online tjeneste, vil du komme til at stifte bekendtskab med en del af internettets bagside; bots. Bots er automatiserede scripts og programmer, der drøner rundt på websider og udfylder alle de signup formularer og kommentarfelter, de kan finde.
 
-Typisk er håbet at nogen klikker på et link eller at afsenderens Google-juice øges. Andre gange er det mere udspekuleret og bruges til spredning af politisk propagande eller [Nigeria-breve](http://www.forbrugerbloggen.dk/svindelgalleriet/nigeriabreve/).
+Typisk er håbet at nogen klikker på et link eller at afsenderens Google-juice øges. Andre gange er det mere udspekuleret og bruges til spredning af politisk propagande eller [Nigeria-breve](https://forbrugerbloggen.dk/svindelgalleriet/nigeriabreve/).
 
 Når det sker melder spørgsmålet sig hurtigt, hvordan undgår vi det? Desværre er det korte svar, at det gør vi ikke - det længere svar er, at der er 2 måder at angribe problemet på:
 

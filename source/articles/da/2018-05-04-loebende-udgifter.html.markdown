@@ -25,14 +25,14 @@ Følgende er et konkret eksempel for en mindre forretning med en tilstedeværels
 | Billed hosting              | [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/ynhzxqtl27gizmijf2gj) | 550 |
 | Email og dokumenter         | [G Suite](https://gsuite.google.dk/intl/da/) | 150 |
 | Hosting af kode             | [GitHub](https://github.com) | 50 |
-| Hosting af websites/blogs   | [UnoEuro](https://www.unoeuro.com/) | 430 |
+| Hosting af websites/blogs   | [Simply.com](https://www.simply.com/dk/) | 430 |
 | Håndtering af oversættelser | [PhraseApp](https://phrase.com/) | 400 |
 | Modtagelse af betalinger    | [Nets](https://www.nets.eu/dk-da) + [Quickpay](https://quickpay.net/dk/) | 1.600 |
 | Postadresser i udlandet     | [Clevvermail](https://www.clevver.io/) | 500 |
 | SMS udsending               | [Compaya SMS](https://www.compaya.dk/) | 400 |
 | Spamhåndtering              | [Akismet](https://akismet.com/) |  30 |
-| Support/helpdesk            | [HelpScout](https://www.helpscout.net/) | 125 |
-| Transaktions emails         | [Mandrill](https://www.mandrill.com/) | 175 |
+| Support/helpdesk            | [HelpScout](https://www.helpscout.com/) | 125 |
+| Transaktions emails         | [Mailchimp](https://mailchimp.com/features/transactional-email/) | 175 |
 |                             | | 5.710 |
 
 Dertil kommer løbende udgifter til [udvikling](/services/development/) og [vedligehold](/services/maintenance/) af løsningen, der skal betales for annoncer og SEO - for slet ikke at tale om de driftsmæssige udgifter til advokater, kontor, medarbejdere osv osv.

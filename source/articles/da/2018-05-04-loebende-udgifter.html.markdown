@@ -22,17 +22,17 @@ Følgende er et konkret eksempel for en mindre forretning med en tilstedeværels
 | Område/problem              | Udbyder         | Kr. pr måned |
 | --------------------------- | --------------- | ------------ |
 | Applikationsservere         | [Linode](https://www.linode.com/?r=a28e5e6bc518468404ebaadf2b31032146fa2c97) | 1.300 |
-| Billed hosting              | [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/ynhzxqtl27gizmijf2gj) | 550 |
+| Billede hosting             | [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/ynhzxqtl27gizmijf2gj) | 550 |
 | Email og dokumenter         | [G Suite](https://gsuite.google.dk/intl/da/) | 150 |
 | Hosting af kode             | [GitHub](https://github.com) | 50 |
-| Hosting af websites/blogs   | [UnoEuro](https://www.unoeuro.com/) | 430 |
+| Hosting af websites/blogs   | [Simply.com](https://www.simply.com/dk/) | 430 |
 | Håndtering af oversættelser | [PhraseApp](https://phrase.com/) | 400 |
 | Modtagelse af betalinger    | [Nets](https://www.nets.eu/dk-da) + [Quickpay](https://quickpay.net/dk/) | 1.600 |
 | Postadresser i udlandet     | [Clevvermail](https://www.clevver.io/) | 500 |
 | SMS udsending               | [Compaya SMS](https://www.compaya.dk/) | 400 |
 | Spamhåndtering              | [Akismet](https://akismet.com/) |  30 |
-| Support/helpdesk            | [HelpScout](https://www.helpscout.net/) | 125 |
-| Transaktions emails         | [Mandrill](https://www.mandrill.com/) | 175 |
+| Support/helpdesk            | [HelpScout](https://www.helpscout.com/) | 125 |
+| Transaktions emails         | [Mailchimp](https://mailchimp.com/features/transactional-email/) | 175 |
 |                             | | 5.710 |
 
 Dertil kommer løbende udgifter til [udvikling](/services/development/) og [vedligehold](/services/maintenance/) af løsningen, der skal betales for annoncer og SEO - for slet ikke at tale om de driftsmæssige udgifter til advokater, kontor, medarbejdere osv osv.
@@ -46,7 +46,7 @@ Ikke to forretninger er ens, og ovenstående er naturligvis kun et eksempel. And
 * [Omkostninger - 10er](https://10er.com/open)
 * [A bootstrapped SaaS cost teardown](https://www.checklyhq.com/blog/bootstrapped-developer-saas-cost-teardown/)
 * [Baremetrics Engineering Expenses](https://www.notion.so/bbf18630e4154072a538485f45a9a6e2?v=0e2a6e82b0bf4c008c92412a4e942e1b)
-* [How a 2 person startup already uses 28 other tools](https://www.acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools)
+* [How a 2 person startup already uses 28 other tools](https://medium.com/@kunaljasty/how-a-2-person-startup-already-uses-26-other-tools-318da014cf38)
 * [What does Unsplash cost in 2019?](https://medium.com/unsplash/what-does-unsplash-cost-in-2019-f499620a14d0)
 * [Open Startup - Remote OK](https://remoteok.com/open)
 

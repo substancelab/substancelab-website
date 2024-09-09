@@ -22,7 +22,7 @@ Følgende er et konkret eksempel for en mindre forretning med en tilstedeværels
 | Område/problem              | Udbyder         | Kr. pr måned |
 | --------------------------- | --------------- | ------------ |
 | Applikationsservere         | [Linode](https://www.linode.com/?r=a28e5e6bc518468404ebaadf2b31032146fa2c97) | 1.300 |
-| Billed hosting              | [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/ynhzxqtl27gizmijf2gj) | 550 |
+| Billede hosting             | [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/ynhzxqtl27gizmijf2gj) | 550 |
 | Email og dokumenter         | [G Suite](https://gsuite.google.dk/intl/da/) | 150 |
 | Hosting af kode             | [GitHub](https://github.com) | 50 |
 | Hosting af websites/blogs   | [Simply.com](https://www.simply.com/dk/) | 430 |

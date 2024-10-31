@@ -3,7 +3,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "babel-loader": "< 9.0",
-    "chart.js": "^2.9.4",
+    "chart.js": "^4.4.6",
     "file-loader": "^6.2.0",
     "jquery": "^3.7.1",
     "node-sass": "< 7.0.0",

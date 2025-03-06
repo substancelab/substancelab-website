@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "middleman", "~> 4.5"
+gem "middleman", "~> 4.6"
 gem "middleman-blog"
 gem "middleman-favicon-maker"
 gem "middleman-livereload"

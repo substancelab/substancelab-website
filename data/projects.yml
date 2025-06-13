@@ -446,7 +446,6 @@ minder-for-altid:
 
 mitbarnsnavn:
   client: Babysteps, Denmark
-  client_website: https://mitbarnsnavn.dk
   services:
   - frontend_development
   technologies:

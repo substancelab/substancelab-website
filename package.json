@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@babel/core": "^7.27.7",
+    "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.27.2",
     "babel-loader": "< 9.0",
     "chart.js": "^2.9.4",

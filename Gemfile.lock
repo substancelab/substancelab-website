@@ -47,7 +47,7 @@ GEM
     favicon_maker (1.3.1)
       docile (~> 1.1)
     ffi (1.17.2)
-    haml (7.0.1)
+    haml (7.0.2)
       temple (>= 0.8.2)
       thor
       tilt
@@ -58,7 +58,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    json (2.15.2)
+    json (2.16.0)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     listen (3.9.0)
@@ -72,7 +72,7 @@ GEM
     middleman (4.6.2)
       middleman-cli (= 4.6.2)
       middleman-core (= 4.6.2)
-    middleman-blog (4.2.0)
+    middleman-blog (4.2.1)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
@@ -119,7 +119,7 @@ GEM
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
     mini_portile2 (2.8.9)
-    minitest (5.26.0)
+    minitest (5.26.1)
     nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -165,7 +165,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
-    uri (1.1.0)
+    uri (1.1.1)
     webrick (1.9.1)
 
 PLATFORMS

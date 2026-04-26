@@ -1,0 +1,90 @@
+@function power($number, $exponent)
+  $value: 1
+
+  @if $exponent > 0
+    @for $i from 1 through $exponent
+      $value: $value * $number
+
+  @return $value
+
+/* Headlines */
+
+// Basic power function that works with positive, integer exponents
+@function power($number, $exponent)
+  // Stolen from https://css-tricks.com/snippets/sass/power-function/
+  $value: 1
+
+  @if $exponent > 0
+    @for $i from 1 through $exponent
+      $value: $value * $number
+
+  @return $value
+
+@mixin headline-font-size($level)
+  $_headlines-ratio: 1.2
+  $_headlines-ratio-phone: 1.2
+
+  font-size: +power($_headlines-ratio, $level) * 1em
+  @media #{$breakpoint-phone}
+    font-size: +power($_headlines-ratio-phone, $level) * 1em
+
+h1, h2, h3, .subtitle
+  +geogrotesque
+  font-weight: bold
+
+h1,
+.subtitle
+  margin-top: 0
+  +headline-font-size(3)
+  line-height: 1.1em /* ~36.608px */
+  padding-bottom: 2px
+  padding-top: 9px
+  @media #{$breakpoint-tablet-and-smaller}
+    padding: 0.2em 0
+    margin: 0
+h2
+  +headline-font-size(2)
+  line-height: 1.6em
+  margin-top: 1.9em
+  margin-bottom: 0.5em
+  padding-bottom: 1px
+  padding-top: 0px
+
+h3
+  +headline-font-size(1)
+  line-height: 1.8em
+  margin-top: 1.4em
+  margin-bottom: 0
+  padding-top: 1px
+
+h2:first-child
+  line-height: 1
+
+h2, h3
+  &:first-child
+    margin-top: 0
+
+.subtitle
+  line-height: 1.6em
+
+h1 + .subtitle
+  font-size: 1.6em
+  font-weight: bold
+  margin-bottom: 0
+  margin-top: 0
+  padding-bottom: 1px
+  padding-top: 5px
+  @media #{$breakpoint-tablet-and-smaller}
+    font-size: 1em
+    font-weight: bold
+
+h2 + .subtitle
+  font-size: 1em
+  font-weight: normal
+  margin-bottom: 1em
+  margin-top: -1em
+
+article
+  h1, .subtitle
+    text-shadow: none
+

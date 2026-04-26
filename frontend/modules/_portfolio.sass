@@ -1,0 +1,44 @@
+// Portfolio page
+.portfolio
+  .tile:first-child
+    min-width: 60%
+
+.projects
+  +full-width
+  display: flex
+  flex-wrap: wrap
+  margin:
+    left: -1rem
+    right: -1rem
+
+  .tile
+    background:
+      position: 50% 0
+      repeat: no-repeat
+      size: cover
+    flex: 1
+    height: 600px
+    height: 75vh
+    margin: 1rem
+    max-height: 600px
+    min-width: 300px
+
+    @media #{$breakpoint-tablet}
+      min-width: 45%
+
+    @media #{$breakpoint-phone}
+      box-sizing: border-box
+      width: 100%
+
+    &:hover
+      border: 0
+      .tile-text
+        background: rgba(0, 0, 0, 0.75)
+
+  .tile-image
+    position: absolute
+
+  .tile-text
+    background: rgba(0, 0, 0, 0.6)
+    color: #ffffff
+    position: absolute

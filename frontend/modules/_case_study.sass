@@ -1,0 +1,52 @@
+@import "mixins/separator"
+
+.case_study
+  overflow-x: hidden
+
+  .screenshot
+    +full-width
+    img
+      height: auto
+      margin: 0 0 2em 0
+      width: 100%
+
+  .columns
+    clear: both
+    overflow: visible
+
+    +clear
+
+    .masthead
+      background: transparent
+      color: inherit
+      margin-bottom: 0
+      padding: 0
+
+  .display-project
+    +full-width
+    width: 100%
+    img
+      width: 100%
+
+  .intro
+    +intro
+
+  .pullout
+    margin: 0 2em
+
+  blockquote.pullout
+    margin-top: -0.3em
+    width: 60%
+    .author
+      margin-top: -0.4em
+
+  .content
+    font-size: 1.6em
+    font-weight: 300
+    line-height: 1.5em
+
+  .portfolio
+    +separator
+    padding-top: 0
+    .project
+      border: 0

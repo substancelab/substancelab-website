@@ -1,0 +1,12 @@
+@mixin separator-bottom
+  border-bottom: 1px solid #caccc6
+  +default-padding-bottom
+
+@mixin separator-top
+  border-top: 1px solid #caccc6
+  +default-padding-top
+
+// Use the separate an element from the one above it
+@mixin separator
+  +separator-top
+

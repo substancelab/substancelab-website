@@ -9,7 +9,10 @@
 
 # Ignore the build directory
 /build
+
+# Ignore tmp stuff
 .tmp
+/tmp/*
 
 # Ignore Sass' cache
 /.sass-cache
@@ -18,3 +21,7 @@ node_modules
 
 # Ignore .DS_Store
 /.DS_Store
+
+# Vite Ruby
+/source/vite-dev/*
+/source/vite/*

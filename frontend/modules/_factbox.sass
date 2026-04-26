@@ -1,0 +1,43 @@
+$_factbox-font-size: 0.9em
+
+.factbox
+  background: #cccccc
+  border-radius: 3px
+  color: #333333
+  font-size: $_factbox-font-size
+  width: 33%
+
+  @media #{$breakpoint-tablet-and-smaller}
+    float: none
+    width: auto
+    margin: 0
+
+  a
+    &:link
+      color: darken($link-color, 10%)
+    &:hover
+      border-color: darken($link-hover-color, 10%)
+      color: darken($link-hover-color, 10%)
+
+  h2
+    +headline-font-size(1)
+
+.factbox-body
+  padding: 1em
+
+.factbox-table
+  margin: 0
+
+  td, th
+    background: transparent
+    font-size: $_factbox-font-size
+    padding:
+      bottom: 0.5em
+      top: 0.5em
+
+  td
+    text-align: right
+    padding-right: 1rem
+
+  th
+    padding-left: 1rem

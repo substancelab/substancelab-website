@@ -45,7 +45,4 @@ section#person
 
 
 - content_for :scripts do
-  javascript:
-    setupHomepage()
-
-  == javascript_include_tag 'substance_lab.js'
+  == vite_javascript_tag 'substance_lab.js'

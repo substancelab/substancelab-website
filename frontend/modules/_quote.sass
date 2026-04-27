@@ -1,0 +1,41 @@
+.quote
+  $_spacing: 2.4rem
+  font-family: palatino, georgia, times, serif
+  font-size: 1.6em
+  line-height: 1.67em
+  padding-left: $_spacing
+  p
+    margin-top: 1.8em
+    margin-bottom: 0
+    &:first-child
+      margin-top: 0
+  .author
+    font-size: 1rem
+    &:before
+      content: '\2014'
+  &:before
+    content: '\201C'
+    display: block
+    font-size: 2em
+    float: left
+    line-height: 1em
+    margin-left: -$_spacing
+
+  @mixin pull-quote
+    margin: 0
+    padding: 1rem
+    padding-left: $_spacing // Extend the box behind the quotation mark
+    width: 12rem
+
+    @media #{$breakpoint-tablet-and-smaller}
+      float: none
+      width: auto
+      margin: 0
+
+  &.pull-left
+    +pull-quote
+    +pull-left
+
+  &.pull-right
+    +pull-quote
+    +pull-right

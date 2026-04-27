@@ -1,18 +1,17 @@
 doctype html
 html lang="#{current_locale}"
   head
-    link rel="preload" href="#{asset_url("/fonts/geogrotesque.css")}" as="style"
-
     - set_meta_tags( \
       :locale => config.locale,
       :url => "#{config.protocol}#{config.domain}#{current_page.url}")
     = auto_display_meta_tags
 
+    == vite_client_tag
     -# One stylesheet to import them all
-    == stylesheet_link_tag "layout.css", :media => "all"
+    == vite_stylesheet_tag "layout.sass", :media => "all"
 
     -# And one to make printing pretty
-    == stylesheet_link_tag 'print.css', :media => "print"
+    == vite_stylesheet_tag "print.sass", :media => "print"
 
     - if content_for?(:stylesheets)
       == yield_content(:stylesheets)
@@ -102,6 +101,6 @@ html lang="#{current_locale}"
               span.locality Kolding
             div.country-name = I18n.t("index.address.country")
 
-    == javascript_include_tag "site.js"
+    == vite_javascript_tag "site.js"
 
     == yield_content :scripts

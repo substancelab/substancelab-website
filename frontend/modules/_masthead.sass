@@ -1,0 +1,64 @@
+// Generic masthead element. This wraps the title and subtitle
+.masthead
+  background: #777777
+  color: #ffffff
+  +full-width
+  margin:
+    left: 0
+    right: 0
+  position: relative
+  text-align: center
+
+  .masthead-container
+    @extend .container
+    padding:
+      bottom: 9em
+      top: 9em
+    @media #{$breakpoint-tablet}
+      padding:
+        bottom: 5em
+        top: 5em
+    @media #{$breakpoint-phone}
+      padding:
+        bottom: 3em
+        top: 1em
+  h1, .subtitle
+    color: inherit
+
+  h1
+    font-size: 4.096em
+    @media #{$breakpoint-tablet}
+      font-size: 3.375em
+    @media #{$breakpoint-phone}
+      font-size: 1.728em
+
+  .subtitle
+    font-weight: normal
+    letter-spacing: inherit
+    @media #{$breakpoint-tablet-and-smaller}
+      font-weight: bold
+
+  .work
+    margin-left: 0
+    margin-right: 0
+
+  .photo-credits
+    bottom: 0
+    font-size: 0.7em
+    right: 0
+    opacity: 0.5
+    position: absolute
+    a
+      background: #000000
+      background: rgba(0,0,0,0.5)
+      color: #ffffff
+      display: inline-block
+      font-weight: normal
+      padding: 0 0.5em
+      &:hover
+        border: 0
+        text-decoration: underline
+
+  &:hover
+    .photo-credits
+      opacity: 1

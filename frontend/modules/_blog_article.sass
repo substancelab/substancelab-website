@@ -1,0 +1,57 @@
+@import "mixins/separator"
+
+.blog-article
+  .content
+    +default-margin-top
+  .content > p:first-child
+    +intro
+  p:first-child + h2
+    margin-top: 0em
+
+  aside
+    +separator
+    margin: 1em 0
+    padding: 1em 0
+
+  blockquote
+    margin: 1em
+
+  figure
+    img
+      border-radius: 0.2rem
+      margin-left: 0
+      margin-bottom: 1rem
+      width: 100%
+
+      @media #{$breakpoint-desktop}
+        $_growth: 5%
+        margin-left: -$_growth
+        width: 100% + $_growth * 2
+
+  nav
+    overflow: hidden
+    padding: 1em 0
+    a
+      padding: 0
+    .next, .previous
+      min-height: 1em
+      width: 45
+    .next
+      float: right
+      text-align: right
+      a:after
+        content: " »"
+    .previous
+      float: left
+      a:before
+        content: "« "
+
+.blog-article-headline
+  margin-bottom: 2rem
+  text-align: center
+
+.blog-article-meta
+  color: #aaaaaa
+  color: rgba(255,255,255,0.5)
+  margin: 1rem 0
+  text-align: center

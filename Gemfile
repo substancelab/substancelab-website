@@ -9,7 +9,11 @@ gem "middleman-livereload"
 gem "middleman-meta-tags"
 gem "middleman-minify-html"
 
+gem "vite_ruby"
+gem "vite_padrino"
+
 gem "contracts", "~> 0.17.3"
+gem "ostruct"
 gem "rails-html-sanitizer", :require => false
 gem "rake"
 

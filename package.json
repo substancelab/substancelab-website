@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "chart.js": "^2.9.4",
-    "jquery": "^3.7.1",
+    "jquery": "^4.0.0",
     "waypoints": "^4.0.1"
   }
 }

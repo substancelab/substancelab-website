@@ -62,7 +62,7 @@ end
 
 namespace :middleman do
   desc "Builds the website files into the build directory"
-  task :build do
+  task :build => ["vite:build"] do
     system "middleman build --clean"
   end
 

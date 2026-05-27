@@ -31,7 +31,7 @@ html lang="#{current_locale}"
     link rel="shortcut icon" href="/images/favicon.png"
     link rel="icon" type="image/ico" href="/images/favicon.ico"
 
-    script defer=true data-domain="substancelab.dk" src="https://plausible.io/js/plausible.js"
+    == partial("layouts/analytics")
 
   body *body_attributes
     == partial("layouts/tag_manager/body")

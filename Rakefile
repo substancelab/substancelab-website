@@ -98,9 +98,3 @@ namespace :middleman do
 end
 require 'vite_padrino'
 ViteRuby.install_tasks
-
-require 'vite_padrino'
-ViteRuby.install_tasks
-
-require 'vite_padrino'
-ViteRuby.install_tasks

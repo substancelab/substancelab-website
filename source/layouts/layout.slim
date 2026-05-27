@@ -3,6 +3,8 @@ html lang="#{current_locale}"
   head
     link rel="preload" href="#{asset_url("/fonts/geogrotesque.css")}" as="style"
 
+    == partial("layouts/tag_manager/head")
+
     - set_meta_tags( \
       :locale => config.locale,
       :url => "#{config.protocol}#{config.domain}#{current_page.url}")
@@ -32,6 +34,8 @@ html lang="#{current_locale}"
     script defer=true data-domain="substancelab.dk" src="https://plausible.io/js/plausible.js"
 
   body *body_attributes
+    == partial("layouts/tag_manager/body")
+
     header.masthead
       .nav-bar
         .container

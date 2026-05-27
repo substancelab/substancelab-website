@@ -1,1 +1,6 @@
-bundle exec middleman
+#!/bin/sh
+set -e
+
+gem list procodile -i > /dev/null 2>&1 || gem install procodile
+
+procodile start --dev --procfile Procfile.dev

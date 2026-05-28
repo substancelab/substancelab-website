@@ -25,17 +25,26 @@ end
 
 require "action_view"
 require "slim"
+require "vite_ruby"
+require "vite_padrino/tag_helpers"
 Slim::Engine.set_options(
   :format => :html,
   :pretty => true
 )
 
-set :css_dir, "stylesheets"
-set :js_dir, "javascripts"
 set :images_dir, "images"
 
-# Add asset hash to URLs
-activate :asset_hash
+helpers VitePadrino::TagHelpers
+
+helpers do
+  def asset_path(*args)
+    if args.size == 1
+      super(File.extname(args[0]).delete(".").to_sym, args[0])
+    else
+      super(*args)
+    end
+  end
+end
 
 # Blogging
 activate :blog do |blog|
@@ -61,6 +70,10 @@ I18n.locale = LOCALE
 # Reload automatically when stuff changes
 activate :livereload, :host => "localhost"
 
+configure :development do
+  use ViteRuby::DevServerProxy, ssl_verify_none: true
+end
+
 # Generate meta tags from content
 activate :meta_tags
 
@@ -72,17 +85,6 @@ activate :meta_tags
 # Middleman.
 proxy "/_headers", "/netlify/headers"
 ignore "/netlify/headers"
-
-# Use Webpack for building our assets
-activate :external_pipeline,
-  :name => :webpack,
-  :command => if build?
-                "./node_modules/webpack/bin/webpack.js --progress --mode production"
-              else
-                "./node_modules/webpack/bin/webpack.js --watch -d --progress --color"
-  end,
-  :source => ".tmp/webpack-build",
-  :latency => 1
 
 data.projects.each do |key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
@@ -122,5 +124,4 @@ configure :build do
 
   # Minify all the things
   activate :minify_html
-  activate :minify_javascript
 end

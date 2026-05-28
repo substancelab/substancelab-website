@@ -1,0 +1,23 @@
+.block-link
+  display: block
+  &:link,
+  &:visited
+    color: $body-text-color
+  &:focus,
+  &:hover,
+  &:active
+    border: 0
+    h3
+      color: $link-hover-color
+
+    .block-link-highlight
+      @extend %link-hover
+
+  h3
+    @extend a
+    @extend h3
+
+.block-link-highlight
+  @extend a
+  &:hover
+    @extend %link-hover

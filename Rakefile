@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "pathname"
+
 desc "Build and publish the website"
 task :deploy => ["middleman:build", "deploy:publish"]
 
@@ -60,7 +62,7 @@ end
 
 namespace :middleman do
   desc "Builds the website files into the build directory"
-  task :build do
+  task :build => ["vite:build"] do
     system "middleman build --clean"
   end
 
@@ -94,3 +96,5 @@ namespace :middleman do
     system "lftp", "-c #{ftp_script}"
   end
 end
+require 'vite_padrino'
+ViteRuby.install_tasks

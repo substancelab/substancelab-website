@@ -1,0 +1,30 @@
+@mixin pulled-figure
+  width: 50%
+
+  img
+    display: block
+    width: 100%
+
+  @media #{$breakpoint-tablet-and-smaller}
+    &.pull-left
+      margin-left: 0
+
+    &.pull-right
+      margin-right: 0
+
+.extended
+  margin:
+    left: -6em
+    right: -6em
+
+  @media #{$breakpoint-tablet-and-smaller}
+    margin:
+      left: auto
+      right: auto
+
+  img
+    width: 100%
+
+.figure.pull-left,
+.figure.pull-right
+  +pulled-figure

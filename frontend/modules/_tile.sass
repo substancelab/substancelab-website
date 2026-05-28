@@ -1,0 +1,37 @@
+@import "mixins/clear"
+
+.tile
+  +clear
+  background: #ffffff
+  overflow: hidden
+  position: relative
+
+  .tile-text
+    bottom: 0
+    box-sizing: border-box
+    padding: 1em
+    width: 100%
+
+  .tile-title
+    @extend h3
+    color: #fff
+
+  .tile-image
+    background:
+      position: 50% 0
+      repeat: no-repeat
+      size: cover
+    display: block
+    height: 10em
+    text-indent: -999em
+    width: 100%
+
+  &.block-link
+    .tile-title
+      color: $link-color
+
+    &:hover
+      border: 0
+      .tile-title
+        color: $link-hover-color
+        text-decoration: underline

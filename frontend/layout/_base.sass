@@ -1,0 +1,77 @@
+@import "mixins/centered_block"
+@import "mixins/separator"
+
+p
+  margin-bottom: 1.8em
+  &:last-child
+    margin-bottom: 0
+
+strong
+  font-weight: bold
+
+
+/* Lists */
+
+ol,
+ul
+  margin-bottom: 1em
+
+ol
+  list-style-type: decimal
+
+ul
+  list-style-type: square
+
+li
+  margin-left: 1.5em
+
+
+.column nav a
+  background-color : $base-color
+  line-height: 1.55em
+  margin-bottom: 1px
+
+// Layout structure
+.container
+  +centered-block
+  +full-width
+  font-size: 1em
+
+article,
+footer,
+section
+  .container
+    +default-margin
+    max-width: 42em
+    width: 66%
+
+    @media #{$breakpoint-tablet-and-smaller}
+      width: 90%
+
+  &.filled
+    border: 1px solid red
+
+section
+  margin: 0
+
+
+.columns
+  h1,
+  .subtitle
+    margin-left: 0
+    margin-right: 0
+
+h1 + .columns
+  /* Columns immediately after a headline needs bigger top margin, since there is no tagline there */
+  margin-top: 29px
+
+article, footer, header, nav, section
+  display: block
+
+body
+  background: $body-color
+  color: $body-text-color
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue", Arial, sans-serif
+  font-size: 1.2em
+  font-weight: 300
+  line-height: 1.8em

@@ -1,0 +1,86 @@
+%nav-bar-link
+  background-color: inherit
+  border: 0
+  border-bottom: 0.2em solid transparent
+  color: #ffffff
+  display: block
+  font-weight: bold
+  padding: 1em
+  text-decoration: none
+  @media #{$breakpoint-phone}
+    padding-bottom: 0.25em
+    padding-top: 0.25em
+  &:visited
+    background-color: inherit
+    color: #ffffff
+  &:hover, &:focus
+    border-color: $link-color
+    color: $link-color
+
+.nav-bar
+  +full-width
+  +geogrotesque
+
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1) 60%, rgba(0,0,0,0))
+  display: block
+  left: 0
+  overflow: hidden
+  padding: 0
+  position: fixed
+  text-shadow: rgba(0,0,0,0.4) 0 0 1em
+  top: 0
+  width: 100%
+  z-index: 100
+
+  @media #{$breakpoint-phone}
+    position: static
+
+  .logo
+    bottom: 0
+    display: block
+    font-weight: bold
+    font-size: 1.45em
+    line-height: 1em
+    text-align: center
+    padding: 0.5em // Controls the spacing to the edges of the branding box
+    position: absolute
+    text-indent: 0.15em
+    width: 100%
+    .substance, .lab
+      text-align: left
+      display: none
+
+  .branding
+    $_size: 1.5em
+    +curve
+    color: $body-text-color
+    display: block
+    float: left
+    height: $_size
+    margin-top: 1em
+    position: absolute
+    width: $_size
+    z-index: 1000
+    &:hover
+      border: 0
+      color: #ffffff
+    @media #{$breakpoint-phone}
+      $_size: 1.5em
+      height: $_size
+      margin-top: 0.5em
+      width: $_size
+
+  nav
+    float: right
+    margin-right: -1em
+    ul
+      list-style-type: none
+    li
+      float: left
+      margin-left: 1px
+    a
+      @extend %nav-bar-link
+
+  @media #{$breakpoint-tablet-and-smaller}
+    .home
+      display: none

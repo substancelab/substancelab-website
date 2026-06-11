@@ -1,0 +1,13 @@
+---
+---
+- set_meta_tags( \
+  :description => I18n.translate("legalese.cookies.meta_description"),
+  :title => I18n.translate("legalese.cookies.title"))
+
+- content_for :masthead do
+  h1== I18n.translate("legalese.cookies.title")
+
+article
+  .container
+    .content
+      div cs-declaration=true

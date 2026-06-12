@@ -21,12 +21,15 @@ SETTINGS = {
 SITE_SETTINGS = SETTINGS.fetch(LOCALE)
 
 Bridgetown.configure do |config|
-  config.locale = LOCALE
+  config.locale = LOCALE.to_sym
+  config.default_locale = LOCALE.to_sym
+  config.available_locales = SETTINGS.keys.map(&:to_sym)
   config.url = "#{SITE_SETTINGS["protocol"]}#{SITE_SETTINGS["domain"]}"
 
   template_engine "erb"
 end
 
 I18n.load_path += Dir[File.join(File.expand_path("../locales", __dir__), "*.yml")]
-I18n.locale = LOCALE
-I18n.default_locale = LOCALE
+I18n.available_locales = SETTINGS.keys.map(&:to_sym)
+I18n.locale = LOCALE.to_sym
+I18n.default_locale = LOCALE.to_sym

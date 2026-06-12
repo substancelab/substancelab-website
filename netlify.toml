@@ -1,6 +1,6 @@
 [build]
-  command = "bundle exec rake vite:build && bundle exec middleman build --clean"
-  publish = "build"
+  command = "bundle exec bridgetown deploy"
+  publish = "output"
 
 [build.environment]
   RUBY_VERSION = "3.2.2"

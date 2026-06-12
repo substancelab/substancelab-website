@@ -1,0 +1,39 @@
+<% set_meta_tags(:thumbnail => masthead_image_for_article(current_article)) %>
+
+<% slot :masthead do %>
+  <h1 class="blog-article-headline"><%= current_article.data.title %></h1>
+  <% if (credits = article_photo_data(current_article, "credits")) %>
+    <div class="photo-credits">
+      <% if credits.is_a?(Hash) && (credits["url"] || credits[:url]) %>
+        <a href="<%= credits["url"] || credits[:url] %>"><%= I18n.translate("articles.show.photo_credits", :name => (credits["name"] || credits[:name])) %></a>
+      <% else %>
+        <%= I18n.translate("articles.show.photo_credits", :name => (credits.is_a?(Hash) ? (credits["name"] || credits[:name]) : credits)) %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+<article class="blog-article">
+  <div class="container">
+    <div class="content">
+      <%= current_article.content %>
+    </div>
+
+    <aside>
+      <nav>
+        <div class="previous">
+          <% if (prev_article = current_article.previous_resource) %>
+            <%= link_to_article(prev_article) %>
+          <% end %>
+        </div>
+        <div class="next">
+          <% if (next_article = current_article.next_resource) %>
+            <%= link_to_article(next_article) %>
+          <% end %>
+        </div>
+      </nav>
+    </aside>
+  </div>
+</article>
+
+<% masthead_image_for_article(current_article) %>

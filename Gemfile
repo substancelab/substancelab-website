@@ -2,20 +2,15 @@
 
 source "https://rubygems.org"
 
-gem "middleman", "~> 4.6"
-gem "middleman-blog"
-gem "middleman-favicon-maker"
-gem "middleman-livereload"
-gem "middleman-meta-tags"
-gem "middleman-minify-html"
+gem "bridgetown", "~> 2.0"
+gem "puma", "~> 6.0"
 
 gem "vite_ruby"
-gem "vite_padrino"
 
-gem "contracts", "~> 0.17.3"
+gem "kramdown"
+gem "kramdown-parser-gfm"
 gem "ostruct"
 gem "rails-html-sanitizer", :require => false
 gem "rake"
 
 gem "actionview"
-gem "slim"

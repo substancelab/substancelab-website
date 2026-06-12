@@ -1,0 +1,65 @@
+---
+layout: layout
+section: portfolio
+---
+<% set_meta_tags(
+  :description => I18n.translate("work.index.meta_description"),
+  :title => I18n.translate("work.index.featured_works")
+) %>
+
+<% slot :masthead do %>
+  <h1><%= I18n.t("work.index.portfolio") %></h1>
+  <div class="subtitle"><%= I18n.t("work.index.featured_works") %></div>
+<% end %>
+<% masthead_image("v1571928252/substancelab-website/office") %>
+
+<article class="portfolio">
+  <section>
+    <div class="container">
+      <h2><%= I18n.t("work.index.case_studies") %></h2>
+      <p><%= I18n.t("work.index.list_of_case_studies") %></p>
+    </div>
+  </section>
+
+  <section class="featured-work">
+    <div class="container">
+      <div class="projects">
+        <% portfolio_projects.each do |project| %>
+          <%= project_tile(project) %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients">
+    <div class="container">
+      <h2><%= I18n.t("work.index.client_list") %></h2>
+      <p><%= I18n.t("work.index.list_of_companies_worked_with") %></p>
+
+      <ul class="client-list">
+        <% clients.each do |client| %>
+          <li>
+            <% if client.website %>
+              <a href="<%= client.website %>" title="<%= client.name %>"><%= client.name %></a>
+            <% else %>
+              <%= client.name %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="technology">
+    <div class="container">
+      <h2><%= I18n.t("work.index.technologies") %></h2>
+      <p><%= I18n.t("work.index.list_of_technologies") %></p>
+
+      <ul class="technology-list">
+        <% technologies.each do |technology| %>
+          <li><%= technology %></li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+</article>

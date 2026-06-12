@@ -1,0 +1,67 @@
+<% slot :masthead do %>
+  <h1>Mobilt design er ikke valgfrit</h1>
+<% end %>
+
+<section>
+  <div class="container">
+    <p class="intro">
+      Når 50% af ens kunder benytter en eller anden form for mobilenhed, er det ikke
+      valgfrit om man vil optimere sin webløsning til dem &mdash; det er en nødvendighed.
+    </p>
+
+    <%= markdown(<<~MARKDOWN)
+      Den realisering havde [Børn i byen](http://bornibyen.dk) i slutningen af 2013, hvorefter en længere
+      proces blev sat i gang.
+    MARKDOWN
+    %>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Ét website til alle enheder
+
+      I tæt samarbejde med UX'er, brugervenlighedseksperter og designere
+      udviklede Substance Lab et nyt og funklende website, der tilpasser sig
+      den enhed, brugeren sidder med.
+    MARKDOWN
+    %>
+
+    <blockquote class="quote pull-left">
+      <p>Det ser super ud på min Samsung Galaxy III</p>
+      <div class="author">Børn i byen bruger</div>
+    </blockquote>
+
+    <%= markdown(<<~MARKDOWN)
+      Ét website betyder at der kun er ét site at vedligeholde og ét sted at
+      holde fokus -- det er simplere og billigere og nemmere for brugerne.
+
+      ## Smertefri lancering
+
+      Når man lancerer en så omfattende ændring af et site, må man også forvente, at
+      brugerne råber op og at der skal rettes masser af småfejl i dagene efter
+      lanceringen.
+
+      Stik mod forventningen løb lanceringen smertefrit og brugerne har været
+      overvældende glade og positive for resultatet.
+
+      ## Resultatet
+
+      Tallene taler for sig selv: Børn i byens mobilbrugere kunne næsten ikke få armene ned.
+    MARKDOWN
+    %>
+
+    <blockquote class="quote pull-right">
+      <p>Wauw, det ser godt ud!</p>
+      <div class="author">Børn i byen bruger</div>
+    </blockquote>
+
+    <%= markdown(<<~MARKDOWN)
+      Efter lanceringen steg mobilbrugernes antal læste sider med 18% og de spenderede i gennemsnit 26% mere tid på sitet.
+
+      På et reklamefinansieret website som [Børn i byen](http://bornibyen.dk) er flere læste sider og mere engagement lig med flere penge på bundlinjen.
+    MARKDOWN
+    %>
+  </div>
+</section>

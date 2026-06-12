@@ -1,0 +1,59 @@
+<% project = resource.data._project %>
+<% set_meta_tags(
+  :description => localized(project["description"] || {}),
+  :title => project_page_title(project)
+) %>
+
+<div class="case_study <%= project["slug"] %>">
+  <article>
+    <%= localized_partial "work/#{project["slug"]}", :locals => {:project => project} %>
+
+    <%= project_image(project) %>
+
+    <section class="overview">
+      <div class="container">
+        <div class="columns tripple">
+          <div class="column description">
+            <h3><%= project["name"] %></h3>
+            <p><%= localized(project["description"] || {}) %></p>
+            <% if project["website"] %>
+              <div class="website">
+                <a href="<%= project["website"] %>"><%= project["website"] %></a>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="column services">
+            <h3><%= I18n.t("work.index.substance_lab_did") %></h3>
+            <p><%= project_services(project) %></p>
+          </div>
+
+          <div class="column technologies">
+            <h3><%= I18n.t("work.index.technologies_used") %></h3>
+            <p><%= (project["technologies"] || []).sort.to_sentence %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <% other_studies = case_studies.reject { |cs| cs["slug"] == project["slug"] } %>
+  <% if other_studies.any? %>
+    <section class="featured-work">
+      <div class="container">
+        <div class="columns double case_studies">
+          <div class="column">
+            <h2><%= I18n.t("work.show.other_case_studies") %></h2>
+          </div>
+        </div>
+        <div class="projects">
+          <% other_studies.sample(3).each do |cs| %>
+            <%= project_tile(cs) %>
+          <% end %>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</div>
+
+<% masthead_image(project_masthead_image_path(project)) %>

@@ -1,6 +1,6 @@
 {
   "all": {
-    "publicDir": "source",
+    "publicDir": "src",
     "sourceCodeDir": "frontend",
     "watchAdditionalPaths": []
   },

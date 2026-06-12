@@ -1,0 +1,57 @@
+<% slot :masthead do %>
+  <div class="container">
+    <h1>Sparet tid og øget kvalitet</h1>
+  </div>
+<% end %>
+
+<section>
+  <div class="container">
+    <p class="intro">
+      4 medarbejdere, millioner af enheder på skibe fra Kina, og et utal af Excel ark. Det var hverdagen i HH Components, hvor der blev brugt meget tid på at ajourføre lagersystem og ordre-statusser.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Processerne var allerede på plads
+
+      Med et lille, fleksibelt team til at holde styr på de mange ordrer og leverandører er veldefinerede processer et nødvendigt omdrejningspunkt hos HH Components.
+
+      Ikke desto mindre blev stadig mere tid brugt på manuelt at håndtere indkommende data i Excel ark fra leverandører og ajourføre lagersystem og ordre-statusser. Det er en langsommelig proces med risiko for tastefejl eller at man ikke lige får klikket det korrekte sted og optog mange timer hver dag.
+    MARKDOWN
+    %>
+
+    <aside class="factbox pull-right">
+      <div class="factbox-body">
+        <h2>Hvem er HH Components?</h2>
+        <p>
+          <a href="https://hhcomponents.com/forside">HH Components</a> fungerer som ekstern indkøbsafdeling i Kina for flere producenter og grossister i Europa. De modtager leverancer hver uge fra producenterne i Kina og fordeler leverancerne til partnere over hele Europa.
+        </p>
+      </div>
+
+      <table class="factbox-table">
+        <tr>
+          <th>Website</th>
+          <td><a href="https://hhcomponents.com/forside" title="HH Components">hh-components.com</a></td>
+        </tr>
+      </table>
+    </aside>
+
+    <%= markdown(<<~MARKDOWN)
+      ## Løsningen
+
+      I tæt samarbejde med den ansvarlige medarbejder gennemgik vi de daglige arbejdsgange og analyserede de processer, der gav mest mening at automatisere. Hvor kunne vi nemmest spare mest tid?
+
+      Substance Lab udviklede derefter en skræddersyet kontorrobot, som kan modtage de Excel-dokumenter og automatisk ajourføre de relevante ordrer i lagersystemet.
+
+      ## Resultatet
+
+      Fra at være en proces, der optog timevis af arbejde hver eneste dag, kan medarbejderne nu fordre robotten med Excel-dokumenter og lade den efterligne den definerede arbejdsgang på en ensartet og effektiv måde - hver gang.
+
+      Det har gjort det muligt for HH Components at håndtere mere end dobbelt så mange ordrer uden at skulle skalere antallet af medarbejdere tilsvarende. Samtidigt har det reduceret afhængigheden af enkelte medarbejdere, da processen nu kan varetages online af flere personer.
+    MARKDOWN
+    %>
+  </div>
+</section>

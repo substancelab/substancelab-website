@@ -1,0 +1,625 @@
+37signals:
+  client: 37signals, USA
+  client_website: https://37signals.com
+  services:
+  - internationalization
+  - web_application_development
+  technologies:
+  - Ruby
+  - Ruby on Rails
+
+agency-fusion:
+  client: Agency Fusion, USA
+  client_website: https://agencyfusion.com
+  services:
+  - ux
+
+biq:
+  client: BiQ, Denmark
+  client_website: https://biq.dk
+  description:
+    da: BiQ er en database med fakta om mere end 500'000 firmaer og deres direktører, ejere, og bestyrelsesmedlemmer over de sidste 25 år.
+    en: BiQ is business intelligence database with 25 years of information about 400.000 danish companies and their board members, directors, owners and more.
+  featured: true
+  name: BiQ
+  position: 6
+  services:
+  - api_development
+  - maintenance
+  - web_application_development
+  - webdesign
+  slug: biq
+  technologies:
+  - CSS
+  - Javascript
+  - Python
+  - Ruby
+  - Ruby on Rails
+  - SQL Server
+  - Wordpress
+  website: https://biq.dk
+
+bomae:
+  client: "Bomae, Denmark"
+  client_website: https://www.bomae.dk/
+  description:
+    da: "Dokument-håndtering og sagsstyringsværktøj til Danmarks måske mest ambitiøse købermæglere."
+    en: "Document-sharing and case management tool for the most ambitious home buyer's agents in Denmark."
+  featured: true
+  name: "Bomae"
+  position: 4
+  services:
+  - dropbox_integration
+  - responsive_design
+  - roadmapping
+  - web_application_development
+  slug: bomae
+  technologies:
+  - CSS
+  - Dropbox
+  - Javascript
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  website: https://www.bomae.dk/
+
+born-i-byen:
+  case_studies:
+  - da
+  client: "Børn i byen, Denmark"
+  client_website: https://bornibyen.dk
+  description:
+    da: "Forældrenes guide til København og Aarhus. Her finder du anmeldelser, børnevenlige arrangementer og meget andet."
+    en: "Community driven guide to Copenhagen and Aarhus focusing on parents and their children."
+  featured: true
+  name: "Børn i byen"
+  position: 1
+  services:
+  - api_development
+  - google_maps
+  - maintenance
+  - payment_gateway_integration
+  - responsive_design
+  - web_application_development
+  slug: born-i-byen
+  technologies:
+  - Google Maps
+  - CSS
+  - Javascript
+  - MySQL
+  - Ruby
+  - Ruby on Rails
+  website: https://bornibyen.dk
+
+change-healthcare:
+  client: change:healthcare, USA
+  client_website: https://changehealthcare.com
+  description:
+    da: "change:healthcare hjælper forbrugere i USA med at finde rundt i den jungle, der er deres sundhedssystem, med værktøjer til at holde styr på regninger og forsikringer sammenligning af priser på medicin og læger."
+    en: "Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money."
+  featured: true
+  name: change:healthcare
+  position: 7
+  services:
+  - maintenance
+  - web_application_development
+  slug: change-healthcare
+  technologies:
+  - Ruby
+  - Ruby on Rails
+  website: https://changehealthcare.com
+
+collaboraid:
+  client: Collaboraid, Denmark
+  client_website: https://collaboraid.net
+  technologies:
+  - Javascript
+  - Ruby on Rails
+
+comedykalenderen:
+  client: STØJ, Denmark
+  client_website: https://www.stoej.nu/
+  name: "ComedyKalenderen"
+  services:
+  - roadmap
+  - project_management
+  - seed
+  - web_application_development
+  technologies:
+  - CSS
+  - Google Maps
+  - HTML
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+  website: https://www.comedykalenderen.dk
+
+daily-rush:
+  client: Daily Rush, Denmark
+  client_website: https://dailyrush.dk
+  services:
+  - web_application_development
+  - webdesign
+  technologies:
+  - CSS
+  - HTML
+  - MySQL
+  - PHP
+
+ejendomsstatistik:
+  client: Lokalebasen.dk, Denmark
+  client_website: https://lokalebasen.dk
+  featured: false
+  name: Ejendomsstatistik.dk
+  services:
+  - maintenance
+  - project_management
+  - web_application_development
+  slug: ejendomsstatistik
+  technologies:
+  - Ruby on Rails
+  - CSS
+  - Javascript
+  - PostgreSQL
+  website: https://ejendomsstatistik.dk
+
+eventzonen:
+  case_studies:
+  - da
+  - en
+  client: Underholdningsbureauet, Denmark
+  client_website: https://eventzonen.dk
+  description:
+    da: International markedsplads for kunstnere og foredragsholdere. Substance Lab har bygget løsningen fra bunden og været med til at forbedre og udvide den.
+    en: International marketplace that puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
+  featured: true
+  name: eventzonen.dk
+  position: 3
+  services:
+  - maintenance
+  - web_application_development
+  - project_management
+  - youtube_integration
+  - payment_gateway_integration
+  - recurring_billing
+  slug: eventzonen-dk
+  technologies:
+  - Ruby on Rails
+  - CSS
+  - Javascript
+  - PostgreSQL
+  website: https://eventzonen.dk
+
+fab-it:
+  client: Fab:IT, Denmark
+  client_website: https://fab-it.dk
+  services:
+  - economic_integration
+  - frontend_development
+  technologies:
+  - CSS
+  - HTML
+  - Radiant CMS
+  - Ruby
+  - Ruby on Rails
+
+falconeer:
+  client: Investeringsforeningen Falcon Invest, Denmark
+  client_website: https://falconinvest.dk
+  description:
+    da: Investerings-portefølje-værktøj der gør det muligt for Falcon Invest at overvåge og optimere deres investings-strategier.
+    en: Portfolio management tool that allows Falcon Invest to monitor and optimize their investment strategies across all their funds.
+  name: Falconeer
+  services:
+    - web_application_development
+  technologies:
+    - Ruby on Rails
+
+flaym:
+  case_studies:
+  - da
+  client: LEO Innovation Lab, Denmark
+  client_website: https://leoinnovationlab.com/
+  description:
+    da: Socialt netværk for personer med psoriasis. Deadlinen var stram, så kunden havde brug for en partner, der kunne arbejde iterativt og sammen med deres designere.
+    en: Flaym connects psoriasis sufferers from all over the world. They needed a development partner who could work iteratively and closely with their designers.
+  featured: true
+  name: Flaym
+  position: 4
+  services:
+  - maintenance
+  - web_application_development
+  slug: flaym
+  technologies:
+  - Javascript
+  - Knockout
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+
+gamekillers:
+  case_studies:
+  - en
+  client: SBS Radio, Denmark
+  description:
+    da: SBS Radio havde brug for et kampagne website for at promovere TV showet, Gamekillers. Substance Lab leverede på mindre end en måned.
+    en: SBS Radio wanted a campaign website to promote their upcoming TV show, Gamekillers - a production by AXE known from MTV.
+  featured: true
+  name: Gamekillers
+  services:
+  - web_application_development
+  - webdesign
+  - youtube_integration
+  slug: gamekillers
+  technologies:
+  - CSS
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+
+gas-detection:
+  client: Danfoss Cooling, Denmark
+  client_website: https://refrigerationandairconditioning.danfoss.dk/
+  description:
+    da: I Danfoss første forsøg med IoT havde de brug for en fleksibel partner, der kunne levere en brugervenlig applikation.
+    en: Danfoss wanted to venture into the IoT space and needed a flexible partner to build out a userfriendly frontend for their devices.
+  name: Gas Detection
+  services:
+  - web_application_development
+  - webdesign
+  slug: danfoss-gas-detection
+  technologies:
+  - CSS
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+  - Stimulus
+
+gomore:
+  case_studies:
+  - da
+  client: GoMore, Denmark
+  client_website: https://gomore.dk
+  description:
+    da: Samkørsel, privat biludlejning, og deleøkonomi. GoMore forbinder passagerer med bilister og lejere med private udlejere.
+    en: Ridesharing and peer to peer car-rental done right. Connecting passengers with drivers, renters with car owners.
+  featured: true
+  name: GoMore
+  position: 2
+  services:
+  - maintenance
+  - project_management
+  - tech_lead
+  - web_application_development
+  slug: gomore
+  technologies:
+  - CSS
+  - Elasticsearch
+  - Javascript
+  - Ruby
+  - Ruby on Rails
+
+grundfos-biobooster:
+  client: Grundfos Biobooster, Denmark
+  client_website: https://www.grundfos.com/
+  services:
+  - training
+  - web_application_development
+  technologies:
+  - Javascript
+  - Ruby on Rails
+
+hhcomponents:
+  case_studies:
+  - da
+  client: HH Components, Denmark
+  client_website: https://hhcomponents.com/forside
+  description:
+    da: HH Components sparer penge og øger kvaliteten med en software robot udviklet af Substance Lab til at automatisere e-conomic.
+    en: HH Components uses a CPA Software Robot built by Substance Lab to ensure quality and save money to automate their inventory and order flows.
+  name: Shipmaster Robot
+  position: 5
+  services:
+  - cpa
+  - web_application_development
+  slug: hh-components
+  technologies:
+  - Capybara
+  - E-conomic
+  - Ruby
+  - Redis
+  - Resque
+
+iiamo:
+  client: Loop Associates, Denmark
+  client_website: https://www.loopassociates.com/
+  services:
+  - frontend_development
+  technologies:
+  - Ruby on Rails
+
+justitsministeriet:
+  client: Danish Ministry of Justice, Denmark
+  client_website: https://www.justitsministeriet.dk
+  services:
+  - web_application_development
+  technologies:
+  - Ruby on Rails
+
+kailas:
+  client: Kailas, Denmark
+  services:
+  - webdesign
+  - frontend_development
+  technologies:
+  - CSS
+  - HTML
+
+kontrakten:
+  client: Learning Lab, Denmark
+  services:
+  - web_application_development
+  technologies:
+  - CSS
+  - HTML
+  - Javascript
+  - Ruby on Rails
+
+kreditregisteret:
+  client: Kreditregisteret, Denmark
+  client_website: https://www.kreditregisteret.dk
+  description:
+    da: "Kreditregisteret hjælper banker, finansieringsvirksomheder og kreditgivere med at føre en ansvarlig lånepolitik"
+    en: "Kreditregisteret (The Credit Registry) provides financial institutions and debt providers with credit information"
+  featured: false
+  name: Kreditregisteret
+  position: 4
+  services:
+  - api_development
+  - maintenance
+  - project_management
+  - server_management
+  - web_application_development
+  - webdesign
+  slug: biq
+  technologies:
+  - Ansible
+  - CSS
+  - Javascript
+  - JSON API
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  website: https://biq.dk
+
+lokalebasen:
+  case_studies:
+  - da
+  - en
+  client: Lokalebasen.dk, Denmark
+  client_website: https://lokalebasen.dk
+  description:
+    da: "Danmarks førende portal for udlejning af erhvervslokaler. Sitet blev til under anvendelse af Rails, testdreven udvikling og agile metoder."
+    en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
+  featured: true
+  name: Lokalebasen
+  position: 6
+  services:
+  - api_development
+  - economic_integration
+  - google_maps
+  - internationalization
+  - maintenance
+  - web_application_development
+  slug: lokalebasen
+  technologies:
+  - Coffeescript
+  - Google Maps
+  - Javascript
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  website: https://lokalebasen.dk
+
+minder-for-altid:
+  client: Minder for Altid ApS, Denmark
+  client_website: https://minderforaltid.dk
+  description:
+    da: "Med en usikker forretnings-model og et behov for høj brugervenlighed har Minder for Altid brug for en erfaren partner. Derfor kontaktede de Substance Lab."
+    en: "When the businessmodel isn't proven and user experience quality is a priority, you need an experienced partner. That's why Substance Lab was contacted."
+  featured: false
+  name: Minder for Altid
+  position: 4
+  services:
+  - ios_application_development
+  - roadmapping
+  - web_application_development
+  slug: minder-for-altid
+  technologies:
+  - Javascript
+  - PostgreSQL
+  - Ruby
+  - Ruby on Rails
+  - Turbolinks
+  - Wordpress
+  website: https://minderforaltid.dk
+
+mitbarnsnavn:
+  client: Babysteps, Denmark
+  services:
+  - frontend_development
+  technologies:
+  - CSS
+  - HTML
+  - Javascript
+
+nethunters:
+  client: Nethunters, Denmark
+  services:
+  - frontend_development
+  technologies:
+  - Ruby on Rails
+
+patentlog:
+  client: PatentAct, Denmark
+  client_website: https://patentact.company
+  name: PatentLog
+  services:
+    - roadmapping
+    - web_application_development
+  technologies:
+    - CSS
+    - HTML
+    - Javascript
+    - Ruby on Rails
+
+personal_business_plan:
+  client: Bruyant-Langer, Denmark
+  client_website: https://www.thepersonalbusinessplan.com
+  name: The Personal Business Plan
+  services:
+    - maintenance
+    - web_application_development
+  technologies:
+    - CSS
+    - React
+    - Ruby on Rails
+    - Wordpress
+
+pluggd:
+  client: Pluggd, USA
+  services:
+  - webdesign
+  technologies:
+  - CSS
+  - HTML
+  - Javascript
+  - Ruby on Rails
+
+quickpay-invoicing:
+  client: Quickpay, Denmark
+  client_website: https://quickpay.net
+  name: Quickpay
+  services:
+    - web_application_development
+  technologies:
+    - Ruby
+
+region_syddanmark:
+  client: Region Syddanmark, Denmark
+  client_website: https://regionsyddanmark.dk/
+  name: Fundingguiden
+  services:
+  - frontend_development
+  - project_management
+  - responsive_design
+  technologies:
+  - CSS
+  - Javascript
+  - Ruby on Rails
+
+rp_lookups:
+  case_studies:
+  - en
+  client: Mapicture, Denmark
+  client_website: https://mapicture.dk
+  description:
+    da: Det er ikke simpelt at indsamle og visualisere rejsetider mellem tusindvis af afgangssteder og destinationer. Men det er netop det Mapictures interne analyseværktøj gør.
+    en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
+  featured: true
+  name: Internal analysis tool
+  position: 5
+  services:
+  - automation
+  - project_management
+  - rejseplanen_integration
+  - web_application_development
+  - webdesign
+  slug: mapicture
+  technologies:
+  - Ruby on Rails
+  - Delayed Job
+  - Javascript
+  - Leaflet.js
+  - Knockout
+  - PostGIS
+  - PostgreSQL
+  - Twitter Bootstrap
+  website:
+
+smartphoneguide:
+  client: KanKom Online, Denmark
+  client_website: https://kankom.dk
+  name: SmartphoneGuide
+  services:
+  - web_application_development
+  technologies:
+  - PHP
+
+test_cloud:
+  client: Xamarin Europe, Denmark
+  client_website: https://xamarin.com
+  name: Xamarin Test Cloud
+  services:
+  - api_development
+  - web_application_development
+  technologies:
+  - Angular
+  - Ruby on Rails
+
+tumlino:
+  client: Tumlino, Denmark
+  client_website: https://www.tumlino.dk
+  name: Tumlino
+  services:
+  - project_management
+  - web_application_development
+  technologies:
+  - Javascript
+  - MySQL
+  - Ruby on Rails
+  - Sharetribe
+
+urbanwinebox:
+  client: UrbanWineBox, Denmark
+  client_website: https://urbanwinebox.com
+  name: UrbanWineBox
+  services:
+  - project_management
+  - roadmapping
+  - web_application_development
+  technologies:
+  - PostgreSQL
+  - Ruby on Rails
+
+verisure:
+  client: Verisure, Denmark
+  client_website: https://verisure.dk
+  name: Mere Tryg
+  services:
+    - maintenance
+    - project_management
+    - web_application_development
+  technologies:
+    - CSS
+    - HTML
+    - Knockout
+    - PostgreSQL
+    - Ruby on Rails
+
+wildfire:
+  client: Wildfire, USA
+  description:
+    da: "Wildfire gør det nemt for firmaer at lancere og håndtere marketing kampagner på tværs af sociale medier som Facebook og Twitter. Substance Lab arbejde som en del af Wildfires distribuerede team."
+    en: With Wildfire companies can easily launch marketing campaigns on social networks like Facebook and Twitter. Substance Lab worked with the virtual development team to build out the featureset of Wildfire.
+  featured: false
+  name: Wildfire
+  services:
+  - facebook_integration
+  - web_application_development
+  slug: wildfire
+  technologies:
+  - Javascript
+  - Liquid
+  - MySQL
+  - Ruby on Rails

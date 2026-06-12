@@ -1,0 +1,34 @@
+url: "https://substancelab.com"
+locale: "en"
+timezone: "Europe/Copenhagen"
+
+permalink: pretty
+excerpt_separator: "READMORE"
+
+collections:
+  posts:
+    output: true
+    permalink: /articles/:title/
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: articles
+
+plugins_dir: plugins
+source: src
+partials_dir: ""
+
+keep_files:
+  - .git
+  - fonts
+  - images
+
+exclude:
+  - source
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - yarn.lock
+  - node_modules

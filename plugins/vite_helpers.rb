@@ -4,25 +4,33 @@ require "vite_ruby"
 
 module ViteHelpers
   def vite_client_tag
-    src = ViteRuby.instance.manifest.vite_client_src
-    return "" unless src
-
-    %(<script type="module" src="#{src}"></script>).html_safe
+    ""
   end
 
   def vite_javascript_tag(name, crossorigin: "anonymous", **_options)
-    path = ViteRuby.instance.manifest.path_for(name, type: :javascript)
+    path = vite_manifest_path("entrypoints/#{name}")
     %(<script src="#{path}" type="module" crossorigin="#{crossorigin}"></script>).html_safe
   end
 
   def vite_stylesheet_tag(name, **options)
-    path = ViteRuby.instance.manifest.path_for(name, type: :stylesheet)
+    path = vite_manifest_path("entrypoints/#{name}")
     media = options[:media] ? %( media="#{options[:media]}") : ""
     %(<link rel="stylesheet" href="#{path}"#{media} />).html_safe
   end
 
-  def vite_asset_path(name, **options)
-    ViteRuby.instance.manifest.path_for(name, **options)
+  def vite_asset_path(name, **_options)
+    vite_manifest_path(name)
+  end
+
+  private
+
+  def vite_manifest_path(name)
+    config = ViteRuby.instance.config
+    manifest = config.manifest_paths
+      .map { |p| JSON.parse(p.read) }
+      .inject({}, &:merge)
+    entry = manifest[name] || raise("Vite manifest entry not found: #{name}")
+    "/#{config.public_output_dir}/#{entry["file"]}"
   end
 
   Bridgetown::RubyTemplateView::Helpers.include(self)

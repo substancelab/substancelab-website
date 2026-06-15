@@ -1,0 +1,25 @@
+---
+layout: layout
+---
+<% set_meta_tags(
+  :description => I18n.translate("articles.index.meta_description"),
+  :title => I18n.translate("articles.index.page_title")
+) %>
+
+<% slot :masthead do %>
+  <h1>Artikler</h1>
+  <div class="subtitle">Substance Lab bloggen - Skriverier med substans</div>
+<% end %>
+<% masthead_image("v1571995295/substancelab-website/books") %>
+
+<section class="article-list">
+  <div class="container">
+    <% blog_articles.each do |article| %>
+      <article class="article-list-article">
+        <h2 class="article-list-entry-title"><a href="<%= article.relative_url %>"><%= article.data.title %></a></h2>
+        <%= article_summary(article) %>
+        <p><a href="<%= article.relative_url %>">Læs artiklen "<%= article.data.title %>"</a></p>
+      </article>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="<%= current_locale %>">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preload" href="<%= asset_url("/fonts/geogrotesque.css") %>" as="style">
+
+    <%= partial "layouts/tag_manager/head" %>
+
+    <% set_meta_tags(
+      :locale => ::SITE_SETTINGS["locale"],
+      :url => "#{::SITE_SETTINGS["protocol"]}#{::SITE_SETTINGS["domain"]}#{resource.relative_url}"
+    ) %>
+    <%= auto_display_meta_tags %>
+
+    <%= vite_client_tag %>
+    <%= vite_stylesheet_tag "layout.sass", :media => "all" %>
+    <%= vite_stylesheet_tag "print.sass", :media => "print" %>
+
+    <% if slotted?(:stylesheets) %>
+      <%= slotted :stylesheets %>
+    <% end %>
+    <% if slotted?(:page_specific_style) %>
+      <%= slotted :page_specific_style %>
+    <% end %>
+
+    <meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc=">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="icon" type="image/ico" href="/images/favicon.ico">
+
+    <%= partial "layouts/analytics" %>
+  </head>
+
+  <body<%= body_attributes %>>
+    <%= partial "layouts/tag_manager/body" %>
+
+    <header class="masthead">
+      <div class="nav-bar">
+        <div class="container">
+          <a href="/" class="branding" title="Substance Lab | Carefully crafting websites and web applications">
+            <div class="logo">
+              <div class="substance">Substance</div>
+              <div class="lab">Lab</div>
+            </div>
+          </a>
+          <nav>
+            <ul>
+              <li class="home"><a href="/"><%= I18n.t("navigation.home") %></a></li>
+              <li class="work"><a href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a></li>
+              <%= nav_bar_link_to_services %>
+              <%= nav_bar_link_to_blog %>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <% if slotted?(:masthead) %>
+        <div class="masthead-container">
+          <%= slotted :masthead %>
+        </div>
+      <% end %>
+    </header>
+
+    <%= yield %>
+
+    <section class="call-to-action vcard">
+      <div class="container">
+        <%= localized_partial_if_present "layouts/mailchimp/signup", :locals => {:audience_id => "63e2b402de"} %>
+
+        <div class="contact-details">
+          <h2><%= I18n.translate("contact_details.headline") %></h2>
+
+          <p><%= I18n.translate("contact_details.teaser") %></p>
+
+          <div class="primary-contact-methods">
+            <div class="book contact-method">
+              <a href="https://savvycal.com/substancelab/meet"><%= I18n.t("contact_details.book_a_meeting") %></a>
+            </div>
+            <div class="tel contact-method">
+              <abbr title="+4571990999">
+                <a href="tel:<%= I18n.t("contact_details.phone_number") %>"><%= I18n.t("contact_details.phone_number") %></a>
+              </abbr>
+            </div>
+            <div class="email contact-method">
+              <a href="mailto:hi@substancelab.com">hi@substancelab.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="contents">
+          <ul class="link-list">
+            <li><a href="/" title="<%= I18n.t("footer.link_to_substance_lab") %>">Homepage</a></li>
+            <li><a href="/work/" title="<%= I18n.t("footer.link_to_portfolio") %>">Web application development</a></li>
+          </ul>
+
+          <% if has_services? %>
+            <ul class="link-list">
+              <li><a href="/services/seed/" title="<%= I18n.translate("footer.services.seed.description") rescue "" %>">Seed</a></li>
+              <li><a href="/services/development/" title="<%= I18n.translate("footer.services.development.description") rescue "" %>">Grow</a></li>
+              <li><a href="/services/maintenance/" title="<%= I18n.translate("footer.services.maintenance.description") rescue "" %>">Care</a></li>
+            </ul>
+          <% end %>
+
+          <ul class="link-list">
+            <li><a href="https://mentalized.net" title="The personal website of Jakob Skjerning, an independent web developer in Kolding, Denmark">mentalized</a></li>
+            <li><a href="https://substancelab.com" title="Carefully crafted web applications and websites with Ruby, Rails, HTML5, CSS3, Javascript" hreflang="en">substancelab.com</a></li>
+            <li><a href="https://substancelab.dk" title="Udvikling af kundespecifikke websites i Ruby, Rails, HTML5, CSS3, Javascript" hreflang="da">substancelab.dk</a></li>
+          </ul>
+        </div>
+
+        <div class="legalese">
+          &copy;
+          <%= [2008, Time.now.year].uniq.join("-") %>
+          <a href="/" title="<%= I18n.t("footer.link_to_substance_lab") %>" class="fn org url">Substance Lab ApS</a>
+          <div class="address adr">
+            <div class="street-address">Jernbanegade 27</div>
+            <div>
+              <span class="postal-code">6000</span>
+              <span class="locality">Kolding</span>
+            </div>
+            <div class="country-name"><%= I18n.t("index.address.country") %></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <%= vite_javascript_tag "site.js" %>
+
+    <%= slotted :scripts %>
+  </body>
+</html>

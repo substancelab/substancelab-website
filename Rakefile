@@ -3,7 +3,7 @@
 require "pathname"
 
 desc "Build and publish the website"
-task :deploy => ["middleman:build", "deploy:publish"]
+task :deploy => ["bridgetown:build", "deploy:publish"]
 
 namespace :deploy do
   desc "Publish contents of the build directory"
@@ -22,7 +22,7 @@ namespace :images do
 
   namespace :masthead do
     MASTHEAD_ORIGINALS = Pathname.new("originals")
-    MASTHEAD_DESTINATION = Pathname.new("source/images")
+    MASTHEAD_DESTINATION = Pathname.new("src/images")
 
     masthead_article_images = Rake::FileList.new(
       MASTHEAD_ORIGINALS.join("articles/*.jpg").to_s
@@ -51,50 +51,25 @@ namespace :images do
     task :all => [:jpg, :png]
 
     task :jpg do
-      system 'find source/images -name *.jpg -exec jpegoptim --strip-all {} \;'
+      system 'find src/images -name *.jpg -exec jpegoptim --strip-all {} \;'
     end
 
     task :png do
-      system 'find source/images -name *.png -exec optipng {} \;'
+      system 'find src/images -name *.png -exec optipng {} \;'
     end
   end
 end
 
-namespace :middleman do
-  desc "Builds the website files into the build directory"
-  task :build => ["vite:build"] do
-    system "middleman build --clean"
+namespace :bridgetown do
+  desc "Builds the website files into the output directory"
+  task :build do
+    system "bridgetown build"
   end
 
   task :clean do
-    system "rm -rf build"
-  end
-
-  desc "Deploys the site to whatever host is configured in middleman"
-  task :deploy => [:clean, :build] do
-    host = "linux41.unoeuro.com"
-    user = "substancelab.dk"
-    password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
-    ftp_url = "ftp://#{user}:#{password}@#{host}"
-
-    local_dir = Pathname.new(File.join(Dir.pwd, "build"))
-    raise "Build directory not found at #{local_dir}" unless local_dir.exist?
-
-    LOCALE = (ENV["LOCALE"] || "en").to_s
-    remote_dir = {
-      "da" => "/public_html/",
-      "en" => "/substancelab.com/"
-    }[LOCALE]
-
-    ftp_script = <<-EOS
-      set ftp:list-options -a;
-      open #{ftp_url};
-      lcd #{local_dir};
-      cd #{remote_dir};
-      mirror --reverse --verbose"
-    EOS
-    system "lftp", "-c #{ftp_script}"
+    system "rm -rf output"
   end
 end
-require 'vite_padrino'
+
+require "vite_ruby"
 ViteRuby.install_tasks

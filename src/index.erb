@@ -4,64 +4,48 @@ priority: 1
 ---
 <% set_meta_tags(:description => I18n.translate("index.meta_description"), :site => I18n.translate("index.page_title")) %>
 
-<% slot :masthead do %>
-  <div class="hero">
-    <div class="tagline">Grow online</div>
-    <h1 class="peptalk"><%= I18n.t("index.peptalk").html_safe %></h1>
-  </div>
+<div class="ui-hero">
+  <h1>Substance Lab</h1>
+  <h2>We build <span class="highlight">modern software</span> for founders with customers</h2>
+</div>
+
+<section class="ui-content" id="company">
+  <%= localized_partial("index/about_substance_lab") %>
+</section>
+
+<div class="ui-gallery">
+  <% featured_projects.first(3).each do |project| %>
+    <figure>
+      <img src="/images/work/<%= project["slug"] %>/tile.jpg" alt="<%= project["name"] %>">
+      <figcaption><%= project["name"] %> &mdash; <%= localized(project["description"]) %></figcaption>
+    </figure>
+  <% end %>
+</div>
+
+<% featured_case = case_studies.first %>
+<% if featured_case %>
+  <article class="ui-article">
+    <div class="ui-badge">Case</div>
+    <h1><%= featured_case["name"] %></h1>
+
+    <p><%= localized(featured_case["description"]) %></p>
+
+    <p><a href="<%= project_url(featured_case) %>">Read the case study</a></p>
+  </article>
 <% end %>
 
-<% masthead_image("v1571927405/substancelab-website/table") %>
+<article class="ui-article">
+  <div class="ui-badge">Service</div>
+  <h1>Development</h1>
 
-<section id="company">
-  <div class="container">
-    <%= localized_partial("index/about_substance_lab") %>
-  </div>
+  <div class="ui-intro">We are probably Denmark's most experienced Ruby on Rails developers. For 20 years we have built the technology behind a long line of successful businesses, all of which have benefited from our professional and thorough approach to software development.</div>
+
+  <p>Development processes can be hard to follow, and we know how important it is to keep an ongoing dialogue in plain language. A good collaboration is the core of a good project. That is why we hold weekly status meetings, where we review together what has been done and what is coming up, so you always have your finger on the pulse.</p>
+
+  <p><a href="/services/development/">More about development</a></p>
+</article>
+
+<section class="ui-content" id="person">
+  <h2><%= I18n.t("index.the_team") %></h2>
+  <%= partial "index/people_behind" %>
 </section>
-
-<section class="featured-work">
-  <div class="container">
-    <div class="projects">
-      <% featured_projects.first(3).each_with_index do |project, index| %>
-        <%= project_tile(project) %>
-      <% end %>
-    </div>
-  </div>
-</section>
-
-<section class="quotes">
-  <div class="container">
-    <div class="sliding_quotes">
-      <%= localized_partial("index/quotes") %>
-    </div>
-  </div>
-</section>
-
-<% if blog_articles.any? %>
-  <section class="article-list">
-    <div class="container">
-      <h2><%= I18n.t("index.blog_headline") %></h2>
-      <div class="columns">
-        <% blog_articles.first(2).each do |article| %>
-          <div class="column">
-            <a href="<%= article.relative_url %>" class="tile block-link">
-              <div class="tile-image" style="background-image: url(<%= article_image(article, "t_tile_image") %>)"></div>
-              <div class="tile-text">
-                <h2 class="tile-title"><%= article.data.title %></h2>
-                <p><%= strip_tags(article_summary(article)) %></p>
-              </div>
-            </a>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
-<% end %>
-
-<section id="person">
-  <div class="container">
-    <h2><%= I18n.t("index.the_team") %></h2>
-    <%= partial "index/people_behind" %>
-  </div>
-</section>
-

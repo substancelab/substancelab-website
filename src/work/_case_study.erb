@@ -6,7 +6,7 @@
 
 <div class="case_study <%= project["slug"] %>">
   <article>
-    <%= localized_partial "work/#{project["slug"]}", :locals => {:project => project} %>
+    <%= localized_partial "work/#{project["slug"]}", {:project => project} %>
 
     <%= project_image(project) %>
 

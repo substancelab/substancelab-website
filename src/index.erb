@@ -66,5 +66,6 @@ priority: 1
 </section>
 
 <% slot :scripts do %>
-  <%= vite_javascript_tag 'substance_lab.js' %>
+  <%# TODO %>
+  <script src="<%= asset_path(:js) %>"></script>
 <% end %>

@@ -14,6 +14,9 @@
 .tmp
 /tmp/*
 
+# Ignore Bridgetown's cache
+/.bridgetown-cache
+
 # Ignore Sass' cache
 /.sass-cache
 originals
@@ -21,10 +24,6 @@ node_modules
 
 # Ignore .DS_Store
 /.DS_Store
-
-# Vite Ruby
-/source/vite-dev/*
-/source/vite/*
 
 # Procodile
 /pids/*

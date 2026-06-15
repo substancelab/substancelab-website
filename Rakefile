@@ -70,6 +70,3 @@ namespace :bridgetown do
     system "rm -rf output"
   end
 end
-
-require "vite_ruby"
-ViteRuby.install_tasks

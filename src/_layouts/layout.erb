@@ -12,9 +12,7 @@
     ) %>
     <%= auto_display_meta_tags %>
 
-    <%= vite_client_tag %>
-    <%= vite_stylesheet_tag "layout.sass", :media => "all" %>
-    <%= vite_stylesheet_tag "print.sass", :media => "print" %>
+    <link rel="stylesheet" href="<%= asset_path(:css) %>">
 
     <% if slotted?(:stylesheets) %>
       <%= slotted :stylesheets %>
@@ -36,7 +34,7 @@
     <%= partial "layouts/analytics" %>
   </head>
 
-  <body<%= body_attributes %>>
+  <body <%= body_attributes %>>
     <%= partial "layouts/tag_manager/body" %>
 
     <header class="masthead">
@@ -133,7 +131,7 @@
       </div>
     </footer>
 
-    <%= vite_javascript_tag "site.js" %>
+    <script src="<%= asset_path(:js) %>"></script>
 
     <%= slotted :scripts %>
   </body>

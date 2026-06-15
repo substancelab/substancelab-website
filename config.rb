@@ -25,8 +25,6 @@ end
 
 require "action_view"
 require "slim"
-require "vite_ruby"
-require "vite_padrino/tag_helpers"
 Slim::Engine.set_options(
   :format => :html,
   :pretty => true

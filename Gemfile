@@ -5,8 +5,6 @@ source "https://rubygems.org"
 gem "bridgetown", "~> 2.0"
 gem "puma", "~> 6.0"
 
-gem "vite_ruby"
-
 gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "ostruct"

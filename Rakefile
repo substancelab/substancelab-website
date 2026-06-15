@@ -1,19 +1,33 @@
 # frozen_string_literal: true
 
 require "pathname"
+require "bridgetown"
 
-desc "Build and publish the website"
-task :deploy => ["bridgetown:build", "deploy:publish"]
+Bridgetown.load_tasks
 
-namespace :deploy do
-  desc "Publish contents of the build directory"
-  task :publish do
-    target_folder = {
-      "da" => "public_html",
-      "en" => "substancelab.com"
-    }.fetch(ENV["LOCALE"])
+# Run rake without specifying any command to execute a deploy build by default.
+task default: :deploy
 
-    sh "scp -r build/* substancelab.dk@linux41.unoeuro.com:#{target_folder}"
+desc "Build the Bridgetown site for deployment"
+task :deploy => [:clean, "frontend:build"] do
+  Bridgetown::Commands::Build.start
+end
+
+desc "Runs the clean command"
+task :clean do
+  Bridgetown::Commands::Clean.start
+end
+
+namespace :frontend do
+  desc "Build the frontend with esbuild for deployment"
+  task :build do
+    sh "yarn esbuild"
+  end
+
+  desc "Watch the frontend with esbuild during development"
+  task :dev do
+    sh "yarn esbuild-dev"
+  rescue Interrupt
   end
 end
 
@@ -57,16 +71,5 @@ namespace :images do
     task :png do
       system 'find src/images -name *.png -exec optipng {} \;'
     end
-  end
-end
-
-namespace :bridgetown do
-  desc "Builds the website files into the output directory"
-  task :build do
-    system "bridgetown build"
-  end
-
-  task :clean do
-    system "rm -rf output"
   end
 end

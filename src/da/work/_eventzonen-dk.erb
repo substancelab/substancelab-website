@@ -1,11 +1,12 @@
 <% case_study_hero(project) %>
+<% slot :hero do %>
+  <p class="ui-intro">
+    Enhver startup stifter ved, hvor mange tallerkner, der skal holdes i luften samtidigt. Derfor er det vigtigt at finde en samarbejdspartner, som man kan stole på, hvor det håndværksmæssige er i topkvalitet og som kan vejlede og rådgive.
+  </p>
+<% end %>
 
 <section>
   <div class="container">
-    <p class="intro">
-      Enhver startup stifter ved, hvor mange tallerkner, der skal holdes i luften samtidigt. Derfor er det vigtigt at finde en samarbejdspartner, som man kan stole på, hvor det håndværksmæssige er i topkvalitet og som kan vejlede og rådgive.
-    </p>
-
     <p>
       Stifteren af <a href="<%= project["website"] %>"><%= project["name"] %></a> kombinerede sine mange års erfaring som ejer af et bookingbureau med Substance Labs mange års erfaring med at udvikle Software As A Service løsninger.
     </p>

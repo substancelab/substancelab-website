@@ -58,12 +58,13 @@
       </div>
     </header>
 
-      <ul class="link-list">
-        <li><a href="https://mentalized.net" title="The personal website of Jakob Skjerning, an independent web developer in Kolding, Denmark">mentalized</a></li>
-        <li><a href="https://substancelab.com" title="Carefully crafted web applications and websites with Ruby, Rails, HTML5, CSS3, Javascript" hreflang="en">substancelab.com</a></li>
-        <li><a href="https://substancelab.dk" title="Udvikling af kundespecifikke websites i Ruby, Rails, HTML5, CSS3, Javascript" hreflang="da">substancelab.dk</a></li>
-      </ul>
-    </div>
+    <% if slotted?(:hero) %>
+      <div class="ui-hero">
+        <%= slotted :hero %>
+      </div>
+    <% end %>
+
+    <%= yield %>
 
     <footer class="ui-footer">
       <div>

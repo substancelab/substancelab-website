@@ -12,7 +12,8 @@ require_relative "html_helpers"
 require_relative "i18n_helpers"
 require_relative "navigation_helpers"
 require_relative "layout_helpers"
-require_relative "masthead_helpers"
+require_relative "meta_tag_helpers"
+require_relative "hero_helpers"
 require_relative "article_helpers"
 require_relative "client_helpers"
 require_relative "project_helpers"
@@ -25,7 +26,8 @@ module AllHelpers
     ::I18nHelpers,
     ::NavigationHelpers,
     ::LayoutHelpers,
-    ::MastheadHelpers,
+    ::MetaTagHelpers,
+    ::HeroHelpers,
     ::ArticleHelpers,
     ::ClientHelpers,
     ::ProjectHelpers,

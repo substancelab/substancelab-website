@@ -7,11 +7,11 @@ section: portfolio
   :title => I18n.translate("work.index.featured_works")
 ) %>
 
-<% slot :masthead do %>
+<% slot :hero do %>
   <h1><%= I18n.t("work.index.portfolio") %></h1>
   <div class="subtitle"><%= I18n.t("work.index.featured_works") %></div>
 <% end %>
-<% masthead_image("v1571928252/substancelab-website/office") %>
+<% hero_image("v1571928252/substancelab-website/office") %>
 
 <article class="portfolio">
   <section>

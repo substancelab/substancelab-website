@@ -14,7 +14,6 @@
       <div class="container">
         <div class="columns tripple">
           <div class="column description">
-            <h3><%= project["name"] %></h3>
             <p><%= localized(project["description"] || {}) %></p>
             <% if project["website"] %>
               <div class="website">
@@ -56,4 +55,4 @@
   <% end %>
 </div>
 
-<% masthead_image(project_masthead_image_path(project)) %>
+<% hero_image(project_hero_image_path(project)) %>

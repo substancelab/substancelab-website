@@ -21,8 +21,8 @@ module ProjectHelpers
     }
   end
 
-  def case_study_masthead(project)
-    view.slot(:masthead) do
+  def case_study_hero(project)
+    view.slot(:hero) do
       name = project.is_a?(Hash) ? project["name"] : project.name
       desc = localized(project.is_a?(Hash) ? project["description"] : project.description)
       "<h1>#{CGI.escapeHTML(name.to_s)}</h1><div class=\"subtitle\">#{CGI.escapeHTML(desc.to_s)}</div>".html_safe
@@ -66,7 +66,7 @@ module ProjectHelpers
     case_studies
   end
 
-  def project_masthead_image_path(project)
+  def project_hero_image_path(project)
     slug = project.is_a?(Hash) ? project["slug"] : project.slug
     image = "work/#{slug}/masthead.jpg"
     return nil unless image_exists?(image)

@@ -1,6 +1,6 @@
-<% set_meta_tags(:thumbnail => masthead_image_for_article(current_article)) %>
+<% hero_image_for_article(current_article) %>
 
-<% slot :masthead do %>
+<% slot :hero do %>
   <h1 class="blog-article-headline"><%= current_article.data.title %></h1>
   <% if (credits = article_photo_data(current_article, "credits")) %>
     <div class="photo-credits">
@@ -35,5 +35,3 @@
     </aside>
   </div>
 </article>
-
-<% masthead_image_for_article(current_article) %>

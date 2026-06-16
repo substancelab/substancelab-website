@@ -13,6 +13,7 @@
     <div class="container">
       <div class="columns tripple">
         <div class="column description">
+          <h3><%= project["name"] %></h3>
           <p><%= localized(project["description"] || {}) %></p>
           <% if project["website"] %>
             <div class="website">

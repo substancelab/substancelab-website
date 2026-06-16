@@ -84,6 +84,7 @@ Breakpoints
   --color-brand-secondary-rgb: 0, 255, 122;
   --color-brand-secondary: rgb(var(--color-brand-secondary-rgb));
 
+  --content-spacing-x: 3rem;
   --content-spacing-y: 3rem;
 
   --font-copy: system-ui, sans-serif;
@@ -419,6 +420,22 @@ h4 {
 /*
 Modifiers
 */
+
+/* Apply .tripple to an element to make it split into three columns */
+.tripple {
+  display: flex;
+  gap: var(--content-spacing-x);
+
+  & > * {
+    flex: 1;
+  }
+
+  @container (width < 50em) {
+    & {
+      display: block;
+    }
+  }
+}
 
 /* Apply .wide to an element to make it span the full viewport width */
 .wide {

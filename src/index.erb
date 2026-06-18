@@ -16,14 +16,9 @@ end
   <%= localized_partial("index/about_substance_lab") %>
 </section>
 
-<div class="ui-gallery">
-  <% featured_projects.first(3).each do |project| %>
-    <figure>
-      <img src="/images/work/<%= project["slug"] %>/tile.jpg" alt="<%= project["name"] %>">
-      <figcaption><%= project["name"] %> &mdash; <%= localized(project["description"]) %></figcaption>
-    </figure>
-  <% end %>
-</div>
+<% if featured_projects.any? %>
+  <%= render Gallery.new(case_studies: featured_projects.first(3)) %>
+<% end %>
 
 <% featured_case = case_studies.first %>
 <% if featured_case %>

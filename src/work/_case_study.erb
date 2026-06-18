@@ -37,14 +37,7 @@
   <h2><%= I18n.translate("work.show.other_case_studies") %></h2>
   <div class="ui-gallery">
     <% other_studies.sample(3).each do |case_study| %>
-      <%= link_to project_url(case_study), :class => "ui-gallery-item" do %>
-        <figure>
-          <%= image_tag "/images/work/#{case_study["slug"]}/tile.jpg", alt: case_study["name"] %>
-          <figcaption class="ui-gallery-item-caption">
-            <div class="ui-gallery-item-title"><%= case_study["name"] %></div>
-            <%= localized(case_study["description"]) %></figcaption>
-        </figure>
-      <% end %>
+      <%= render CaseStudyCard.new(case_study: case_study) %>
     <% end %>
   </div>
 <% end %>

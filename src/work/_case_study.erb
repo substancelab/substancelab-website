@@ -35,11 +35,7 @@
 <% other_studies = case_studies.reject { |case_study| case_study["slug"] == project["slug"] } %>
 <% if other_studies.any? %>
   <h2><%= I18n.translate("work.show.other_case_studies") %></h2>
-  <div class="ui-gallery">
-    <% other_studies.sample(3).each do |case_study| %>
-      <%= render CaseStudyCard.new(case_study: case_study) %>
-    <% end %>
-  </div>
+  <%= render Gallery.new(case_studies: other_studies.sample(3)) %>
 <% end %>
 
 <% hero_image(project_hero_image_path(project)) %>

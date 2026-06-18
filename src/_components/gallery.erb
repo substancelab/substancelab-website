@@ -1,0 +1,5 @@
+<div class="ui-gallery">
+  <% @case_studies.each do |case_study| %>
+    <%= render CaseStudyCard.new(case_study: case_study) %>
+  <% end %>
+</div>

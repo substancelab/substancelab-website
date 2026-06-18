@@ -167,14 +167,11 @@ body {
 }
 
 figure {
-  background: linear-gradient(to top left, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
   border-radius: var(--border-radius-base);
   margin: 0;
   overflow: hidden;
-  padding: 2px;
 
   img {
-    border-radius: calc(var(--border-radius-base) - 0.1em);
     display: block;
     height: 100%;
     object-fit: cover;
@@ -319,15 +316,6 @@ h4 {
   pointer-events: auto;
 }
 
-.ui-gallery {
-  display: flex;
-  gap: 2em;
-
-  figure {
-    aspect-ratio: 9 / 16;
-  }
-}
-
 .ui-fadeout {
   height: 2em;
   left: 0;
@@ -374,30 +362,64 @@ h4 {
 }
 
 .ui-gallery {
-  figure {
-    flex: 1;
-    margin-top: 2em;
-  }
+  --inner-border-radius: calc(var(--border-radius-base) - 0.1em);
 
-  figure img {
-    transition: transform 0.5s ease-in-out;
-  }
-
-  figure:hover img {
-    transform: scale(1.5);
-    transition: transform 0.25s cubic-bezier(0.3, 0.2, 0.2, 2.4);
-  }
-
-  figure:nth-child(2n - 1) {
-    transform: translateY(-2em);
-  }
-
-  figure:nth-child(2n) {
-    transform: translateY(2em);
-  }
-
+  display: flex;
+  gap: 2em;
   margin-bottom: var(--content-spacing-y);
   margin-top: var(--content-spacing-y);
+
+  .ui-gallery-item-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: calc(var(--inner-border-radius));
+    border-bottom-right-radius: calc(var(--inner-border-radius));
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .ui-gallery-item {
+    border: 0.1em solid var(--color-brand-secondary);
+    border-radius: calc(var(--border-radius-base));
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    display: block;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+
+    & > :first-child {
+      aspect-ratio: 9 / 16;
+      border-radius: calc(var(--inner-border-radius));
+      z-index: 42;
+      overflow: hidden;
+    }
+
+    img {
+      transition: transform 0.25s ease-in-out;
+      // transition: transform 0.25s cubic-bezier(0.3, 0.2, 0.2, 2.4);
+    }
+  }
+
+  .ui-gallery-item:hover {
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.4);
+    transform: scale(1.05) translateY(-1.5em);
+
+    img {
+      // transition: transform 0.25s cubic-bezier(0.3, 0.2, 0.2, 2.4);
+      transform: scale(1.1);
+    }
+
+    .ui-gallery-item-title {
+      text-decoration: underline;
+    }
+  }
+
+  .ui-gallery-item-title {
+    font-weight: bold;
+  }
 }
 
 .ui-hero {

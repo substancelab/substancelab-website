@@ -32,22 +32,21 @@
   </section>
 </article>
 
-<% other_studies = case_studies.reject { |cs| cs["slug"] == project["slug"] } %>
+<% other_studies = case_studies.reject { |case_study| case_study["slug"] == project["slug"] } %>
 <% if other_studies.any? %>
-  <section class="featured-work">
-    <div class="container">
-      <div class="columns double case_studies">
-        <div class="column">
-          <h2><%= I18n.t("work.show.other_case_studies") %></h2>
-        </div>
-      </div>
-      <div class="projects">
-        <% other_studies.sample(3).each do |cs| %>
-          <%= project_tile(cs) %>
-        <% end %>
-      </div>
-    </div>
-  </section>
+  <h2><%= I18n.translate("work.show.other_case_studies") %></h2>
+  <div class="ui-gallery">
+    <% other_studies.sample(3).each do |case_study| %>
+      <%= link_to project_url(case_study), :class => "ui-gallery-item" do %>
+        <figure>
+          <%= image_tag "/images/work/#{case_study["slug"]}/tile.jpg", alt: case_study["name"] %>
+          <figcaption class="ui-gallery-item-caption">
+            <div class="ui-gallery-item-title"><%= case_study["name"] %></div>
+            <%= localized(case_study["description"]) %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
 <% end %>
 
 <% hero_image(project_hero_image_path(project)) %>

@@ -90,7 +90,7 @@ module ProjectHelpers
       img
     end
 
-    "<section class=\"display-project\"><div class=\"container\">#{img_with_link}</div></section>".html_safe
+    "<section class=\"ui-content wide\">#{img_with_link}</section>".html_safe
   end
 
   def project_services(project, max_length: nil)

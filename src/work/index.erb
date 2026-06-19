@@ -13,22 +13,12 @@ end
 <% end %>
 <% hero_image("v1571928252/substancelab-website/office") %>
 
-<article class="portfolio">
-  <section>
-    <div class="container">
-      <h2><%= I18n.t("work.index.case_studies") %></h2>
-      <p><%= I18n.t("work.index.list_of_case_studies") %></p>
-    </div>
-  </section>
+<article>
+  <section class="ui-content wide">
+    <h2><%= I18n.t("work.index.case_studies") %></h2>
+    <p><%= I18n.t("work.index.list_of_case_studies") %></p>
 
-  <section class="featured-work">
-    <div class="container">
-      <div class="projects">
-        <% portfolio_projects.each do |project| %>
-          <%= project_tile(project) %>
-        <% end %>
-      </div>
-    </div>
+    <%= render Gallery.new(case_studies: portfolio_projects) %>
   </section>
 
   <section class="clients">

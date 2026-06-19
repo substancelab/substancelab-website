@@ -1,10 +1,13 @@
 <div class="newsletter-signup">
-  <h2>Følg med fra sidelinjen</h2>
+  <div class="newsletter-signup-teaser">
+    <h2>Kom godt i gang</h2>
 
-  <p>
-    Modtag ekspert-viden om at bygge digitale produkter og webløsninger direkte i
-    din indbakke.
-  </p>
+    <p>
+      Få vores praktiske guide til at bygge digitale produkter - samt løbende
+      ekspert-viden direkte i din indbakke.
+    </p>
+  </div>
+  <%= image_tag(cloudinary_image_url("v1781860466/substancelab-website/guide.jpg"), alt: "Guide til at bygge digitale produkter", class: "guide-image") %>
 
   <%= localized_partial_if_present "layouts/mailerlite/signup_form.html.erb" %>
 

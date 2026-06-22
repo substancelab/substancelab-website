@@ -48,6 +48,11 @@ en:
     vat_id_name: VAT ID
     web_application_work_by_substance_lab: Web application work by Substance Lab
 
+  legalese:
+    cookies:
+      meta_description: "We use cookies. They aren't evil, we promise. Read more about how we use cookies and why we use them."
+      title: "Cookies"
+
   navigation:
     articles: Articles
     home: Home

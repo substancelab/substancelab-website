@@ -241,39 +241,6 @@ h4 {
     margin-right: auto;
     max-width: 66vw;
   }
-
-  /* A content block that is split up in two areas */
-  &.split {
-    align-items: center;
-    display: flex;
-    gap: 4em;
-    margin-top: var(--content-spacing-y);
-    margin-bottom: var(--content-spacing-y);
-
-    & > * {
-      flex: 1;
-      width: 50%;
-    }
-
-    & > * > :first-child {
-      margin-top: unset;
-    }
-
-    img {
-      aspect-ratio: 16 / 9;
-    }
-
-    @container (width < 35em) {
-      & {
-        display: block;
-        max-width: inherit;
-
-        & > * {
-          width: unset;
-        }
-      }
-    }
-  }
 }
 
 .ui-pullquote {
@@ -314,6 +281,16 @@ h4 {
 }
 .ui-navigation * {
   pointer-events: auto;
+}
+
+.ui-contact {
+  .ui-contact-name {
+    font-weight: bold;
+  }
+
+  .ui-contact-phone {
+    margin-top: 1em;
+  }
 }
 
 .ui-fadeout {
@@ -465,6 +442,39 @@ h4 {
 Modifiers
 */
 
+/* A content block that is split up in two areas */
+.split {
+  align-items: center;
+  display: flex;
+  gap: 4em;
+  margin-top: var(--content-spacing-y);
+  margin-bottom: var(--content-spacing-y);
+
+  & > * {
+    flex: 1;
+    width: 50%;
+  }
+
+  & > * > :first-child {
+    margin-top: unset;
+  }
+
+  img {
+    aspect-ratio: 16 / 9;
+  }
+
+  @container (width < 35em) {
+    & {
+      display: block;
+      max-width: inherit;
+
+      & > * {
+        width: unset;
+      }
+    }
+  }
+}
+
 /* Apply .tripple to an element to make it split into three columns */
 .tripple {
   display: flex;
@@ -477,6 +487,30 @@ Modifiers
   @container (width < 50em) {
     & {
       display: block;
+    }
+  }
+}
+
+.well {
+  // --background: rgba(0, 0, 0, 0.1);
+    --background: rgba(var(--color-text-primary-rgb), 0.1);
+  --padding: 1em;
+
+  background: var(--background);
+  border-radius: var(--border-radius-base);
+  padding: var(--padding);
+
+  figure {
+    border-radius: calc(var(--border-radius-base) - calc(var(--padding) * 0.6));
+  }
+
+  @container (width < 35em) {
+    & > div {
+      max-width: unset;
+    }
+
+    figure {
+      margin-bottom: 1em;
     }
   }
 }

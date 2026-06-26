@@ -1,0 +1,37 @@
+---
+title: "Den effektive vej fra idé til launch"
+description: "Vi har samlet vores erfaringer i en lille, let læst guide, der hjælper dig i gang i med at udvikle dit digitale produkt - hvad end det er en markedsplads, en abonnementsforretning, eller noget helt tredje."
+layout: "basic"
+---
+- content_for :masthead do
+  .container
+    h1 Den effektive vej fra idé til launch
+
+- masthead_image("v1613744727/substancelab-website/sprout")
+
+article
+  .container
+    section
+      p
+        |
+          Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at have forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før — mange gange - og vi har hjulpet rigtigt mange iværksættere videre med deres drøm.
+
+      figure.figure.pull-right
+        = image_tag(cloudinary_image_url("v1781860466/substancelab-website/guide.jpg"), alt: "Guide til at bygge digitale produkter", class: "guide-image")
+      p
+        |
+          De erfaringer har vi samlet i en lille, let læst guide, der hjælper dig i gang i med at udvikle dit digitale produkt - hvad end det er en markedsplads, en abonnementsforretning, eller noget helt tredje.
+
+      p
+        |
+          Guiden er skrevet til dig, der har en idé til et digitalt produkt, men ikke har erfaring med at udvikle det. Den er også til dig, der allerede har en eksisterende virksomhed og overvejer at digitalisere dele af forretningen.
+
+      h2 Gør din idé til virkelighed
+
+      == localized_partial_if_present "layouts/bento/guide_signup_form.erb"
+
+      h2 Hvem er vi?
+
+      p
+        |
+          Substance Lab er en lille, stabil konsulent-virksomhed, der i #{Time.zone.now.year - 2006} år har hjulpet mindre virksomheder med at blive større og indfri deres drømme om succesfulde Software-as-a-Service forretninger.

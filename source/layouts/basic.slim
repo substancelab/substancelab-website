@@ -1,0 +1,58 @@
+doctype html
+html lang="#{current_locale}"
+  head
+    link rel="preload" href="#{asset_url("/fonts/geogrotesque.css")}" as="style"
+
+    == partial("layouts/tag_manager/head")
+
+    - set_meta_tags( \
+      :locale => config.locale,
+      :url => "#{config.protocol}#{config.domain}#{current_page.url}")
+    = auto_display_meta_tags
+
+    == vite_client_tag
+    -# One stylesheet to import them all
+    == vite_stylesheet_tag "layout.sass", :media => "all"
+
+    -# And one to make printing pretty
+    == vite_stylesheet_tag "print.sass", :media => "print"
+
+    - if content_for?(:stylesheets)
+      == yield_content(:stylesheets)
+    - if content_for?(:page_specific_style)
+      == yield_content(:page_specific_style)
+
+    meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc="
+
+    link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png"
+    link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png"
+    link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png"
+    link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png"
+    link rel="apple-touch-icon" href="/images/apple-touch-icon-precomposed.png"
+    link rel="shortcut icon" href="/images/favicon.png"
+    link rel="icon" type="image/ico" href="/images/favicon.ico"
+
+    == partial("layouts/analytics")
+
+  body *body_attributes
+    == partial("layouts/tag_manager/body")
+
+    header.masthead
+      .nav-bar
+        .container
+          == link_to("/", :class => 'branding', :title => "Substance Lab | Carefully crafting websites and web applications") do
+            .logo
+              .substance Substance
+              .lab Lab
+          nav
+            ul
+              li.home== link_to I18n.translate("navigation.home"), "/"
+              li.work== link_to I18n.translate("navigation.work"), projects_url
+              = nav_bar_link_to_services
+              = nav_bar_link_to_blog
+
+      - if content_for?(:masthead)
+        .masthead-container
+          == yield_content(:masthead)
+
+    == yield

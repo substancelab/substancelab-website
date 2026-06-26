@@ -1,0 +1,31 @@
+---
+title: "Tak for din tilmelding!"
+description: "Vi har sendt dig guiden og nyhedsbrevet. Du kan til enhver tid afmelde dig."
+layout: "basic"
+---
+- content_for :masthead do
+  .container
+    h1 Tak for din tilmelding!
+
+- masthead_image("v1613744727/substancelab-website/sprout")
+
+article
+  .container
+    section
+      p
+        |
+          Tak, det er jeg super glad for! Guiden er på vej til dig og skulle dukke op i din indbakke lige straks.
+
+      p
+        |
+          Indtil den dukker op, kan du kigge nærmere på vores <a href="/articles">artikler</a> eller se, <a href="/work">eksempler på, hvad vi har lavet</a>.
+
+      .person-image
+        == image_tag(cloudinary_image_url("v1782068244/substancelab-website/people/jakob_cta.jpg", "w_300,h_300,c_fill,g_face"), :alt => "Jakob Skjerning", :width => "150", :height => "150", :loading => "lazy", :style => "border-radius: 100%")
+        p
+          |
+            Jeg ser frem til at dele vores erfaringer med dig, og håber du får glæde af guiden.
+
+        p
+          |
+            Jakob, stifter og rådgiver

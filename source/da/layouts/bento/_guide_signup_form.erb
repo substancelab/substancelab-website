@@ -1,4 +1,5 @@
-<form action="https://track.bentonow.com/forms/0ddd81e0025b2163c1c99894da608315/%24subscribe?hardened=true" method="POST" enctype="multipart/form-data" class="bento-formkit" id="bento-formkit-hhxpuzj" onkeydown="if(event.keyCode===13){event.preventDefault();this.requestSubmit ? this.requestSubmit() : this.submit();}">
+<% form_id = locals["form_id"] || "bento-formkit-hhxpuzj" %>
+<form action="https://track.bentonow.com/forms/0ddd81e0025b2163c1c99894da608315/%24subscribe?hardened=true" method="POST" enctype="multipart/form-data" class="bento-formkit" id="<%= form_id %>" onkeydown="if(event.keyCode===13){event.preventDefault();this.requestSubmit ? this.requestSubmit() : this.submit();}">
   <input type="hidden" name="redirect" value="https://substancelab.dk/guide/thank-you">
   <div class="form-inputs-container">
     <label>E-mail
@@ -8,21 +9,21 @@
       <input type="text" name="fields_first_name" class="bento-formkit-input" required>
     </label>
     <button type="submit" class="bento-formkit-button">Ja tak, send mig guide og nyhedsbrev</button>
+    <div class="bento-formkit-disclosure">Vi sender dig guiden i en e-mail. Derudover får du en række opfølgende og uddybende mails. Du kan fravælge mails til hver en tid.</div>
   </div>
-  <div class="bento-formkit-disclosure">Vi sender dig guiden i en e-mail. Derudover får du en række opfølgende og uddybende mails. Du kan fravælge mails til hver en tid.</div>
 </form>
 <style>
 
-#bento-formkit-hhxpuzj {
+#<%= form_id %> {
   text-align: left !important;
 }
-#bento-formkit-hhxpuzj .form-inputs-container {
+#<%= form_id %> .form-inputs-container {
   display: flex !important;
   flex-direction: column !important;
   gap: 10px !important;
 }
 
-#bento-formkit-hhxpuzj .bento-formkit-input {
+#<%= form_id %> .bento-formkit-input {
   width: 100% !important;
   border-radius: 8px !important;
   border: 1px solid #d1d5db !important;
@@ -32,12 +33,12 @@
   padding: 12px 14px !important;
   font-size: 15px !important;
 }
-#bento-formkit-hhxpuzj input:focus {
+#<%= form_id %> input:focus {
   outline: none !important;
   border-color: #00EC66 !important;
   box-shadow: 0 0 0 3px rgba(0, 236, 102, 0.2) !important;
 }
-#bento-formkit-hhxpuzj button {
+#<%= form_id %> button {
   width: 100% !important;
   border-radius: 8px !important;
   border: none !important;
@@ -48,15 +49,21 @@
   padding: 12px 16px !important;
   cursor: pointer !important;
 }
-#bento-formkit-hhxpuzj button:hover {
+#<%= form_id %> button:hover {
   filter: brightness(0.93) !important;
 }
 .bento-formkit-disclosure {
-  margin-top: 14px !important;
+  margin-top: 0 !important;
   color: #6b7280 !important;
   font-size: 12px !important;
   line-height: 1.45 !important;
 }
 
 </style>
-<script src="https://app.bentonow.com/modules/form-sniffer.js" async defer></script>
+
+<% unless @bento_form_sniffer_included %>
+  <% content_for :bottom_of_page do %>
+    <script src="https://app.bentonow.com/modules/form-sniffer.js" async defer></script>
+  <% end %>
+  <% @bento_form_sniffer_included = true %>
+<% end %>

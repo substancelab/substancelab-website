@@ -3,30 +3,33 @@ title: "Den effektive vej fra idé til launch"
 description: "Vi har samlet vores erfaringer i en lille, let læst guide, der hjælper dig i gang i med at udvikle dit digitale produkt - hvad end det er en markedsplads, en abonnementsforretning, eller noget helt tredje."
 layout: "basic"
 ---
-- content_for :masthead do
+article class="article without-masthead"
   .container
-    h1 Den effektive vej fra idé til launch
+    .article-intro
+      small Gratis guide til at komme i gang med at udvikle dit digitale produkt
+      h1 Den effektive vej fra idé til launch
 
-- masthead_image("v1613744727/substancelab-website/sprout")
+    section
+      figure.figure.pull-left
+        == image_tag(cloudinary_image_url("v1782068244/substancelab-website/people/jakob_cta.jpg", ["w_800"]), :alt => "Jakob Skjerning", :loading => "lazy")
 
-article
+      p
+        |
+          Vi har samlet #{Time.zone.now.year - 2006} års erfaringer med at udvikle digitale produkter og softwareløsninger i en guide, der hjælper dig i gang.
+
+      == localized_partial_if_present "layouts/bento/guide_signup_form.erb"
+
   .container
     section
-      p
-        |
-          Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at have forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før — mange gange - og vi har hjulpet rigtigt mange iværksættere videre med deres drøm.
+      h2 Det lærer du i guiden
 
-      figure.figure.pull-right
-        = image_tag(cloudinary_image_url("v1781860466/substancelab-website/guide.jpg"), alt: "Guide til at bygge digitale produkter", class: "guide-image")
-      p
-        |
-          De erfaringer har vi samlet i en lille, let læst guide, der hjælper dig i gang i med at udvikle dit digitale produkt - hvad end det er en markedsplads, en abonnementsforretning, eller noget helt tredje.
+      ul
+        li At fokusere på problemet i stedet for at stirre dig blind på én af mange mulige løsninger.
+        li Hvordan du skærer ned til det absolut nødvendige, så du ikke bygger noget forkert.
+        li Hvordan du kan udnytte standardløsninger til at spare penge uden at låse dig fast.
+        li Hvordan du kan arbejde med udvikling på en måde, der giver dig kontrol over budget og risiko.
 
-      p
-        |
-          Guiden er skrevet til dig, der har en idé til et digitalt produkt, men ikke har erfaring med at udvikle det. Den er også til dig, der allerede har en eksisterende virksomhed og overvejer at digitalisere dele af forretningen.
-
-      h2 Gør din idé til virkelighed
+      h2 Få guiden nu
 
       == localized_partial_if_present "layouts/bento/guide_signup_form.erb"
 

@@ -56,3 +56,6 @@ html lang="#{current_locale}"
           == yield_content(:masthead)
 
     == yield
+
+    - if content_for?(:bottom_of_page)
+      == yield_content(:bottom_of_page)

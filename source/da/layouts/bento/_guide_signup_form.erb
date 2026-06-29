@@ -60,4 +60,10 @@
 }
 
 </style>
-<script src="https://app.bentonow.com/modules/form-sniffer.js" async defer></script>
+
+<% unless @bento_form_sniffer_included %>
+  <% content_for :bottom_of_page do %>
+    <script src="https://app.bentonow.com/modules/form-sniffer.js" async defer></script>
+  <% end %>
+  <% @bento_form_sniffer_included = true %>
+<% end %>

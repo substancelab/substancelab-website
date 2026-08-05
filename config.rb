@@ -80,12 +80,6 @@ activate :meta_tags
 # # Use a familiar asset pipeline...
 # activate :sprockets
 
-# Generate configuration files for Netlify. Netlify looks for these in the root
-# of the built site, but files starting with underscores are ignored by
-# Middleman.
-proxy "/_headers", "/netlify/headers"
-ignore "/netlify/headers"
-
 data.projects.each do |key, attributes|
   case_study = (attributes.case_studies || []).include?(I18n.locale.to_s)
   next unless case_study

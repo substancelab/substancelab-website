@@ -16,6 +16,7 @@
         'self'
         *.googlesyndication.com
         *.mailerlite.com
+        ad.doubleclick.net
         consent.studio
         plausible.io
         ;
@@ -28,10 +29,12 @@
       *.cloudfront.net
       *.cloudinary.com
       *.facebook.com
+      *.google.com
       *.googlesyndication.com
       *.googletagmanager.com
       *.mailerlite.com
       data:
+      googleads.g.doubleclick.net
       ;
      object-src
       'none'

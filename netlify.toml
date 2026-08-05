@@ -18,6 +18,7 @@
         *.mailerlite.com
         ad.doubleclick.net
         consent.studio
+        google.com
         plausible.io
         ;
      font-src
@@ -30,6 +31,7 @@
       *.cloudinary.com
       *.facebook.com
       *.google.com
+      *.google.dk
       *.googlesyndication.com
       *.googletagmanager.com
       *.mailerlite.com
@@ -51,6 +53,9 @@
       consent.studio
       plausible.io
       s3.amazonaws.com
+      ;
+     script-src-elem
+      googleads.g.doubleclick.net
       ;
      style-src
       'self'

@@ -12,7 +12,10 @@
     # Detect and mitigate certain types of attacks, including Cross Site
     # Scripting (XSS) and data injection attacks.
     Content-Security-Policy = '''
-      connect-src: 'self' consent.studio *.googlesyndication.com;
+      connect-src:
+        'self'
+        consent.studio
+        *.googlesyndication.com;
       default-src 'self' *.mailerlite.com consent.studio *.googlesyndication.com plausible.io;
       font-src 'self' fonts.gstatic.com;
       img-src 'self' data: *.cloudinary.com *.cloudfront.net *.facebook.com *.mailerlite.com *.googlesyndication.com *.googletagmanager.com;

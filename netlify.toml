@@ -12,11 +12,6 @@
     # Detect and mitigate certain types of attacks, including Cross Site
     # Scripting (XSS) and data injection attacks.
     Content-Security-Policy = '''
-      connect-src
-        'self'
-        *.googlesyndication.com
-        consent.studio
-        ;
       default-src
         'self'
         *.googlesyndication.com

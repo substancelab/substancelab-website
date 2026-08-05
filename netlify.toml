@@ -55,7 +55,9 @@
       s3.amazonaws.com
       ;
      script-src-elem
+      app.bentonow.com
       googleads.g.doubleclick.net
+      plausible.io
       ;
      style-src
       'self'

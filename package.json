@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "sass": "^1.103.1",
-    "vite": "^8.2.1",
+    "vite": "^8.2.2",
     "vite-plugin-ruby": "^5.2.2"
   },
   "dependencies": {

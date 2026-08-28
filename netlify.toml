@@ -9,64 +9,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # Detect and mitigate certain types of attacks, including Cross Site
-    # Scripting (XSS) and data injection attacks.
-    Content-Security-Policy = '''
-      default-src
-        'self'
-        *.googlesyndication.com
-        *.mailerlite.com
-        ad.doubleclick.net
-        consent.studio
-        google.com
-        plausible.io
-        ;
-     font-src
-      'self'
-      fonts.gstatic.com
-      ;
-     img-src
-      'self'
-      *.cloudfront.net
-      *.cloudinary.com
-      *.facebook.com
-      *.google.com
-      *.google.dk
-      *.googlesyndication.com
-      *.googletagmanager.com
-      *.mailerlite.com
-      data:
-      googleads.g.doubleclick.net
-      ;
-     object-src
-      'none'
-      ;
-     script-src
-      'self'
-      'unsafe-inline'
-      *.googletagmanager.com
-      *.mailerlite.com
-      app.bentonow.com
-      assets.mlcdn.com
-      capi-automation.s3.us-east-2.amazonaws.com
-      connect.facebook.net
-      consent.studio
-      plausible.io
-      s3.amazonaws.com
-      ;
-     script-src-elem
-      app.bentonow.com
-      googleads.g.doubleclick.net
-      plausible.io
-      ;
-     style-src
-      'self'
-      'unsafe-inline'
-      consent.studio
-      fonts.googleapis.com
-      ;
-      '''
-
     # Send the origin, path, and querystring when performing a same-origin
     # request, only send the origin when the protocol security level stays the
     # same while performing a cross-origin request (HTTPS→HTTPS), and send no

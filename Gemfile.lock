@@ -179,7 +179,7 @@ GEM
     uri (1.1.1)
     vite_padrino (3.0.0)
       vite_ruby (~> 3.0)
-    vite_ruby (3.10.4)
+    vite_ruby (3.10.5)
       dry-cli (>= 0.7, < 2)
       logger (~> 1.6)
       mutex_m

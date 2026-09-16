@@ -201,12 +201,6 @@ h4 {
 
 .ui-content {
   container-type: inline-size;
-
-  & > * {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 66vw;
-  }
 }
 
 .ui-pullquote {
@@ -392,12 +386,12 @@ h4 {
   text-align: left;
 }
 
-/* A subheader callout for articles */
-.ui-intro {
-  font-weight: 500;
+/* A subheader callout  */
+.ui-lede {
   letter-spacing: 0.01em;
   margin-bottom: 1em;
   margin-top: 1em;
+  max-width: 50%;
 }
 
 /*

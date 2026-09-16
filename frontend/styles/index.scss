@@ -133,7 +133,6 @@ body {
 }
 
 figure {
-  border-radius: var(--border-radius-base);
   margin: 0;
   overflow: hidden;
 
@@ -308,7 +307,6 @@ h4 {
 
 .ui-gallery {
   --gap: 2%;
-  --inner-border-radius: calc(var(--border-radius-base) - 0.1em);
   --items-per-row: 1;
 
   @container (width > 50em) {
@@ -337,8 +335,6 @@ h4 {
 
   .ui-gallery-item-caption {
     background: rgba(0, 0, 0, 0.5);
-    border-bottom-left-radius: calc(var(--inner-border-radius));
-    border-bottom-right-radius: calc(var(--inner-border-radius));
     bottom: 0;
     color: #ffffff;
     left: 0;
@@ -349,14 +345,11 @@ h4 {
 
   .ui-gallery-item {
     aspect-ratio: 9 / 16;
-    border: 0.1em solid var(--color-brand-secondary);
-    border-radius: calc(var(--border-radius-base));
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
     display: block;
     position: relative;
 
     & > :first-child {
-      border-radius: calc(var(--inner-border-radius));
       z-index: 42;
       overflow: hidden;
       height: 100%;

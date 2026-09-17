@@ -37,6 +37,12 @@ Breakpoints
     --border-radius-base: 2em;
   }
 
+  // How much whitespace to leave around the body content
+  --body-outer-spacing: 1.4em;
+  @media (min-width: 900px) {
+    --body-outer-spacing: 2em;
+  }
+
   --color-bg-primary-rgb: 229, 229, 229;
   --color-bg-primary: rgb(var(--color-bg-primary-rgb));
   --color-text-primary-rgb: 25, 25, 25;
@@ -109,14 +115,10 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.6;
   margin: 0;
-  padding: 1.4em;
+  padding: var(--body-outer-spacing);
 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-
-  @media (min-width: 900px) {
-    padding: 2em;
-  }
 }
 
 .highlight {

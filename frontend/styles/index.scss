@@ -318,22 +318,9 @@ h4 {
     --items-per-row: 3;
   }
 
-  display: flex;
-  gap: var(--gap);
-  justify-content: center;
-  margin-bottom: var(--content-spacing-y);
-  margin-top: var(--content-spacing-y);
-
-  // If there are 4 or more items, wrap them into multiple rows and make them
-  // smaller to fit better on the screen
-  &:has(> :nth-last-child(4)) {
-    flex-wrap: wrap;
-
-    .ui-gallery-item {
-      margin-bottom: var(--gap);
-      max-width: calc((100% - var(--gap) * (var(--items-per-row))) / var(--items-per-row));
-    }
-  }
+  // Extend the gallery outside the body spacing to become full-bleed
+  margin-left: calc(-1 * var(--body-outer-spacing));
+  margin-right: calc(-1 * var(--body-outer-spacing));
 
   .ui-gallery-item-caption {
     background: rgba(0, 0, 0, 0.5);
@@ -346,10 +333,12 @@ h4 {
   }
 
   .ui-gallery-item {
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 16 / 9;
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
     display: block;
+    min-width: 50vw;
     position: relative;
+    scroll-snap-align: start;
 
     & > :first-child {
       z-index: 42;
@@ -369,6 +358,21 @@ h4 {
 
   .ui-gallery-item-title {
     font-weight: bold;
+  }
+
+  .ui-gallery-items {
+    display: flex;
+    gap: var(--gap);
+    overflow-x: auto;
+    padding-bottom: var(--content-spacing-y);
+    padding-left: var(--body-outer-spacing);
+    padding-right: var(--body-outer-spacing);
+    padding-top: var(--content-spacing-y);
+
+    // Snap the children to the left margin of the container
+    scroll-padding-left: var(--body-outer-spacing);
+    scroll-padding-right: var(--body-outer-spacing);
+    scroll-snap-type: x mandatory;
   }
 }
 

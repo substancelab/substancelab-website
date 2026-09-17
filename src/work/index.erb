@@ -18,7 +18,7 @@ end
     <h2><%= I18n.t("work.index.case_studies") %></h2>
     <p><%= I18n.t("work.index.list_of_case_studies") %></p>
 
-    <%= render Gallery.new(case_studies: portfolio_projects) %>
+    <%= render Gallery.new(case_studies: portfolio_projects, :additional_classes => ["grid"]) %>
   </section>
 
   <section class="clients">

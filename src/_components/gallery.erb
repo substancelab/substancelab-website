@@ -1,4 +1,4 @@
-<div class="ui-gallery">
+<div class="ui-gallery <%= additional_classes %>">
   <div class="ui-gallery-items">
     <% @case_studies.each do |case_study| %>
       <%= render CaseStudyCard.new(case_study: case_study) %>

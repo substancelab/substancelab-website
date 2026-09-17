@@ -376,6 +376,16 @@ h4 {
     scroll-padding-right: var(--body-outer-spacing);
     scroll-snap-type: x mandatory;
   }
+
+  &.grid {
+    .ui-gallery-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--item-width), 1fr));
+      gap: var(--gap);
+      overflow-x: unset;
+      scroll-snap-type: none;
+    }
+  }
 }
 
 .ui-hero {

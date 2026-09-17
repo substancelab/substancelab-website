@@ -14,14 +14,8 @@ module ArticleHelpers
     view.resource
   end
 
-  def newer_article(article)
-    index = blog_articles.index(article)
-    blog_articles[index - 1] if index&.positive?
-  end
-
-  def older_article(article)
-    index = blog_articles.index(article)
-    blog_articles[index + 1] if index
+  def article_body(article)
+    article_parts(article).last.html_safe
   end
 
   def article_data(article)
@@ -39,6 +33,15 @@ module ArticleHelpers
     default_transformations = ["t_masthead", "f_auto"]
     all_transformations = (default_transformations + Array(extra_transformations)).sort
     cloudinary_image_url(image, all_transformations)
+  end
+
+  def article_intro(article)
+    article_parts(article).first.html_safe
+  end
+
+  def article_parts(article)
+    content = article.content.to_s
+    content.split("READMORE")
   end
 
   def article_photo_data(article, key = nil)

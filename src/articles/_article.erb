@@ -13,25 +13,20 @@
   <% end %>
 <% end %>
 
-<article class="blog-article">
-  <div class="container">
-    <div class="content">
-      <%= without_readmore(article_html) %>
-    </div>
+<div class="ui-article">
+  <%= article_intro(current_article) %>
+  <%= article_body(current_article) %>
+</div>
 
-    <aside>
-      <nav>
-        <div class="previous">
-          <% if (prev_article = older_article(current_article)) %>
-            <%= link_to_article(prev_article) %>
-          <% end %>
-        </div>
-        <div class="next">
-          <% if (next_article = newer_article(current_article)) %>
-            <%= link_to_article(next_article) %>
-          <% end %>
-        </div>
-      </nav>
-    </aside>
+<nav>
+  <div class="previous">
+    <% if (prev_article = current_article.previous_resource) %>
+      <%= link_to_article(prev_article) %>
+    <% end %>
   </div>
-</article>
+  <div class="next">
+    <% if (next_article = current_article.next_resource) %>
+      <%= link_to_article(next_article) %>
+    <% end %>
+  </div>
+</nav>

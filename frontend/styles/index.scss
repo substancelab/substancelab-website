@@ -238,7 +238,7 @@ h4 {
   position: fixed;
   right: var(--body-outer-spacing);
   top: 2em;
-  z-index: 10;
+  z-index: 100;
 
   & > *:first-child {
     width: 25%;

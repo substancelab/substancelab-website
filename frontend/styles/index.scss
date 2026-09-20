@@ -364,6 +364,14 @@ h4 {
     .ui-gallery-item-title {
       text-decoration: underline;
     }
+
+    // Swap the static fade for a sprite sheet of alternate dither patterns
+    // and step through them on a loop, so the pixels flicker while hovered.
+    .ui-gallery-item-caption::before {
+      animation: dither-flicker 0.9s steps(6) infinite;
+      background-image: url("/images/dither-ramp-frames.png");
+      background-position: left top;
+    }
   }
 
   .ui-gallery-item-title {
@@ -403,6 +411,14 @@ h4 {
       overflow-x: unset;
       scroll-snap-type: none;
     }
+  }
+}
+
+// Steps down through the 6 stacked frames in dither-ramp-frames.png (each
+// 64px tall) and loops -- see .ui-gallery-item:hover above.
+@keyframes dither-flicker {
+  to {
+    background-position-y: -384px;
   }
 }
 

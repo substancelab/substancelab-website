@@ -40,7 +40,7 @@ Breakpoints
   // How much whitespace to leave around the body content
   --body-outer-spacing: 1.4em;
   @media (min-width: 900px) {
-    --body-outer-spacing: 2em;
+    --body-outer-spacing: 4em;
   }
 
   --color-bg-primary-rgb: 229, 229, 229;
@@ -233,10 +233,10 @@ h4 {
 .ui-navigation {
   display: flex;
   justify-content: space-between;
-  left: 2em;
+  left: var(--body-outer-spacing);
   pointer-events: none;
   position: fixed;
-  right: 2em;
+  right: var(--body-outer-spacing);
   top: 2em;
   z-index: 10;
 

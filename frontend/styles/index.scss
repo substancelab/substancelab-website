@@ -322,6 +322,23 @@ h4 {
     padding: 1em;
     position: absolute;
     right: 0;
+
+    // A fixed-height dithered fade, anchored to the top of the caption so it
+    // always sits immediately above it regardless of how tall the caption
+    // grows (e.g. two vs. three lines of description).
+    &::before {
+      background-image: url("/images/dither-ramp.png");
+      background-position: bottom left;
+      background-repeat: repeat-x;
+      bottom: 100%;
+      content: "";
+      height: 64px; // matches the native height of dither-ramp.png so it isn't stretched
+      image-rendering: pixelated; // keep frame boundaries crisp -- otherwise the browser smooths across them, bleeding a faint line from the adjacent frame
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
   }
 
   .ui-gallery-item {
@@ -336,6 +353,7 @@ h4 {
       z-index: 42;
       overflow: hidden;
       height: 100%;
+      position: relative;
     }
 
     img {

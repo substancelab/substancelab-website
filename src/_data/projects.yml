@@ -40,6 +40,9 @@ biq:
   website: https://biq.dk
 
 bomae:
+  case_studies:
+  - da
+  - en
   client: "Bomae, Denmark"
   client_website: https://www.bomae.dk/
   description:
@@ -50,6 +53,7 @@ bomae:
   position: 4
   services:
   - dropbox_integration
+  - maintenance
   - responsive_design
   - roadmapping
   - web_application_development

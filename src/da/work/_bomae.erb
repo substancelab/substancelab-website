@@ -1,0 +1,111 @@
+<% slot :hero do %>
+  <div class="container">
+    <h1>Et CRM der skulle videreføres uden at stoppe</h1>
+    <p class="ui-intro">
+      <a href="https://www.bomae.dk/">Bomae</a> driver hele deres forretning
+      &mdash; leads, kontrakter, rådgivning og fakturering &mdash; gennem ét
+      internt CRM, bygget op gennem ti år. Da medarbejderen bag det skiftede
+      job, skulle en ny udvikler overtage driften uden afbrydelser.
+    </p>
+  </div>
+<% end %>
+
+<section>
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Overtagelsen
+
+      Systemet var i god stand og fungerede fint, men var kun dokumenteret i
+      koden selv. Substance Lab blev hyret til at overtage udvikling og
+      drift, i tæt samarbejde med Bomaes ledelse. For at komme sikkert
+      igennem overtagelsen, uden at kende systemet på forhånd, blev hver
+      ændring holdt så snæver som muligt og understøttet af test-driven
+      development. Det bevarede medarbejdernes kendte arbejdsgange og
+      undgik driftsforstyrrelser undervejs.
+    MARKDOWN
+    %>
+
+    <aside class="factbox pull-right">
+      <div class="factbox-body">
+        <h2>Hvem er Bomae?</h2>
+        <p>
+          <a href="https://www.bomae.dk/">Bomae</a> er en dansk
+          køberrådgivning, der arbejder udelukkende for boligkøberen &mdash;
+          med finansiel, boligfaglig og juridisk rådgivning gennem hele
+          købsforløbet. De er godkendt af Finanstilsynet som
+          boligkreditformidler og har mere end 780 anmeldelser på Trustpilot.
+        </p>
+      </div>
+
+      <table class="factbox-table">
+        <tr>
+          <th>Website</th>
+          <td><a href="https://www.bomae.dk/" title="Bomae">bomae.dk</a></td>
+        </tr>
+      </table>
+    </aside>
+
+    <%= markdown(<<~MARKDOWN)
+      ## Sikkerhedsopgradering
+
+      Det tekniske fundament kom løbende længere væk fra aktuelle
+      sikkerhedspatches, uden at nogen aktivt fulgte med i det. Substance Lab
+      lagde en business case frem for ledelsen og gennemførte opgraderingen
+      til understøttede versioner som en planlagt, kontrolleret proces
+      &mdash; frem for at vente til en akut nødopgradering blev nødvendig
+      under langt mere pres.
+    MARKDOWN
+    %>
+
+    <blockquote class="quote pull-left">
+      <p>
+        Substance Lab trådte til med meget kort varsel, da Bomae mistede en
+        nøglemedarbejder, og hjalp os med at sikre kontinuiteten omkring vores
+        portal. De er kvikke, sætter sig hurtigt ind i problemstillingerne og
+        argumenterer sagligt for den løsning, de vurderer er bedst.
+      </p>
+      <div class="author">Mads Nørgaard, CFO, Bomae</div>
+    </blockquote>
+
+    <%= markdown(<<~MARKDOWN)
+      ## Ét fælles kontraktgrundlag
+
+      Kontraktpreview og den endelige, underskrevne kontrakt blev genereret
+      af to separate kodestier, som kunne afvige fra hinanden. Det skabte i
+      enkelte tilfælde uoverensstemmelser mellem det, sælgeren viste kunden,
+      og det kunden endte med at underskrive. Substance Lab samlede begge
+      dele om ét fælles data- og logiklag, så preview og slutresultat altid
+      stemmer overens.
+
+      ## Automatiseret bekræftelse
+
+      Én arbejdsgang krævede et manuelt "OK" i en popup, selvom der kun
+      nogensinde var ét gyldigt udfald af trinnet. Substance Lab
+      automatiserede beslutningen og fjernede klikket fra arbejdsgangen, så
+      resultatet blev det samme, hver gang &mdash; uden en ekstra
+      handling.
+    MARKDOWN
+    %>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="statistics">
+      <div class="statistics-figure">
+        <div class="statistics-number">10 år</div>
+        <div class="statistics-label">Kodebasens alder</div>
+      </div>
+
+      <div class="statistics-figure">
+        <div class="statistics-number">~1 uge</div>
+        <div class="statistics-label">Til at lukke sikkerhedshullet</div>
+      </div>
+
+      <div class="statistics-figure">
+        <div class="statistics-number">0</div>
+        <div class="statistics-label">Større driftsnedbrud</div>
+      </div>
+    </div>
+  </div>
+</section>

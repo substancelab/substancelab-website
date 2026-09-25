@@ -70,6 +70,7 @@ bomae:
 born-i-byen:
   case_studies:
   - da
+  - en
   client: "Børn i byen, Denmark"
   client_website: https://bornibyen.dk
   description:
@@ -79,20 +80,17 @@ born-i-byen:
   name: "Børn i byen"
   position: 1
   services:
-  - api_development
-  - google_maps
   - maintenance
-  - payment_gateway_integration
-  - responsive_design
+  - roadmapping
   - web_application_development
   slug: born-i-byen
   technologies:
-  - Google Maps
-  - CSS
-  - Javascript
+  - Elasticsearch
   - MySQL
   - Ruby
   - Ruby on Rails
+  - Tailwind CSS
+  - View Components
   website: https://bornibyen.dk
 
 change-healthcare:

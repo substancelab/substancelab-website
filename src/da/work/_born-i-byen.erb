@@ -8,41 +8,26 @@
   </div>
 <% end %>
 
-<section>
-  <div class="container">
-    <%= markdown(<<~MARKDOWN)
+<section class="ui-content">
+  <%= markdown(<<~MARKDOWN)
       ## Redaktionen manglede frihed
 
       [Børn i byen](https://bornibyen.dk) startede som et brugerdrevet website med en database over steder og events for børnefamilier. Med tiden ønskede virksomheden at bevæge sig mod redaktionelt styret indhold — men platformen var bygget på en forældet frontend, og redaktionen kunne reelt kun uploade billeder og ændre skriftformattering i artikler. Det gjorde det svært at skabe visuelt konsistente forsider på tværs af enheder.
-    MARKDOWN
-    %>
 
-    <aside class="factbox pull-right">
-      <div class="factbox-body">
-        <h2>Hvem er Børn i byen?</h2>
-        <p>
-          <a href="https://bornibyen.dk">Børn i byen</a> er de danske børnefamiliers guide til events, steder og aktiviteter i København og Aarhus, med anmeldelser, artikler og et betalt medlemskab med rabatter hos samarbejdspartnere som Tivoli, Zoo og Experimentarium.
-        </p>
-      </div>
+      ## Hvem er Børn i byen?
 
-      <table class="factbox-table">
-        <tr>
-          <th>Website</th>
-          <td><a href="https://bornibyen.dk" title="Børn i byen">bornibyen.dk</a></td>
-        </tr>
-      </table>
-    </aside>
+      [Børn i byen](https://bornibyen.dk) er de danske børnefamiliers guide til events, steder og aktiviteter i København og Aarhus, med anmeldelser, artikler og et betalt medlemskab med rabatter hos samarbejdspartnere som Tivoli, Zoo og Experimentarium.
 
-    <%= markdown(<<~MARKDOWN)
+      **Website**: [bornibyen.dk](https://bornibyen.dk)
+
       ## En komplet omskrivning, sideløbende med driften
 
       Substance Lab stod for en komplet omskrivning af sitet, mens den eksisterende applikation fortsat kørte i daglig drift. Den gamle frontend-kode kunne ikke genbruges — den var forældet, ikke tilstrækkeligt testdækket, og for filtret sammen til at kunne moderniseres stykvis. Vi skrottede derfor hele frontend-laget og byggede det op forfra på en moderne, server-renderet stack med en langt mere ryddelig kodestruktur.
 
       Kernen i løsningen er et selvbygget page builder-system: I stedet for at udvide den gamle rich text-editor kan redaktionen nu frit sammensætte forsider og artikler ud fra en voksende samling content blocks — i dag 42 stk. — hver med egne visuelle varianter. Systemet har siden vist sig fleksibelt nok til at blive udvidet løbende og genbrugt på nye sidetyper som landingssider. Samtidig fik sitet en ny, Elasticsearch-baseret søgemaskine, der i dag driver ikke bare søgning, men alle listevisninger på sitet.
-    MARKDOWN
-    %>
 
-    <%= markdown(<<~MARKDOWN)
+      ## Iterativt samarbejde
+
       Ugentlige iterationsmøder med opfølgning på status i forhold til estimatet holdt samarbejdet gnidningsfrit gennem hele projektet, på trods af den omfattende omskrivning.
 
       ## Resultatet

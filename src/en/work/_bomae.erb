@@ -109,3 +109,28 @@
     </div>
   </div>
 </section>
+
+<section>
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## What it looks like today
+    MARKDOWN
+    %>
+  </div>
+
+  <div class="ui-screenshot-gallery">
+    <div class="ui-screenshot-gallery-items">
+      <figure>
+        <%= image_tag "work/bomae/screenshots/dashboard.jpg", alt: "An advisor's overview in Bomae's CRM" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/bomae/screenshots/cases-list.jpg", alt: "The case list, with filters for store, advisor, and status" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/bomae/screenshots/case-detail.jpg", alt: "A single case with status, selected products, and revenue" %>
+      </figure>
+    </div>
+  </div>
+</section>

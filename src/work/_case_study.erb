@@ -30,24 +30,24 @@
       <p><%= (project["technologies"] || []).sort.to_sentence %></p>
     </div>
   </section>
-
-  <section class="ui-content split wide well">
-    <div>
-      <figure>
-        <%= image_tag(cloudinary_image_url("v1782068244/substancelab-website/people/jakob_cta.jpg", ["w_500"]), alt: "Jakob") %>
-      </figure>
-    </div>
-
-    <div class="ui-contact">
-      <h3>Jeg hører gerne om <strong class="highlight">din idé</strong></h3>
-
-      <div class="ui-contact-name">Jakob Skjerning</div>
-      <div class="ui-contact-title">Stifter og rådgiver</div>
-      <div class="ui-contact-phone"><a href="tel:+4571990999">+45 7199 0999</a></div>
-      <div class="ui-contact-email"><a href="mailto:jakob@substancelab.com">jakob@substancelab.com</a></div>
-    </div>
-  </section>
 </article>
+
+<section class="ui-content split wide well">
+  <div>
+    <figure>
+      <%= image_tag(cloudinary_image_url("v1782068244/substancelab-website/people/jakob_cta.jpg", ["w_500"]), alt: "Jakob") %>
+    </figure>
+  </div>
+
+  <div class="ui-contact">
+    <h3>Jeg hører gerne om <strong class="highlight">din idé</strong></h3>
+
+    <div class="ui-contact-name">Jakob Skjerning</div>
+    <div class="ui-contact-title">Stifter og rådgiver</div>
+    <div class="ui-contact-phone"><a href="tel:+4571990999">+45 7199 0999</a></div>
+    <div class="ui-contact-email"><a href="mailto:jakob@substancelab.com">jakob@substancelab.com</a></div>
+  </div>
+</section>
 
 <% other_studies = case_studies.reject { |case_study| case_study["slug"] == project["slug"] } %>
 <% if other_studies.any? %>

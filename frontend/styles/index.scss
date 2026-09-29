@@ -115,6 +115,7 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.6;
   margin: 0;
+  overflow-x: hidden; // guards against the 100vw breakout (.ui-screenshot-gallery) overshooting by the scrollbar's width
   padding: var(--body-outer-spacing);
 
   -moz-osx-font-smoothing: grayscale;
@@ -420,6 +421,59 @@ h4 {
 @keyframes dither-flicker {
   to {
     background-position-y: -384px;
+  }
+}
+
+// A simple CSS-columns masonry, used for showcasing product screenshots of
+// varying heights within a case study (no JS layout needed -- browsers place
+// each figure into the shortest column as they read down the source order).
+.ui-screenshot-gallery {
+  container-type: inline-size;
+
+  // Unlike .ui-gallery (a direct child of body), this lives inside the
+  // 60ch-capped .ui-content column, so an ordinary negative margin only
+  // buys back a little width -- it never reaches the viewport edges.
+  // Instead, size it to the full viewport and pull it back left by
+  // exactly body's own padding, since .ui-content sits flush against it.
+  width: 100vw;
+  margin-left: calc(-1 * var(--body-outer-spacing));
+
+  .ui-screenshot-gallery-items {
+    // Container query units (cqw) rather than plain percentages: inside a
+    // multi-column layout, a percentage margin on a figure resolves against
+    // its narrow column box, not the full container -- so it wouldn't match
+    // column-gap (which is a percentage of the whole container). cqw always
+    // resolves against this container, regardless of which column a
+    // descendant lands in, keeping the vertical and horizontal gaps equal.
+    --gap: 4cqw;
+
+    column-count: 1;
+    column-gap: var(--gap);
+    padding-bottom: var(--content-spacing-y);
+    padding-left: var(--body-outer-spacing);
+    padding-right: var(--body-outer-spacing);
+    padding-top: var(--content-spacing-y);
+
+    @container (width > 30em) {
+      --gap: 2cqw;
+      column-count: 2;
+    }
+
+    @container (width > 40em) {
+      column-count: 3;
+    }
+  }
+
+  figure {
+    break-inside: avoid;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    margin: 0 0 var(--gap);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 

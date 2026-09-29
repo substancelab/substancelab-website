@@ -58,3 +58,40 @@
     </div>
   </div>
 </section>
+
+<section>
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Sådan ser det ud i dag
+    MARKDOWN
+    %>
+  </div>
+
+  <div class="ui-screenshot-gallery">
+    <div class="ui-screenshot-gallery-items">
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/homepage.jpg", alt: "Forsiden af Børn i byen" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/category.jpg", alt: "Kategorisiden for udendørs legepladser, med filtre" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/article.jpg", alt: "En redaktionel artikel bygget med page builderen" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/homepage_mobile.jpg", alt: "Forsiden på en mobiltelefon" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/place.jpg", alt: "En stedside med anmeldelser og medlemsrabat" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/calendar.jpg", alt: "Medlemskalenderen med events" %>
+      </figure>
+    </div>
+  </div>
+</section>

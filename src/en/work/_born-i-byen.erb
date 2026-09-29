@@ -73,3 +73,40 @@
     </div>
   </div>
 </section>
+
+<section>
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## What it looks like today
+    MARKDOWN
+    %>
+  </div>
+
+  <div class="ui-screenshot-gallery">
+    <div class="ui-screenshot-gallery-items">
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/homepage.jpg", alt: "The Børn i byen front page" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/category.jpg", alt: "A category page for outdoor playgrounds, with filters" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/article.jpg", alt: "An editorial article built with the page builder" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/homepage_mobile.jpg", alt: "The front page on a mobile phone" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/place.jpg", alt: "A venue page with reviews and a member discount" %>
+      </figure>
+
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/calendar.jpg", alt: "The member calendar of events" %>
+      </figure>
+    </div>
+  </div>
+</section>

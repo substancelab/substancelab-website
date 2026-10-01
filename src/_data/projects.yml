@@ -78,7 +78,7 @@ born-i-byen:
     en: "Guide to Copenhagen and Aarhus focusing on parents and their children."
   featured: true
   name: "Børn i byen"
-  position: 1
+  position: 2
   services:
   - maintenance
   - roadmapping
@@ -176,7 +176,7 @@ eventzonen:
     en: International marketplace that puts event organizers in contact with artists and entertainers.
   featured: true
   name: eventzonen.dk
-  position: 3
+  position: 1
   services:
   - maintenance
   - web_application_development
@@ -240,7 +240,7 @@ flaym:
     en: Flaym connects psoriasis sufferers from all over the world.
   featured: true
   name: Flaym
-  position: 4
+  position: 7
   services:
   - maintenance
   - web_application_development
@@ -300,7 +300,7 @@ gomore:
     en: Ridesharing and peer to peer car-rental done right.
   featured: true
   name: GoMore
-  position: 2
+  position: 6
   services:
   - maintenance
   - project_management
@@ -418,7 +418,7 @@ lokalebasen:
     en: "Denmarks leading portal for offices, warehouses, and production facilities."
   featured: true
   name: Lokalebasen
-  position: 6
+  position: 9
   services:
   - api_development
   - economic_integration
@@ -543,7 +543,7 @@ rp_lookups:
     en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
   featured: true
   name: Internal analysis tool
-  position: 5
+  position: 8
   services:
   - automation
   - project_management

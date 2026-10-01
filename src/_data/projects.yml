@@ -231,8 +231,6 @@ falcon:
     - PostgreSQL
 
 flaym:
-  case_studies:
-  - da
   client: LEO Innovation Lab, Denmark
   client_website: https://leoinnovationlab.com/
   description:
@@ -240,7 +238,6 @@ flaym:
     en: Flaym connects psoriasis sufferers from all over the world.
   featured: true
   name: Flaym
-  position: 7
   services:
   - maintenance
   - web_application_development

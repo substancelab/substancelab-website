@@ -46,7 +46,7 @@ Read a few of `src/da/work/_*.erb` (e.g. `_hh-components.erb`,
 <% slot :hero do %>
   <div class="container">
     <h1>...</h1>
-    <p class="ui-intro">...</p>
+    <p class="ui-lede">...</p>
   </div>
 <% end %>
 

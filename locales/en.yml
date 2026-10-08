@@ -6,7 +6,6 @@ en:
       page_title: "Articles"
     show:
       meta_data: "%{author} wrote this on %{date}"
-      photo_credits: "Photo by %{name}"
 
   contact_details:
     book_a_meeting: "Book an online meeting"

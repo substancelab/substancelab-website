@@ -6,7 +6,6 @@ da:
       page_title: "Artikler"
     show:
       meta_data: "Skrevet af %{author} d. %{date}"
-      photo_credits: "Billede taget af %{name}"
 
   contact_details:
     book_a_meeting: "Book et online møde"

@@ -130,9 +130,6 @@ crops, all in `src/images/work/<slug>/`:
 
 - `<photographer-slug>-<photo-id>-unsplash.jpg` — the untouched source image,
   named for traceability back to the photographer/photo.
-- `masthead.jpg` — resized wide (e.g. `-resize 1600x`), used only as the
-  page's social/og:image thumbnail (see `plugins/hero_helpers.rb`), never
-  shown inline.
 - `tile.jpg` — cropped to exactly `740x600` (`-resize 740x600^ -gravity
   center -extent 740x600`), shown in the case-study gallery listing.
 

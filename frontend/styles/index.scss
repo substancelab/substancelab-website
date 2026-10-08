@@ -479,7 +479,7 @@ h4 {
 
 .ui-hero {
   font-size: var(--font-size-lg);
-  padding: 5em 0em;
+  padding: calc(var(--content-spacing-y) * 1.4) 0em;
 }
 
 /* A subheader callout  */

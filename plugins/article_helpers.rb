@@ -55,9 +55,10 @@ module ArticleHelpers
     content.split("READMORE").first.to_s.sub(%r{\s*<p>\s*\z}, "").html_safe
   end
 
-  def link_to_article(article)
+  def link_to_article(article, prefix: nil, suffix: nil)
     href = article.relative_url
     title = article.data.title
-    "<a href=\"#{href}\" title=\"#{CGI.escapeHTML(title.to_s)}\">#{title}</a>".html_safe
+    label = [prefix, title, suffix].compact.join(" ")
+    "<a href=\"#{href}\" title=\"#{CGI.escapeHTML(title.to_s)}\">#{label}</a>".html_safe
   end
 end

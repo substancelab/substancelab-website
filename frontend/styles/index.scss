@@ -494,6 +494,33 @@ h4 {
 Modifiers
 */
 
+// Apply .non-wrap-row to a container to prevent its children from wrapping.
+// This renders all child elements on a single line forcing their contents to
+// shrink as more elements are added
+.non-wrap-row {
+  display: flex;
+  flex-wrap: nowrap;
+
+  & > * {
+    flex-shrink: 1;
+  }
+}
+.ui-gallery.non-wrap-row {
+  margin-left: unset;
+  margin-right: unset;
+
+  .ui-gallery-items {
+    margin: unset;
+    padding-left: unset;
+    padding-right: unset;
+
+    & > * {
+      flex-shrink: 1;
+      min-width: 0;
+    }
+  }
+}
+
 /* A content block that is split up in two areas */
 .split {
   align-items: center;
@@ -569,5 +596,6 @@ Modifiers
 
 /* Apply .wide to an element to make it span the full viewport width */
 .wide {
-  max-width: 100vw;
+  max-width: unset;
+  width: unset;
 }

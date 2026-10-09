@@ -5,10 +5,10 @@ title: "Vi kan også hjælpe dig"
 description: "Vi hjælper ikke-tekniske iværksættere med at bygge den webløsning, der gør deres idéer til en profitabel forretning"
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Vi kan også hjælpe dig</h1>
-    <div class="subtitle">Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at have forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før &mdash; mange gange.</div>
-  </div>
+  <%= render Hero.new(
+    title: "Vi kan også hjælpe dig",
+    lede: "Vi ved, hvad det vil sige at stå med en spæd forretningsidé uden at have forudsætningerne for selv for at forvandle den til et produkt, som kunderne betaler for. For vi har gjort det før — mange gange."
+  ) %>
 <% end %>
 
 <section class="overview">

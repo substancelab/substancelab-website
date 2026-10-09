@@ -5,9 +5,7 @@ title: "Hvor skal du starte?"
 description: "Du har valgt at lave en unik software-løsning, men hvad nu?"
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Hvor skal du starte?</h1>
-  </div>
+  <%= render Hero.new(title: "Hvor skal du starte?") %>
 <% end %>
 
 <article>

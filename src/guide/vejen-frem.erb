@@ -5,9 +5,7 @@ title: "De 3 veje frem"
 description: "Hvad er dine muligheder, når du vil realisere din forretningsidé?"
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>De 3 veje frem</h1>
-  </div>
+  <%= render Hero.new(title: "De 3 veje frem") %>
 <% end %>
 
 <article>

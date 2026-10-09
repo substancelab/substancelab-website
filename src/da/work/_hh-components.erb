@@ -1,10 +1,8 @@
 <% slot :hero do %>
-  <div class="container">
-    <h1>Sparet tid og øget kvalitet</h1>
-    <p class="ui-lede">
-      4 medarbejdere, millioner af enheder på skibe fra Kina, og et utal af Excel ark. Det var hverdagen i HH Components, hvor der blev brugt meget tid på at ajourføre lagersystem og ordre-statusser.
-    </p>
-  </div>
+  <%= render Hero.new(
+    title: "Sparet tid og øget kvalitet",
+    lede: "4 medarbejdere, millioner af enheder på skibe fra Kina, og et utal af Excel ark. Det var hverdagen i HH Components, hvor der blev brugt meget tid på at ajourføre lagersystem og ordre-statusser."
+  ) %>
 <% end %>
 
 <section>

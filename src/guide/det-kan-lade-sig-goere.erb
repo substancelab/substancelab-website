@@ -5,9 +5,7 @@ title: "Det kan lade sig gøre"
 description: "Se hvordan solo-stifteren, Mogens, tog hans firma, Eventzonen, fra idé til succesfuld forretning med tilstedeværlse i 4 lande."
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Det kan lade sig gøre</h1>
-  </div>
+  <%= render Hero.new(title: "Det kan lade sig gøre") %>
 <% end %>
 
 <article>

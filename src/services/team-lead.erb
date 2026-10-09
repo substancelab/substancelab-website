@@ -5,10 +5,10 @@ title: "Remote Lead Developer"
 description: ""
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Lead Developer</h1>
-    <div class="subtitle">Erfaren CTO/team lead as a Service</div>
-  </div>
+  <%= render Hero.new(
+    title: "Lead Developer",
+    lede: "Erfaren CTO/team lead as a Service"
+  ) %>
 <% end %>
 
 <article>

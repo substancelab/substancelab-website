@@ -224,6 +224,9 @@ h4 {
 .ui-content {
   container-type: inline-size;
   max-width: 60ch;
+  margin-bottom: var(--content-spacing-y);
+  margin-top: var(--content-spacing-y);
+
 }
 
 // Use for navigation between full pages, like next and previous articles.
@@ -518,7 +521,7 @@ h4 {
 
 .ui-hero {
   font-size: var(--font-size-lg);
-  padding: calc(var(--content-spacing-y) * 1.4) 0em;
+  margin: calc(var(--content-spacing-y) * 1.4) 0em;
 }
 
 /* A subheader callout  */

@@ -1,0 +1,27 @@
+jakob:
+  name: Jakob Skjerning
+  title:
+    - dk: Stifter og rådgiver
+    - en: Founder & CEO
+  position: 1
+
+michael:
+  name: Michael Pedersen
+  title:
+    - dk: Webudvikler
+    - en: Web Developer
+  position: 4
+
+ole:
+  name: Ole Palm
+  title:
+    - dk: Senior webudvikler
+    - en: Senior Web Developer
+  position: 2
+
+rasmus:
+  name: Rasmus Nissen
+  title:
+    - dk: Webudvikler
+    - en: Web Developer
+  position: 3

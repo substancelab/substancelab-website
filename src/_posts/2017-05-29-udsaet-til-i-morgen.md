@@ -36,4 +36,6 @@ Starten af et projekt er det tidspunkt i projektets levetid, hvor du ved allermi
 
 Jeg foreslår derfor at have et lettere modificeret ordsprog i baghovedet, når du planlægger din webløsning:
 
-<blockquote class="quote">Udsæt til i morgen, hvad du kan lære mere om i dag.</blockquote>
+<%= render Quote.new do %>
+  <p>Udsæt til i morgen, hvad du kan lære mere om i dag.</p>
+<% end %>

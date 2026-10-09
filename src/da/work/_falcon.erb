@@ -50,10 +50,9 @@
       </table>
     </aside>
 
-    <blockquote class="quote pull-left">
+    <%= render Quote.new(author: "Louise Lykkegård, Falcon Invest", additional_classes: ["pull-left"]) do %>
       <p>Vi er ved at drukne i arbejdsopgaver, så vi har brug for automatisering.</p>
-      <div class="author">Louise Lykkegård, Falcon Invest</div>
-    </blockquote>
+    <% end %>
 
     <%= markdown(<<~MARKDOWN)
       Det behov har været den røde tråd i samarbejdet, der i virkeligheden
@@ -71,14 +70,13 @@
     MARKDOWN
     %>
 
-    <blockquote class="quote pull-right">
+    <%= render Quote.new(author: "René Engell, Porteføljemanager / Investeringsdirektør & Partner, Falcon Invest", additional_classes: ["pull-right"]) do %>
       <p>
         Jeg ved godt, at vi ikke er helt i mål endnu, men vi er langt nok til,
         at jeg kan se, at I igen leverer über cool arbejde som altid. Det
         kommer til at spare os en masse tid og risiko for fejl.
       </p>
-      <div class="author">René Engell, Porteføljemanager / Investeringsdirektør &amp; Partner, Falcon Invest</div>
-    </blockquote>
+    <% end %>
 
     <%= markdown(<<~MARKDOWN)
       I stedet for en skræddersyet integration per bank blev Folio udvidet
@@ -113,14 +111,13 @@
     MARKDOWN
     %>
 
-    <blockquote class="quote pull-left">
+    <%= render Quote.new(author: "Rasmus Sommerskov, Partner, Falcon Management A/S", additional_classes: ["pull-left"]) do %>
       <p>
         Best in class! Dygtigste udvikler, jeg nogensinde har arbejdet
         sammen med. Grundet god arkitektur implementeres nye features og
         ønsker meget hurtigt.
       </p>
-      <div class="author">Rasmus Sommerskov, Partner, Falcon Management A/S</div>
-    </blockquote>
+    <% end %>
   </div>
 </section>
 

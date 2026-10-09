@@ -54,9 +54,8 @@ description: "Vi hjælper ikke-tekniske iværksættere med at bygge den webløsn
 
 <section class="quotes">
   <div class="container">
-    <blockquote class="quote">
+    <%= render Quote.new(author: "Casper Klenz-Kitenge — Creative Director, Pilot") do %>
       <p>Jakob &amp; co. er blandt de allerbedste herhjemme. Punktum. Jeg har sjældent mødt så erfarne, professionelle og generelt bare pisseseje (Rails)udviklere.</p>
-      <div class="author">Casper Klenz-Kitenge &mdash; Creative Director, Pilot</div>
-    </blockquote>
+    <% end %>
   </div>
 </section>

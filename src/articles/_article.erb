@@ -1,21 +1,26 @@
-<% slot :hero do %>
-  <%= render Hero.new(title: current_article.data.title) %>
+<%= render Hero.new(:lede => article_intro(current_article), :title => current_article.data.title) do %>
+  <div class="ui-attribution">
+    <img alt="Jakob Skjerning" class="ui-avatar" src="/images/people/jakob/avatar.jpg">
+    <div>
+      <div class="author">Jakob Skjerning</div>
+      <div>Owner</div>
+    </div>
+  </div>
 <% end %>
 
-<div class="ui-article">
-  <%= article_intro(current_article) %>
+<article class="ui-content">
   <%= article_body(current_article) %>
-</div>
+</article>
 
-<nav>
-  <div class="previous">
+<nav class="ui-page-navigation">
+  <div class="ui-previous-page">
     <% if (prev_article = current_article.previous_resource) %>
-      <%= link_to_article(prev_article) %>
+      <%= link_to_article(prev_article, prefix: "←") %>
     <% end %>
   </div>
-  <div class="next">
+  <div class="ui-next-page">
     <% if (next_article = current_article.next_resource) %>
-      <%= link_to_article(next_article) %>
+      <%= link_to_article(next_article, suffix: "→") %>
     <% end %>
   </div>
 </nav>

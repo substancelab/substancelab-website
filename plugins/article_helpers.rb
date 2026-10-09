@@ -26,9 +26,25 @@ module ArticleHelpers
     article_parts(article).first.html_safe
   end
 
+  # READMORE ends up inside the paragraph markup – as a paragraph of its own,
+  # or at the start or end of another paragraph – so move the <p> tags around
+  # it to leave both parts balanced.
   def article_parts(article)
-    content = article.content.to_s
-    content.split("READMORE")
+    intro, body = article.content.to_s.split(/\s*READMORE\s*/, 2)
+    return [intro] unless body
+
+    if intro.end_with?("<p>") && body.start_with?("</p>")
+      intro = intro.delete_suffix("<p>")
+      body = body.delete_prefix("</p>")
+    elsif body.start_with?("</p>")
+      intro += "</p>"
+      body = body.delete_prefix("</p>")
+    elsif intro.end_with?("<p>")
+      intro = intro.delete_suffix("<p>")
+      body = "<p>#{body}"
+    end
+
+    [intro, body]
   end
 
   def article_summary(article)

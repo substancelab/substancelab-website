@@ -66,9 +66,11 @@ description: "Skræddersyet, fungerende software, som du kan vise frem til banke
 
 <section class="social-proof">
   <div class="container">
-    <blockquote class="quote">
+    <%= render Quote.new do |quote| %>
       <p>Jeg var imponeret over, hvor langt vi kom på kort tid. Efter få uger hos Substance Lab havde jeg et faktisk produkt, som jeg kunne lade mine kunder bruge</p>
-      <div class="author">Steen Iver Andersen, <a href="https://www.patentact.company" title="Technology, business, and patents">PatentAct</a></div>
-    </blockquote>
+      <% quote.slot :author do %>
+        Steen Iver Andersen, <a href="https://www.patentact.company" title="Technology, business, and patents">PatentAct</a>
+      <% end %>
+    <% end %>
   </div>
 </section>

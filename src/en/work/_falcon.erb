@@ -50,10 +50,9 @@
       </table>
     </aside>
 
-    <blockquote class="quote pull-left">
+    <%= render Quote.new(author: "Louise Lykkegård, Falcon Invest", additional_classes: ["pull-left"]) do %>
       <p>We're drowning in tasks, so we need automation.</p>
-      <div class="author">Louise Lykkegård, Falcon Invest</div>
-    </blockquote>
+    <% end %>
 
     <%= markdown(<<~MARKDOWN)
       That need has been the throughline of the collaboration, which
@@ -71,14 +70,13 @@
     MARKDOWN
     %>
 
-    <blockquote class="quote pull-right">
+    <%= render Quote.new(author: "René Engell, Portfolio Manager / Investment Director & Partner, Falcon Invest", additional_classes: ["pull-right"]) do %>
       <p>
         I know we're not quite there yet, but we're far enough along that I
         can see you're once again delivering über cool work as always. It's
         going to save us a lot of time and risk of errors.
       </p>
-      <div class="author">René Engell, Portfolio Manager / Investment Director &amp; Partner, Falcon Invest</div>
-    </blockquote>
+    <% end %>
 
     <%= markdown(<<~MARKDOWN)
       Rather than build a bespoke integration per bank, Folio was expanded
@@ -113,14 +111,13 @@
     MARKDOWN
     %>
 
-    <blockquote class="quote pull-left">
+    <%= render Quote.new(author: "Rasmus Sommerskov, Partner, Falcon Management A/S", additional_classes: ["pull-left"]) do %>
       <p>
         Best in class! The most skilled developer I've ever worked with.
         Thanks to good architecture, new features and requests get
         implemented very quickly.
       </p>
-      <div class="author">Rasmus Sommerskov, Partner, Falcon Management A/S</div>
-    </blockquote>
+    <% end %>
   </div>
 </section>
 

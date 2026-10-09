@@ -57,15 +57,14 @@
     MARKDOWN
     %>
 
-    <blockquote class="quote pull-left">
+    <%= render Quote.new(author: "Mads Nørgaard, CFO, Bomae", additional_classes: ["pull-left"]) do %>
       <p>
         Substance Lab stepped in on very short notice, when Bomae lost a key
         employee, and helped us ensure continuity around our portal. They
         are sharp, quick to get up to speed on the issues at hand, and make
         well-reasoned arguments for the solution they consider best.
       </p>
-      <div class="author">Mads Nørgaard, CFO, Bomae</div>
-    </blockquote>
+    <% end %>
 
     <%= markdown(<<~MARKDOWN)
       ## One shared source of truth for contracts

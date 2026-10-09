@@ -2,14 +2,11 @@
 
 <section>
   <div class="container">
-    <blockquote class="quote">
+    <%= render Quote.new(author: "David Pepke, Web Content Manager, SBS Radio") do %>
       <p>
         Substance Lab delivered not only a first class product, but also a user experience knowledge that helped this project become as good as it possibly could. Jakob possessed the ability to foresee the challenges of a project, and act accordingly.
       </p>
-      <div class="author">
-        David Pepke, Web Content Manager, SBS Radio
-      </div>
-    </blockquote>
+    <% end %>
   </div>
 </section>
 

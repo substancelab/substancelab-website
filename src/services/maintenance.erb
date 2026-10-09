@@ -56,10 +56,9 @@ description: "Løbende vedligehold af din Ruby on Rails web applikation, rettels
 
 <section class="social-proof">
   <div class="container">
-    <blockquote class="quote">
+    <%= render Quote.new(author: "Jacob Tjørnholm — Partner, GoMore") do %>
       <p>Substance Lab var en meget stor hjælp i arbejdet med at sætte vores udvikling på skinner.</p>
-      <div class="author">Jacob Tjørnholm &mdash; Partner, GoMore</div>
-    </blockquote>
+    <% end %>
   </div>
 </section>
 

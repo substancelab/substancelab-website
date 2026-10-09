@@ -4,9 +4,7 @@ title: "Job: Ruby on Rails udvikler"
 description: "Vil du være med til at udvikle lækker, test-drevet kode for kunder med succes? Vi søger jævnligt nye kolleger, der lige som resten af os brænder for web."
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Job hos Substance Lab</h1>
-  </div>
+  <%= render Hero.new(title: "Job hos Substance Lab") %>
 <% end %>
 
 <article>

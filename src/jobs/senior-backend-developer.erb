@@ -4,10 +4,10 @@ title: "Job: Ruby on Rails udvikler"
 description: "Vi vil gerne arbejde med dig og Ruby, Rails, PostgreSQL, Tailwind, Slim, Stimulus, Turbo, agile, remote, Git, Heroku, RSpec, ViewComponents"
 ---
 <% slot :hero do %>
-  <div class="container">
-    <div class="subtitle">Vi søger...</div>
-    <h1>Senior backend udvikler</h1>
-  </div>
+  <%= render Hero.new(
+    badge: "Vi søger...",
+    title: "Senior backend udvikler"
+  ) %>
 <% end %>
 
 <article>

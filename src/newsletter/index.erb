@@ -5,9 +5,7 @@ title: "Bliv klogere"
 description: "Vi bygger webløsninger, der gør dine drømme til forretning"
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Fra idé til forretning</h1>
-  </div>
+  <%= render Hero.new(title: "Fra idé til forretning") %>
 <% end %>
 
 <article>

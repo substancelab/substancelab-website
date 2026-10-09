@@ -5,10 +5,10 @@ title: "Vedligeholdelsesaftale"
 description: "Løbende vedligehold af din Ruby on Rails web applikation, rettelse af fejl, lukning af sikkerhedshuller, og understøttelse af support"
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Care</h1>
-    <div class="subtitle">Vedligehold og optimering af Ruby on Rails løsninger</div>
-  </div>
+  <%= render Hero.new(
+    title: "Care",
+    lede: "Vedligehold og optimering af Ruby on Rails løsninger"
+  ) %>
 <% end %>
 
 <article>

@@ -7,10 +7,9 @@ front_matter do
 end
 ---
 
-<div class="ui-hero">
-  <h1>Substance Lab</h1>
+<%= render Hero.new(title: "Substance Lab") do %>
   <h2>We build <span class="highlight">modern software</span> for founders with customers</h2>
-</div>
+<% end %>
 
 <section class="ui-content" id="company">
   <%= localized_partial("index/about_substance_lab") %>

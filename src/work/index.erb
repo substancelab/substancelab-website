@@ -8,8 +8,10 @@ end
 ---
 
 <% slot :hero do %>
-  <h1><%= I18n.t("work.index.portfolio") %></h1>
-  <div class="subtitle"><%= I18n.t("work.index.featured_works") %></div>
+  <%= render Hero.new(
+    title: I18n.t("work.index.portfolio"),
+    lede: I18n.t("work.index.featured_works")
+  ) %>
 <% end %>
 
 <article>

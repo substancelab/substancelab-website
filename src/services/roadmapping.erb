@@ -5,10 +5,10 @@ title: "Roadmapping"
 description: "Få udstukket kursen inden du drager afsted. Med et roadmap får du et grundigt indblik i de tekniske opgaver, der ligger foran dig."
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Roadmapping</h1>
-    <div class="subtitle">Få udstukket kursen inden du drager afsted</div>
-  </div>
+  <%= render Hero.new(
+    title: "Roadmapping",
+    lede: "Få udstukket kursen inden du drager afsted"
+  ) %>
 <% end %>
 
 <article>

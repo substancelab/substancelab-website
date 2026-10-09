@@ -1,16 +1,14 @@
 <% slot :hero do %>
-  <div class="container">
-    <h1>Rapportering der ikke længere spiser tiden</h1>
-    <p class="ui-lede">
-      Som børsnoteret investeringsforening under tilsyn af Finanstilsynet skal
+  <%= render Hero.new(
+    title: "Rapportering der ikke længere spiser tiden",
+    lede: "Som børsnoteret investeringsforening under tilsyn af Finanstilsynet skal
       Falcon Invest holde styr på tung rapportering og dokumentation ved
-      siden af den daglige forvaltning af foreningens fonde &mdash; uden at
+      siden af den daglige forvaltning af foreningens fonde — uden at
       det går ud over tempoet i resten af forretningen. Substance Lab har
       siden 2022 bygget og videreudviklet Folio, det interne system der i
       dag håndterer rapportering, dataintegration, kunderelationer og
-      compliance-overvågning for foreningen.
-    </p>
-  </div>
+      compliance-overvågning for foreningen."
+  ) %>
 <% end %>
 
 <section>

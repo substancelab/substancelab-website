@@ -5,9 +5,7 @@ title: "Seed: Fra idé til virkelighed"
 description: "Skræddersyet, fungerende software, som du kan vise frem til banken, dine investorer og kommende kunder og bygge din virksomhed på."
 ---
 <% slot :hero do %>
-  <div class="container">
-    <h1>Seed</h1>
-  </div>
+  <%= render Hero.new(title: "Seed") %>
 <% end %>
 
 <article>

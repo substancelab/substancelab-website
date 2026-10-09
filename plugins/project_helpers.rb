@@ -25,7 +25,7 @@ module ProjectHelpers
     view.slot(:hero) do
       name = project.is_a?(Hash) ? project["name"] : project.name
       desc = localized(project.is_a?(Hash) ? project["description"] : project.description)
-      "<h1>#{CGI.escapeHTML(name.to_s)}</h1><div class=\"subtitle\">#{CGI.escapeHTML(desc.to_s)}</div>".html_safe
+      view.render(Hero.new(title: name, lede: desc))
     end
   end
 

@@ -1,16 +1,14 @@
 <% slot :hero do %>
-  <div class="container">
-    <h1>Reporting that no longer eats up the week</h1>
-    <p class="ui-lede">
-      As a publicly listed investment association supervised by the Danish
+  <%= render Hero.new(
+    title: "Reporting that no longer eats up the week",
+    lede: "As a publicly listed investment association supervised by the Danish
       FSA, Falcon Invest has to keep up with heavy reporting and
-      documentation alongside the daily management of its funds &mdash;
+      documentation alongside the daily management of its funds —
       without slowing down the rest of the business. Since 2022, Substance
       Lab has built and continued to develop Folio, the internal system that
       today handles reporting, data integration, customer relationships, and
-      compliance monitoring for the association.
-    </p>
-  </div>
+      compliance monitoring for the association."
+  ) %>
 <% end %>
 
 <section>

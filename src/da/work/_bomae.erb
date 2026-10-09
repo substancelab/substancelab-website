@@ -1,13 +1,12 @@
 <% slot :hero do %>
-  <div class="container">
-    <h1>Et CRM der skulle videreføres uden at stoppe</h1>
-    <p class="ui-lede">
+  <%= render Hero.new(title: "Et CRM der skulle videreføres uden at stoppe") do |hero| %>
+    <% hero.slot :lede do %>
       <a href="https://www.bomae.dk/">Bomae</a> driver hele deres forretning
       &mdash; leads, kontrakter, rådgivning og fakturering &mdash; gennem ét
       internt CRM, bygget op gennem ti år. Da medarbejderen bag det skiftede
       job, skulle en ny udvikler overtage driften uden afbrydelser.
-    </p>
-  </div>
+    <% end %>
+  <% end %>
 <% end %>
 
 <section>

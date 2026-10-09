@@ -1,5 +1,5 @@
 <% slot :hero do %>
-  <h1><%= current_article.data.title %></h1>
+  <%= render Hero.new(title: current_article.data.title) %>
 <% end %>
 
 <div class="ui-article">

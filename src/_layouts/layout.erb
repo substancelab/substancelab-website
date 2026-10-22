@@ -1,126 +1,57 @@
-<!DOCTYPE html>
-<html lang="<%= current_locale %>">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: basic
+---
+<%= yield %>
 
-<section class="call-to-action vcard">
-  <div class="container">
-    <%= localized_partial_if_present "layouts/newsletter/signup" %>
+<footer class="ui-footer">
+  <div>
+    <div class="ui-address">
+      <img src="/images/logos/grow.png" alt="Substance Lab" class="ui-logo">
+      <div>Substance Lab ApS</div>
+      <div>Jernbanegade 27</div>
+      <div>6000 Kolding</div>
+    </div>
 
-    <div class="contact-details">
-      <h2><%= I18n.translate("contact_details.headline") %></h2>
-
-    <link rel="stylesheet" href="<%= asset_path(:css) %>">
-
-    <% if slotted?(:stylesheets) %>
-      <%= slotted :stylesheets %>
-    <% end %>
-    <% if slotted?(:page_specific_style) %>
-      <%= slotted :page_specific_style %>
-    <% end %>
-
-    <meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc=">
-
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon-precomposed.png">
-    <link rel="shortcut icon" href="/images/favicon.png">
-    <link rel="icon" type="image/ico" href="/images/favicon.ico">
-
-    <%= partial "layouts/analytics" %>
-  </head>
-
-  <body <%= body_attributes %>>
-    <%= partial "layouts/tag_manager/body" %>
-
-    <header class="ui-navigation">
-      <div class="ui-branding">
-        <a href="/" title="Substance Lab">
-          <img src="/images/logos/grow.png" alt="Substance Lab" class="ui-logo">
-        </a>
-      </div>
+    <div>
+      <div><a href="mailto:hi@substancelab.com">hi@substancelab.com</a></div>
+      <div><a href="tel:+4571990999">+45 7199 0999</a></div>
     </div>
   </div>
-</section>
 
-      <nav class="ui-nav">
-        <a href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
-        <a href="<%= services_url %>">Services</a>
-        <a href="/#company">About</a>
-        <a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a>
-      </nav>
-
-      <div class="ui-nav-cta">
-        <a href="https://savvycal.com/substancelab/meet"><%= I18n.t("contact_details.book_a_meeting") %></a>
-      </div>
-    </header>
-
-    <%= slotted :hero %>
-
-    <%= yield %>
-
-    <footer class="ui-footer">
-      <div>
-        <div class="ui-address">
-          <img src="/images/logos/grow.png" alt="Substance Lab" class="ui-logo">
-          <div>Substance Lab ApS</div>
-          <div>Jernbanegade 27</div>
-          <div>6000 Kolding</div>
-        </div>
-
-        <div>
-          <div><a href="mailto:hi@substancelab.com">hi@substancelab.com</a></div>
-          <div><a href="tel:+4571990999">+45 7199 0999</a></div>
-        </div>
-        <div class="country-name"><%= I18n.translate("index.address.country") %></div>
-      </div>
-
-      <nav>
-        <a class="ui-footer-nav-title" href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
-        <ul>
-          <% featured_projects.first(4).each do |project| %>
-            <li>
-              <% if case_study?(project) %>
-                <a href="<%= project_url(project) %>"><%= project["name"] %></a>
-              <% else %>
-                <%= project["name"] %>
-              <% end %>
-            </li>
+  <nav>
+    <a class="ui-footer-nav-title" href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
+    <ul>
+      <% featured_projects.first(4).each do |project| %>
+        <li>
+          <% if case_study?(project) %>
+            <a href="<%= project_url(project) %>"><%= project["name"] %></a>
+          <% else %>
+            <%= project["name"] %>
           <% end %>
-        </ul>
-      </nav>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
 
-      <nav>
-        <a class="ui-footer-nav-title" href="<%= services_url %>">Services</a>
-        <ul>
-          <li><a href="/services/seed/">Seed</a></li>
-          <li><a href="/services/development/">Development</a></li>
-          <li><a href="/services/maintenance/">Maintenance</a></li>
-        </ul>
-      </nav>
+  <nav>
+    <a class="ui-footer-nav-title" href="<%= services_url %>">Services</a>
+    <ul>
+      <li><a href="/services/seed/">Seed</a></li>
+      <li><a href="/services/development/">Development</a></li>
+      <li><a href="/services/maintenance/">Maintenance</a></li>
+    </ul>
+  </nav>
 
-      <nav>
-        <a class="ui-footer-nav-title" href="/#company">About</a>
-        <ul>
-          <li><a href="/#person">People</a></li>
-          <li><a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a></li>
-          <li><a href="/jobs/">Jobs</a></li>
-        </ul>
-      </nav>
+  <nav>
+    <a class="ui-footer-nav-title" href="/#company">About</a>
+    <ul>
+      <li><a href="/#person">People</a></li>
+      <li><a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a></li>
+      <li><a href="/jobs/">Jobs</a></li>
+    </ul>
+  </nav>
 
-      <div>
-        <a href="https://www.linkedin.com/company/substance-lab/">LinkedIn</a>
-      </div>
-    </footer>
-
-    <div class="ui-fadeout top"></div>
-    <div class="ui-fadeout bottom"></div>
-
-    <script src="<%= asset_path(:js) %>"></script>
-
-    <%= slotted :scripts %>
-  </body>
-</html>
+  <div>
+    <a href="https://www.linkedin.com/company/substance-lab/">LinkedIn</a>
+  </div>
+</footer>

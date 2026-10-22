@@ -1,13 +1,13 @@
----ruby
-front_matter do
-  layout :layout
-  title I18n.translate("legalese.cookies.title")
-  description I18n.translate("legalese.cookies.meta_description")
-end
 ---
+layout: layout
+---
+<% set_meta_tags(
+  :description => I18n.translate("legalese.cookies.meta_description"),
+  :title => I18n.translate("legalese.cookies.title")
+) %>
 
-<% slot :masthead do %>
-  <h1><%= I18n.translate("legalese.cookies.title") %></h1>
+<% slot :hero do %>
+  <%= render Hero.new(title: I18n.translate("legalese.cookies.title")) %>
 <% end %>
 
 <article>

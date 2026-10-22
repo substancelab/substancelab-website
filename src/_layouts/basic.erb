@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="<%= asset_url("/fonts/geogrotesque.css") %>" as="style">
 
     <%= partial "layouts/tag_manager/head" %>
 
-    <%= seo %>
+    <% set_meta_tags(
+      :locale => ::SITE_SETTINGS["locale"],
+      :url => "#{::SITE_SETTINGS["protocol"]}#{::SITE_SETTINGS["domain"]}#{resource.relative_url}"
+    ) %>
+    <%= auto_display_meta_tags %>
 
-    <%= vite_client_tag %>
-    <%= vite_stylesheet_tag "layout.sass", :media => "all" %>
-    <%= vite_stylesheet_tag "print.sass", :media => "print" %>
+    <link rel="stylesheet" href="<%= asset_path(:css) %>">
 
     <% if slotted?(:stylesheets) %>
       <%= slotted :stylesheets %>
@@ -33,40 +34,41 @@
     <%= partial "layouts/analytics" %>
   </head>
 
-  <body<%= body_attributes %>>
+  <body <%= body_attributes %>>
     <%= partial "layouts/tag_manager/body" %>
 
-    <header class="masthead">
-      <div class="nav-bar">
-        <div class="container">
-          <a href="/" class="branding" title="Substance Lab | Carefully crafting websites and web applications">
-            <div class="logo">
-              <div class="substance">Substance</div>
-              <div class="lab">Lab</div>
-            </div>
-          </a>
-          <nav>
-            <ul>
-              <li class="home"><a href="/"><%= I18n.translate("navigation.home") %></a></li>
-              <li class="work"><a href="<%= projects_url %>"><%= I18n.translate("navigation.work") %></a></li>
-              <%= nav_bar_link_to_services %>
-              <%= nav_bar_link_to_blog %>
-            </ul>
-          </nav>
-        </div>
+    <header class="ui-navigation">
+      <div class="ui-branding">
+        <a href="/" title="Substance Lab">
+          <img src="/images/logos/grow.png" alt="Substance Lab" class="ui-logo">
+        </a>
       </div>
 
-      <% if slotted?(:masthead) %>
-        <div class="masthead-container">
-          <%= slotted :masthead %>
-        </div>
-      <% end %>
+      <nav class="ui-nav">
+        <a href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
+        <a href="<%= services_url %>">Services</a>
+        <a href="/#company">About</a>
+        <a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a>
+      </nav>
+
+      <div class="ui-nav-cta">
+        <a href="https://savvycal.com/substancelab/meet"><%= I18n.t("contact_details.book_a_meeting") %></a>
+      </div>
     </header>
+
+    <%= slotted :hero %>
 
     <%= yield %>
 
     <% if slotted?(:bottom_of_page) %>
       <%= slotted :bottom_of_page %>
     <% end %>
+
+    <div class="ui-fadeout top"></div>
+    <div class="ui-fadeout bottom"></div>
+
+    <script src="<%= asset_path(:js) %>"></script>
+
+    <%= slotted :scripts %>
   </body>
 </html>

@@ -57,12 +57,10 @@ module ArticleHelpers
     [intro, body]
   end
 
+  # The article content before the READMORE separator, or all of it if the
+  # article has no separator.
   def article_summary(article)
-    content = article.content.to_s
-    return content.html_safe unless content.include?("READMORE")
-
-    # Drop the opening tag of the paragraph the separator was in
-    content.split("READMORE").first.to_s.sub(%r{\s*<p>\s*\z}, "").html_safe
+    article_parts(article).first.html_safe
   end
 
   def link_to_article(article, prefix: nil, suffix: nil)

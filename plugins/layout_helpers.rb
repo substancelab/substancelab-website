@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
+require "cgi"
+
 module LayoutHelpers
   def body_attributes
     data = view.resource.data
     attrs = {}
-    attrs[:id] = data.section if data.respond_to?(:section) && data.section
-    classes = data.respond_to?(:body_classes) && data.body_classes
-    if classes && classes.any?
-      attrs[:class] = classes.join(" ")
-    end
-    attrs.map { |k, v| " #{k}=\"#{v}\"" }.join
+    attrs[:id] = data[:section] if data[:section]
+    classes = Array(data[:body_classes])
+    attrs[:class] = classes.join(" ") if classes.any?
+    attrs.map { |k, v| " #{k}=\"#{CGI.escapeHTML(v.to_s)}\"" }.join.html_safe
   end
 end

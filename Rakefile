@@ -62,7 +62,7 @@ end
 
 namespace :bridgetown do
   desc "Builds the website files into the output directory"
-  task :build do
+  task :build => ["vite:build"] do
     system "bridgetown build"
   end
 

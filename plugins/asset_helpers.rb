@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "cgi"
+
 module AssetHelpers
   def image_exists?(path)
     File.exist?(File.join(site.source, "images", path))
@@ -12,8 +14,8 @@ module AssetHelpers
 
   def image_tag(src, options = {})
     src_val = image_path(src)
-    attrs = options.map { |k, v| " #{k}=\"#{v}\"" }.join
-    "<img src=\"#{src_val}\"#{attrs}>".html_safe
+    attrs = options.map { |k, v| " #{k}=\"#{CGI.escapeHTML(v.to_s)}\"" }.join
+    "<img src=\"#{CGI.escapeHTML(src_val)}\"#{attrs}>".html_safe
   end
 
   def image_url(image)

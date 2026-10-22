@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "cgi"
 require "rails-html-sanitizer"
 require "kramdown"
 require "kramdown-parser-gfm"
@@ -14,7 +15,7 @@ module HTMLHelpers
       options = content if content.is_a?(Hash)
       content = yield
     end
-    attrs = options.map { |k, v| " #{k}=\"#{v}\"" }.join
+    attrs = options.map { |k, v| " #{k}=\"#{CGI.escapeHTML(v.to_s)}\"" }.join
     "<#{name}#{attrs}>#{content}</#{name}>".html_safe
   end
 

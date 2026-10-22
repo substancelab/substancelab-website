@@ -13,7 +13,7 @@ namespace :deploy do
       "en" => "substancelab.com"
     }.fetch(ENV["LOCALE"])
 
-    sh "scp -r build/* substancelab.dk@linux41.unoeuro.com:#{target_folder}"
+    sh "scp -r output/* substancelab.dk@linux41.unoeuro.com:#{target_folder}"
   end
 end
 

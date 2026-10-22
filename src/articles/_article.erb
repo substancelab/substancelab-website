@@ -14,12 +14,12 @@
 
 <nav class="ui-page-navigation">
   <div class="ui-previous-page">
-    <% if (prev_article = current_article.previous_resource) %>
+    <% if (prev_article = older_article(current_article)) %>
       <%= link_to_article(prev_article, prefix: "←") %>
     <% end %>
   </div>
   <div class="ui-next-page">
-    <% if (next_article = current_article.next_resource) %>
+    <% if (next_article = newer_article(current_article)) %>
       <%= link_to_article(next_article, suffix: "→") %>
     <% end %>
   </div>

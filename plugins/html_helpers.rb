@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "cgi"
-require "erb"
 require "rails-html-sanitizer"
 require "kramdown"
 require "kramdown-parser-gfm"

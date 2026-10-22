@@ -8,7 +8,7 @@ excerpt_separator: "READMORE"
 collections:
   posts:
     output: true
-    permalink: /articles/:title/
+    permalink: /articles/:slug/
 
 defaults:
   - scope:

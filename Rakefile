@@ -34,6 +34,27 @@ end
 namespace :images do
   task :optimize => ["optimize:all"]
 
+  desc "Creates favicons and touch icons from images/favicon_template.png"
+  task :favicons do
+    images = Pathname.new("src/images")
+    template = images.join("favicon_template.png")
+    icons = {
+      "apple-touch-icon-152x152-precomposed.png" => "152x152",
+      "apple-touch-icon-144x144-precomposed.png" => "144x144",
+      "apple-touch-icon-114x114-precomposed.png" => "114x114",
+      "apple-touch-icon-72x72-precomposed.png" => "72x72",
+      "apple-touch-icon-precomposed.png" => "57x57",
+      "apple-touch-icon.png" => "57x57",
+      "favicon.png" => "16x16",
+      "mstile-144x144.png" => "144x144"
+    }
+    icons.each do |icon, size|
+      sh "magick", template.to_s, "-resize", size, images.join(icon).to_s
+    end
+
+    sh "magick", template.to_s, "-define", "icon:auto-resize=64,32,24,16", images.join("favicon.ico").to_s
+  end
+
   namespace :optimize do
     task :all => [:jpg, :png]
 

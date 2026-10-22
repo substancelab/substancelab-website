@@ -41,7 +41,7 @@ module I18nHelpers
   def partial_with_fallbacks(paths, locals = {})
     path = paths.shift
     if partial_file_exists?(path)
-      view.partial(path, :locals => locals)
+      view.partial(path, **locals)
     elsif paths.any?
       partial_with_fallbacks(paths, locals)
     else

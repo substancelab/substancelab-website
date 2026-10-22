@@ -1,11 +1,11 @@
+---ruby
+front_matter do
+  layout :layout
+  section :portfolio
+  title I18n.translate("work.index.featured_works")
+  description I18n.translate("work.index.meta_description")
+end
 ---
-layout: layout
-section: portfolio
----
-<% set_meta_tags(
-  :description => I18n.translate("work.index.meta_description"),
-  :title => I18n.translate("work.index.featured_works")
-) %>
 
 <% slot :masthead do %>
   <h1><%= I18n.t("work.index.portfolio") %></h1>

@@ -5,7 +5,8 @@ module MastheadHelpers
     return unless image_url
 
     image_url = masthead_image_url(image_url)
-    set_meta_tags(:thumbnail => image_url)
+    # Used by bridgetown-seo-tag for og:image
+    view.resource.data.image = image_url
 
     view.slot(:page_specific_style) do
       css = css_for_masthead_image(image_url)

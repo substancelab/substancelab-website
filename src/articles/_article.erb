@@ -1,4 +1,4 @@
-<% set_meta_tags(:thumbnail => masthead_image_for_article(current_article)) %>
+<% masthead_image_for_article(current_article) %>
 
 <% slot :masthead do %>
   <h1 class="blog-article-headline"><%= current_article.data.title %></h1>

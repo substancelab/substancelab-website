@@ -27,6 +27,11 @@ Bridgetown.configure do |config|
   config.url = "#{SITE_SETTINGS["protocol"]}#{SITE_SETTINGS["domain"]}"
 
   template_engine "erb"
+
+  # Used by bridgetown-seo-tag for og:locale
+  config.lang = SITE_SETTINGS["locale"]
+
+  init :"bridgetown-seo-tag"
 end
 
 I18n.load_path += Dir[File.join(File.expand_path("../locales", __dir__), "*.yml")]

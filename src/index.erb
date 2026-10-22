@@ -1,8 +1,11 @@
+---ruby
+front_matter do
+  layout :layout
+  priority 1
+  title I18n.translate("index.page_title")
+  description I18n.translate("index.meta_description")
+end
 ---
-layout: layout
-priority: 1
----
-<% set_meta_tags(:description => I18n.translate("index.meta_description"), :site => I18n.translate("index.page_title")) %>
 
 <% slot :masthead do %>
   <div class="hero">

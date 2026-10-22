@@ -1,10 +1,10 @@
+---ruby
+front_matter do
+  layout :layout
+  title I18n.translate("articles.index.page_title")
+  description I18n.translate("articles.index.meta_description")
+end
 ---
-layout: layout
----
-<% set_meta_tags(
-  :description => I18n.translate("articles.index.meta_description"),
-  :title => I18n.translate("articles.index.page_title")
-) %>
 
 <% slot :masthead do %>
   <h1>Artikler</h1>

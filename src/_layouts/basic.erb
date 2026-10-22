@@ -6,11 +6,7 @@
 
     <%= partial "layouts/tag_manager/head" %>
 
-    <% set_meta_tags(
-      :locale => ::SITE_SETTINGS["locale"],
-      :url => "#{::SITE_SETTINGS["protocol"]}#{::SITE_SETTINGS["domain"]}#{resource.relative_url}"
-    ) %>
-    <%= auto_display_meta_tags %>
+    <%= seo %>
 
     <%= vite_client_tag %>
     <%= vite_stylesheet_tag "layout.sass", :media => "all" %>

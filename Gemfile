@@ -14,3 +14,5 @@ gem "rails-html-sanitizer", :require => false
 gem "rake"
 
 gem "actionview"
+
+gem "bridgetown-seo-tag", "~> 7.0"

@@ -4,13 +4,9 @@ locale: da
 title: "Tak for din tilmelding!"
 description: "Vi har sendt dig guiden og nyhedsbrevet. Du kan til enhver tid afmelde dig."
 ---
-<% slot :masthead do %>
-  <div class="container">
-    <h1>Tak for din tilmelding!</h1>
-  </div>
+<% slot :hero do %>
+  <%= render Hero.new(title: "Tak for din tilmelding!") %>
 <% end %>
-
-<% masthead_image("v1613744727/substancelab-website/sprout") %>
 
 <article>
   <div class="container">

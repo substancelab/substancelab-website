@@ -1,9 +1,4 @@
 <% project = resource.data._project %>
-<% set_meta_tags(
-  :description => localized(project["description"] || {}),
-  :title => project_page_title(project)
-) %>
-
 <article class="ui-content">
   <%= localized_partial "work/#{project["slug"]}", {:project => project} %>
 

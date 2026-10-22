@@ -24,23 +24,23 @@ module ArticleHelpers
     blog_articles[index + 1] if index
   end
 
-  def article_body(article)
-    article_parts(article).last.html_safe
+  def article_body(html)
+    article_parts(html).last.html_safe
   end
 
   def article_data(article)
     article.data
   end
 
-  def article_intro(article)
-    article_parts(article).first.html_safe
+  def article_intro(html)
+    article_parts(html).first.html_safe
   end
 
   # READMORE ends up inside the paragraph markup – as a paragraph of its own,
   # or at the start or end of another paragraph – so move the <p> tags around
   # it to leave both parts balanced.
-  def article_parts(article)
-    intro, body = article.content.to_s.split(/\s*READMORE\s*/, 2)
+  def article_parts(html)
+    intro, body = html.to_s.split(/\s*READMORE\s*/, 2)
     return [intro] unless body
 
     if intro.end_with?("<p>") && body.start_with?("</p>")
@@ -60,7 +60,7 @@ module ArticleHelpers
   # The article content before the READMORE separator, or all of it if the
   # article has no separator.
   def article_summary(article)
-    article_parts(article).first.html_safe
+    article_parts(article.content).first.html_safe
   end
 
   def link_to_article(article, prefix: nil, suffix: nil)

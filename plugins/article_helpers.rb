@@ -62,10 +62,10 @@ module ArticleHelpers
     end
   end
 
-  # The article content without the READMORE separator, which separates the
-  # summary from the rest of the article.
-  def article_content(article)
-    article.content.to_s.gsub(%r{<p>\s*READMORE\s*</p>\n?|READMORE}, "").html_safe
+  # Removes the READMORE separator, which separates the summary from the rest
+  # of the article, from the article HTML.
+  def without_readmore(html)
+    html.to_s.gsub(%r{<p>\s*READMORE\s*</p>\n?|READMORE}, "").html_safe
   end
 
   # The article content before the READMORE separator, or all of it if the

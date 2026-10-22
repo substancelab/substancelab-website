@@ -18,7 +18,7 @@ class Builders::CaseStudies < SiteBuilder
           body_classes ["case_study"]
           section "portfolio"
           _project project
-          template_content
+          content template_content
         end
       end
     end

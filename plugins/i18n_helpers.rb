@@ -19,6 +19,8 @@ module I18nHelpers
       File.join(current_locale, clean_path),
       File.join(fallback_locale, clean_path)
     ]
+    # Support the Middleman style of passing locals, ie `:locals => {...}`
+    locals = locals.fetch(:locals, locals)
     partial_with_fallbacks(paths, locals)
   end
 

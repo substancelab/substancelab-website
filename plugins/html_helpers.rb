@@ -21,7 +21,7 @@ module HTMLHelpers
 
   def markdown(text = nil)
     text = yield if block_given? && text.nil?
-    Kramdown::Document.new(text.to_s.strip, :input => "GFM").to_html.html_safe
+    Kramdown::Document.new(text.to_s.strip, :input => "GFM", :hard_wrap => false).to_html.html_safe
   end
 
   def mail_to(email, name = nil, options = {})

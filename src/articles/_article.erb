@@ -1,4 +1,4 @@
-<%= render Hero.new(:lede => article_intro(current_article), :title => current_article.data.title) do %>
+<%= render Hero.new(:lede => article_intro(article_html), :title => current_article.data.title) do %>
   <div class="ui-attribution">
     <img alt="Jakob Skjerning" class="ui-avatar" src="/images/people/jakob/avatar.jpg">
     <div>
@@ -9,7 +9,7 @@
 <% end %>
 
 <article class="ui-content">
-  <%= article_body(current_article) %>
+  <%= article_body(article_html) %>
 </article>
 
 <nav class="ui-page-navigation">

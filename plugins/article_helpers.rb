@@ -2,7 +2,10 @@
 
 module ArticleHelpers
   def blog_articles
-    site.collections.posts.resources.sort_by { |r| r.date }.reverse
+    site.collections.posts.resources
+      .select { |r| r.data.published != false && r.data.locale.to_s == current_locale }
+      .sort_by { |r| r.date }
+      .reverse
   rescue
     []
   end

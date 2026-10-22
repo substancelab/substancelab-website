@@ -14,6 +14,16 @@ module ArticleHelpers
     view.resource
   end
 
+  def newer_article(article)
+    index = blog_articles.index(article)
+    blog_articles[index - 1] if index&.positive?
+  end
+
+  def older_article(article)
+    index = blog_articles.index(article)
+    blog_articles[index + 1] if index
+  end
+
   def article_body(article)
     article_parts(article).last.html_safe
   end

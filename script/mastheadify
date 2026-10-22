@@ -14,7 +14,7 @@ destination_path = File.expand_path(
   File.join(
     source_path,
     "../..",
-    "source",
+    "src",
     "images",
     source_folder
   )

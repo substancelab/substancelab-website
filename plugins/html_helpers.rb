@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "cgi"
+require "erb"
 require "rails-html-sanitizer"
 require "kramdown"
 require "kramdown-parser-gfm"
@@ -28,7 +29,8 @@ module HTMLHelpers
     name ||= email
     subject = options[:subject]
     href = "mailto:#{email}"
-    href += "?subject=#{URI.encode_www_form_component(subject)}" if subject
+    # Mail clients don't decode + as a space, like browsers do in URLs
+    href += "?subject=#{ERB::Util.url_encode(subject)}" if subject
     "<a href=\"#{href}\">#{name}</a>".html_safe
   end
 end

@@ -18,7 +18,7 @@ layout: basic
         </div>
         <div class="tel contact-method">
           <abbr title="+4571990999">
-            <a href="tel:<%= I18n.translate("contact_details.phone_number") %>"><%= I18n.translate("contact_details.phone_number") %></a>
+            <a href="tel:<%= I18n.translate("contact_details.phone_number").gsub(" ", "%20") %>"><%= I18n.translate("contact_details.phone_number") %></a>
           </abbr>
         </div>
         <div class="email contact-method">

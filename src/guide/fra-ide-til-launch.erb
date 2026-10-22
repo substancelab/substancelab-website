@@ -1,0 +1,49 @@
+---
+layout: basic
+locale: da
+title: "Den effektive vej fra idé til launch"
+description: "Vi har samlet vores erfaringer i en lille, let læst guide, der hjælper dig i gang i med at udvikle dit digitale produkt - hvad end det er en markedsplads, en abonnementsforretning, eller noget helt tredje."
+---
+<article class="article without-masthead">
+  <div class="container">
+    <div class="article-intro">
+      <small>Gratis guide til at komme i gang med at udvikle dit digitale produkt</small>
+      <h1>Den effektive vej fra idé til launch</h1>
+    </div>
+
+    <section>
+      <figure class="figure pull-left">
+        <%= image_tag(cloudinary_image_url("v1782068244/substancelab-website/people/jakob_cta.jpg", ["w_800"]), :alt => "Jakob Skjerning", :loading => "lazy") %>
+      </figure>
+
+      <p>
+        Vi har samlet <%= Time.now.year - 2006 %> års erfaringer med at udvikle digitale produkter og softwareløsninger i en guide, der hjælper dig i gang.
+      </p>
+
+      <%= localized_partial_if_present "layouts/bento/guide_signup_form", :locals => {:form_id => "bento-formkit-signup-top"} %>
+    </section>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Det lærer du i guiden</h2>
+
+      <ul>
+        <li>At fokusere på problemet i stedet for at stirre dig blind på én af mange mulige løsninger.</li>
+        <li>Hvordan du skærer ned til det absolut nødvendige, så du ikke bygger noget forkert.</li>
+        <li>Hvordan du kan udnytte standardløsninger til at spare penge uden at låse dig fast.</li>
+        <li>Hvordan du kan arbejde med udvikling på en måde, der giver dig kontrol over budget og risiko.</li>
+      </ul>
+
+      <h2>Få guiden nu</h2>
+
+      <%= localized_partial_if_present "layouts/bento/guide_signup_form", :locals => {:form_id => "bento-formkit-signup-bottom"} %>
+
+      <h2>Hvem er vi?</h2>
+
+      <p>
+        Substance Lab er en lille, stabil konsulent-virksomhed, der i <%= Time.now.year - 2006 %> år har hjulpet mindre virksomheder med at blive større og indfri deres drømme om succesfulde Software-as-a-Service forretninger.
+      </p>
+    </section>
+  </div>
+</article>

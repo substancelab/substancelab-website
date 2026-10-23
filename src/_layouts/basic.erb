@@ -9,6 +9,7 @@
     <%= seo %>
 
     <link rel="stylesheet" href="<%= asset_path(:css) %>">
+    <%= partial "layouts/page_transitions" %>
 
     <% if slotted?(:stylesheets) %>
       <%= slotted :stylesheets %>

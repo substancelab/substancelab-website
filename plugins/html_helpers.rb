@@ -11,6 +11,11 @@ module HTMLHelpers
     Rails::Html::FullSanitizer.new.sanitize(html.to_s)
   end
 
+  # Removes links from the HTML, keeping their text.
+  def strip_links(html)
+    Rails::Html::LinkSanitizer.new.sanitize(html.to_s).html_safe
+  end
+
   def content_tag(name, content = nil, options = {}, &block)
     if block_given?
       options = content if content.is_a?(Hash)

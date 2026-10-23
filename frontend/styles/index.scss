@@ -332,13 +332,27 @@ h4 {
 
 .ui-quote {
   border-left: 4px solid rgb(var(--color-brand-primary-rgb));
+  font-size: var(--font-size-lg);
   margin: var(--content-spacing-y) 0;
   padding: 0 1em;
+
+  // Span the full width rather than the column's line length cap
+  &, & p {
+    .ui-content & {
+      max-width: none;
+    }
+  }
 
   &::before {
     content: open-quote;
     font-size: var(--font-size-2xl);
     line-height: 1.4em;
+  }
+
+  // Close the quote again without showing it, so the next quote on the page
+  // isn't treated as nested inside this one and shown with single quotes
+  &::after {
+    content: no-close-quote;
   }
 
   p {

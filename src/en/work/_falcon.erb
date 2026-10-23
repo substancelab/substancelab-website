@@ -13,133 +13,125 @@
   ) %>
 <% end %>
 
-<section>
-  <div class="container">
-    <%= markdown(<<~MARKDOWN)
-      ## From manual Excel reporting to an automated process
+<%= markdown(<<~MARKDOWN)
+  ## From manual Excel reporting to an automated process
 
-      Falcon Invest's customer reports used to be built in Excel &mdash;
-      data pulled manually from other reports and entered into the right
-      rows. It was error-prone and took time away from the employee
-      responsible for reporting, and as Falcon Invest gained more customers,
-      the process simply couldn't keep up.
+  Falcon Invest's customer reports used to be built in Excel &mdash;
+  data pulled manually from other reports and entered into the right
+  rows. It was error-prone and took time away from the employee
+  responsible for reporting, and as Falcon Invest gained more customers,
+  the process simply couldn't keep up.
 
-      Folio now fetches and normalizes positions, transactions, exchange
-      rates, and fees from Falcon Invest's banking partners every day, and
-      generates the reports &mdash; returns, quarterly overviews, taxation
-      &mdash; that used to be built by hand.
-    MARKDOWN
-    %>
+  Folio now fetches and normalizes positions, transactions, exchange
+  rates, and fees from Falcon Invest's banking partners every day, and
+  generates the reports &mdash; returns, quarterly overviews, taxation
+  &mdash; that used to be built by hand.
+MARKDOWN
+%>
 
-    <aside class="factbox pull-right">
-      <div class="factbox-body">
-        <h2>Who is Falcon Invest?</h2>
-        <p>
-          <a href="https://falconinvest.dk">Falcon Invest</a> is a publicly
-          listed Danish investment association specializing in momentum and
-          multi-factor investing, running three actively managed funds
-          supervised by the Danish FSA. The association's investment advisor
-          is Falcon Fondsmæglerselskab A/S, which also offers individual
-          portfolio management.
-        </p>
-      </div>
-
-      <table class="factbox-table">
-        <tr>
-          <th>Website</th>
-          <td><a href="https://falconinvest.dk" title="Falcon Invest">falconinvest.dk</a></td>
-        </tr>
-      </table>
-    </aside>
-
-    <%= render Quote.new(author: "Louise Lykkegård, Falcon Invest", additional_classes: ["pull-left"]) do %>
-      <p>We're drowning in tasks, so we need automation.</p>
-    <% end %>
-
-    <%= markdown(<<~MARKDOWN)
-      That need has been the throughline of the collaboration, which
-      actually goes back to 2015, when Substance Lab built one of Falcon
-      Invest's first tools for comparing investment models. Every new piece
-      of automation in Folio frees up time employees would otherwise spend
-      on repeated, manual work.
-
-      ## One normalized data flow across banks
-
-      Folio started as a narrow integration with a single banking partner.
-      As Falcon Invest began onboarding customers who banked elsewhere, it
-      became clear that a solution built for one data format wouldn't hold
-      up.
-    MARKDOWN
-    %>
-
-    <%= render Quote.new(author: "René Engell, Portfolio Manager / Investment Director & Partner, Falcon Invest", additional_classes: ["pull-right"]) do %>
-      <p>
-        I know we're not quite there yet, but we're far enough along that I
-        can see you're once again delivering über cool work as always. It's
-        going to save us a lot of time and risk of errors.
-      </p>
-    <% end %>
-
-    <%= markdown(<<~MARKDOWN)
-      Rather than build a bespoke integration per bank, Folio was expanded
-      into a proper ETL process, where data from every provider is
-      normalized into Falcon Invest's internal data model, regardless of
-      source format. It was a hard transition to build the first time
-      &mdash; but the third banking connection was added with surprisingly
-      little effort, because the reporting and CRM core didn't need to
-      change.
-
-      ## From reporting to CRM and ongoing compliance
-
-      As needs grew, Folio has been extended to also serve as a CRM for
-      customer relationships and to manage complex workflows like gradual
-      customer onboarding: when a new customer starts with a larger amount
-      of capital, Falcon Invest spreads the initial investment out over
-      time to diversify the timing of purchases &mdash; a process that can
-      involve several currencies and trade windows, which Folio now tracks
-      and reminds the responsible people about.
-
-      The system also continuously monitors that customer account balances
-      match the agreements in place. That catches discrepancies along the
-      way, instead of only surfacing them during the quarterly reporting
-      crunch, when the time window is shortest and the pressure highest.
-
-      ## Ownership without vendor lock-in
-
-      Folio is built on mature, open source technologies. That means
-      Falcon Invest has full ownership of the code and isn't locked to a
-      single vendor &mdash; an important priority for an association that
-      has to document and account for its systems to regulators.
-    MARKDOWN
-    %>
-
-    <%= render Quote.new(author: "Rasmus Sommerskov, Partner, Falcon Management A/S", additional_classes: ["pull-left"]) do %>
-      <p>
-        Best in class! The most skilled developer I've ever worked with.
-        Thanks to good architecture, new features and requests get
-        implemented very quickly.
-      </p>
-    <% end %>
+<aside class="factbox pull-right">
+  <div class="factbox-body">
+    <h2>Who is Falcon Invest?</h2>
+    <p>
+      <a href="https://falconinvest.dk">Falcon Invest</a> is a publicly
+      listed Danish investment association specializing in momentum and
+      multi-factor investing, running three actively managed funds
+      supervised by the Danish FSA. The association's investment advisor
+      is Falcon Fondsmæglerselskab A/S, which also offers individual
+      portfolio management.
+    </p>
   </div>
-</section>
 
-<section>
-  <div class="container">
-    <div class="statistics">
-      <div class="statistics-figure">
-        <div class="statistics-number">Thousands</div>
-        <div class="statistics-label">of hours saved annually in reporting</div>
-      </div>
+  <table class="factbox-table">
+    <tr>
+      <th>Website</th>
+      <td><a href="https://falconinvest.dk" title="Falcon Invest">falconinvest.dk</a></td>
+    </tr>
+  </table>
+</aside>
 
-      <div class="statistics-figure">
-        <div class="statistics-number">4 years</div>
-        <div class="statistics-label">of ongoing collaboration on Folio since 2022</div>
-      </div>
+<%= render Quote.new(author: "Louise Lykkegård, Falcon Invest", additional_classes: ["pull-left"]) do %>
+  <p>We're drowning in tasks, so we need automation.</p>
+<% end %>
 
-      <div class="statistics-figure">
-        <div class="statistics-number">0</div>
-        <div class="statistics-label">vendor lock-in &mdash; full code ownership</div>
-      </div>
-    </div>
+<%= markdown(<<~MARKDOWN)
+  That need has been the throughline of the collaboration, which
+  actually goes back to 2015, when Substance Lab built one of Falcon
+  Invest's first tools for comparing investment models. Every new piece
+  of automation in Folio frees up time employees would otherwise spend
+  on repeated, manual work.
+
+  ## One normalized data flow across banks
+
+  Folio started as a narrow integration with a single banking partner.
+  As Falcon Invest began onboarding customers who banked elsewhere, it
+  became clear that a solution built for one data format wouldn't hold
+  up.
+MARKDOWN
+%>
+
+<%= render Quote.new(author: "René Engell, Portfolio Manager / Investment Director & Partner, Falcon Invest", additional_classes: ["pull-right"]) do %>
+  <p>
+    I know we're not quite there yet, but we're far enough along that I
+    can see you're once again delivering über cool work as always. It's
+    going to save us a lot of time and risk of errors.
+  </p>
+<% end %>
+
+<%= markdown(<<~MARKDOWN)
+  Rather than build a bespoke integration per bank, Folio was expanded
+  into a proper ETL process, where data from every provider is
+  normalized into Falcon Invest's internal data model, regardless of
+  source format. It was a hard transition to build the first time
+  &mdash; but the third banking connection was added with surprisingly
+  little effort, because the reporting and CRM core didn't need to
+  change.
+
+  ## From reporting to CRM and ongoing compliance
+
+  As needs grew, Folio has been extended to also serve as a CRM for
+  customer relationships and to manage complex workflows like gradual
+  customer onboarding: when a new customer starts with a larger amount
+  of capital, Falcon Invest spreads the initial investment out over
+  time to diversify the timing of purchases &mdash; a process that can
+  involve several currencies and trade windows, which Folio now tracks
+  and reminds the responsible people about.
+
+  The system also continuously monitors that customer account balances
+  match the agreements in place. That catches discrepancies along the
+  way, instead of only surfacing them during the quarterly reporting
+  crunch, when the time window is shortest and the pressure highest.
+
+  ## Ownership without vendor lock-in
+
+  Folio is built on mature, open source technologies. That means
+  Falcon Invest has full ownership of the code and isn't locked to a
+  single vendor &mdash; an important priority for an association that
+  has to document and account for its systems to regulators.
+MARKDOWN
+%>
+
+<%= render Quote.new(author: "Rasmus Sommerskov, Partner, Falcon Management A/S", additional_classes: ["pull-left"]) do %>
+  <p>
+    Best in class! The most skilled developer I've ever worked with.
+    Thanks to good architecture, new features and requests get
+    implemented very quickly.
+  </p>
+<% end %>
+
+<div class="statistics">
+  <div class="statistics-figure">
+    <div class="statistics-number">Thousands</div>
+    <div class="statistics-label">of hours saved annually in reporting</div>
   </div>
-</section>
+
+  <div class="statistics-figure">
+    <div class="statistics-number">4 years</div>
+    <div class="statistics-label">of ongoing collaboration on Folio since 2022</div>
+  </div>
+
+  <div class="statistics-figure">
+    <div class="statistics-number">0</div>
+    <div class="statistics-label">vendor lock-in &mdash; full code ownership</div>
+  </div>
+</div>

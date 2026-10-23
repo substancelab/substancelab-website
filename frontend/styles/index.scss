@@ -393,6 +393,23 @@ h4 {
   pointer-events: auto;
 }
 
+// Invites the reader to get in touch, see CallToAction
+.ui-call-to-action {
+  & > :first-child {
+    flex: 0 1 240px;
+
+    // Fill the width once there's no room for the text beside it
+    @container (width < 35em) {
+      flex-basis: 100%;
+    }
+  }
+
+  // Show the whole photo rather than cropping it
+  figure img {
+    aspect-ratio: auto;
+  }
+}
+
 .ui-contact {
   .ui-contact-name {
     font-weight: bold;
@@ -676,13 +693,15 @@ Modifiers
 .split {
   align-items: center;
   display: flex;
-  gap: 4em;
+  // Wrap rather than relying on a container query, as the block is usually
+  // its own container (.ui-content) and can't query its own size
+  flex-wrap: wrap;
+  gap: 2em 4em;
   margin-top: var(--content-spacing-y);
   margin-bottom: var(--content-spacing-y);
 
   & > * {
-    flex: 1;
-    width: 50%;
+    flex: 1 1 15em;
   }
 
   & > * > :first-child {
@@ -691,17 +710,6 @@ Modifiers
 
   img {
     aspect-ratio: 16 / 9;
-  }
-
-  @container (width < 35em) {
-    & {
-      display: block;
-      max-width: inherit;
-
-      & > * {
-        width: unset;
-      }
-    }
   }
 }
 
@@ -727,12 +735,7 @@ Modifiers
   --padding: 1em;
 
   background: var(--background);
-  border-radius: var(--border-radius-base);
   padding: var(--padding);
-
-  figure {
-    border-radius: calc(var(--border-radius-base) - calc(var(--padding) * 0.6));
-  }
 
   @container (width < 35em) {
     & > div {

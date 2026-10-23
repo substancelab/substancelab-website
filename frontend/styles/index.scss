@@ -238,10 +238,16 @@ h4 {
 
 .ui-content {
   container-type: inline-size;
-  max-width: 60ch;
   margin-bottom: var(--content-spacing-y);
   margin-top: var(--content-spacing-y);
 
+  // Cap each child rather than the column itself, so ch resolves against the
+  // child's own font-size: a headline gets 60 characters of headline, a
+  // paragraph 60 characters of body text.
+  &:not(.wide) > *,
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    max-width: 60ch;
+  }
 }
 
 // A list of articles with their summaries, where each article is a link to
@@ -520,13 +526,18 @@ h4 {
 .ui-screenshot-gallery {
   container-type: inline-size;
 
-  // Unlike .ui-gallery (a direct child of body), this lives inside the
-  // 60ch-capped .ui-content column, so an ordinary negative margin only
-  // buys back a little width -- it never reaches the viewport edges.
-  // Instead, size it to the full viewport and pull it back left by
-  // exactly body's own padding, since .ui-content sits flush against it.
+  // Unlike .ui-gallery (a direct child of body), this lives inside a
+  // .ui-content column, which caps its children at 60ch, so an ordinary
+  // negative margin only buys back a little width -- it never reaches the
+  // viewport edges. Instead, lift the cap, size it to the full viewport and
+  // pull it back left by exactly body's own padding, since .ui-content sits
+  // flush against it.
   width: 100vw;
   margin-left: calc(-1 * var(--body-outer-spacing));
+
+  .ui-content > & {
+    max-width: none;
+  }
 
   .ui-screenshot-gallery-items {
     // Container query units (cqw) rather than plain percentages: inside a

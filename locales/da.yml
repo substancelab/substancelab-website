@@ -7,6 +7,9 @@ da:
     show:
       meta_data: "Skrevet af %{author} d. %{date}"
 
+  call_to_action:
+    headline_html: "Jeg hører gerne om <strong class=\"highlight\">din idé</strong>"
+
   contact_details:
     book_a_meeting: "Book et online møde"
     email: "Send en e-mail til %{email_link}"

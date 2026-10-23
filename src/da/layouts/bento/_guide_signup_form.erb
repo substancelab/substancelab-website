@@ -16,52 +16,57 @@
   </div>
 </form>
 <style>
-
+/* Bento's formkit styles its own forms, hence the !importants */
 #<%= form_id %> {
   text-align: left !important;
+}
+:is(h1, h2, h3, h4) + #<%= form_id %> {
+  margin-top: 1em !important;
 }
 #<%= form_id %> .form-inputs-container {
   display: flex !important;
   flex-direction: column !important;
-  gap: 10px !important;
+  gap: 1em !important;
 }
-
 #<%= form_id %> .bento-formkit-input {
-  width: 100% !important;
-  border-radius: 8px !important;
-  border: 1px solid #d1d5db !important;
   background: #ffffff !important;
-  color: #111827 !important;
+  border: 1px solid rgba(var(--color-text-primary-rgb), 0.3) !important;
+  border-radius: 0 !important;
   box-sizing: border-box !important;
-  padding: 12px 14px !important;
-  font-size: 15px !important;
+  color: #191919 !important;
+  display: block !important;
+  font: inherit !important;
+  font-size: var(--font-size-base) !important;
+  margin-top: 0.25em !important;
+  padding: 0.6em 0.8em !important;
+  width: 100% !important;
 }
 #<%= form_id %> input:focus {
+  border-color: var(--color-brand-primary) !important;
+  box-shadow: 0 0 0 3px rgba(var(--color-brand-primary-rgb), 0.3) !important;
   outline: none !important;
-  border-color: #00EC66 !important;
-  box-shadow: 0 0 0 3px rgba(0, 236, 102, 0.2) !important;
 }
 #<%= form_id %> button {
-  width: 100% !important;
-  border-radius: 8px !important;
+  background: linear-gradient(to top left, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%) !important;
   border: none !important;
-  background: #00EC66 !important;
-  color: #ffffff !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  padding: 12px 16px !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
   cursor: pointer !important;
+  font: inherit !important;
+  font-weight: bold !important;
+  padding: 0.8em 1em !important;
+  width: 100% !important;
 }
 #<%= form_id %> button:hover {
   filter: brightness(0.93) !important;
 }
-.bento-formkit-disclosure {
-  margin-top: 0 !important;
-  color: #6b7280 !important;
-  font-size: 12px !important;
+#<%= form_id %> .bento-formkit-disclosure {
+  color: inherit !important;
+  font-size: var(--font-size-sm) !important;
   line-height: 1.45 !important;
+  margin-top: 0 !important;
+  opacity: 0.7 !important;
 }
-
 </style>
 
 <% unless @bento_form_sniffer_included %>

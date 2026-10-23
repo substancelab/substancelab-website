@@ -748,6 +748,11 @@ Modifiers
   }
 }
 
+/* Apply .align-top to a .split to align its areas at the top rather than center */
+.split.align-top {
+  align-items: flex-start;
+}
+
 /* Apply .wide to an element to make it span the full viewport width */
 .wide {
   max-width: unset;

@@ -13,11 +13,16 @@
 #     <% end %>
 #   <% end %>
 #
+# The badge sits above the title and links to badge_url when given:
+#
+#   <%= render Hero.new(title: "Seed", badge: "Service", badge_url: "/services/") %>
+#
 # Any other content in the block is rendered at the end of the hero.
 class Hero < Bridgetown::Component
-  def initialize(title:, badge: nil, lede: nil)
+  def initialize(title:, badge: nil, badge_url: nil, lede: nil)
     @title = title
     @badge = badge
+    @badge_url = badge_url
     @lede = lede
   end
 

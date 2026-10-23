@@ -6,6 +6,7 @@ description: "Løbende vedligehold af din Ruby on Rails web applikation, rettels
 ---
 <%= render Hero.new(
   :badge => "Service",
+  :badge_url => services_url,
   :title => "Care",
   :lede => "Når din webløsning har success, kunderne vælter ind, og udviklerne er i fuld sving med at gøre applikationen endnu lækrere, er opdateringer, sikkerhedshuller og arbejde bag facaden ikke noget, man ønsker at bruge tid på."
 ) %>
@@ -47,12 +48,10 @@ description: "Løbende vedligehold af din Ruby on Rails web applikation, rettels
   %>
 </article>
 
-<section class="social-proof">
-  <div class="container">
-    <%= render Quote.new(author: "Jacob Tjørnholm — Partner, GoMore") do %>
-      <p>Substance Lab var en meget stor hjælp i arbejdet med at sætte vores udvikling på skinner.</p>
-    <% end %>
-  </div>
+<section class="ui-content">
+  <%= render Quote.new(author: "Jacob Tjørnholm — Partner, GoMore") do %>
+    <p>Substance Lab var en meget stor hjælp i arbejdet med at sætte vores udvikling på skinner.</p>
+  <% end %>
 </section>
 
 <section class="ui-content tripple wide">
@@ -72,11 +71,6 @@ description: "Løbende vedligehold af din Ruby on Rails web applikation, rettels
       <li>Gladere udviklere</li>
     </ul>
   </div>
-
-  <div>
-    <h2>Det investerer du</h2>
-    <ul>
-      <li>9.500 kr. pr måned</li>
-    </ul>
-  </div>
 </section>
+
+<%= render CallToAction.new %>

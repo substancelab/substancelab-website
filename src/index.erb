@@ -15,8 +15,8 @@ end
   <%= localized_partial("index/about_substance_lab") %>
 </section>
 
-<% if featured_projects.any? %>
-  <%= render Gallery.new(case_studies: featured_projects.first(3)) %>
+<% if featured_case_studies.any? %>
+  <%= render Gallery.new(case_studies: featured_case_studies) %>
 <% end %>
 
 <% featured_case = case_studies.first %>

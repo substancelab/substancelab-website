@@ -33,8 +33,8 @@ module ProjectHelpers
     Array(project.is_a?(Hash) ? project["case_studies"] : project.case_studies).include?(current_locale)
   end
 
-  def featured_projects
-    all_projects.select { |p| p["featured"] }
+  def featured_case_studies
+    case_studies.select { |p| p["featured"] }
   end
 
   def project_page_title(project)

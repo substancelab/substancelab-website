@@ -21,14 +21,8 @@ layout: basic
   <nav>
     <a class="ui-footer-nav-title" href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
     <ul>
-      <% featured_projects.first(4).each do |project| %>
-        <li>
-          <% if case_study?(project) %>
-            <a href="<%= project_url(project) %>"><%= project["name"] %></a>
-          <% else %>
-            <%= project["name"] %>
-          <% end %>
-        </li>
+      <% featured_case_studies.each do |project| %>
+        <li><a href="<%= project_url(project) %>"><%= project["name"] %></a></li>
       <% end %>
     </ul>
   </nav>

@@ -25,7 +25,7 @@ module ProjectHelpers
     view.slot(:hero) do
       name = project.is_a?(Hash) ? project["name"] : project.name
       desc = localized(project.is_a?(Hash) ? project["description"] : project.description)
-      view.render(Hero.new(title: name, lede: desc))
+      view.render(Hero.new(badge: "Case study", badge_url: projects_url, title: name, lede: desc))
     end
   end
 

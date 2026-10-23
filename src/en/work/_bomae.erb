@@ -1,5 +1,5 @@
 <% slot :hero do %>
-  <%= render Hero.new(title: "A CRM that had to keep running without a pause") do |hero| %>
+  <%= render Hero.new(badge: "Case study", badge_url: projects_url, title: "A CRM that had to keep running without a pause") do |hero| %>
     <% hero.slot :lede do %>
       <a href="https://www.bomae.dk/">Bomae</a> runs its entire business
       &mdash; leads, contracts, advisory work, and invoicing &mdash; through

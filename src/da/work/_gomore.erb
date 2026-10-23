@@ -1,5 +1,5 @@
 <% slot :hero do %>
-  <%= render Hero.new(title: "Deleøkonomi der fungerer") do |hero| %>
+  <%= render Hero.new(badge: "Case study", badge_url: projects_url, title: "Deleøkonomi der fungerer") do |hero| %>
     <% hero.slot :lede do %>
       <a href="https://gomore.dk">GoMore</a> har succes. Med 30+
       medarbejdere og millioner af venturekapital i ryggen skal ting gå

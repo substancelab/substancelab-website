@@ -8,71 +8,63 @@
   ) %>
 <% end %>
 
-<section>
-  <div class="container">
-    <%= markdown(<<~MARKDOWN)
-      ## The editorial team lacked freedom
+<%= markdown(<<~MARKDOWN)
+  ## The editorial team lacked freedom
 
-      [Børn i byen](https://bornibyen.dk) started as a user-driven website with a database of places and events for families with children. Over time the company wanted to move toward editorially controlled content — but the platform was built on an outdated frontend, and editors could effectively only upload images and change text formatting within articles. That made it hard to create visually consistent front pages across devices.
-    MARKDOWN
-    %>
+  [Børn i byen](https://bornibyen.dk) started as a user-driven website with a database of places and events for families with children. Over time the company wanted to move toward editorially controlled content — but the platform was built on an outdated frontend, and editors could effectively only upload images and change text formatting within articles. That made it hard to create visually consistent front pages across devices.
+MARKDOWN
+%>
 
-    <aside class="factbox pull-right">
-      <div class="factbox-body">
-        <h2>Who is Børn i byen?</h2>
-        <p>
-          <a href="https://bornibyen.dk">Børn i byen</a> is the Danish guide for families with children looking for events, places, and activities in Copenhagen and Aarhus, with reviews, articles, and a paid membership offering discounts at partners such as Tivoli, Copenhagen Zoo, and Experimentarium.
-        </p>
-      </div>
-
-      <table class="factbox-table">
-        <tr>
-          <th>Website</th>
-          <td><a href="https://bornibyen.dk" title="Børn i byen">bornibyen.dk</a></td>
-        </tr>
-      </table>
-    </aside>
-
-    <%= markdown(<<~MARKDOWN)
-      ## A complete rewrite, alongside live operations
-
-      Substance Lab handled a complete rewrite of the site while the existing application kept running in daily use. None of the old frontend code could be reused — it was outdated, not adequately covered by tests, and too tangled together to modernize piece by piece. So we scrapped the entire frontend layer and rebuilt it from scratch on a modern, server-rendered stack with a much cleaner code structure.
-
-      At the core of the new solution is a custom-built page builder: rather than extending the old rich text editor, editors can now freely assemble front pages and articles from a growing set of content blocks — 42 today — each with its own visual variants. The system has since proven flexible enough to keep expanding and to be reused across new page types like landing pages. The site also gained a new Elasticsearch-based search engine, which today powers not just search, but every list on the site.
-    MARKDOWN
-    %>
-
-    <%= markdown(<<~MARKDOWN)
-      Weekly iteration meetings with status updates against the estimate kept the collaboration smooth throughout the project, despite the scope of the rewrite.
-
-      ## The Result
-
-      Børn i byen has since established itself as a successful niche media outlet for families with children, with higher ad revenue than ever — despite a general decline in the media industry. And because the stack is easy to maintain, ongoing development today runs on just a few days a month.
-    MARKDOWN
-    %>
+<aside class="factbox pull-right">
+  <div class="factbox-body">
+    <h2>Who is Børn i byen?</h2>
+    <p>
+      <a href="https://bornibyen.dk">Børn i byen</a> is the Danish guide for families with children looking for events, places, and activities in Copenhagen and Aarhus, with reviews, articles, and a paid membership offering discounts at partners such as Tivoli, Copenhagen Zoo, and Experimentarium.
+    </p>
   </div>
-</section>
 
-<section>
-  <div class="container">
-    <div class="statistics">
-      <div class="statistics-figure">
-        <div class="statistics-number">42</div>
-        <div class="statistics-label">content blocks for the editorial team to use freely</div>
-      </div>
+  <table class="factbox-table">
+    <tr>
+      <th>Website</th>
+      <td><a href="https://bornibyen.dk" title="Børn i byen">bornibyen.dk</a></td>
+    </tr>
+  </table>
+</aside>
 
-      <div class="statistics-figure">
-        <div class="statistics-number">100%</div>
-        <div class="statistics-label">new frontend, launched with zero downtime</div>
-      </div>
+<%= markdown(<<~MARKDOWN)
+  ## A complete rewrite, alongside live operations
 
-      <div class="statistics-figure">
-        <div class="statistics-number">A few days</div>
-        <div class="statistics-label">a month of ongoing maintenance after launch</div>
-      </div>
-    </div>
+  Substance Lab handled a complete rewrite of the site while the existing application kept running in daily use. None of the old frontend code could be reused — it was outdated, not adequately covered by tests, and too tangled together to modernize piece by piece. So we scrapped the entire frontend layer and rebuilt it from scratch on a modern, server-rendered stack with a much cleaner code structure.
+
+  At the core of the new solution is a custom-built page builder: rather than extending the old rich text editor, editors can now freely assemble front pages and articles from a growing set of content blocks — 42 today — each with its own visual variants. The system has since proven flexible enough to keep expanding and to be reused across new page types like landing pages. The site also gained a new Elasticsearch-based search engine, which today powers not just search, but every list on the site.
+MARKDOWN
+%>
+
+<%= markdown(<<~MARKDOWN)
+  Weekly iteration meetings with status updates against the estimate kept the collaboration smooth throughout the project, despite the scope of the rewrite.
+
+  ## The Result
+
+  Børn i byen has since established itself as a successful niche media outlet for families with children, with higher ad revenue than ever — despite a general decline in the media industry. And because the stack is easy to maintain, ongoing development today runs on just a few days a month.
+MARKDOWN
+%>
+
+<div class="statistics">
+  <div class="statistics-figure">
+    <div class="statistics-number">42</div>
+    <div class="statistics-label">content blocks for the editorial team to use freely</div>
   </div>
-</section>
+
+  <div class="statistics-figure">
+    <div class="statistics-number">100%</div>
+    <div class="statistics-label">new frontend, launched with zero downtime</div>
+  </div>
+
+  <div class="statistics-figure">
+    <div class="statistics-number">A few days</div>
+    <div class="statistics-label">a month of ongoing maintenance after launch</div>
+  </div>
+</div>
 
 <section>
   <div class="container">

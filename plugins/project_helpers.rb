@@ -37,6 +37,27 @@ module ProjectHelpers
     case_studies.select { |p| p["featured"] }
   end
 
+  # The services we have pages for, and the project services each page covers
+  SERVICE_PAGES = {
+    "/services/seed/" => %w[seed],
+    "/services/development/" => %w[web_application_development],
+    "/services/maintenance/" => %w[maintenance],
+    "/services/roadmapping/" => %w[roadmapping],
+    "/services/team-lead/" => %w[tech_lead project_management]
+  }.freeze
+
+  # Case studies of projects where we delivered at least one of the services
+  # covered by the service page at url
+  def case_studies_for_service_page(url)
+    services = SERVICE_PAGES.fetch(url)
+    case_studies.select { |p| (Array(p["services"]) & services).any? }
+  end
+
+  # The URL of the service page covering a project service, if any
+  def service_page_url(service)
+    SERVICE_PAGES.find { |_url, services| services.include?(service.to_s) }&.first
+  end
+
   def project_page_title(project)
     max_page_title_length = 60 - "Substance Lab ".length
     name = project.is_a?(Hash) ? project["name"] : project.name
@@ -109,6 +130,21 @@ module ProjectHelpers
     end
 
     result.sort.to_sentence
+  end
+
+  # Like project_services, but linking each service to its service page, if
+  # we have one
+  def linked_project_services(project)
+    services = project.is_a?(Hash) ? project["services"] : project.services
+    return "" unless services
+
+    services.map { |s|
+      [I18n.translate(s, :scope => :services, :default => s.to_s), s]
+    }.sort_by(&:first).map { |name, s|
+      name = ERB::Util.html_escape(name)
+      url = service_page_url(s)
+      url ? %(<a href="#{url}">#{name}</a>) : name
+    }.to_sentence.html_safe
   end
 
   def project_url(project)

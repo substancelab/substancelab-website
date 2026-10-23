@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="<%= current_locale %>">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="<%= asset_url("/fonts/geogrotesque.css") %>" as="style">
+
+    <%= partial "layouts/tag_manager/head" %>
+
+    <%= seo %>
+
+    <%= vite_client_tag %>
+    <%= vite_stylesheet_tag "layout.sass", :media => "all" %>
+    <%= vite_stylesheet_tag "print.sass", :media => "print" %>
+
+    <% if slotted?(:stylesheets) %>
+      <%= slotted :stylesheets %>
+    <% end %>
+    <% if slotted?(:page_specific_style) %>
+      <%= slotted :page_specific_style %>
+    <% end %>
+
+    <meta name="verify-v1" content="9JYCl90ocTKA6ZvAgBU6Jg+Bs4/6R/0xcE4Gpj7UKpc=">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="icon" type="image/ico" href="/images/favicon.ico">
+
+    <%= partial "layouts/analytics" %>
+  </head>
+
+  <body<%= body_attributes %>>
+    <%= partial "layouts/tag_manager/body" %>
+
+    <header class="masthead">
+      <div class="nav-bar">
+        <div class="container">
+          <a href="/" class="branding" title="Substance Lab | Carefully crafting websites and web applications">
+            <div class="logo">
+              <div class="substance">Substance</div>
+              <div class="lab">Lab</div>
+            </div>
+          </a>
+          <nav>
+            <ul>
+              <li class="home"><a href="/"><%= I18n.translate("navigation.home") %></a></li>
+              <li class="work"><a href="<%= projects_url %>"><%= I18n.translate("navigation.work") %></a></li>
+              <%= nav_bar_link_to_services %>
+              <%= nav_bar_link_to_blog %>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <% if slotted?(:masthead) %>
+        <div class="masthead-container">
+          <%= slotted :masthead %>
+        </div>
+      <% end %>
+    </header>
+
+    <%= yield %>
+
+    <% if slotted?(:bottom_of_page) %>
+      <%= slotted :bottom_of_page %>
+    <% end %>
+  </body>
+</html>

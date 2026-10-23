@@ -1,0 +1,19 @@
+---ruby
+front_matter do
+  layout :layout
+  title I18n.translate("legalese.cookies.title")
+  description I18n.translate("legalese.cookies.meta_description")
+end
+---
+
+<% slot :masthead do %>
+  <h1><%= I18n.translate("legalese.cookies.title") %></h1>
+<% end %>
+
+<article>
+  <div class="container">
+    <div class="content">
+      <div cs-declaration></div>
+    </div>
+  </div>
+</article>

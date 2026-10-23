@@ -3,7 +3,7 @@
 require "pathname"
 
 desc "Build and publish the website"
-task :deploy => ["middleman:build", "deploy:publish"]
+task :deploy => ["bridgetown:build", "deploy:publish"]
 
 namespace :deploy do
   desc "Publish contents of the build directory"
@@ -13,7 +13,7 @@ namespace :deploy do
       "en" => "substancelab.com"
     }.fetch(ENV["LOCALE"])
 
-    sh "scp -r build/* substancelab.dk@linux41.unoeuro.com:#{target_folder}"
+    sh "scp -r output/* substancelab.dk@linux41.unoeuro.com:#{target_folder}"
   end
 end
 
@@ -22,7 +22,7 @@ namespace :images do
 
   namespace :masthead do
     MASTHEAD_ORIGINALS = Pathname.new("originals")
-    MASTHEAD_DESTINATION = Pathname.new("source/images")
+    MASTHEAD_DESTINATION = Pathname.new("src/images")
 
     masthead_article_images = Rake::FileList.new(
       MASTHEAD_ORIGINALS.join("articles/*.jpg").to_s
@@ -47,54 +47,50 @@ namespace :images do
     task :create => masthead_article_originals
   end
 
+  desc "Creates favicons and touch icons from images/favicon_template.png"
+  task :favicons do
+    images = Pathname.new("src/images")
+    template = images.join("favicon_template.png")
+    icons = {
+      "apple-touch-icon-152x152-precomposed.png" => "152x152",
+      "apple-touch-icon-144x144-precomposed.png" => "144x144",
+      "apple-touch-icon-114x114-precomposed.png" => "114x114",
+      "apple-touch-icon-72x72-precomposed.png" => "72x72",
+      "apple-touch-icon-precomposed.png" => "57x57",
+      "apple-touch-icon.png" => "57x57",
+      "favicon.png" => "16x16",
+      "mstile-144x144.png" => "144x144"
+    }
+    icons.each do |icon, size|
+      sh "magick", template.to_s, "-resize", size, images.join(icon).to_s
+    end
+
+    sh "magick", template.to_s, "-define", "icon:auto-resize=64,32,24,16", images.join("favicon.ico").to_s
+  end
+
   namespace :optimize do
     task :all => [:jpg, :png]
 
     task :jpg do
-      system 'find source/images -name *.jpg -exec jpegoptim --strip-all {} \;'
+      system 'find src/images -name *.jpg -exec jpegoptim --strip-all {} \;'
     end
 
     task :png do
-      system 'find source/images -name *.png -exec optipng {} \;'
+      system 'find src/images -name *.png -exec optipng {} \;'
     end
   end
 end
 
-namespace :middleman do
-  desc "Builds the website files into the build directory"
+namespace :bridgetown do
+  desc "Builds the website files into the output directory"
   task :build => ["vite:build"] do
-    system "middleman build --clean"
+    system "bridgetown build"
   end
 
   task :clean do
-    system "rm -rf build"
-  end
-
-  desc "Deploys the site to whatever host is configured in middleman"
-  task :deploy => [:clean, :build] do
-    host = "linux41.unoeuro.com"
-    user = "substancelab.dk"
-    password = "jQBhDPEKAkzxa8jpjarJHTGZna4sdKLUMyGPNEiiKQtLTgcvZT"
-    ftp_url = "ftp://#{user}:#{password}@#{host}"
-
-    local_dir = Pathname.new(File.join(Dir.pwd, "build"))
-    raise "Build directory not found at #{local_dir}" unless local_dir.exist?
-
-    LOCALE = (ENV["LOCALE"] || "en").to_s
-    remote_dir = {
-      "da" => "/public_html/",
-      "en" => "/substancelab.com/"
-    }[LOCALE]
-
-    ftp_script = <<-EOS
-      set ftp:list-options -a;
-      open #{ftp_url};
-      lcd #{local_dir};
-      cd #{remote_dir};
-      mirror --reverse --verbose"
-    EOS
-    system "lftp", "-c #{ftp_script}"
+    system "rm -rf output"
   end
 end
-require 'vite_padrino'
+
+require "vite_ruby"
 ViteRuby.install_tasks

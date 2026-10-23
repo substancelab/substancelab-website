@@ -81,6 +81,12 @@ da:
     webdesign: Webdesign
     youtube_integration: Integration med YouTube
 
+  support:
+    array:
+      last_word_connector: " og "
+      two_words_connector: " og "
+      words_connector: ", "
+
   work:
     index:
       case_studies: Case studies

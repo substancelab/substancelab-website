@@ -1,0 +1,101 @@
+<% slot :masthead do %>
+  <div class="container">
+    <h1>"Ambitionen er at skabe en portal, der samler alle erhvervslejemål i Danmark"</h1>
+  </div>
+<% end %>
+
+<section>
+  <div class="container">
+    <p class="intro">
+      Når målet er at blive Danmarks førende portal for formidling af
+      erhvervslokaler, bygger man ikke sin forretning på en standard hyldevare.
+    </p>
+
+    <p>
+      <a href="https://www.lokalebasen.dk">Lokalebasen</a> bad Substance
+      Lab bygge nøjagtigt den platform, der passede deres forretning - og den
+      skulle være fremtidssikret.
+    </p>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Løbende feedback
+
+      [Lokalebasen.dk](http://www.lokalebasen.dk) ved, at det bedste produkt udvikles ved at få idéer
+      realiseret hurtigt og placeret på skærmene foran rigtige brugere. Feedback
+      fra de personer, der faktisk bruger og betaler for ens løsning, er
+      uvurderlig.
+
+      Ved dagligt at lægge ændringer i drift har Substance Lab sikret, at
+      [Lokalebasen.dk](http://www.lokalebasen.dk) konstant har kunne drage erfaringer fra deres kunder og
+      løbende forbedre deres webløsning.
+    MARKDOWN
+    %>
+  </div>
+</section>
+
+<section class="collaboration">
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Lokal erfaring
+
+      For [Lokalebasen.dk](http://www.lokalebasen.dk) var det vigtigt at finde en lokal leverandør med bred
+      erfaring fra udvikling af webløsninger.
+
+      Det fandt de i Substance Lab og fik samtidig en samarbejdspartner, der var
+      i stand til at udfordre de forretningsmæssige antagelser og skære igennem
+      til den enkle tekniske løsning.
+    MARKDOWN
+    %>
+  </div>
+</section>
+
+<section class="code">
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## 5 år, samme platform
+
+      Når en webløsning skal danne fundament for ens forretning, kan det ikke
+      betale sig at springe over, hvor gærdet er lavest. For Lokalebasen.dk
+      var det vigtigt at få en webløsning, der er nem at vedligeholde, stabil
+      og fremtidssikret.
+
+      Løsningen er udviklet med automatiske tests og kritiske øjne på
+      kodekvaliteten. Det betyder, at den samme kode, der blev sat i drift i
+      2009, stadig kører store dele af Lokalebasen.dk i 2014.
+    MARKDOWN
+    %>
+  </div>
+</section>
+
+<section class="results">
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      ## Resultatet
+
+      5 år efter lancering er [Lokalebasen.dk](http://www.lokalebasen.dk) en succesfuld forretning med
+      stadigt stigende omsætning.
+    MARKDOWN
+    %>
+  </div>
+
+  <div class="graph">
+    <canvas id="gross-profit"></canvas>
+  </div>
+</section>
+
+<section class="results">
+  <div class="container">
+    <%= markdown(<<~MARKDOWN)
+      70.000 månedlige besøgende og 750 udlejninger om året kører gennem
+      kodebasen, der danner fundament for formidling af erhvervslokaler i 3
+      lande og et team på 10 ansatte.
+    MARKDOWN
+    %>
+  </div>
+</section>
+
+<%= vite_javascript_tag "lokalebasen.js" %>

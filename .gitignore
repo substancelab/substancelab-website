@@ -23,8 +23,12 @@ node_modules
 /.DS_Store
 
 # Vite Ruby
-/source/vite-dev/*
-/source/vite/*
+/src/vite-dev/*
+/src/vite/*
 
 # Procodile
 /pids/*
+
+# Bridgetown
+/output
+/.bridgetown-cache

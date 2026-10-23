@@ -28,7 +28,3 @@ node_modules
 
 # Procodile
 /pids/*
-
-# Bridgetown
-/output
-/.bridgetown-cache

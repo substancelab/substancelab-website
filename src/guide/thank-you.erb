@@ -4,31 +4,26 @@ locale: da
 title: "Tak for din tilmelding!"
 description: "Vi har sendt dig guiden og nyhedsbrevet. Du kan til enhver tid afmelde dig."
 ---
-<% slot :hero do %>
-  <%= render Hero.new(title: "Tak for din tilmelding!") %>
-<% end %>
+<%= render Hero.new(
+  title: "Tak for din tilmelding!",
+  lede: "Tak, det er jeg super glad for! Guiden er på vej til dig og skulle dukke op i din indbakke lige straks."
+) %>
 
-<article>
-  <div class="container">
-    <section>
-      <p>
-        Tak, det er jeg super glad for! Guiden er på vej til dig og skulle dukke op i din indbakke lige straks.
-      </p>
+<section class="ui-content">
+  <p>Indtil den dukker op, kan du kigge nærmere på vores <a href="<%= articles_path %>">artikler</a> eller se <a href="<%= projects_url %>">eksempler på, hvad vi har lavet</a>.</p>
+</section>
 
-      <p>
-        Indtil den dukker op, kan du kigge nærmere på vores <a href="/articles">artikler</a> eller se, <a href="/work">eksempler på, hvad vi har lavet</a>.
-      </p>
-
-      <div class="person-image">
-        <%= image_tag(cloudinary_image_url("v1782068244/substancelab-website/people/jakob_cta.jpg", "w_300,h_300,c_fill,g_face"), :alt => "Jakob Skjerning", :width => "150", :height => "150", :loading => "lazy", :style => "border-radius: 100%; float: left; margin-right: 1em;") %>
-        <p>
-          Jeg ser frem til at dele vores erfaringer med dig, og håber du får glæde af guiden.
-        </p>
-
-        <p>
-          Jakob, stifter og rådgiver
-        </p>
-      </div>
-    </section>
+<section class="ui-content ui-call-to-action split wide well">
+  <div>
+    <figure>
+      <%= image_tag("people/jakob/cta.jpg", alt: "Jakob Skjerning") %>
+    </figure>
   </div>
-</article>
+
+  <div class="ui-contact">
+    <p>Jeg ser frem til at dele vores erfaringer med dig, og håber du får glæde af guiden.</p>
+
+    <div class="ui-contact-name">Jakob Skjerning</div>
+    <div class="ui-contact-title">Stifter og rådgiver</div>
+  </div>
+</section>

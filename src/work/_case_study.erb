@@ -1,29 +1,29 @@
 <% project = resource.data._project %>
 <article class="ui-content">
   <%= localized_partial "work/#{project["slug"]}", {:project => project} %>
-
-  <section class="ui-content tripple">
-    <div>
-      <h3><%= project["name"] %></h3>
-      <p><%= localized(project["description"] || {}) %></p>
-      <% if project["website"] %>
-        <div class="website">
-          <a href="<%= project["website"] %>"><%= project["website"] %></a>
-        </div>
-      <% end %>
-    </div>
-
-    <div>
-      <h3><%= I18n.t("work.index.substance_lab_did") %></h3>
-      <p><%= linked_project_services(project) %></p>
-    </div>
-
-    <div>
-      <h3><%= I18n.t("work.index.technologies_used") %></h3>
-      <p><%= (project["technologies"] || []).sort.to_sentence %></p>
-    </div>
-  </section>
 </article>
+
+<%= render Columns.new do %>
+  <div>
+    <h3><%= project["name"] %></h3>
+    <p><%= localized(project["description"] || {}) %></p>
+    <% if project["website"] %>
+      <div class="website">
+        <a href="<%= project["website"] %>"><%= project["website"] %></a>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <h3><%= I18n.t("work.index.substance_lab_did") %></h3>
+    <p><%= linked_project_services(project) %></p>
+  </div>
+
+  <div>
+    <h3><%= I18n.t("work.index.technologies_used") %></h3>
+    <p><%= (project["technologies"] || []).sort.to_sentence %></p>
+  </div>
+<% end %>
 
 <%= render CallToAction.new %>
 

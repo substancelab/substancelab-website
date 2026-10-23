@@ -54,7 +54,7 @@ description: "Løbende vedligehold af din Ruby on Rails web applikation, rettels
   <% end %>
 </section>
 
-<section class="ui-content tripple wide">
+<%= render Columns.new do %>
   <div>
     <h2>Oplagt til...</h2>
     <p>Den lille webløsning, som ikke kræver den store udvikling, men som alligevel skal holdes kørende. Eller den succesfulde forretning, der vil holde udviklingsteamet fokuseret på den videre udvikling.</p>
@@ -71,7 +71,7 @@ description: "Løbende vedligehold af din Ruby on Rails web applikation, rettels
       <li>Gladere udviklere</li>
     </ul>
   </div>
-</section>
+<% end %>
 
 <%= partial "services/case_studies" %>
 

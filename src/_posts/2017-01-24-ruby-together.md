@@ -1,5 +1,6 @@
 ---
 title: "Ruby Together"
+author: jakob
 description: "Selv om at open source er gratis, betyder det ikke, at det ikke koster noget. Vi støtter også open source økonomisk."
 tags: open source, velgørenhed
 photo:

@@ -1,27 +1,34 @@
 jakob:
+  links:
+    - title: "LinkedIn"
+      url: "https://www.linkedin.com/in/jakobskjerning/"
+    - title: "GitHub"
+      url: "https://github.com/koppen"
+    - title: "Website"
+      url: "https://mentalized.net"
   name: Jakob Skjerning
   title:
-    - dk: Stifter og rådgiver
-    - en: Founder & CEO
+    da: Stifter og rådgiver
+    en: Founder & CEO
   position: 1
 
 michael:
   name: Michael Pedersen
   title:
-    - dk: Webudvikler
-    - en: Web Developer
+    da: Webudvikler
+    en: Web Developer
   position: 4
 
 ole:
   name: Ole Palm
   title:
-    - dk: Senior webudvikler
-    - en: Senior Web Developer
+    da: Senior webudvikler
+    en: Senior Web Developer
   position: 2
 
 rasmus:
   name: Rasmus Nissen
   title:
-    - dk: Webudvikler
-    - en: Web Developer
+    da: Webudvikler
+    en: Web Developer
   position: 3

@@ -1,5 +1,6 @@
 ---
 title: "Udsæt til i morgen..."
+author: jakob
 description: "Hvis du udvikler features, som reelt ikke løser det problem, du har nu og her, spilder du din tid og dine penge."
 tags: software, udvikling, produktstyring
 photo:

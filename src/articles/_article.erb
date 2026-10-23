@@ -1,11 +1,16 @@
+<% author_key = current_article.data.author %>
+<% author = person(author_key) %>
 <%= render Hero.new(:lede => article_intro(article_html), :title => current_article.data.title) do %>
-  <div class="ui-attribution">
-    <img alt="Jakob Skjerning" class="ui-avatar" src="/images/people/jakob/avatar.jpg">
-    <div>
-      <div class="author">Jakob Skjerning</div>
-      <div>Owner</div>
-    </div>
-  </div>
+  <% if author %>
+    <a class="ui-attribution" href="<%= person_url(author_key) %>">
+      <%# The name is in the link text, so the photo doesn't need to repeat it %>
+      <img alt="" class="ui-avatar" src="<%= person_avatar_path(author_key) %>">
+      <div>
+        <div class="author"><%= author["name"] %></div>
+        <div><%= person_title(author) %></div>
+      </div>
+    </a>
+  <% end %>
 <% end %>
 
 <article class="ui-content">

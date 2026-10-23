@@ -191,14 +191,29 @@ h4 {
   }
 }
 
+// A byline linking to the author's page. Only the name looks like a link.
 .ui-attribution {
   align-items: center;
-  display: flex;
+  display: inline-flex;
   font-size: var(--font-size-sm);
   gap: 1em;
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: inherit;
+  }
 
   & .author {
     font-weight: bold;
+    text-decoration: underline;
+  }
+
+  &:hover .author, &:active .author {
+    color: var(--color-brand-primary);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-brand-secondary);
+    }
   }
 }
 
@@ -250,6 +265,16 @@ h4 {
       color: var(--color-brand-secondary);
     }
   }
+}
+
+// Links to a person's profiles elsewhere, like LinkedIn or their website.
+.ui-person-links {
+  display: flex;
+  flex-wrap: wrap;
+  // The hero is a step larger than the body text, so step back down to match
+  font-size: var(--font-size-sm);
+  gap: 0.5em 1.5em;
+  margin-top: 1em;
 }
 
 // Use for navigation between full pages, like next and previous articles.
@@ -579,9 +604,15 @@ Modifiers
     padding-left: unset;
     padding-right: unset;
 
+    // Share the row equally, whether an item is an image or a link around one
     & > * {
-      flex-shrink: 1;
+      flex: 1 1 0;
       min-width: 0;
+    }
+
+    & > a > img {
+      display: block;
+      width: 100%;
     }
   }
 }

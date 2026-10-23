@@ -1,5 +1,6 @@
 ---
 title: "De løbende udgifter"
+author: jakob
 description: "Det er ikke helt gratis at drive en SaaS-virksomhed. Se eksempler på driftsomkostninger fra faktiske virksomheder"
 tags: software, forretning
 photo:

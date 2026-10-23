@@ -1,5 +1,6 @@
 ---
 title: "Søgemaskiner"
+author: jakob
 description: "Søgemaskiner ser simple ud udefra; det er jo bare et enkelt felt! Men kompleksiteten gemmer sig under overfladen..."
 tags: software
 photo:

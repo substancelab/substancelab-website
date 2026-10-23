@@ -1,7 +1,13 @@
 <div class="ui-gallery non-wrap-row wide">
   <div class="ui-gallery-items">
+    <%- people_with_page = authors %>
     <%- site.data.people.sort_by { |key, person| person["position"] }.each do |key, person| %>
-      <%= image_tag("people/#{key}/portrait.jpg", :alt => person.name, :loading => "lazy") %>
+      <%- portrait = image_tag("people/#{key}/portrait.jpg", :alt => person.name, :loading => "lazy") %>
+      <% if people_with_page.include?(key) %>
+        <a href="<%= person_url(key) %>"><%= portrait %></a>
+      <% else %>
+        <%= portrait %>
+      <% end %>
     <% end %>
   </div>
 </div>

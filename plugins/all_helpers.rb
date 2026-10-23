@@ -15,6 +15,7 @@ require_relative "layout_helpers"
 require_relative "article_helpers"
 require_relative "client_helpers"
 require_relative "project_helpers"
+require_relative "people_helpers"
 
 module AllHelpers
   SITE_HELPERS = [
@@ -27,6 +28,7 @@ module AllHelpers
     ::ArticleHelpers,
     ::ClientHelpers,
     ::ProjectHelpers,
+    ::PeopleHelpers,
   ].freeze
 
   SITE_HELPERS.each do |mod|

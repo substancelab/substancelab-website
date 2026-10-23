@@ -32,17 +32,17 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET" || url.origin !== self.location.origin) return
 
   if (request.mode === "navigate") {
-    event.respondWith(networkFirst(request))
+    event.respondWith(networkFirst(request, event))
   } else {
     event.respondWith(staleWhileRevalidate(request, event))
   }
 })
 
-async function networkFirst(request) {
+async function networkFirst(request, event) {
   const cache = await caches.open(CACHE)
   try {
     const response = await fetch(request)
-    if (response.ok) cache.put(request, response.clone())
+    store(cache, request, response, event)
     return response
   } catch (error) {
     return (await cache.match(request)) || (await cache.match(OFFLINE_URL))
@@ -53,7 +53,7 @@ async function staleWhileRevalidate(request, event) {
   const cache = await caches.open(CACHE)
   const cached = await cache.match(request)
   const refresh = fetch(request).then((response) => {
-    if (response.ok) cache.put(request, response.clone())
+    store(cache, request, response, event)
     return response
   })
 
@@ -62,4 +62,13 @@ async function staleWhileRevalidate(request, event) {
     return cached
   }
   return refresh
+}
+
+// Saves a copy of a successful response without holding up the response
+// itself. The fetch event is kept alive until the write is done, so the
+// worker isn't stopped halfway through, and a failed write is ignored rather
+// than failing the request.
+function store(cache, request, response, event) {
+  if (!response.ok) return
+  event.waitUntil(cache.put(request, response.clone()).catch(() => {}))
 }

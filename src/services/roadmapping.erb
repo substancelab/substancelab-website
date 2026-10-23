@@ -42,7 +42,7 @@ description: "Få udstukket kursen inden du drager afsted. Med et roadmap får d
   <% end %>
 </section>
 
-<section class="ui-content tripple wide">
+<%= render Columns.new do %>
   <div>
     <h2>Oplagt til...</h2>
     <p>Iværksætteren med drømmen om en online tjeneste, som skal til at finde leverandører og som savner overblik over projektet.</p>
@@ -57,7 +57,7 @@ description: "Få udstukket kursen inden du drager afsted. Med et roadmap får d
       <li>Frokost i Kolding</li>
     </ul>
   </div>
-</section>
+<% end %>
 
 <%= partial "services/case_studies" %>
 

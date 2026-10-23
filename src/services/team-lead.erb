@@ -25,7 +25,7 @@ description: ""
   <p>Vi etablerer og udvikler en proces, der passer til din virksomhed, hvor alle får indblik i, hvad der laves og hvem der laver hvad. Det gør det muligt for forretningen at demonstrere fremgang over for investorerne, og udviklerne får mulighed for at placere de enkelte opgaver i den store sammenhæng.</p>
 </article>
 
-<section class="ui-content tripple wide">
+<%= render Columns.new do %>
   <div>
     <h2>Oplagt til...</h2>
     <p>Den etablerede virksomhedsejer med eksisterende, remote udviklere, som gerne vil optimere udviklingsforløbet, minimere spild og have produktiviteten tilbage.</p>
@@ -41,7 +41,7 @@ description: ""
       <li>Veldefineret proces</li>
     </ul>
   </div>
-</section>
+<% end %>
 
 <%= partial "services/case_studies" %>
 

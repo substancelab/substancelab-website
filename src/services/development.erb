@@ -59,7 +59,7 @@ description: "Grundig og stilfuld software udvikling med en sans for detaljer, d
   <% end %>
 </section>
 
-<section class="ui-content tripple wide">
+<%= render Columns.new do %>
   <div>
     <h2>Oplagt til...</h2>
     <p>
@@ -78,7 +78,7 @@ description: "Grundig og stilfuld software udvikling med en sans for detaljer, d
       <li>Fleksibel og gennemsigtig proces</li>
     </ul>
   </div>
-</section>
+<% end %>
 
 <%= partial "services/case_studies" %>
 

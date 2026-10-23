@@ -1,5 +1,6 @@
 ---
 title: "Udrulning af DMARC Reject"
+author: jakob
 description: "DMARC er vigtigt, men ikke noget, du skal implementere uovervejet. Her er vores proces, der bringer dig til DMARC Reject 100% med færrest mulige problemer."
 tags: email, domæner, proces, dmarc
 photo:

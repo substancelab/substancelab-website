@@ -1,5 +1,6 @@
 ---
 title: Om valideringer
+author: jakob
 description: "Validering af bruger-data er svært. Vi giver dig her tips til at lave formularer bedre, så dine brugere bliver gladere."
 tags: design, forms, usability
 photo:

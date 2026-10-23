@@ -1,5 +1,6 @@
 ---
 title: "Launch: UrbanWineBox"
+author: jakob
 description: "Substance Lab har leveret backend til UrbanWineBox; Danmarks første deleøkonomiske vinkælder og -markedsplads"
 tags: launch, urbanwinebox
 photo:

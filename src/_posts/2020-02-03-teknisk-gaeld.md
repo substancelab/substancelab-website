@@ -1,5 +1,6 @@
 ---
 title: "Teknisk gæld"
+author: jakob
 description: "Hvad er det lige teknisk gæld egentligt er, og hvordan undgår du at have for meget af det - og hvorfor er det vigtigt?"
 tags: kvalitet, prioritering, software, udvikling
 photo:

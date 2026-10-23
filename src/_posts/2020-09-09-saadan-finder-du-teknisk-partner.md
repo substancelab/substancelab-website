@@ -1,5 +1,6 @@
 ---
 title: "Sådan vælger du din tekniske partner"
+author: jakob
 description: "Har du aldrig lavet en digital løsning og er du ikke teknisk anlagt, er det svært at vide, hvad du skal kigge efter i en teknisk partner."
 tags: software, udvikling, produktstyring, opstart
 photo:

@@ -13,12 +13,4 @@ end
   ) %>
 <% end %>
 
-<section class="ui-content ui-article-list">
-  <% blog_articles.each do |article| %>
-    <%# The entire article links to it, so the summary can't contain links %>
-    <a class="ui-article-list-item" href="<%= article.relative_url %>">
-      <h2><%= article.data.title %></h2>
-      <%= strip_links(article_summary(article)) %>
-    </a>
-  <% end %>
-</section>
+<%= partial "articles/list", :articles => blog_articles %>

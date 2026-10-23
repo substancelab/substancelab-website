@@ -14,3 +14,5 @@ gem "rake"
 gem "actionview"
 
 gem "bridgetown-seo-tag", "~> 7.0"
+
+gem "htmlbeautifier", "~> 1.4"

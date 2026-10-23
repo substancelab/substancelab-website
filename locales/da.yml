@@ -64,6 +64,10 @@ da:
     services: Ydelser
     work: Cases
 
+  offline:
+    body: "Siden kan ikke vises uden internetforbindelse. Prøv igen, når du er online."
+    title: "Du er offline"
+
   services:
     api_development: Udvikling af API
     automation: Automatisering

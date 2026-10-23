@@ -1,6 +1,6 @@
 <%= link_to project_url(@case_study), :class => "ui-gallery-item" do %>
   <figure>
-    <%= image_tag "/images/work/#{@case_study["slug"]}/tile.jpg", alt: @case_study["name"] %>
+    <%= image_tag "/images/work/#{@case_study["slug"]}/tile.jpg", image_attributes %>
     <figcaption class="ui-gallery-item-caption">
       <div class="ui-gallery-item-title"><%= @case_study["name"] %></div>
       <%= localized(@case_study["description"]) %></figcaption>

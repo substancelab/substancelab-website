@@ -758,3 +758,82 @@ Modifiers
   max-width: unset;
   width: unset;
 }
+
+// Page transitions, using cross-document view transitions. The outgoing page
+// fades and shrinks away while the incoming page slides in from the right.
+// Browsers without support simply navigate as usual.
+@view-transition {
+  navigation: auto;
+}
+
+// Keep fixed chrome in place while the page content transitions underneath
+.ui-navigation {
+  view-transition-name: site-navigation;
+}
+.ui-fadeout.top {
+  view-transition-name: site-fadeout-top;
+}
+.ui-fadeout.bottom {
+  view-transition-name: site-fadeout-bottom;
+}
+
+// Avoid flashing the canvas color around the shrinking page
+::view-transition {
+  background-color: var(--color-bg-primary);
+}
+
+::view-transition-old(root) {
+  animation: 250ms cubic-bezier(0.4, 0, 1, 1) both page-transition-out;
+}
+
+::view-transition-new(root) {
+  animation: 350ms cubic-bezier(0, 0, 0.2, 1) 100ms both page-transition-in;
+}
+
+@keyframes page-transition-out {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes page-transition-in {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+}
+
+// Going back plays the transition in reverse: the current page slides out to
+// the right while the previous page grows back into place
+html:active-view-transition-type(back) {
+  &::view-transition-old(root) {
+    animation: 250ms cubic-bezier(0.4, 0, 1, 1) both page-transition-back-out;
+  }
+
+  &::view-transition-new(root) {
+    animation: 350ms cubic-bezier(0, 0, 0.2, 1) 100ms both page-transition-back-in;
+  }
+}
+
+@keyframes page-transition-back-out {
+  to {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes page-transition-back-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

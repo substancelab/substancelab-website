@@ -7,6 +7,9 @@ en:
     show:
       meta_data: "%{author} wrote this on %{date}"
 
+  call_to_action:
+    headline_html: "I would love to hear about <strong class=\"highlight\">your idea</strong>"
+
   contact_details:
     book_a_meeting: "Book an online meeting"
     email: "Send an email to %{email_link}"

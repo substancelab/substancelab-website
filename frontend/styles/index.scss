@@ -239,6 +239,30 @@ h4 {
   @media (prefers-color-scheme: dark) {
    color: rgb(var(--color-brand-secondary-rgb));
   }
+
+  // Bold capitals read larger than body text, so size it a step below the
+  // body text to make it appear similar. The hero is a step larger than the
+  // body text, so this is two steps down from there.
+  .ui-hero & {
+    font-size: var(--font-size-xs);
+  }
+
+  &:is(a) {
+    display: inline-block;
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: rgb(var(--color-brand-primary-rgb));
+
+      @media (prefers-color-scheme: dark) {
+        color: rgb(var(--color-brand-secondary-rgb));
+      }
+    }
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .ui-content {

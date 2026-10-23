@@ -6,6 +6,7 @@ description: "Grundig og stilfuld software udvikling med en sans for detaljer, d
 ---
 <%= render Hero.new(
   :badge => "Service",
+  :badge_url => services_url,
   :title => "Grow",
   :lede => "Udvikling og programmering i Ruby on Rails"
 ) %>
@@ -52,12 +53,10 @@ description: "Grundig og stilfuld software udvikling med en sans for detaljer, d
   %>
 </article>
 
-<section class="social-proof">
-  <div class="container">
-    <%= render Quote.new(author: "Caroline Meldgaard, Børn i byen") do %>
-      <p>I hjælper os til at undgå at bruge penge på at få lavet kode der enten er unødvendig eller måske bare en dårlig ide :)</p>
-    <% end %>
-  </div>
+<section class="ui-content">
+  <%= render Quote.new(author: "Caroline Meldgaard, Børn i byen") do %>
+    <p>I hjælper os til at undgå at bruge penge på at få lavet kode der enten er unødvendig eller måske bare en dårlig ide :)</p>
+  <% end %>
 </section>
 
 <section class="ui-content tripple wide">
@@ -79,11 +78,6 @@ description: "Grundig og stilfuld software udvikling med en sans for detaljer, d
       <li>Fleksibel og gennemsigtig proces</li>
     </ul>
   </div>
-
-  <div>
-    <h2>Din investering</h2>
-    <ul>
-      <li>21.500 kr. pr iteration</li>
-    </ul>
-  </div>
 </section>
+
+<%= render CallToAction.new %>

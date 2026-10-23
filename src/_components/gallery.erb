@@ -1,7 +1,7 @@
 <div class="ui-gallery <%= additional_classes %>">
   <div class="ui-gallery-items">
-    <% @case_studies.each do |case_study| %>
-      <%= render CaseStudyCard.new(case_study: case_study) %>
+    <% @case_studies.each_with_index do |case_study, index| %>
+      <%= render CaseStudyCard.new(case_study: case_study, lazy: index >= @eager) %>
     <% end %>
   </div>
 </div>

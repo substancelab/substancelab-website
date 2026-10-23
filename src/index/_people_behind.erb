@@ -2,7 +2,7 @@
   <div class="ui-gallery-items">
     <%- people_with_page = authors %>
     <%- site.data.people.sort_by { |key, person| person["position"] }.each do |key, person| %>
-      <%- portrait = image_tag("people/#{key}/portrait.jpg", :alt => person.name, :loading => "lazy") %>
+      <%- portrait = image_tag("people/#{key}/portrait.jpg", :alt => person.name, :loading => "lazy", :width => 340, :height => 510) %>
       <% if people_with_page.include?(key) %>
         <a href="<%= person_url(key) %>"><%= portrait %></a>
       <% else %>

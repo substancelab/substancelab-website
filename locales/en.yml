@@ -60,6 +60,10 @@ en:
     home: Home
     work: Work
 
+  offline:
+    body: "This page isn't available without an internet connection. Try again once you're back online."
+    title: "You're offline"
+
   services:
     api_development: API development
     automation: Automation

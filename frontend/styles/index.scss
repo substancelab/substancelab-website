@@ -56,6 +56,10 @@ Breakpoints
   --color-brand-secondary-rgb: 0, 255, 122;
   --color-brand-secondary: rgb(var(--color-brand-secondary-rgb));
 
+  --color-link: #006622;
+  --color-link-hover: #00521b;
+  --color-link-visited: #2b6451;
+
   --content-spacing-x: 3rem;
   --content-spacing-y: 3rem;
 
@@ -88,6 +92,10 @@ Breakpoints
   @media (prefers-color-scheme: dark) {
     --color-bg-primary-rgb: 22, 33, 22;
     --color-text-primary-rgb: 229, 229, 229;
+
+    --color-link: var(--color-brand-primary);
+    --color-link-hover: var(--color-brand-secondary);
+    --color-link-visited: #79d2b5;
   }
 }
 
@@ -96,16 +104,13 @@ html {
 }
 
 a:link {
-  color: hsl(200, 100%, 50%);
+  color: var(--color-link);
 }
 a:visited {
-  color: hsl(275, 100%, 75%);
+  color: var(--color-link-visited);
 }
-a:hover {
-  color: hsl(200, 100%, 75%);
-}
-a:active {
-  color: hsl(200, 100%, 95%);
+a:hover, a:active {
+  color: var(--color-link-hover);
 }
 
 body {
@@ -386,6 +391,7 @@ h4 {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  margin-top: var(--content-spacing-y);
   gap: 3em;
 
   .ui-footer-nav-title {

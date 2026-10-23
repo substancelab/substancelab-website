@@ -92,13 +92,13 @@ GEM
     faraday-net_http (3.5.0)
       net-http (~> 0.5)
     ffi (1.17.4-arm64-darwin)
-    ffi (1.17.4-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
     fiber-storage (1.0.1)
     freyia (0.6.2)
     hash_with_dot_access (2.2.0)
+    htmlbeautifier (1.4.3)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
     inclusive (1.1.0)
@@ -128,12 +128,8 @@ GEM
       prism (~> 1.5)
     net-http (0.9.1)
       uri (>= 0.11.1)
-    net-protocol (0.4.0)
-      timeout
     nio4r (2.7.5)
     nokogiri (1.19.4-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     ostruct (0.6.3)
     pp (0.6.4)
@@ -186,7 +182,6 @@ GEM
       serbea (>= 2.1)
       zeitwerk (~> 2.5)
     tilt (2.9.0)
-    timeout (0.6.1)
     tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -202,6 +197,7 @@ DEPENDENCIES
   actionview
   bridgetown (~> 2.0)
   bridgetown-seo-tag (~> 7.0)
+  htmlbeautifier (~> 1.4)
   kramdown
   kramdown-parser-gfm
   ostruct

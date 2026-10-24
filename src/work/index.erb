@@ -7,28 +7,19 @@ front_matter do
 end
 ---
 
-<% slot :masthead do %>
-  <h1><%= I18n.t("work.index.portfolio") %></h1>
-  <div class="subtitle"><%= I18n.t("work.index.featured_works") %></div>
+<% slot :hero do %>
+  <%= render Hero.new(
+    title: I18n.t("work.index.portfolio"),
+    lede: I18n.t("work.index.featured_works")
+  ) %>
 <% end %>
-<% masthead_image("v1571928252/substancelab-website/office") %>
 
-<article class="portfolio">
-  <section>
-    <div class="container">
-      <h2><%= I18n.t("work.index.case_studies") %></h2>
-      <p><%= I18n.t("work.index.list_of_case_studies") %></p>
-    </div>
-  </section>
+<article>
+  <section class="ui-content wide">
+    <h2><%= I18n.t("work.index.case_studies") %></h2>
+    <p><%= I18n.t("work.index.list_of_case_studies") %></p>
 
-  <section class="featured-work">
-    <div class="container">
-      <div class="projects">
-        <% portfolio_projects.each do |project| %>
-          <%= project_tile(project) %>
-        <% end %>
-      </div>
-    </div>
+    <%= render Gallery.new(case_studies: portfolio_projects, :additional_classes => ["grid"], :eager => 2) %>
   </section>
 
   <section class="clients">

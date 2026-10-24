@@ -1,5 +1,6 @@
 ---
 title: "Launch: Front Lobby"
+author: jakob
 description: "Substance Lab præsenter: Front Lobby - en komplet løsning til booking og reservation af mødelokaler i kontorfællesskaber"
 tags: launch, frontlobby
 photo:

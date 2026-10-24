@@ -1,39 +1,31 @@
-<% masthead_image_for_article(current_article) %>
-
-<% slot :masthead do %>
-  <h1 class="blog-article-headline"><%= current_article.data.title %></h1>
-  <% if (credits = article_photo_data(current_article, "credits")) %>
-    <div class="photo-credits">
-      <% if credits.is_a?(Hash) && (credits["url"] || credits[:url]) %>
-        <a href="<%= credits["url"] || credits[:url] %>"><%= I18n.translate("articles.show.photo_credits", :name => (credits["name"] || credits[:name])) %></a>
-      <% else %>
-        <%= I18n.translate("articles.show.photo_credits", :name => (credits.is_a?(Hash) ? (credits["name"] || credits[:name]) : credits)) %>
-      <% end %>
-    </div>
+<% author_key = current_article.data.author %>
+<% author = person(author_key) %>
+<%= render Hero.new(:lede => article_intro(article_html), :title => current_article.data.title) do %>
+  <% if author %>
+    <a class="ui-attribution" href="<%= person_url(author_key) %>">
+      <%# The name is in the link text, so the photo doesn't need to repeat it %>
+      <img alt="" class="ui-avatar" src="<%= person_avatar_path(author_key) %>">
+      <div>
+        <div class="author"><%= author["name"] %></div>
+        <div><%= person_title(author) %></div>
+      </div>
+    </a>
   <% end %>
 <% end %>
 
-<article class="blog-article">
-  <div class="container">
-    <div class="content">
-      <%= without_readmore(article_html) %>
-    </div>
-
-    <aside>
-      <nav>
-        <div class="previous">
-          <% if (prev_article = older_article(current_article)) %>
-            <%= link_to_article(prev_article) %>
-          <% end %>
-        </div>
-        <div class="next">
-          <% if (next_article = newer_article(current_article)) %>
-            <%= link_to_article(next_article) %>
-          <% end %>
-        </div>
-      </nav>
-    </aside>
-  </div>
+<article class="ui-content">
+  <%= article_body(article_html) %>
 </article>
 
-<% masthead_image_for_article(current_article) %>
+<nav class="ui-page-navigation">
+  <div class="ui-previous-page">
+    <% if (prev_article = older_article(current_article)) %>
+      <%= link_to_article(prev_article, prefix: "←") %>
+    <% end %>
+  </div>
+  <div class="ui-next-page">
+    <% if (next_article = newer_article(current_article)) %>
+      <%= link_to_article(next_article, suffix: "→") %>
+    <% end %>
+  </div>
+</nav>

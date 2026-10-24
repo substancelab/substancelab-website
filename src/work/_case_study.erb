@@ -1,54 +1,34 @@
 <% project = resource.data._project %>
-<div class="case_study <%= project["slug"] %>">
-  <article>
-    <%= localized_partial "work/#{project["slug"]}", :locals => {:project => project} %>
+<article class="ui-content">
+  <%= localized_partial "work/#{project["slug"]}", {:project => project} %>
+</article>
 
-    <%= project_image(project) %>
-
-    <section class="overview">
-      <div class="container">
-        <div class="columns tripple">
-          <div class="column description">
-            <h3><%= project["name"] %></h3>
-            <p><%= localized(project["description"] || {}) %></p>
-            <% if project["website"] %>
-              <div class="website">
-                <a href="<%= project["website"] %>"><%= project["website"] %></a>
-              </div>
-            <% end %>
-          </div>
-
-          <div class="column services">
-            <h3><%= I18n.t("work.index.substance_lab_did") %></h3>
-            <p><%= project_services(project) %></p>
-          </div>
-
-          <div class="column technologies">
-            <h3><%= I18n.t("work.index.technologies_used") %></h3>
-            <p><%= (project["technologies"] || []).sort.to_sentence %></p>
-          </div>
-        </div>
+<%= render Columns.new do %>
+  <div>
+    <h3><%= project["name"] %></h3>
+    <p><%= localized(project["description"] || {}) %></p>
+    <% if project["website"] %>
+      <div class="website">
+        <a href="<%= project["website"] %>"><%= project["website"] %></a>
       </div>
-    </section>
-  </article>
+    <% end %>
+  </div>
 
-  <% other_studies = case_studies.reject { |cs| cs["slug"] == project["slug"] } %>
-  <% if other_studies.any? %>
-    <section class="featured-work">
-      <div class="container">
-        <div class="columns double case_studies">
-          <div class="column">
-            <h2><%= I18n.t("work.show.other_case_studies") %></h2>
-          </div>
-        </div>
-        <div class="projects">
-          <% other_studies.sample(3).each do |cs| %>
-            <%= project_tile(cs) %>
-          <% end %>
-        </div>
-      </div>
-    </section>
-  <% end %>
-</div>
+  <div>
+    <h3><%= I18n.t("work.index.substance_lab_did") %></h3>
+    <p><%= linked_project_services(project) %></p>
+  </div>
 
-<% masthead_image(project_masthead_image_path(project)) %>
+  <div>
+    <h3><%= I18n.t("work.index.technologies_used") %></h3>
+    <p><%= (project["technologies"] || []).sort.to_sentence %></p>
+  </div>
+<% end %>
+
+<%= render CallToAction.new %>
+
+<% other_studies = case_studies.reject { |case_study| case_study["slug"] == project["slug"] } %>
+<% if other_studies.any? %>
+  <h2><%= I18n.translate("work.show.other_case_studies") %></h2>
+  <%= render Gallery.new(case_studies: other_studies.sample(3)) %>
+<% end %>

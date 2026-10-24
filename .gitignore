@@ -9,10 +9,14 @@
 
 # Ignore the build directory
 /build
+/output
 
 # Ignore tmp stuff
 .tmp
 /tmp/*
+
+# Ignore Bridgetown's cache
+/.bridgetown-cache
 
 # Ignore Sass' cache
 /.sass-cache
@@ -22,13 +26,5 @@ node_modules
 # Ignore .DS_Store
 /.DS_Store
 
-# Vite Ruby
-/src/vite-dev/*
-/src/vite/*
-
 # Procodile
 /pids/*
-
-# Bridgetown
-/output
-/.bridgetown-cache

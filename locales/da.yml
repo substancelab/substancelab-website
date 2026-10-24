@@ -6,7 +6,9 @@ da:
       page_title: "Artikler"
     show:
       meta_data: "Skrevet af %{author} d. %{date}"
-      photo_credits: "Billede taget af %{name}"
+
+  call_to_action:
+    headline_html: "Jeg hører gerne om <strong class=\"highlight\">din idé</strong>"
 
   contact_details:
     book_a_meeting: "Book et online møde"
@@ -62,6 +64,10 @@ da:
     services: Ydelser
     work: Cases
 
+  offline:
+    body: "Siden kan ikke vises uden internetforbindelse. Prøv igen, når du er online."
+    title: "Du er offline"
+
   services:
     api_development: Udvikling af API
     automation: Automatisering
@@ -100,7 +106,7 @@ da:
       meta_description: Vi er stolte af det vi laver og viser det gerne frem. Vi har udviklet online løsninger og SaaS produkter for en lang række nystiftede virksomheder.
       portfolio: Hvem har vi hjulpet
       project_website: Se resultatet
-      substance_lab_did: Substance Lab lavede
+      substance_lab_did: Vi lavede
       technologies: Teknologier
       technologies_used: Teknologier
     show:

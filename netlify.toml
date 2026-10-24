@@ -1,12 +1,10 @@
 [build]
-  command = "bundle exec rake vite:build && bundle exec bridgetown build"
+  command = "bundle exec bridgetown deploy"
   publish = "output"
 
 [build.environment]
   RUBY_VERSION = "3.2.2"
   NODE_VERSION = "24.15.0"
-  BRIDGETOWN_ENV = "production"
-  RACK_ENV = "production"
 
 # A placeholder copy of the jobs page used to live here. Send visitors to the
 # guide landing page instead.

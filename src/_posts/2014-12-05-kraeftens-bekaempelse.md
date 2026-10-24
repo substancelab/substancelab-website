@@ -1,5 +1,6 @@
 ---
 title: Vi støtter Kræftens Bekæmpelse
+author: jakob
 description: "I 2014 valgte vi at donere en del af vores overskud til Kræftens Bekæmpelse og dermed støtte deres kamp for børn og unge"
 tags: velgørenhed
 photo:

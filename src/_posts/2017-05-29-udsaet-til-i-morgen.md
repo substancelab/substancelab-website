@@ -1,5 +1,6 @@
 ---
 title: "Udsæt til i morgen..."
+author: jakob
 description: "Hvis du udvikler features, som reelt ikke løser det problem, du har nu og her, spilder du din tid og dine penge."
 tags: software, udvikling, produktstyring
 photo:
@@ -36,4 +37,6 @@ Starten af et projekt er det tidspunkt i projektets levetid, hvor du ved allermi
 
 Jeg foreslår derfor at have et lettere modificeret ordsprog i baghovedet, når du planlægger din webløsning:
 
-<blockquote class="quote">Udsæt til i morgen, hvad du kan lære mere om i dag.</blockquote>
+<%= render Quote.new do %>
+  <p>Udsæt til i morgen, hvad du kan lære mere om i dag.</p>
+<% end %>

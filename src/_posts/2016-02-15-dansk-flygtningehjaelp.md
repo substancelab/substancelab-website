@@ -1,5 +1,6 @@
 ---
 title: Vi støtter Dansk Flygtningehjælp
+author: jakob
 description: "Substance Labs årlige donation til velgørenhed faldt i 2015 til Dansk Flygtningehjælp, som hjælper flygtninge i verdens brændpunkter."
 tags: velgørenhed
 photo:

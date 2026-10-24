@@ -1,0 +1,14 @@
+<div class="ui-hero">
+  <% if @badge && @badge_url %>
+    <a class="ui-badge" href="<%= @badge_url %>"><%= @badge %></a>
+  <% elsif @badge %>
+    <div class="ui-badge"><%= @badge %></div>
+  <% end %>
+  <h1><%= @title %></h1>
+  <% if lede? %>
+    <div class="ui-lede">
+      <%= lede %>
+    </div>
+  <% end %>
+  <%= content %>
+</div>

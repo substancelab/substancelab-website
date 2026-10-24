@@ -1,0 +1,875 @@
+// Substance Lab design system
+// Ported from the "onlinecity" design mockup. Valid CSS, compiled through
+// Dart Sass via esbuild — native nesting and container queries pass through.
+
+// Self-hosted (latin subset of the variable font from Google Fonts) and
+// preloaded in the layout. `optional` means the text never re-flows when the
+// font arrives late: a slow first visit renders with the fallback instead,
+// and the font is cached for the next page.
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/roboto-slab-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+Breakpoints
+- sm: 600px;
+- md: 900px;
+- lg: 1200px;
+*/
+
+:root {
+  --border-radius-base: 1em;
+  @media (min-width: 600px) {
+    --border-radius-base: 1.5em;
+  }
+  @media (min-width: 900px) {
+    --border-radius-base: 2em;
+  }
+
+  // How much whitespace to leave around the body content
+  --body-outer-spacing: 1.4em;
+  @media (min-width: 900px) {
+    --body-outer-spacing: 4em;
+  }
+
+  --color-bg-primary-rgb: 229, 229, 229;
+  --color-bg-primary: rgb(var(--color-bg-primary-rgb));
+  --color-text-primary-rgb: 25, 25, 25;
+  --color-text-primary: rgb(var(--color-text-primary-rgb));
+
+  /* HSL: hsl(138.73, 100%, 46.47%) */
+  --color-brand-primary-rgb: 0, 237, 74;
+  --color-brand-primary: rgb(var(--color-brand-primary-rgb));
+
+  /* HSL: hsl(148.71, 100%, 50%) */
+  --color-brand-secondary-rgb: 0, 255, 122;
+  --color-brand-secondary: rgb(var(--color-brand-secondary-rgb));
+
+  --color-link: #006622;
+
+  // Brand green is too light to read as text on the light background, so
+  // text in brand colors (like badges) uses this darker shade instead
+  --color-brand-text: #007025;
+  --color-link-hover: #00521b;
+  --color-link-visited: #2b6451;
+
+  --content-spacing-x: 3rem;
+  --content-spacing-y: 3rem;
+
+  --font-copy: system-ui, sans-serif;
+  --font-display: 'Roboto Slab', sans-serif;
+
+  --font-size: 20px;
+  --font-size-scale: 1.2;
+
+  @media (min-width: 600px) {
+    --font-size-scale: 1.3;
+  }
+  @media (min-width: 900px) {
+    --font-size-scale: 1.4;
+  }
+
+  --font-size-scale-xs: calc(1 / var(--font-size-scale) / var(--font-size-scale));
+  --font-size-scale-sm: calc(1 / var(--font-size-scale));
+  --font-size-scale-lg: calc(var(--font-size-scale));
+  --font-size-scale-xl: calc(var(--font-size-scale) * var(--font-size-scale));
+  --font-size-scale-2xl: calc(var(--font-size-scale) * var(--font-size-scale) * var(--font-size-scale));
+
+  --font-size-xs: calc(1em * var(--font-size-scale-xs));
+  --font-size-sm: calc(1em * var(--font-size-scale-sm));
+  --font-size-base: clamp(1em, 1vw, 1.4em);
+  --font-size-lg: calc(1em * var(--font-size-scale-lg));
+  --font-size-xl: calc(1em * var(--font-size-scale-xl));
+  --font-size-2xl: calc(1em * var(--font-size-scale-2xl));
+
+  @media (prefers-color-scheme: dark) {
+    --color-bg-primary-rgb: 22, 33, 22;
+    --color-text-primary-rgb: 229, 229, 229;
+
+    --color-link: var(--color-brand-primary);
+    --color-link-hover: var(--color-brand-secondary);
+    --color-link-visited: #79d2b5;
+
+    --color-brand-text: var(--color-brand-secondary);
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+a:link {
+  color: var(--color-link);
+}
+a:visited {
+  color: var(--color-link-visited);
+}
+a:hover, a:active {
+  color: var(--color-link-hover);
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-copy);
+  font-size: var(--font-size-base);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: hidden; // guards against the 100vw breakout (.ui-screenshot-gallery) overshooting by the scrollbar's width
+  padding: var(--body-outer-spacing);
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.highlight {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
+  /* background: rgb(0,237,74); */
+  background: linear-gradient(to top left, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #fff;
+  padding: 0.2em 0.4em;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+  }
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0;
+  margin-top: var(--content-spacing-y);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  margin-top: var(--content-spacing-y);
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-base);
+  margin-top: var(--content-spacing-y);
+}
+
+.ui-article {
+  margin-bottom: 8em;
+  margin-top: 8em;
+
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+
+// A byline linking to the author's page. Only the name looks like a link.
+.ui-attribution {
+  align-items: center;
+  display: inline-flex;
+  font-size: var(--font-size-sm);
+  gap: 1em;
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: inherit;
+  }
+
+  & .author {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  &:hover .author, &:active .author {
+    color: var(--color-brand-primary);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-brand-secondary);
+    }
+  }
+}
+
+.ui-avatar {
+  border-radius: 50%;
+  display: block;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.ui-badge {
+  color: var(--color-brand-text);
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+
+  // Bold capitals read larger than body text, so size it a step below the
+  // body text to make it appear similar. The hero is a step larger than the
+  // body text, so this is two steps down from there.
+  .ui-hero & {
+    font-size: var(--font-size-xs);
+  }
+
+  &:is(a) {
+    display: inline-block;
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: var(--color-brand-text);
+    }
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.ui-content {
+  container-type: inline-size;
+  margin-bottom: var(--content-spacing-y);
+  margin-top: var(--content-spacing-y);
+
+  // Cap each child rather than the column itself, so ch resolves against the
+  // child's own font-size: a headline gets 60 characters of headline, a
+  // paragraph 60 characters of body text.
+  &:not(.wide) > *,
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    max-width: 60ch;
+  }
+}
+
+// A list of articles with their summaries, where each article is a link to
+// the full article. Only the headline looks like a link.
+.ui-article-list-item {
+  display: block;
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: inherit;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+
+  &:hover h2, &:active h2 {
+    color: var(--color-brand-primary);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-brand-secondary);
+    }
+  }
+}
+
+// Links to a person's profiles elsewhere, like LinkedIn or their website.
+.ui-person-links {
+  display: flex;
+  flex-wrap: wrap;
+  // The hero is a step larger than the body text, so step back down to match
+  font-size: var(--font-size-sm);
+  gap: 0.5em 1.5em;
+  margin-top: 1em;
+}
+
+// Use for navigation between full pages, like next and previous articles.
+.ui-page-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--content-spacing-y);
+  margin-top: var(--content-spacing-y);
+
+  .ui-next-page, .ui-previous-page {
+    flex: 1;
+  }
+  .ui-next-page {
+    text-align: right;
+  }
+  .ui-previous-page {
+    text-align: left;
+  }
+}
+
+.ui-quote {
+  border-left: 4px solid rgb(var(--color-brand-primary-rgb));
+  font-size: var(--font-size-lg);
+  margin: var(--content-spacing-y) 0;
+  padding: 0 1em;
+
+  // Span the full width rather than the column's line length cap
+  &, & p {
+    .ui-content & {
+      max-width: none;
+    }
+  }
+
+  &::before {
+    content: open-quote;
+    font-size: var(--font-size-2xl);
+    line-height: 1.4em;
+  }
+
+  // Close the quote again without showing it, so the next quote on the page
+  // isn't treated as nested inside this one and shown with single quotes
+  &::after {
+    content: no-close-quote;
+  }
+
+  p {
+    margin-top: 0;
+  }
+  p:first-of-type {
+    margin-top: -1em;
+  }
+}
+.ui-quote-author {
+  font-size: var(--font-size-sm);
+}
+
+.ui-logo {
+  width: 2em;
+  height: 2em;
+}
+
+.ui-navigation {
+  display: flex;
+  justify-content: space-between;
+  left: var(--body-outer-spacing);
+  pointer-events: none;
+  position: fixed;
+  right: var(--body-outer-spacing);
+  top: 2em;
+  z-index: 100;
+
+  & > *:first-child {
+    width: 25%;
+  }
+  & > *:last-child {
+    text-align: right;
+    width: 25%;
+  }
+
+  // There's no room for logo, links and call to action on one row, so put
+  // the links on a row of their own and let the header scroll with the page
+  @media (max-width: 599px) {
+    flex-wrap: wrap;
+    position: absolute;
+    row-gap: 0.5em;
+
+    & > *:first-child, & > *:last-child {
+      width: auto;
+    }
+
+    .ui-nav {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: var(--font-size-sm);
+      gap: 0 0.75em;
+      order: 1;
+      width: 100%;
+
+      // Tall enough to tap without hitting a neighbour
+      a {
+        padding-block: calc((48px - 1.6em) / 2);
+      }
+    }
+  }
+}
+
+// Make room for the two-row header above
+body {
+  @media (max-width: 599px) {
+    padding-top: calc(var(--body-outer-spacing) + 3em);
+  }
+}
+.ui-navigation * {
+  pointer-events: auto;
+}
+
+// Invites the reader to get in touch, see CallToAction
+.ui-call-to-action {
+  & > :first-child {
+    flex: 0 1 240px;
+
+    // Fill the width once there's no room for the text beside it
+    @container (width < 35em) {
+      flex-basis: 100%;
+    }
+  }
+
+  // Show the whole photo rather than cropping it
+  figure img {
+    aspect-ratio: auto;
+  }
+}
+
+.ui-contact {
+  .ui-contact-name {
+    font-weight: bold;
+  }
+
+  .ui-contact-phone {
+    margin-top: 1em;
+  }
+}
+
+.ui-fadeout {
+  height: 2em;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+}
+
+.ui-fadeout.bottom {
+  background: linear-gradient(to top, var(--color-bg-primary), rgba(var(--color-bg-primary-rgb), 0));
+  bottom: 0;
+}
+
+.ui-fadeout.top {
+  background: linear-gradient(to bottom, var(--color-bg-primary), rgba(var(--color-bg-primary-rgb), 0));
+  height: 4em;
+  top: 0;
+  z-index: 9;
+}
+
+.ui-footer {
+  display: flex;
+  font-size: calc(1em / var(--font-size-scale));
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--content-spacing-y);
+  flex-wrap: wrap;
+  gap: 1.5em 3em;
+
+  // Stacked links are too close to tap reliably, so make each one 48px tall
+  @media (max-width: 899px) {
+    a {
+      display: inline-block;
+      line-height: 1.2;
+      padding-block: calc((48px - 1.2em) / 2);
+    }
+  }
+
+  .ui-footer-nav-title {
+    font-weight: bold;
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: inherit;
+    }
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
+.ui-gallery {
+  container-type: inline-size;
+
+  // Extend the gallery outside the body spacing to become full-bleed
+  margin-left: calc(-1 * var(--body-outer-spacing));
+  margin-right: calc(-1 * var(--body-outer-spacing));
+
+  .ui-gallery-item-caption {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+
+    // A fixed-height dithered fade, anchored to the top of the caption so it
+    // always sits immediately above it regardless of how tall the caption
+    // grows (e.g. two vs. three lines of description).
+    &::before {
+      background-image: url("/images/dither-ramp.png");
+      background-position: bottom left;
+      background-repeat: repeat-x;
+      bottom: 100%;
+      content: "";
+      height: 64px; // matches the native height of dither-ramp.png so it isn't stretched
+      image-rendering: pixelated; // keep frame boundaries crisp -- otherwise the browser smooths across them, bleeding a faint line from the adjacent frame
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .ui-gallery-item {
+    aspect-ratio: var(--item-aspect-ratio);
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    display: block;
+    min-width: var(--item-width);
+    position: relative;
+    scroll-snap-align: start;
+
+    & > :first-child {
+      z-index: 42;
+      overflow: hidden;
+      height: 100%;
+      position: relative;
+    }
+
+    img {
+    }
+  }
+
+  .ui-gallery-item:hover {
+    .ui-gallery-item-title {
+      text-decoration: underline;
+    }
+
+    // Swap the static fade for a sprite sheet of alternate dither patterns
+    // and step through them on a loop, so the pixels flicker while hovered.
+    .ui-gallery-item-caption::before {
+      animation: dither-flicker 0.9s steps(6) infinite;
+      background-image: url("/images/dither-ramp-frames.png");
+      background-position: left top;
+    }
+  }
+
+  .ui-gallery-item-title {
+    font-weight: bold;
+  }
+
+  .ui-gallery-items {
+    --gap: 4%;
+    --item-aspect-ratio:  9 / 16;
+    --item-width: calc((100% - var(--gap)) / 1);
+
+    @container (width > 40em) {
+      --gap: 2%;
+      --item-aspect-ratio: 4 / 3;
+      --item-width: calc((100% - var(--gap)) / 2);
+    }
+
+    display: flex;
+    gap: var(--gap);
+    overflow-x: auto;
+    padding-bottom: var(--content-spacing-y);
+    padding-left: var(--body-outer-spacing);
+    padding-right: var(--body-outer-spacing);
+    padding-top: var(--content-spacing-y);
+
+    // Snap the children to the left margin of the container
+    scroll-padding-left: var(--body-outer-spacing);
+    scroll-padding-right: var(--body-outer-spacing);
+    scroll-snap-type: x mandatory;
+  }
+
+  &.grid {
+    .ui-gallery-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--item-width), 1fr));
+      gap: var(--gap);
+      overflow-x: unset;
+      scroll-snap-type: none;
+    }
+  }
+}
+
+// Steps down through the 6 stacked frames in dither-ramp-frames.png (each
+// 64px tall) and loops -- see .ui-gallery-item:hover above.
+@keyframes dither-flicker {
+  to {
+    background-position-y: -384px;
+  }
+}
+
+// A simple CSS-columns masonry, used for showcasing product screenshots of
+// varying heights within a case study (no JS layout needed -- browsers place
+// each figure into the shortest column as they read down the source order).
+.ui-screenshot-gallery {
+  container-type: inline-size;
+
+  // Unlike .ui-gallery (a direct child of body), this lives inside a
+  // .ui-content column, which caps its children at 60ch, so an ordinary
+  // negative margin only buys back a little width -- it never reaches the
+  // viewport edges. Instead, lift the cap, size it to the full viewport and
+  // pull it back left by exactly body's own padding, since .ui-content sits
+  // flush against it.
+  width: 100vw;
+  margin-left: calc(-1 * var(--body-outer-spacing));
+
+  .ui-content > & {
+    max-width: none;
+  }
+
+  .ui-screenshot-gallery-items {
+    // Container query units (cqw) rather than plain percentages: inside a
+    // multi-column layout, a percentage margin on a figure resolves against
+    // its narrow column box, not the full container -- so it wouldn't match
+    // column-gap (which is a percentage of the whole container). cqw always
+    // resolves against this container, regardless of which column a
+    // descendant lands in, keeping the vertical and horizontal gaps equal.
+    --gap: 4cqw;
+
+    column-count: 1;
+    column-gap: var(--gap);
+    padding-bottom: var(--content-spacing-y);
+    padding-left: var(--body-outer-spacing);
+    padding-right: var(--body-outer-spacing);
+    padding-top: var(--content-spacing-y);
+
+    @container (width > 30em) {
+      --gap: 2cqw;
+      column-count: 2;
+    }
+
+    @container (width > 40em) {
+      column-count: 3;
+    }
+  }
+
+  figure {
+    break-inside: avoid;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    margin: 0 0 var(--gap);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.ui-hero {
+  font-size: var(--font-size-lg);
+  margin: calc(var(--content-spacing-y) * 1.4) 0em;
+}
+
+/* A subheader callout  */
+.ui-lede {
+  letter-spacing: 0.01em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  max-width: 60ch;
+}
+
+/*
+Modifiers
+*/
+
+// Apply .non-wrap-row to a container to prevent its children from wrapping.
+// This renders all child elements on a single line forcing their contents to
+// shrink as more elements are added
+.non-wrap-row {
+  display: flex;
+  flex-wrap: nowrap;
+
+  & > * {
+    flex-shrink: 1;
+  }
+}
+.ui-gallery.non-wrap-row {
+  margin-left: unset;
+  margin-right: unset;
+
+  .ui-gallery-items {
+    margin: unset;
+    padding-left: unset;
+    padding-right: unset;
+
+    // Share the row equally, whether an item is an image or a link around one
+    & > * {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+
+    & > img, & > a > img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+/* A content block that is split up in two areas */
+.split {
+  align-items: center;
+  display: flex;
+  // Wrap rather than relying on a container query, as the block is usually
+  // its own container (.ui-content) and can't query its own size
+  flex-wrap: wrap;
+  gap: 2em 4em;
+  margin-top: var(--content-spacing-y);
+  margin-bottom: var(--content-spacing-y);
+
+  & > * {
+    flex: 1 1 15em;
+  }
+
+  & > * > :first-child {
+    margin-top: unset;
+  }
+
+  img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Apply .tripple to an element to make it split into three columns */
+.tripple {
+  display: flex;
+  gap: var(--content-spacing-x);
+
+  & > * {
+    flex: 1;
+  }
+
+  @container (width < 50em) {
+    & {
+      display: block;
+    }
+  }
+}
+
+.well {
+  // --background: rgba(0, 0, 0, 0.1);
+    --background: rgba(var(--color-text-primary-rgb), 0.1);
+  --padding: 1em;
+
+  background: var(--background);
+  padding: var(--padding);
+
+  @container (width < 35em) {
+    & > div {
+      max-width: unset;
+    }
+
+    figure {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+/* Apply .align-top to a .split to align its areas at the top rather than center */
+.split.align-top {
+  align-items: flex-start;
+}
+
+/* Apply .wide to an element to make it span the full viewport width */
+.wide {
+  max-width: unset;
+  width: unset;
+}
+
+// Page transitions, using cross-document view transitions. The outgoing page
+// fades and shrinks away while the incoming page slides in from the right.
+// Browsers without support simply navigate as usual.
+@view-transition {
+  navigation: auto;
+}
+
+// Keep fixed chrome in place while the page content transitions underneath
+.ui-navigation {
+  view-transition-name: site-navigation;
+}
+.ui-fadeout.top {
+  view-transition-name: site-fadeout-top;
+}
+.ui-fadeout.bottom {
+  view-transition-name: site-fadeout-bottom;
+}
+
+// Avoid flashing the canvas color around the shrinking page
+::view-transition {
+  background-color: var(--color-bg-primary);
+}
+
+::view-transition-old(root) {
+  animation: 250ms cubic-bezier(0.4, 0, 1, 1) both page-transition-out;
+}
+
+::view-transition-new(root) {
+  animation: 350ms cubic-bezier(0, 0, 0.2, 1) 100ms both page-transition-in;
+}
+
+@keyframes page-transition-out {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes page-transition-in {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+}
+
+// Going back plays the transition in reverse: the current page slides out to
+// the right while the previous page grows back into place
+html:active-view-transition-type(back) {
+  &::view-transition-old(root) {
+    animation: 250ms cubic-bezier(0.4, 0, 1, 1) both page-transition-back-out;
+  }
+
+  &::view-transition-new(root) {
+    animation: 350ms cubic-bezier(0, 0, 0.2, 1) 100ms both page-transition-back-in;
+  }
+}
+
+@keyframes page-transition-back-out {
+  to {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes page-transition-back-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

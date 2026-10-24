@@ -12,10 +12,10 @@ require_relative "html_helpers"
 require_relative "i18n_helpers"
 require_relative "navigation_helpers"
 require_relative "layout_helpers"
-require_relative "masthead_helpers"
 require_relative "article_helpers"
 require_relative "client_helpers"
 require_relative "project_helpers"
+require_relative "people_helpers"
 
 module AllHelpers
   SITE_HELPERS = [
@@ -25,10 +25,10 @@ module AllHelpers
     ::I18nHelpers,
     ::NavigationHelpers,
     ::LayoutHelpers,
-    ::MastheadHelpers,
     ::ArticleHelpers,
     ::ClientHelpers,
     ::ProjectHelpers,
+    ::PeopleHelpers,
   ].freeze
 
   SITE_HELPERS.each do |mod|

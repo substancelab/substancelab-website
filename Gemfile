@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "bridgetown", "~> 2.0"
-gem "puma", "~> 6.0"
+gem "puma", "~> 7.2"
 
 gem "vite_ruby"
 

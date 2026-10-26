@@ -1,5 +1,9 @@
 <% author_key = current_article.data.author %>
 <% author = person(author_key) %>
+<% slot :scripts do %>
+  <%= article_structured_data(current_article) %>
+<% end %>
+
 <%= render Hero.new(:lede => article_intro(article_html), :title => current_article.data.title) do %>
   <% if author %>
     <a class="ui-attribution" href="<%= person_url(author_key) %>">

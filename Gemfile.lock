@@ -7,6 +7,8 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    activemodel (8.1.4)
+      activesupport (= 8.1.4)
     activesupport (8.1.4)
       base64
       bigdecimal
@@ -172,6 +174,8 @@ GEM
     samovar (2.4.1)
       console (~> 1.0)
       mapping (~> 1.0)
+    schema_dot_org (2.5.3)
+      validated_object (~> 2.3.4)
     securerandom (0.4.1)
     serbea (2.4.1)
       erubi (>= 1.13)
@@ -186,6 +190,8 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (1.1.1)
+    validated_object (2.3.4)
+      activemodel (>= 3.2.21)
     zeitwerk (2.8.2)
 
 PLATFORMS
@@ -204,6 +210,7 @@ DEPENDENCIES
   puma (~> 6.0)
   rails-html-sanitizer
   rake
+  schema_dot_org (~> 2.5)
 
 BUNDLED WITH
   4.0.17

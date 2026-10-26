@@ -7,6 +7,10 @@ front_matter do
 end
 ---
 
+<% slot :scripts do %>
+  <%= organization_structured_data %>
+<% end %>
+
 <%= render Hero.new(title: "Substance Lab") do %>
   <h2>We build <span class="highlight">modern software</span> for founders with customers</h2>
 <% end %>

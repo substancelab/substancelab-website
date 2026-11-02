@@ -77,7 +77,7 @@ GEM
       fiber-annotation
       fiber-local (~> 1.1)
       json
-    crass (1.0.7)
+    crass (1.0.8)
     csv (3.3.6)
     drb (2.2.3)
     dry-cli (1.4.1)

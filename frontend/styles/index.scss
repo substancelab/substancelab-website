@@ -294,6 +294,23 @@ h4 {
   }
 }
 
+// A list laid out as running text, with the items separated by a dot. Use for
+// long lists of short items, like names, where one item per line wastes space.
+.ui-inline-list {
+  list-style: none;
+  padding-left: 0;
+
+  // Keep each item on one line, breaking only between items
+  li {
+    display: inline;
+    white-space: nowrap;
+  }
+
+  li:not(:last-child)::after {
+    content: " · ";
+  }
+}
+
 // Links to a person's profiles elsewhere, like LinkedIn or their website.
 .ui-person-links {
   display: flex;

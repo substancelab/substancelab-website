@@ -4,10 +4,8 @@
     <figcaption class="ui-gallery-item-caption with-logo">
       <%# The name is right next to it, so the logo doesn't need to repeat it %>
       <%= image_tag @product["logo"], :alt => "", :class => "ui-gallery-item-logo" %>
-      <div>
-        <div class="ui-gallery-item-title"><%= @product["name"] %></div>
-        <%= localized(@product["description"]) %>
-      </div>
+      <div class="ui-gallery-item-title"><%= @product["name"] %></div>
+      <div class="ui-gallery-item-description"><%= localized(@product["description"]) %></div>
     </figcaption>
   </figure>
 <% end %>

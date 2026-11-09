@@ -572,28 +572,51 @@ body {
     font-weight: bold;
   }
 
-  // A caption with a logo to the left of the title and description
+  // A caption with a logo to the left of the title and description. On small
+  // screens the logo shrinks to sit beside the title only, giving the
+  // description the full width so the caption fits within the item.
   .ui-gallery-item-caption.with-logo {
     align-items: center;
-    display: flex;
-    gap: 1em;
+    column-gap: 1em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    .ui-gallery-item-logo {
+      grid-row: span 2;
+    }
+
+    @container (width <= 40em) {
+      column-gap: 0.5em;
+
+      .ui-gallery-item-logo {
+        grid-row: auto;
+        height: 1.5em;
+        width: 1.5em;
+      }
+
+      .ui-gallery-item-description {
+        grid-column: 1 / -1;
+      }
+    }
   }
 
   // Override the full-size, cropped images of figure img
   .ui-gallery-item-caption .ui-gallery-item-logo {
-    flex-shrink: 0;
     height: 3em;
     object-fit: contain;
     width: 3em;
   }
 
   .ui-gallery-items {
-    --gap: 4%;
+    // Relative to the gallery's width, not a percentage: in a grid, a
+    // percentage row gap resolves against the grid's height, which isn't known
+    // while laying it out, so the rows would overflow the gallery.
+    --gap: 4cqi;
     --item-aspect-ratio:  9 / 16;
     --item-width: calc((100% - var(--gap)) / 1);
 
     @container (width > 40em) {
-      --gap: 2%;
+      --gap: 2cqi;
       --item-aspect-ratio: 4 / 3;
       --item-width: calc((100% - var(--gap)) / 2);
     }
@@ -619,6 +642,14 @@ body {
       gap: var(--gap);
       overflow-x: unset;
       scroll-snap-type: none;
+    }
+  }
+
+  // Square items on small screens, instead of the default tall format that
+  // fills most of the screen
+  &.square-on-small .ui-gallery-items {
+    @container (width <= 40em) {
+      --item-aspect-ratio: 1 / 1;
     }
   }
 

@@ -55,7 +55,8 @@ module ProjectHelpers
 
   # The URL of the service page covering a project service, if any
   def service_page_url(service)
-    SERVICE_PAGES.find { |_url, services| services.include?(service.to_s) }&.first
+    url = SERVICE_PAGES.find { |_url, services| services.include?(service.to_s) }&.first
+    url if url && page_exists?(url)
   end
 
   def project_page_title(project)

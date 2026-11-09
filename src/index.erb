@@ -43,7 +43,9 @@ end
 
   <p>Development processes can be hard to follow, and we know how important it is to keep an ongoing dialogue in plain language. A good collaboration is the core of a good project. That is why we hold weekly status meetings, where we review together what has been done and what is coming up, so you always have your finger on the pulse.</p>
 
-  <p><a href="/services/development/">More about development</a></p>
+  <% if page_exists?("/services/development/") %>
+    <p><a href="/services/development/">More about development</a></p>
+  <% end %>
 </article>
 
 <section class="ui-content wide">

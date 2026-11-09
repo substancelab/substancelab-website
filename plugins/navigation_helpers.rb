@@ -16,6 +16,12 @@ module NavigationHelpers
     nav_bar_link(:services, services_url)
   end
 
+  # True if the site has a published page at url. Pages in other locales than
+  # the one being built are unpublished by Builders::LocaleGuard.
+  def page_exists?(url)
+    site.resources.any? { |r| r.data.published != false && r.relative_url == url }
+  end
+
   def articles_path
     "/articles/"
   end

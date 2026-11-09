@@ -47,9 +47,13 @@
 
       <nav class="ui-nav">
         <a href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
-        <a href="<%= services_url %>">Services</a>
+        <% if page_exists?(services_url) %>
+          <a href="<%= services_url %>">Services</a>
+        <% end %>
         <a href="/#company">About</a>
-        <a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a>
+        <% if blog_articles.any? %>
+          <a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a>
+        <% end %>
       </nav>
 
       <div class="ui-nav-cta">

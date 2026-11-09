@@ -21,7 +21,7 @@
 
   <div>
     <h3><%= I18n.t("work.index.technologies_used") %></h3>
-    <p><%= (project["technologies"] || []).sort.to_sentence %></p>
+    <p><%= linked_technologies(project["technologies"]) %></p>
   </div>
 <% end %>
 

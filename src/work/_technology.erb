@@ -1,0 +1,39 @@
+<% technology = resource.data._technology %>
+<% projects = projects_with_technology(technology) %>
+<% technology_case_studies, other_projects = projects.partition { |project| case_study?(project) } %>
+
+<% slot :hero do %>
+  <%= render Hero.new(
+    badge: I18n.t("work.technology.badge"),
+    badge_url: projects_url,
+    title: I18n.t("work.technology.title", technology: technology),
+    lede: I18n.t("work.technology.lede", count: projects.size, technology: technology)
+  ) %>
+<% end %>
+
+<% if technology_case_studies.any? %>
+  <section class="ui-content wide">
+    <h2><%= I18n.t("work.index.case_studies") %></h2>
+    <%= render Gallery.new(case_studies: technology_case_studies, :additional_classes => ["grid", "square-on-small"], :eager => 2) %>
+  </section>
+<% end %>
+
+<% if other_projects.any? %>
+  <section class="ui-content">
+    <h2><%= technology_case_studies.any? ? I18n.t("work.technology.other_projects") : I18n.t("work.technology.projects") %></h2>
+
+    <% other_projects.sort_by { |project| project_name(project).downcase }.each do |project| %>
+      <h3><%= project_name(project) %></h3>
+      <p>
+        <% if project["name"] %>
+          <%= project["client"] %><br>
+        <% end %>
+        <% description = localized(project["description"] || {}) %>
+        <% unless description.empty? %>
+          <%= description %><br>
+        <% end %>
+        <%= I18n.t("work.technology.built_with") %> <%= linked_technologies(project["technologies"]) %>
+      </p>
+    <% end %>
+  </section>
+<% end %>

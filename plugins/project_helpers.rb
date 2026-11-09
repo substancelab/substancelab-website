@@ -160,4 +160,25 @@ module ProjectHelpers
       techs
     }.flatten.compact.uniq.sort
   end
+
+  def technology_url(technology)
+    "/work/with/#{Bridgetown::Utils.slugify(technology)}/"
+  end
+
+  # The technologies as a sentence, each linking to its technology page
+  def linked_technologies(technologies)
+    Array(technologies).sort.map { |technology|
+      %(<a href="#{technology_url(technology)}">#{ERB::Util.html_escape(technology)}</a>)
+    }.to_sentence.html_safe
+  end
+
+  def projects_with_technology(technology)
+    all_projects.select { |project| Array(project["technologies"]).include?(technology) }
+  end
+
+  # The name of a project, falling back to its client's name without the
+  # country for projects that don't have a name of their own
+  def project_name(project)
+    project["name"] || project["client"].to_s.sub(/, [^,]+\z/, "")
+  end
 end

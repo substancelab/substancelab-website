@@ -102,3 +102,13 @@ en:
     show:
       other_case_studies: Other case studies
       screenshot_of_project: "Screenshot of %{project_name}"
+    technology:
+      badge: Technology
+      built_with: Built with
+      lede:
+        one: "A project we have built with %{technology}."
+        other: "%{count} projects we have built with %{technology}."
+      meta_description: "The projects and case studies Substance Lab has built with %{technology}."
+      other_projects: Other projects
+      projects: Projects
+      title: "Projects built with %{technology}"

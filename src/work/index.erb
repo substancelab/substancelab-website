@@ -61,7 +61,7 @@ end
 
       <ul class="technology-list ui-inline-list">
         <% technologies.each do |technology| %>
-          <li><%= technology %></li>
+          <li><a href="<%= technology_url(technology) %>"><%= technology %></a></li>
         <% end %>
       </ul>
     </div>

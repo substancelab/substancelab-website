@@ -114,3 +114,13 @@ da:
     show:
       other_case_studies: Andre cases
       screenshot_of_project: "Skærmbillede fra %{project_name}"
+    technology:
+      badge: Teknologi
+      built_with: Bygget med
+      lede:
+        one: "Et projekt, vi har bygget med %{technology}."
+        other: "%{count} projekter, vi har bygget med %{technology}."
+      meta_description: "De projekter og cases, Substance Lab har bygget med %{technology}."
+      other_projects: Andre projekter
+      projects: Projekter
+      title: "Projekter med %{technology}"

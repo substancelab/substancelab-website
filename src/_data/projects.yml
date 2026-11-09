@@ -10,7 +10,6 @@
 
 agency-fusion:
   client: Agency Fusion, USA
-  client_website: https://agencyfusion.com
   services:
   - ux
 
@@ -95,7 +94,6 @@ born-i-byen:
 
 change-healthcare:
   client: change:healthcare, USA
-  client_website: https://changehealthcare.com
   description:
     da: "change:healthcare hjælper forbrugere i USA med at finde rundt i den jungle, der er deres sundhedssystem, med værktøjer til at holde styr på regninger og forsikringer sammenligning af priser på medicin og læger."
     en: "Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money."
@@ -109,11 +107,9 @@ change-healthcare:
   technologies:
   - Ruby
   - Ruby on Rails
-  website: https://changehealthcare.com
 
 collaboraid:
   client: Collaboraid, Denmark
-  client_website: https://collaboraid.net
   technologies:
   - Javascript
   - Ruby on Rails
@@ -232,7 +228,6 @@ falcon:
 
 flaym:
   client: LEO Innovation Lab, Denmark
-  client_website: https://leoinnovationlab.com/
   description:
     da: Socialt netværk for personer med psoriasis.
     en: Flaym connects psoriasis sufferers from all over the world.
@@ -271,7 +266,6 @@ gamekillers:
 
 gas-detection:
   client: Danfoss Cooling, Denmark
-  client_website: https://refrigerationandairconditioning.danfoss.dk/
   description:
     da: I Danfoss første forsøg med IoT havde de brug for en fleksibel partner, der kunne levere en brugervenlig applikation.
     en: Danfoss wanted to venture into the IoT space and needed a flexible partner to build out a userfriendly frontend for their devices.
@@ -534,7 +528,6 @@ rp_lookups:
   case_studies:
   - en
   client: Mapicture, Denmark
-  client_website: https://mapicture.dk
   description:
     da: Det er ikke simpelt at indsamle og visualisere rejsetider mellem tusindvis af afgangssteder og destinationer. Men det er netop det Mapictures interne analyseværktøj gør.
     en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
@@ -581,7 +574,6 @@ test_cloud:
 
 tumlino:
   client: Tumlino, Denmark
-  client_website: https://www.tumlino.dk
   name: Tumlino
   services:
   - project_management

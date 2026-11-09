@@ -451,6 +451,9 @@ body {
   pointer-events: none;
   position: fixed;
   right: 0;
+  // Above content that sets its own z-index, like gallery items, but below
+  // the navigation
+  z-index: 99;
 }
 
 .ui-fadeout.bottom {
@@ -462,7 +465,6 @@ body {
   background: linear-gradient(to bottom, var(--color-bg-primary), rgba(var(--color-bg-primary-rgb), 0));
   height: 4em;
   top: 0;
-  z-index: 9;
 }
 
 .ui-footer {

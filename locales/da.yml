@@ -102,8 +102,10 @@ da:
       link_to_case_study: "Læs hvordan Substance Lab hjalp %{client} med at lave %{project}"
       list_of_case_studies: "Vi er stolte af vores kunders successer og vi er stolte af de webløsninger, vi har lavet for dem. Her er et udvalg af nogle af dem."
       list_of_companies_worked_with: "Den samlede liste med selskaber, som Substance Lab har samarbejdet med:"
+      list_of_our_products: "Ud over at bygge for vores kunder udvikler og driver vi også vores egne software produkter."
       list_of_technologies: "Substance Lab har erfaringer med en lang række teknologier:"
       meta_description: Vi er stolte af det vi laver og viser det gerne frem. Vi har udviklet online løsninger og SaaS produkter for en lang række nystiftede virksomheder.
+      our_products: Vores egne produkter
       portfolio: Hvem har vi hjulpet
       project_website: Se resultatet
       substance_lab_did: Vi lavede

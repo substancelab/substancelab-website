@@ -22,6 +22,19 @@ end
     <%= render Gallery.new(case_studies: portfolio_projects, :additional_classes => ["grid"], :eager => 2) %>
   </section>
 
+  <section class="ui-content wide">
+    <h2><%= I18n.t("work.index.our_products") %></h2>
+    <p><%= I18n.t("work.index.list_of_our_products") %></p>
+
+    <div class="ui-gallery grid full-width-items">
+      <div class="ui-gallery-items">
+        <% site.data.products.values.sort_by { |product| product["name"].downcase }.each do |product| %>
+          <%= render ProductCard.new(product: product, lazy: true) %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
   <section class="clients">
     <div class="container">
       <h2><%= I18n.t("work.index.client_list") %></h2>

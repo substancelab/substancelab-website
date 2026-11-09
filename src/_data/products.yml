@@ -1,0 +1,28 @@
+# The SaaS products we build and run ourselves. Descriptions are from the
+# products' own websites.
+frontlobby:
+  name: Front Lobby
+  website: https://www.frontlobby.dk
+  tile: products/tiles/frontlobby.jpg
+  logo: products/logos/frontlobby.svg
+  description:
+    da: Online system til booking og reservering af mødelokaler og modtagelse af gæster, skræddersyet til kontorfællesskaber.
+    en: Online system for booking meeting rooms and receiving guests, tailored for shared offices and coworking spaces.
+
+uchi:
+  name: Uchi Admin
+  website: https://www.uchiadmin.com
+  tile: products/tiles/uchi.jpg
+  logo: products/logos/uchi.svg
+  description:
+    da: Uchi er et admin panel-framework til Rails med fuld CRUD for dine modeller, hurtig søgning på tværs af felter, indbygget dark mode og almindelig Ruby, som du selv kan udvide.
+    en: Uchi is a Rails admin panel framework with full CRUD for your models, fast search across fields, built-in dark mode, and plain Ruby you can extend.
+
+skrift:
+  name: Skrift
+  website: https://www.skrift.eu
+  tile: products/tiles/skrift.jpg
+  logo: products/logos/skrift.svg
+  description:
+    da: Skrift er en enkel og moderne måde at tilbyde dine klienter rådgivning og støtte via SMS. Det er helt anonymt og sikkert.
+    en: Skrift is a simple, modern way to offer your clients advice and support via SMS. It is completely anonymous and secure.

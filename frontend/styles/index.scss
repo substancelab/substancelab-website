@@ -572,6 +572,21 @@ body {
     font-weight: bold;
   }
 
+  // A caption with a logo to the left of the title and description
+  .ui-gallery-item-caption.with-logo {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+  }
+
+  // Override the full-size, cropped images of figure img
+  .ui-gallery-item-caption .ui-gallery-item-logo {
+    flex-shrink: 0;
+    height: 3em;
+    object-fit: contain;
+    width: 3em;
+  }
+
   .ui-gallery-items {
     --gap: 4%;
     --item-aspect-ratio:  9 / 16;
@@ -604,6 +619,14 @@ body {
       gap: var(--gap);
       overflow-x: unset;
       scroll-snap-type: none;
+    }
+  }
+
+  // One item per row, in a wide banner format when there is room for it
+  &.full-width-items .ui-gallery-items {
+    @container (width > 40em) {
+      --item-aspect-ratio: 5 / 2;
+      --item-width: 100%;
     }
   }
 }

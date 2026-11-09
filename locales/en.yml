@@ -90,8 +90,10 @@ en:
       link_to_case_study: "Learn how Substance Lab helped %{client} build %{project}"
       list_of_case_studies: "We are proud of the success our customers have and the products we craft for them. Here's a selection of some of them."
       list_of_companies_worked_with: "The full list of companies and organizations Substance Lab has worked with:"
+      list_of_our_products: "Besides building for our customers, we also build and run our own SaaS products."
       list_of_technologies: "Substance Lab routinely works with a wide variety of technologies:"
       meta_description: "We have built a lot of web applications by now for customers all over the world. We're proud of them all and want to show them off"
+      our_products: Our own products
       portfolio: Portfolio
       project_website: Project website
       substance_lab_did: Substance Lab did

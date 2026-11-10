@@ -591,9 +591,16 @@ h4 {
     }
 
     // An open menu lists links over whatever is scrolled beneath it, so it
-    // needs a surface to stay legible
-    &.has-menu.is-open {
-      background-color: var(--color-bg-primary);
+    // needs a surface to stay legible. Solid behind the links, then fading
+    // out below the menu rather than ending in a hard edge.
+    &.has-menu.is-open::before {
+      background: linear-gradient(
+        to bottom,
+        var(--color-bg-primary) calc(100% - 2.5em),
+        transparent
+      );
+      bottom: -2em;
+      opacity: 1;
     }
 
     // Collapsed state only applies once JavaScript has taken over the toggle

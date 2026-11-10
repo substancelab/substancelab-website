@@ -1,0 +1,11 @@
+<%= link_to @product["website"], :class => "ui-gallery-item" do %>
+  <figure>
+    <%= image_tag @product["tile"], image_attributes %>
+    <figcaption class="ui-gallery-item-caption with-logo">
+      <%# The name is right next to it, so the logo doesn't need to repeat it %>
+      <%= image_tag @product["logo"], :alt => "", :class => "ui-gallery-item-logo" %>
+      <div class="ui-gallery-item-title"><%= @product["name"] %></div>
+      <div class="ui-gallery-item-description"><%= localized(@product["description"]) %></div>
+    </figcaption>
+  </figure>
+<% end %>

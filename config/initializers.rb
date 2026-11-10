@@ -2,7 +2,7 @@
 
 require "i18n"
 
-LOCALE = ENV["LOCALE"] || "en"
+LOCALE = ENV["LOCALE"] || "da"
 
 SETTINGS = {
   "da" => {
@@ -27,6 +27,10 @@ Bridgetown.configure do |config|
   config.url = "#{SITE_SETTINGS["protocol"]}#{SITE_SETTINGS["domain"]}"
 
   template_engine "erb"
+
+  # Fast refresh drops slots (like the hero) defined in page content when only
+  # a layout changes, so rebuild everything on changes instead.
+  fast_refresh false
 
   # Used by bridgetown-seo-tag for og:locale
   config.lang = SITE_SETTINGS["locale"]

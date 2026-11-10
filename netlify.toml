@@ -1,18 +1,30 @@
 [build]
-  command = "bundle exec rake vite:build && bundle exec bridgetown build"
+  command = "bundle exec bridgetown deploy"
   publish = "output"
 
 [build.environment]
   RUBY_VERSION = "3.2.2"
   NODE_VERSION = "24.15.0"
-  BRIDGETOWN_ENV = "production"
-  RACK_ENV = "production"
+
+# Production gets its LOCALE from the Netlify UI. Previews show the Danish site,
+# which has all the pages.
+[context.deploy-preview.environment]
+  LOCALE = "da"
+
+[context.branch-deploy.environment]
+  LOCALE = "da"
 
 # A placeholder copy of the jobs page used to live here. Send visitors to the
 # guide landing page instead.
 [[redirects]]
   from = "/guide/den-effektive-vej-fra-ide-til-launch/"
   to = "/guide/fra-ide-til-launch/"
+  status = 301
+
+# Eventzonen was renamed to Eventzone.
+[[redirects]]
+  from = "/work/eventzonen-dk/"
+  to = "/work/eventzone/"
   status = 301
 
 [[headers]]

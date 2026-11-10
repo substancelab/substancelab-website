@@ -1,0 +1,12 @@
+<script>
+  // Tags back navigations so the page transition can play in reverse. Must
+  // run before first render, which is when the incoming page's pagereveal fires.
+  window.addEventListener("pagereveal", function (event) {
+    if (!event.viewTransition || !window.navigation || !navigation.activation) return;
+
+    var activation = navigation.activation;
+    if (activation.navigationType === "traverse" && activation.from && activation.from.index > activation.entry.index) {
+      event.viewTransition.types.add("back");
+    }
+  });
+</script>

@@ -1,0 +1,16 @@
+<section class="ui-content ui-call-to-action split wide well">
+  <div>
+    <figure>
+      <%= helpers.image_tag("people/jakob/cta.jpg", alt: "Jakob") %>
+    </figure>
+  </div>
+
+  <div class="ui-contact">
+    <h3><%= helpers.t("call_to_action.headline_html") %></h3>
+
+    <div class="ui-contact-name">Jakob Skjerning</div>
+    <div class="ui-contact-title"><%= helpers.person_title(helpers.person(:jakob)) %></div>
+    <div class="ui-contact-phone"><a href="tel:+4571990999">+45 7199 0999</a></div>
+    <div class="ui-contact-email"><a href="mailto:jakob@substancelab.com">jakob@substancelab.com</a></div>
+  </div>
+</section>

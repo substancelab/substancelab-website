@@ -1,0 +1,16 @@
+<% key = resource.data._person_key %>
+<% author = person(key) %>
+
+<% slot :hero do %>
+  <%= render Hero.new(title: author["name"], lede: person_title(author)) do %>
+    <% if author["links"]&.any? %>
+      <nav class="ui-person-links">
+        <% author["links"].each do |link| %>
+          <a href="<%= link["url"] %>" rel="me"><%= link["title"] %></a>
+        <% end %>
+      </nav>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= partial "articles/list", :articles => articles_by(key) %>

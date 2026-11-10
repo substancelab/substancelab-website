@@ -5,8 +5,6 @@ source "https://rubygems.org"
 gem "bridgetown", "~> 2.0"
 gem "puma", "~> 8.0"
 
-gem "vite_ruby"
-
 gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "ostruct"
@@ -16,3 +14,7 @@ gem "rake"
 gem "actionview"
 
 gem "bridgetown-seo-tag", "~> 7.0"
+
+gem "htmlbeautifier", "~> 1.4"
+
+gem "schema_dot_org", "~> 2.5"

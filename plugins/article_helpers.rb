@@ -24,63 +24,49 @@ module ArticleHelpers
     blog_articles[index + 1] if index
   end
 
+  def article_body(html)
+    article_parts(html).last.html_safe
+  end
+
   def article_data(article)
     article.data
   end
 
-  def article_image(article, transformations = [])
-    article_image_from_cloudinary(article, transformations) || article_image_from_disk(article)
+  def article_intro(html)
+    article_parts(html).first.html_safe
   end
 
-  def article_image_from_cloudinary(article, extra_transformations = [])
-    image = article_photo_data(article, :cloudinary)
-    return nil unless image
+  # READMORE ends up inside the paragraph markup – as a paragraph of its own,
+  # or at the start or end of another paragraph – so move the <p> tags around
+  # it to leave both parts balanced.
+  def article_parts(html)
+    intro, body = html.to_s.split(/\s*READMORE\s*/, 2)
+    return [intro] unless body
 
-    default_transformations = ["t_masthead", "f_auto"]
-    all_transformations = (default_transformations + Array(extra_transformations)).sort
-    cloudinary_image_url(image, all_transformations)
-  end
-
-  def article_photo_data(article, key = nil)
-    photo_data = article.data.photo || {}
-    photo_data = photo_data.to_h.transform_keys(&:to_sym)
-    if key
-      photo_data.fetch(key.to_sym, nil)
-    else
-      photo_data
+    if intro.end_with?("<p>") && body.start_with?("</p>")
+      intro = intro.delete_suffix("<p>")
+      body = body.delete_prefix("</p>")
+    elsif body.start_with?("</p>")
+      intro += "</p>"
+      body = body.delete_prefix("</p>")
+    elsif intro.end_with?("<p>")
+      intro = intro.delete_suffix("<p>")
+      body = "<p>#{body}"
     end
-  end
 
-  def article_image_from_disk(article)
-    image = article_photo_data(article, :filename)
-    return nil unless image
-
-    if image.to_s.start_with?("http")
-      image
-    else
-      "/images/articles/#{image}"
-    end
-  end
-
-  # Removes the READMORE separator, which separates the summary from the rest
-  # of the article, from the article HTML.
-  def without_readmore(html)
-    html.to_s.gsub(%r{<p>\s*READMORE\s*</p>\n?|READMORE}, "").html_safe
+    [intro, body]
   end
 
   # The article content before the READMORE separator, or all of it if the
   # article has no separator.
   def article_summary(article)
-    content = article.content.to_s
-    return content.html_safe unless content.include?("READMORE")
-
-    # Drop the opening tag of the paragraph the separator was in
-    content.split("READMORE").first.to_s.sub(%r{\s*<p>\s*\z}, "").html_safe
+    article_parts(article.content).first.html_safe
   end
 
-  def link_to_article(article)
+  def link_to_article(article, prefix: nil, suffix: nil)
     href = article.relative_url
     title = article.data.title
-    "<a href=\"#{href}\" title=\"#{CGI.escapeHTML(title.to_s)}\">#{title}</a>".html_safe
+    label = [prefix, title, suffix].compact.join(" ")
+    "<a href=\"#{href}\" title=\"#{CGI.escapeHTML(title.to_s)}\">#{label}</a>".html_safe
   end
 end

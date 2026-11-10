@@ -7,25 +7,29 @@ front_matter do
 end
 ---
 
-<% slot :masthead do %>
-  <h1><%= I18n.t("work.index.portfolio") %></h1>
-  <div class="subtitle"><%= I18n.t("work.index.featured_works") %></div>
+<% slot :hero do %>
+  <%= render Hero.new(
+    title: I18n.t("work.index.portfolio"),
+    lede: I18n.t("work.index.featured_works")
+  ) %>
 <% end %>
-<% masthead_image("v1571928252/substancelab-website/office") %>
 
-<article class="portfolio">
-  <section>
-    <div class="container">
-      <h2><%= I18n.t("work.index.case_studies") %></h2>
-      <p><%= I18n.t("work.index.list_of_case_studies") %></p>
-    </div>
+<article>
+  <section class="ui-content wide">
+    <h2><%= I18n.t("work.index.case_studies") %></h2>
+    <p><%= I18n.t("work.index.list_of_case_studies") %></p>
+
+    <%= render Gallery.new(case_studies: portfolio_projects, :additional_classes => ["grid", "square-on-small"], :eager => 2) %>
   </section>
 
-  <section class="featured-work">
-    <div class="container">
-      <div class="projects">
-        <% portfolio_projects.each do |project| %>
-          <%= project_tile(project) %>
+  <section class="ui-content wide">
+    <h2><%= I18n.t("work.index.our_products") %></h2>
+    <p><%= I18n.t("work.index.list_of_our_products") %></p>
+
+    <div class="ui-gallery grid full-width-items square-on-small">
+      <div class="ui-gallery-items">
+        <% site.data.products.values.sort_by { |product| product["name"].downcase }.each do |product| %>
+          <%= render ProductCard.new(product: product, lazy: true) %>
         <% end %>
       </div>
     </div>
@@ -36,7 +40,7 @@ end
       <h2><%= I18n.t("work.index.client_list") %></h2>
       <p><%= I18n.t("work.index.list_of_companies_worked_with") %></p>
 
-      <ul class="client-list">
+      <ul class="client-list ui-inline-list">
         <% clients.each do |client| %>
           <li>
             <% if client.website %>
@@ -55,9 +59,9 @@ end
       <h2><%= I18n.t("work.index.technologies") %></h2>
       <p><%= I18n.t("work.index.list_of_technologies") %></p>
 
-      <ul class="technology-list">
+      <ul class="technology-list ui-inline-list">
         <% technologies.each do |technology| %>
-          <li><%= technology %></li>
+          <li><a href="<%= technology_url(technology) %>"><%= technology %></a></li>
         <% end %>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 ---
 title: "Hvad er kvalitets-kode?"
+author: jakob
 description: 'Hvad er det der "god kode", som vi hele tiden snakker om, egentligt? Og hvordan hjælper det din forretning til at tjene flere penge?'
 tags: SaaS, forretning, fakturaer, betalinger
 photo:

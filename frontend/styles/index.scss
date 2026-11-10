@@ -398,6 +398,8 @@ h4 {
   box-shadow: 0 0.4em 1.5em -0.75em rgba(0, 0, 0, 0.15);
   display: flex;
   font-family: var(--font-display);
+  // Heavier than the body text (300), which looks thin at navigation size
+  font-weight: 400;
   justify-content: space-between;
   left: 0;
   // The logo has the same space above, below and to its left

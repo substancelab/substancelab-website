@@ -300,9 +300,15 @@ h4 {
   list-style: none;
   padding-left: 0;
 
-  // Keep each item on one line, breaking only between items
+  // Keep each item on one line, breaking only between items. An item that is
+  // wider than its container (a long name on a small screen) would make the
+  // whole page scroll sideways, so cut it off with an ellipsis instead.
   li {
-    display: inline;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
     white-space: nowrap;
   }
 
@@ -380,55 +386,263 @@ h4 {
   height: 2em;
 }
 
+// Navigation anchored to the top edge of the screen. It has no surface of its
+// own: the logo and links float over the page content. Once the page scrolls,
+// a soft fade in the page background color appears behind them (no edge, border
+// or shadow) so the links stay legible over whatever is beneath.
 .ui-navigation {
-  display: flex;
-  justify-content: space-between;
-  left: var(--body-outer-spacing);
+  align-items: center;
+  // Equal columns on both sides of the links keep them centered on the page,
+  // whatever the widths of the logo and the call to action
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  font-family: var(--font-display);
+  // Heavier than the body text (300), which looks thin at navigation size
+  font-weight: 400;
+  left: 0;
+  // The logo has the same space above, below and to its left
+  --nav-padding: 0.7em;
+  padding: var(--nav-padding);
   pointer-events: none;
   position: fixed;
-  right: var(--body-outer-spacing);
-  top: 2em;
+  right: 0;
+  top: 0;
   z-index: 100;
 
-  & > *:first-child {
-    width: 25%;
-  }
-  & > *:last-child {
-    text-align: right;
-    width: 25%;
+  // How far down the backdrop stays fully opaque before it starts to fade.
+  // Dark text on a light page needs more cover than light text on a dark one,
+  // where the fade alone is enough.
+  --nav-fade-solid: 40%;
+  @media (prefers-color-scheme: dark) {
+    --nav-fade-solid: 0%;
   }
 
-  // There's no room for logo, links and call to action on one row, so put
-  // the links on a row of their own and let the header scroll with the page
-  @media (max-width: 599px) {
-    flex-wrap: wrap;
+  &::before {
+    // Extra steps between solid and transparent ease the fade: it keeps most
+    // of its strength further down and only drops off towards the end, rather
+    // than starting to thin out right below the links.
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg-primary) var(--nav-fade-solid),
+      color-mix(in srgb, var(--color-bg-primary) 80%, transparent)
+        calc(var(--nav-fade-solid) + (93% - var(--nav-fade-solid)) * 0.4),
+      color-mix(in srgb, var(--color-bg-primary) 30%, transparent)
+        calc(var(--nav-fade-solid) + (93% - var(--nav-fade-solid)) * 0.75),
+      transparent 93%
+    );
+    bottom: -1em;
+    content: "";
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
-    row-gap: 0.5em;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
 
-    & > *:first-child, & > *:last-child {
-      width: auto;
+  &.is-scrolled::before {
+    opacity: 1;
+  }
+
+  // A soft halo in the page background color keeps the text legible over
+  // whatever scrolls beneath it. Layered, so it's dense near the letters and
+  // fades out smoothly.
+  .ui-nav a, .ui-nav-cta a {
+    text-shadow:
+      0 0 0.3em var(--color-bg-primary),
+      0 0 0.7em var(--color-bg-primary),
+      0 0 1.2em var(--color-bg-primary);
+  }
+
+  // The logo and the hamburger aren't text, so give them the same halo with
+  // a drop shadow
+  .ui-logo, .ui-nav-toggle {
+    filter:
+      drop-shadow(0 0 0.3em var(--color-bg-primary))
+      drop-shadow(0 0 0.7em var(--color-bg-primary));
+  }
+
+  .ui-branding a {
+    display: block;
+    line-height: 0;
+  }
+
+  .ui-logo {
+    height: 2.2em;
+    width: 2.2em;
+  }
+
+  .ui-nav {
+    display: flex;
+    gap: 0.25em;
+    justify-content: center;
+
+    a {
+      border-radius: calc(var(--border-radius-base) / 4);
+      padding: 0.2em 0.9em;
+      // The underline is always there but invisible, so it can fade in
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.3em;
+      transition: text-decoration-color 0.2s;
+
+      &:link, &:visited {
+        color: var(--color-text-primary);
+      }
+
+      // The current page keeps its underline
+      &:hover, &:active, &[aria-current="page"] {
+        color: var(--color-text-primary);
+        text-decoration-color: rgba(var(--color-text-primary-rgb), 0.5);
+      }
+    }
+  }
+
+  .ui-nav-cta {
+    justify-self: end;
+  }
+
+  // A quiet outlined button, so the call to action is findable without
+  // competing with the page content
+  .ui-nav-cta a {
+    border: 1px solid rgba(var(--color-text-primary-rgb), 0.3);
+    border-radius: calc(var(--border-radius-base) / 4);
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:link, &:visited {
+      color: var(--color-text-primary);
+    }
+
+    &:hover, &:active {
+      border-color: var(--color-text-primary);
+      color: var(--color-text-primary);
+    }
+  }
+
+  .ui-nav-toggle {
+    appearance: none;
+    background: none;
+    border: 0;
+    border-radius: calc(var(--border-radius-base) / 4);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    height: 44px;
+    justify-content: center;
+    padding: 0 10px;
+    width: 44px;
+
+    // Hidden on larger screens, and without JavaScript (nothing to toggle)
+    &:not([hidden]) {
+      display: none;
+    }
+
+    span {
+      background: currentColor;
+      border-radius: 1px;
+      display: block;
+      height: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    &[aria-expanded="true"] {
+      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  }
+
+  // There's no room for logo, links and call to action on one row, so the
+  // links and call to action collapse into a menu opened by the hamburger.
+  // The full row needs about 740px, so collapse below the 900px breakpoint.
+  @media (max-width: 899px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // A compact bar, about 56px tall: the 44px hamburger is the tallest item
+    // and the logo is sized to match the space around it. The toggle has 10px
+    // of its own padding, so with the same space at the sides the logo and
+    // the icon sit equally far from the edges.
+    --nav-padding: 0.5em;
+    padding: 0.3em 0 0.3em var(--nav-padding);
+    row-gap: 0.25em;
+
+    .ui-logo {
+      height: 1.8em;
+      width: 1.8em;
+    }
+
+    .ui-nav-toggle:not([hidden]) {
+      display: flex;
     }
 
     .ui-nav {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: var(--font-size-sm);
-      gap: 0 0.75em;
+      flex-direction: column;
+      font-size: var(--font-size-lg);
+      gap: 0;
+      justify-content: flex-start;
       order: 1;
       width: 100%;
 
-      // Tall enough to tap without hitting a neighbour
+      // Tall enough to tap without hitting a neighbour, with some air
+      // between the links
       a {
+        padding: calc((56px - 1.6em) / 2) 0.5em;
+      }
+    }
+
+    .ui-nav-cta {
+      box-sizing: border-box;
+      order: 2;
+      // Set the call to action apart from the links above it
+      margin-top: 0.75em;
+      // The bar has no right padding on mobile (the hamburger sits on the
+      // edge), so give the button the same space on the right as on the left
+      padding: 0 var(--nav-padding) 0.4em 0;
+      text-align: center;
+      width: 100%;
+
+      a {
+        display: block;
         padding-block: calc((48px - 1.6em) / 2);
+      }
+    }
+
+    // An open menu lists links over whatever is scrolled beneath it, so it
+    // needs a surface to stay legible. Solid behind the links, then fading
+    // out below the menu rather than ending in a hard edge.
+    &.has-menu.is-open::before {
+      background: linear-gradient(
+        to bottom,
+        var(--color-bg-primary) calc(100% - 3.5em),
+        transparent
+      );
+      bottom: -3em;
+      opacity: 1;
+    }
+
+    // Collapsed state only applies once JavaScript has taken over the toggle
+    &.has-menu:not(.is-open) {
+      .ui-nav, .ui-nav-cta {
+        display: none;
       }
     }
   }
 }
 
-// Make room for the two-row header above
+// Make room for the bar above
 body {
-  @media (max-width: 599px) {
-    padding-top: calc(var(--body-outer-spacing) + 3em);
+  padding-top: calc(var(--body-outer-spacing) + 1.5em);
+
+  @media (max-width: 899px) {
+    padding-top: calc(var(--body-outer-spacing) + 2.5em);
   }
 }
 .ui-navigation * {
@@ -476,12 +690,6 @@ body {
 .ui-fadeout.bottom {
   background: linear-gradient(to top, var(--color-bg-primary), rgba(var(--color-bg-primary-rgb), 0));
   bottom: 0;
-}
-
-.ui-fadeout.top {
-  background: linear-gradient(to bottom, var(--color-bg-primary), rgba(var(--color-bg-primary-rgb), 0));
-  height: 4em;
-  top: 0;
 }
 
 .ui-footer {
@@ -878,9 +1086,6 @@ Modifiers
 // Keep fixed chrome in place while the page content transitions underneath
 .ui-navigation {
   view-transition-name: site-navigation;
-}
-.ui-fadeout.top {
-  view-transition-name: site-fadeout-top;
 }
 .ui-fadeout.bottom {
   view-transition-name: site-fadeout-bottom;

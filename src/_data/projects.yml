@@ -161,17 +161,17 @@ ejendomsstatistik:
   - PostgreSQL
   website: https://ejendomsstatistik.dk
 
-eventzonen:
+eventzone:
   case_studies:
   - da
   - en
   client: Underholdningsbureauet, Denmark
-  client_website: https://eventzonen.dk
+  client_website: https://eventzone.com
   description:
     da: International markedsplads for kunstnere og foredragsholdere.
     en: International marketplace that puts event organizers in contact with artists and entertainers.
   featured: true
-  name: eventzonen.dk
+  name: Eventzone
   position: 1
   services:
   - maintenance
@@ -180,13 +180,13 @@ eventzonen:
   - youtube_integration
   - payment_gateway_integration
   - recurring_billing
-  slug: eventzonen-dk
+  slug: eventzone
   technologies:
   - Ruby on Rails
   - CSS
   - Javascript
   - PostgreSQL
-  website: https://eventzonen.dk
+  website: https://eventzone.com
 
 fab-it:
   client: Fab:IT, Denmark

@@ -40,7 +40,7 @@ existing key like `maintenance` when it fits).
 ## 3. Study 2-3 existing case studies for structure and tone
 
 Read a few of `src/da/work/_*.erb` (e.g. `_hh-components.erb`,
-`_eventzonen-dk.erb`, `_gomore.erb`) before writing. The recurring shape:
+`_eventzone.erb`, `_gomore.erb`) before writing. The recurring shape:
 
 ```erb
 <% slot :hero do %>

@@ -21,6 +21,12 @@
   to = "/guide/fra-ide-til-launch/"
   status = 301
 
+# Eventzonen was renamed to Eventzone.
+[[redirects]]
+  from = "/work/eventzonen-dk/"
+  to = "/work/eventzone/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

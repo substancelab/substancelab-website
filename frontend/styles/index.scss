@@ -194,12 +194,8 @@ h4 {
 }
 
 .ui-article {
-  margin-bottom: 4em;
-  margin-top: 4em;
-  @media (min-width: 900px) {
-    margin-bottom: 8em;
-    margin-top: 8em;
-  }
+  margin-bottom: calc(var(--content-spacing-y) * 2.5);
+  margin-top: calc(var(--content-spacing-y) * 2.5);
 
   p {
     margin-bottom: 1.5em;

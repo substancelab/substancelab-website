@@ -409,12 +409,26 @@ h4 {
   top: 0;
   z-index: 100;
 
+  // How far down the backdrop stays fully opaque before it starts to fade.
+  // Dark text on a light page needs more cover than light text on a dark one,
+  // where the fade alone is enough.
+  --nav-fade-solid: 40%;
+  @media (prefers-color-scheme: dark) {
+    --nav-fade-solid: 0%;
+  }
+
   &::before {
-    // Fully opaque at the very top, fading out from there
+    // Extra steps between solid and transparent ease the fade: it keeps most
+    // of its strength further down and only drops off towards the end, rather
+    // than starting to thin out right below the links.
     background: linear-gradient(
       to bottom,
-      var(--color-bg-primary) 0,
-      transparent 90%
+      var(--color-bg-primary) var(--nav-fade-solid),
+      color-mix(in srgb, var(--color-bg-primary) 80%, transparent)
+        calc(var(--nav-fade-solid) + (93% - var(--nav-fade-solid)) * 0.4),
+      color-mix(in srgb, var(--color-bg-primary) 30%, transparent)
+        calc(var(--nav-fade-solid) + (93% - var(--nav-fade-solid)) * 0.75),
+      transparent 93%
     );
     bottom: -1em;
     content: "";

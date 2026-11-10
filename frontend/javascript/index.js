@@ -73,3 +73,89 @@ if (toggle) {
     }
   })
 }
+
+// Carousel controls (prev/next buttons and dots) for horizontally scrolling
+// galleries. Browsers with CSS carousel support (::scroll-button and
+// ::scroll-marker) get them from the stylesheet alone; this builds the same
+// controls for the rest. Without either the gallery is a plain scrollable row.
+function setupCarousels() {
+  const danish = document.documentElement.lang === "da"
+
+  document.querySelectorAll(".ui-gallery.carousel:not(.grid)").forEach((gallery) => {
+    const track = gallery.querySelector(".ui-gallery-items")
+    const items = Array.from(track.children)
+    if (items.length < 2) return
+
+    const makeButton = (className, label, text) => {
+      const button = document.createElement("button")
+      button.type = "button"
+      button.className = `ui-carousel-button ${className}`
+      button.setAttribute("aria-label", label)
+      button.textContent = text
+      return button
+    }
+
+    const prev = makeButton("previous", danish ? "Forrige" : "Previous", "←")
+    const next = makeButton("next", danish ? "Næste" : "Next", "→")
+    const dotsWrap = document.createElement("div")
+    dotsWrap.className = "ui-carousel-dots"
+
+    const dots = items.map((item, index) => {
+      const dot = document.createElement("button")
+      dot.type = "button"
+      dot.className = "ui-carousel-dot"
+      dot.setAttribute("aria-label", String(index + 1))
+      dot.addEventListener("click", () => scrollToOffset(offsetOf(item)))
+      dotsWrap.append(dot)
+      return dot
+    })
+
+    gallery.append(prev, next, dotsWrap)
+    gallery.classList.add("has-controls")
+
+    // offsetLeft ignores the transforms used by the recede animation
+    const offsetOf = (item) =>
+      item.offsetLeft - (parseFloat(getComputedStyle(track).scrollPaddingLeft) || 0)
+    const maxScroll = () => track.scrollWidth - track.clientWidth
+
+    const scrollToOffset = (left) =>
+      track.scrollTo({ left: Math.max(0, Math.min(maxScroll(), left)) })
+
+    // Step relative to the scroll position rather than the active item, so
+    // the buttons still move when the last items can't reach the left edge
+    const step = (direction) => {
+      const left = track.scrollLeft
+      const offsets = items.map(offsetOf)
+      const target =
+        direction > 0
+          ? offsets.find((offset) => offset > left + 2)
+          : offsets.filter((offset) => offset < left - 2).pop()
+      if (target !== undefined) scrollToOffset(target)
+    }
+
+    const update = () => {
+      const left = track.scrollLeft
+      const offsets = items.map(offsetOf)
+      const atEnd = left >= maxScroll() - 2
+      const current = atEnd
+        ? items.length - 1
+        : offsets.reduce(
+            (best, offset, i) => (Math.abs(offset - left) < Math.abs(offsets[best] - left) ? i : best),
+            0
+          )
+      dots.forEach((dot, i) => dot.setAttribute("aria-current", String(i === current)))
+      prev.disabled = left <= 2
+      next.disabled = atEnd
+    }
+
+    prev.addEventListener("click", () => step(-1))
+    next.addEventListener("click", () => step(1))
+    track.addEventListener("scroll", update, { passive: true })
+    window.addEventListener("resize", update)
+    update()
+  })
+}
+
+if (!CSS.supports("selector(::scroll-button(left))")) {
+  setupCarousels()
+}

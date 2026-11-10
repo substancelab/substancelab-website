@@ -300,17 +300,16 @@ h4 {
   list-style: none;
   padding-left: 0;
 
-  // Keep each item on one line, breaking only between items
+  // Keep each item on one line, breaking only between items. An item that is
+  // wider than its container (a long name on a small screen) would make the
+  // whole page scroll sideways, so cut it off with an ellipsis instead.
   li {
-    display: inline;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
     white-space: nowrap;
-
-    // A long name can be wider than the screen, which would make the whole
-    // page scroll sideways (and stretch the fixed navigation with it), so
-    // let it wrap on small screens
-    @media (max-width: 599px) {
-      white-space: normal;
-    }
   }
 
   li:not(:last-child)::after {

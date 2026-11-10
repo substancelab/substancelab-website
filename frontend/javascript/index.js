@@ -3,7 +3,10 @@ import "$styles/index.scss"
 // Fade content in as it scrolls into view. Only blocks that start below the
 // fold are hidden, so nothing flashes on load, and nothing is hidden at all
 // without JavaScript or when the visitor prefers reduced motion.
-const revealSelector = ".ui-content, .ui-article, .ui-article-list-item, .ui-gallery, .ui-gallery-item, .ui-screenshot-gallery, .ui-footer"
+// Only gallery items in a grid are revealed one by one: in a carousel the
+// gallery is revealed as a whole, and its items have their own recede
+// animation on the same properties.
+const revealSelector = ".ui-content, .ui-article, .ui-article-list-item, .ui-gallery, .ui-gallery.grid .ui-gallery-item, .ui-screenshot-gallery, .ui-footer"
 
 function setupReveal() {
   if (
@@ -137,7 +140,9 @@ function setupCarousels() {
       const left = track.scrollLeft
       const offsets = items.map(offsetOf)
       const atEnd = left >= maxScroll() - 2
-      const current = atEnd
+      // Without overflow the row is at its start and its end at once; the
+      // first item is then the current one
+      const current = atEnd && maxScroll() > 2
         ? items.length - 1
         : offsets.reduce(
             (best, offset, i) => (Math.abs(offset - left) < Math.abs(offsets[best] - left) ? i : best),

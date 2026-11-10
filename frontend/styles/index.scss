@@ -935,7 +935,10 @@ body {
   @supports (animation-timeline: view(inline)) {
     @media (prefers-reduced-motion: no-preference) {
       &.carousel:not(.grid) .ui-gallery-item {
-        animation: carousel-recede linear both;
+        // Two animations, as each one takes a single range: the first plays
+        // while the item enters, the second (reversed) while it exits. The
+        // second must not fill backwards, or it would override the first.
+        animation: carousel-recede linear both, carousel-recede linear reverse forwards;
         animation-timeline: view(inline);
         animation-range: entry 0% entry 100%, exit 0% exit 100%;
       }

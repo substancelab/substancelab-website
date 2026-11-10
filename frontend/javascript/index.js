@@ -38,6 +38,14 @@ setupReveal()
 const nav = document.querySelector(".ui-navigation")
 const toggle = nav && nav.querySelector(".ui-nav-toggle")
 
+// Fade in a backdrop behind the navigation once the page has scrolled, so the
+// links stay legible over content. At the top there's nothing beneath them.
+if (nav) {
+  const updateScrolled = () => nav.classList.toggle("is-scrolled", window.scrollY > 8)
+  window.addEventListener("scroll", updateScrolled, { passive: true })
+  updateScrolled()
+}
+
 if (toggle) {
   toggle.hidden = false
   nav.classList.add("has-menu")

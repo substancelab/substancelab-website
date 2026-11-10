@@ -386,15 +386,12 @@ h4 {
   height: 2em;
 }
 
-// A bar anchored to the top edge of the screen. It has a solid surface in the
-// page background color (so it follows light/dark mode) and a hairline border,
-// which keeps links legible whatever scrolls underneath, including dark
-// sections and images.
+// Navigation anchored to the top edge of the screen. It has no surface of its
+// own: the logo and links float over the page content. Once the page scrolls,
+// a soft fade in the page background color appears behind them (no edge, border
+// or shadow) so the links stay legible over whatever is beneath.
 .ui-navigation {
   align-items: center;
-  background-color: var(--color-bg-primary);
-  border-bottom: 1px solid rgba(var(--color-text-primary-rgb), 0.12);
-  box-shadow: 0 0.4em 1.5em -0.75em rgba(0, 0, 0, 0.15);
   // Equal columns on both sides of the links keep them centered on the page,
   // whatever the widths of the logo and the call to action
   display: grid;
@@ -411,6 +408,39 @@ h4 {
   right: 0;
   top: 0;
   z-index: 100;
+
+  &::before {
+    // Fully opaque at the very top, fading out from there
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg-primary) 0,
+      transparent 90%
+    );
+    bottom: -1em;
+    content: "";
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+
+  &.is-scrolled::before {
+    opacity: 1;
+  }
+
+  // A soft halo in the page background color keeps the text legible over
+  // whatever scrolls beneath it. Layered, so it's dense near the letters and
+  // fades out smoothly.
+  .ui-nav a, .ui-nav-cta a {
+    text-shadow:
+      0 0 0.3em var(--color-bg-primary),
+      0 0 0.7em var(--color-bg-primary),
+      0 0 1.2em var(--color-bg-primary);
+  }
 
   .ui-branding a {
     display: block;
@@ -558,6 +588,12 @@ h4 {
         display: block;
         padding-block: calc((48px - 1.6em) / 2);
       }
+    }
+
+    // An open menu lists links over whatever is scrolled beneath it, so it
+    // needs a surface to stay legible
+    &.has-menu.is-open {
+      background-color: var(--color-bg-primary);
     }
 
     // Collapsed state only applies once JavaScript has taken over the toggle

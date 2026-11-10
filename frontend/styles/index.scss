@@ -59,7 +59,13 @@ Breakpoints
   --color-link-visited: #2b6451;
 
   --content-spacing-x: 3rem;
-  --content-spacing-y: 3rem;
+  --content-spacing-y: 1.75rem;
+  @media (min-width: 600px) {
+    --content-spacing-y: 2.4rem;
+  }
+  @media (min-width: 900px) {
+    --content-spacing-y: 3rem;
+  }
 
   --font-copy: system-ui, sans-serif;
   --font-display: 'Roboto Slab', sans-serif;
@@ -188,8 +194,8 @@ h4 {
 }
 
 .ui-article {
-  margin-bottom: 8em;
-  margin-top: 8em;
+  margin-bottom: calc(var(--content-spacing-y) * 2.5);
+  margin-top: calc(var(--content-spacing-y) * 2.5);
 
   p {
     margin-bottom: 1.5em;

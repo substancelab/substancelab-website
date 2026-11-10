@@ -396,11 +396,13 @@ h4 {
   background-color: var(--color-bg-primary);
   border-bottom: 1px solid rgba(var(--color-text-primary-rgb), 0.12);
   box-shadow: 0 0.4em 1.5em -0.75em rgba(0, 0, 0, 0.15);
-  display: flex;
+  // Equal columns on both sides of the links keep them centered on the page,
+  // whatever the widths of the logo and the call to action
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   font-family: var(--font-display);
   // Heavier than the body text (300), which looks thin at navigation size
   font-weight: 400;
-  justify-content: space-between;
   left: 0;
   // The logo has the same space above, below and to its left
   --nav-padding: 0.7em;
@@ -446,6 +448,10 @@ h4 {
         text-decoration-color: rgba(var(--color-text-primary-rgb), 0.5);
       }
     }
+  }
+
+  .ui-nav-cta {
+    justify-self: end;
   }
 
   // A quiet outlined button, so the call to action is findable without
@@ -506,7 +512,9 @@ h4 {
   // links and call to action collapse into a menu opened by the hamburger.
   // The full row needs about 740px, so collapse below the 900px breakpoint.
   @media (max-width: 899px) {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     // A compact bar, about 56px tall: the 44px hamburger is the tallest item
     // and the logo is sized to match the space around it. The toggle has 10px
     // of its own padding, so with the same space at the sides the logo and

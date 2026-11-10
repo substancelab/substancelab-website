@@ -442,6 +442,14 @@ h4 {
       0 0 1.2em var(--color-bg-primary);
   }
 
+  // The logo and the hamburger aren't text, so give them the same halo with
+  // a drop shadow
+  .ui-logo, .ui-nav-toggle {
+    filter:
+      drop-shadow(0 0 0.3em var(--color-bg-primary))
+      drop-shadow(0 0 0.7em var(--color-bg-primary));
+  }
+
   .ui-branding a {
     display: block;
     line-height: 0;
@@ -563,21 +571,24 @@ h4 {
 
     .ui-nav {
       flex-direction: column;
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-lg);
       gap: 0;
       justify-content: flex-start;
       order: 1;
       width: 100%;
 
-      // Tall enough to tap without hitting a neighbour
+      // Tall enough to tap without hitting a neighbour, with some air
+      // between the links
       a {
-        padding: calc((48px - 1.6em) / 2) 0.5em;
+        padding: calc((56px - 1.6em) / 2) 0.5em;
       }
     }
 
     .ui-nav-cta {
       box-sizing: border-box;
       order: 2;
+      // Set the call to action apart from the links above it
+      margin-top: 0.75em;
       // The bar has no right padding on mobile (the hamburger sits on the
       // edge), so give the button the same space on the right as on the left
       padding: 0 var(--nav-padding) 0.4em 0;
@@ -596,10 +607,10 @@ h4 {
     &.has-menu.is-open::before {
       background: linear-gradient(
         to bottom,
-        var(--color-bg-primary) calc(100% - 2.5em),
+        var(--color-bg-primary) calc(100% - 3.5em),
         transparent
       );
-      bottom: -2em;
+      bottom: -3em;
       opacity: 1;
     }
 

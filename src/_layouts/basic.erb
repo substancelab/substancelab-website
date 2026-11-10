@@ -45,14 +45,18 @@
         </a>
       </div>
 
-      <nav class="ui-nav">
-        <a href="<%= projects_url %>"><%= I18n.t("navigation.work") %></a>
+      <button type="button" class="ui-nav-toggle" aria-controls="ui-nav-menu" aria-expanded="false" aria-label="<%= I18n.t("navigation.menu") %>" hidden>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="ui-nav" id="ui-nav-menu">
+        <%= main_nav_link(I18n.t("navigation.work"), projects_url) %>
         <% if page_exists?(services_url) %>
-          <a href="<%= services_url %>">Services</a>
+          <%= main_nav_link(I18n.t("navigation.services"), services_url) %>
         <% end %>
-        <a href="/#company">About</a>
+        <a href="/#company"><%= I18n.t("navigation.about") %></a>
         <% if blog_articles.any? %>
-          <a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a>
+          <%= main_nav_link(I18n.t("navigation.articles"), articles_path) %>
         <% end %>
       </nav>
 
@@ -69,7 +73,6 @@
       <%= slotted :bottom_of_page %>
     <% end %>
 
-    <div class="ui-fadeout top"></div>
     <div class="ui-fadeout bottom"></div>
 
     <script src="<%= asset_path(:js) %>"></script>

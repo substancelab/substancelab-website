@@ -1,9 +1,21 @@
 # frozen_string_literal: true
 
+require "cgi"
+
 module NavigationHelpers
   def nav_bar_link(key, url)
     label = I18n.translate(key, :scope => "navigation")
     "<li class=\"#{key}\"><a href=\"#{url}\">#{label}</a></li>".html_safe
+  end
+
+  # A link for the main navigation. Marked as the current page when the page
+  # being rendered is url or lives below it, so /work/ stays active on
+  # /work/some-case/.
+  def main_nav_link(label, url)
+    path = view.resource.relative_url.to_s
+    current = path == url || path.start_with?(url)
+    attrs = current ? ' aria-current="page"' : ""
+    "<a href=\"#{CGI.escapeHTML(url)}\"#{attrs}>#{CGI.escapeHTML(label)}</a>".html_safe
   end
 
   def nav_bar_link_to_blog

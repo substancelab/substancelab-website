@@ -29,23 +29,23 @@ layout: basic
 
   <% if page_exists?(services_url) %>
     <nav>
-      <a class="ui-footer-nav-title" href="<%= services_url %>">Services</a>
+      <a class="ui-footer-nav-title" href="<%= services_url %>"><%= I18n.t("navigation.services") %></a>
       <ul>
-        <li><a href="/services/seed/">Seed</a></li>
-        <li><a href="/services/development/">Development</a></li>
-        <li><a href="/services/maintenance/">Maintenance</a></li>
+        <li><a href="/services/seed/"><%= I18n.t("navigation.seed") %></a></li>
+        <li><a href="/services/development/"><%= I18n.t("navigation.development") %></a></li>
+        <li><a href="/services/maintenance/"><%= I18n.t("navigation.maintenance") %></a></li>
       </ul>
     </nav>
   <% end %>
 
   <nav>
-    <a class="ui-footer-nav-title" href="/#company">About</a>
+    <a class="ui-footer-nav-title" href="/#company"><%= I18n.t("navigation.about") %></a>
     <ul>
-      <li><a href="/#person">People</a></li>
+      <li><a href="/#person"><%= I18n.t("navigation.people") %></a></li>
       <% if blog_articles.any? %>
         <li><a href="<%= articles_path %>"><%= I18n.t("navigation.articles") %></a></li>
       <% end %>
-      <li><a href="/jobs/">Jobs</a></li>
+      <li><a href="/jobs/"><%= I18n.t("navigation.jobs") %></a></li>
     </ul>
   </nav>
 

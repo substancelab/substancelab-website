@@ -59,8 +59,15 @@ da:
       title: "Cookies"
 
   navigation:
+    about: Om os
     articles: Artikler
+    development: Udvikling
     home: Forside
+    jobs: Job
+    maintenance: Vedligeholdelse
+    menu: Menu
+    people: Medarbejdere
+    seed: Seed
     services: Ydelser
     work: Cases
 

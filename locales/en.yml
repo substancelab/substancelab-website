@@ -56,8 +56,16 @@ en:
       title: "Cookies"
 
   navigation:
+    about: About
     articles: Articles
+    development: Development
     home: Home
+    jobs: Jobs
+    maintenance: Maintenance
+    menu: Menu
+    people: People
+    seed: Seed
+    services: Services
     work: Work
 
   offline:

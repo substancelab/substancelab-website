@@ -734,6 +734,69 @@ body {
   }
 }
 
+// Shared looks of the carousel controls, which exist both as CSS
+// pseudo-elements and as JS-built elements -- see .ui-gallery.carousel.
+@mixin carousel-track {
+  // Only hide the scrollbar where the custom controls replace it
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+@mixin carousel-button {
+  background: rgba(0, 0, 0, 0.55);
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.25em;
+  height: 2.75em;
+  line-height: 1;
+  padding: 0;
+  transition: background-color 0.2s, opacity 0.2s;
+  width: 2.75em;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0;
+  }
+}
+
+@mixin carousel-dots {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  padding-bottom: var(--content-spacing-y);
+}
+
+@mixin carousel-dot {
+  // Not currentColor: ::scroll-marker is styled like a link by the browser,
+  // so it would pick up the browser's (visited) link colour
+  background: var(--color-text-primary);
+  border-radius: 0.3em;
+  cursor: pointer;
+  height: 0.6em;
+  opacity: 0.25;
+  transition: width 0.3s, opacity 0.3s;
+  width: 0.6em;
+}
+
+@mixin carousel-dot-current {
+  opacity: 1;
+  width: 2em;
+}
+
 .ui-gallery {
   container-type: inline-size;
 
@@ -868,6 +931,110 @@ body {
     scroll-snap-type: x mandatory;
   }
 
+  // Carousel flair: items recede as they leave the focus position.
+  @supports (animation-timeline: view(inline)) {
+    @media (prefers-reduced-motion: no-preference) {
+      &.carousel:not(.grid) .ui-gallery-item {
+        // Two animations, as each one takes a single range: the first plays
+        // while the item enters, the second (reversed) while it exits. The
+        // second must not fill backwards, or it would override the first.
+        animation: carousel-recede linear both, carousel-recede linear reverse forwards;
+        animation-timeline: view(inline);
+        animation-range: entry 0% entry 100%, exit 0% exit 100%;
+      }
+    }
+  }
+
+  // Carousel controls: prev/next buttons overlaying the row and dots below
+  // it. Where supported they are CSS-only (::scroll-button and
+  // ::scroll-marker); elsewhere index.js builds the same controls as real
+  // elements and adds .has-controls. With neither, the gallery remains a
+  // plain swipeable row with its scrollbar.
+  &.carousel:not(.grid) {
+    @supports selector(::scroll-button(left)) {
+      .ui-gallery-items {
+        @include carousel-track;
+        anchor-name: --carousel;
+        scroll-marker-group: after;
+
+        &::scroll-marker-group {
+          @include carousel-dots;
+        }
+
+        &::scroll-button(left),
+        &::scroll-button(right) {
+          @include carousel-button;
+          position: fixed;
+          position-anchor: --carousel;
+          top: anchor(center);
+          translate: 0 -50%;
+        }
+
+        &::scroll-button(left) {
+          content: "←" / "Previous";
+          left: calc(anchor(left) + var(--body-outer-spacing) / 2);
+        }
+
+        &::scroll-button(right) {
+          content: "→" / "Next";
+          right: calc(anchor(right) + var(--body-outer-spacing) / 2);
+        }
+      }
+
+      .ui-gallery-item::scroll-marker {
+        @include carousel-dot;
+        content: "";
+      }
+
+      .ui-gallery-item::scroll-marker:target-current {
+        @include carousel-dot-current;
+      }
+    }
+
+    // The JS-built fallback. Track and buttons share one grid cell, so the
+    // buttons centre on the row without needing a wrapper element.
+    &.has-controls {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+
+      .ui-gallery-items {
+        @include carousel-track;
+        grid-area: 1 / 1;
+        position: relative; // makes it the offsetParent of the items
+      }
+
+      .ui-carousel-button {
+        @include carousel-button;
+        align-self: center;
+        grid-area: 1 / 1;
+        margin-inline: calc(var(--body-outer-spacing) / 2);
+        z-index: 43; // above the items' images
+
+        &.previous {
+          justify-self: start;
+        }
+
+        &.next {
+          justify-self: end;
+        }
+      }
+
+      .ui-carousel-dots {
+        @include carousel-dots;
+      }
+
+      .ui-carousel-dot {
+        @include carousel-dot;
+        border: 0;
+        padding: 0;
+
+        &[aria-current="true"] {
+          @include carousel-dot-current;
+        }
+      }
+    }
+  }
+
   &.grid {
     .ui-gallery-items {
       display: grid;
@@ -892,6 +1059,18 @@ body {
       --item-aspect-ratio: 5 / 2;
       --item-width: 100%;
     }
+  }
+}
+
+// Items fade and shrink slightly while partly outside the scrollport.
+@keyframes carousel-recede {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  100%, 100.01% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

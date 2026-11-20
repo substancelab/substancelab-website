@@ -1,5 +1,6 @@
 ---
 title: "Shipped is better than perfect"
+author: jakob
 description: "Undgå at gøre dine kunder en bjørnetjeneste ved at ville lave den perfekte feature, som de først får en gang. Lav i stedet en brugbar feature, som de får nu."
 tags: product management, SaaS
 photo:

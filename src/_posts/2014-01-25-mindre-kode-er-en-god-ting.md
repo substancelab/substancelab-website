@@ -1,5 +1,6 @@
 ---
 title: Mindre kode er en god ting
+author: jakob
 description: "Kode er en investering, men det kommer med en række risici. Jo mere kode, du har, jo større er din risiko og dine omkostninger."
 tags: software, udvikling, produktstyring
 photo:

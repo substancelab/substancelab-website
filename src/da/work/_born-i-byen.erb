@@ -1,67 +1,93 @@
-<% slot :masthead do %>
-  <h1>Mobilt design er ikke valgfrit</h1>
+<% slot :hero do %>
+  <%= render Hero.new(
+    badge: "Case study",
+    badge_url: projects_url,
+    title: "Fra brugerdrevet database til redaktionelt magasin",
+    lede: "Børn i byen ville give redaktionen reel kontrol over forsider og artikler — men den
+      gamle platform var slet ikke bygget til det."
+  ) %>
 <% end %>
 
-<section>
-  <div class="container">
-    <p class="intro">
-      Når 50% af ens kunder benytter en eller anden form for mobilenhed, er det ikke
-      valgfrit om man vil optimere sin webløsning til dem &mdash; det er en nødvendighed.
-    </p>
+<section class="ui-content">
+  <%= markdown(<<~MARKDOWN)
+      ## Redaktionen manglede frihed
 
-    <%= markdown(<<~MARKDOWN)
-      Den realisering havde [Børn i byen](http://bornibyen.dk) i slutningen af 2013, hvorefter en længere
-      proces blev sat i gang.
+      [Børn i byen](https://bornibyen.dk) startede som et brugerdrevet website med en database over steder og events for børnefamilier. Med tiden ønskede virksomheden at bevæge sig mod redaktionelt styret indhold — men platformen var bygget på en forældet frontend, og redaktionen kunne reelt kun uploade billeder og ændre skriftformattering i artikler. Det gjorde det svært at skabe visuelt konsistente forsider på tværs af enheder.
+
+      ## Hvem er Børn i byen?
+
+      [Børn i byen](https://bornibyen.dk) er de danske børnefamiliers guide til events, steder og aktiviteter i København og Aarhus, med anmeldelser, artikler og et betalt medlemskab med rabatter hos samarbejdspartnere som Tivoli, Zoo og Experimentarium.
+
+      **Website**: [bornibyen.dk](https://bornibyen.dk)
+
+      ## En komplet omskrivning, sideløbende med driften
+
+      Substance Lab stod for en komplet omskrivning af sitet, mens den eksisterende applikation fortsat kørte i daglig drift. Den gamle frontend-kode kunne ikke genbruges — den var forældet, ikke tilstrækkeligt testdækket, og for filtret sammen til at kunne moderniseres stykvis. Vi skrottede derfor hele frontend-laget og byggede det op forfra på en moderne, server-renderet stack med en langt mere ryddelig kodestruktur.
+
+      Kernen i løsningen er et selvbygget page builder-system: I stedet for at udvide den gamle rich text-editor kan redaktionen nu frit sammensætte forsider og artikler ud fra en voksende samling content blocks — i dag 42 stk. — hver med egne visuelle varianter. Systemet har siden vist sig fleksibelt nok til at blive udvidet løbende og genbrugt på nye sidetyper som landingssider. Samtidig fik sitet en ny, Elasticsearch-baseret søgemaskine, der i dag driver ikke bare søgning, men alle listevisninger på sitet.
+
+      ## Iterativt samarbejde
+
+      Ugentlige iterationsmøder med opfølgning på status i forhold til estimatet holdt samarbejdet gnidningsfrit gennem hele projektet, på trods af den omfattende omskrivning.
+
+      ## Resultatet
+
+      Børn i byen har siden etableret sig som et succesfuldt niche-medie for børnefamilier, med højere annonceindtægter end nogensinde — på trods af en generel nedgang i mediebranchen. Og fordi stacken er nem at vedligeholde, kører løbende udvikling i dag på blot få dage om måneden.
     MARKDOWN
     %>
   </div>
 </section>
 
+<div class="statistics">
+  <div class="statistics-figure">
+    <div class="statistics-number">42</div>
+    <div class="statistics-label">content blocks til fri redaktionel brug</div>
+  </div>
+
+  <div class="statistics-figure">
+    <div class="statistics-number">100%</div>
+    <div class="statistics-label">ny frontend, lanceret uden nedetid</div>
+  </div>
+
+  <div class="statistics-figure">
+    <div class="statistics-number">Få dage</div>
+    <div class="statistics-label">om måneden i løbende vedligehold efter lancering</div>
+  </div>
+</div>
+
 <section>
   <div class="container">
     <%= markdown(<<~MARKDOWN)
-      ## Ét website til alle enheder
-
-      I tæt samarbejde med UX'er, brugervenlighedseksperter og designere
-      udviklede Substance Lab et nyt og funklende website, der tilpasser sig
-      den enhed, brugeren sidder med.
+      ## Sådan ser det ud i dag
     MARKDOWN
     %>
+  </div>
 
-    <blockquote class="quote pull-left">
-      <p>Det ser super ud på min Samsung Galaxy III</p>
-      <div class="author">Børn i byen bruger</div>
-    </blockquote>
+  <div class="ui-screenshot-gallery">
+    <div class="ui-screenshot-gallery-items">
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/homepage.jpg", alt: "Forsiden af Børn i byen" %>
+      </figure>
 
-    <%= markdown(<<~MARKDOWN)
-      Ét website betyder at der kun er ét site at vedligeholde og ét sted at
-      holde fokus -- det er simplere og billigere og nemmere for brugerne.
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/category.jpg", alt: "Kategorisiden for udendørs legepladser, med filtre" %>
+      </figure>
 
-      ## Smertefri lancering
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/article.jpg", alt: "En redaktionel artikel bygget med page builderen" %>
+      </figure>
 
-      Når man lancerer en så omfattende ændring af et site, må man også forvente, at
-      brugerne råber op og at der skal rettes masser af småfejl i dagene efter
-      lanceringen.
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/homepage_mobile.jpg", alt: "Forsiden på en mobiltelefon" %>
+      </figure>
 
-      Stik mod forventningen løb lanceringen smertefrit og brugerne har været
-      overvældende glade og positive for resultatet.
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/place.jpg", alt: "En stedside med anmeldelser og medlemsrabat" %>
+      </figure>
 
-      ## Resultatet
-
-      Tallene taler for sig selv: Børn i byens mobilbrugere kunne næsten ikke få armene ned.
-    MARKDOWN
-    %>
-
-    <blockquote class="quote pull-right">
-      <p>Wauw, det ser godt ud!</p>
-      <div class="author">Børn i byen bruger</div>
-    </blockquote>
-
-    <%= markdown(<<~MARKDOWN)
-      Efter lanceringen steg mobilbrugernes antal læste sider med 18% og de spenderede i gennemsnit 26% mere tid på sitet.
-
-      På et reklamefinansieret website som [Børn i byen](http://bornibyen.dk) er flere læste sider og mere engagement lig med flere penge på bundlinjen.
-    MARKDOWN
-    %>
+      <figure>
+        <%= image_tag "work/born-i-byen/screenshots/calendar.jpg", alt: "Medlemskalenderen med events" %>
+      </figure>
+    </div>
   </div>
 </section>

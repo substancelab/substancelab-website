@@ -1,5 +1,6 @@
 ---
 title: "Launch: ComedyKalenderen"
+author: jakob
 description: "Substance Lab har ført Daniel Lill gennem et seedforløb, hvor vi gjorde hans idé om en samlet liste af comedy shows til en realitet."
 tags: launch, ComedyKalenderen, seed
 photo:

@@ -1,0 +1,5 @@
+<% service_case_studies = case_studies_for_service_page(resource.relative_url) %>
+<% if service_case_studies.any? %>
+  <h2><%= I18n.t("work.index.case_studies") %></h2>
+  <%= render Gallery.new(case_studies: service_case_studies) %>
+<% end %>

@@ -1,5 +1,6 @@
 ---
 title: "Standardløsninger"
+author: jakob
 description: "Standardløsninger er fremragende til standard problemer. Vi forklarer, hvornår det giver mening at vælge en standardløsning og hvad du skal være opmærksom på."
 tags: software
 photo:

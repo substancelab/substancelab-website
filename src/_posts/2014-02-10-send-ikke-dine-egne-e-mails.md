@@ -1,5 +1,6 @@
 ---
 title: Send ikke dine egne e-mails
+author: jakob
 description: Der er alt for mange faldgruber, når du sender e-mail fra din løsning. Du bør lade eksperterne om at sørge for, at dine emails bliver leveret til dine kunder.
 tags: eksterne tjenester, produktstyring, software
 photo:

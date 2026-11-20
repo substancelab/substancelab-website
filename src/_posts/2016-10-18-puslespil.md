@@ -1,5 +1,6 @@
 ---
 title: "Software er som puslespil"
+author: jakob
 description: "Softwareudvikling handler om at få en masse brikker til at hænge sammen. Vi hjælper dig at komme fra kaos til samlet billede."
 tags: software, udvikling, produktstyring
 photo:

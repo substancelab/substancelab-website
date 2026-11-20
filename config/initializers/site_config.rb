@@ -2,7 +2,7 @@
 
 require "i18n"
 
-LOCALE = ENV["LOCALE"] || "en"
+LOCALE = ENV["LOCALE"] || "da"
 
 SETTINGS = {
   "da" => {

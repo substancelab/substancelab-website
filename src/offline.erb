@@ -1,0 +1,13 @@
+---ruby
+front_matter do
+  layout :layout
+  title I18n.translate("offline.title")
+  description I18n.translate("offline.body")
+end
+---
+
+<% slot :hero do %>
+  <%= render Hero.new(title: I18n.translate("offline.title")) do %>
+    <p><%= I18n.translate("offline.body") %></p>
+  <% end %>
+<% end %>

@@ -10,7 +10,6 @@
 
 agency-fusion:
   client: Agency Fusion, USA
-  client_website: https://agencyfusion.com
   services:
   - ux
 
@@ -40,6 +39,9 @@ biq:
   website: https://biq.dk
 
 bomae:
+  case_studies:
+  - da
+  - en
   client: "Bomae, Denmark"
   client_website: https://www.bomae.dk/
   description:
@@ -50,6 +52,7 @@ bomae:
   position: 4
   services:
   - dropbox_integration
+  - maintenance
   - responsive_design
   - roadmapping
   - web_application_development
@@ -66,34 +69,31 @@ bomae:
 born-i-byen:
   case_studies:
   - da
+  - en
   client: "Børn i byen, Denmark"
   client_website: https://bornibyen.dk
   description:
-    da: "Forældrenes guide til København og Aarhus. Her finder du anmeldelser, børnevenlige arrangementer og meget andet."
-    en: "Community driven guide to Copenhagen and Aarhus focusing on parents and their children."
+    da: "Forældrenes guide til København og Aarhus."
+    en: "Guide to Copenhagen and Aarhus focusing on parents and their children."
   featured: true
   name: "Børn i byen"
-  position: 1
+  position: 2
   services:
-  - api_development
-  - google_maps
   - maintenance
-  - payment_gateway_integration
-  - responsive_design
+  - roadmapping
   - web_application_development
   slug: born-i-byen
   technologies:
-  - Google Maps
-  - CSS
-  - Javascript
+  - Elasticsearch
   - MySQL
   - Ruby
   - Ruby on Rails
+  - Tailwind CSS
+  - View Components
   website: https://bornibyen.dk
 
 change-healthcare:
   client: change:healthcare, USA
-  client_website: https://changehealthcare.com
   description:
     da: "change:healthcare hjælper forbrugere i USA med at finde rundt i den jungle, der er deres sundhedssystem, med værktøjer til at holde styr på regninger og forsikringer sammenligning af priser på medicin og læger."
     en: "Healthcare is confusing. change:healthcare offer free tools to analyze your healthcare spending and manage your bills, track your providers and compare costs of prescriptions and doctor visits to save money."
@@ -107,11 +107,9 @@ change-healthcare:
   technologies:
   - Ruby
   - Ruby on Rails
-  website: https://changehealthcare.com
 
 collaboraid:
   client: Collaboraid, Denmark
-  client_website: https://collaboraid.net
   technologies:
   - Javascript
   - Ruby on Rails
@@ -163,18 +161,18 @@ ejendomsstatistik:
   - PostgreSQL
   website: https://ejendomsstatistik.dk
 
-eventzonen:
+eventzone:
   case_studies:
   - da
   - en
   client: Underholdningsbureauet, Denmark
-  client_website: https://eventzonen.dk
+  client_website: https://eventzone.com
   description:
-    da: International markedsplads for kunstnere og foredragsholdere. Substance Lab har bygget løsningen fra bunden og været med til at forbedre og udvide den.
-    en: International marketplace that puts event organizers in contact with artists and entertainers. The application was built from scratch by Substance Lab.
+    da: International markedsplads for kunstnere og foredragsholdere.
+    en: International marketplace that puts event organizers in contact with artists and entertainers.
   featured: true
-  name: eventzonen.dk
-  position: 3
+  name: Eventzone
+  position: 1
   services:
   - maintenance
   - web_application_development
@@ -182,13 +180,13 @@ eventzonen:
   - youtube_integration
   - payment_gateway_integration
   - recurring_billing
-  slug: eventzonen-dk
+  slug: eventzone
   technologies:
   - Ruby on Rails
   - CSS
   - Javascript
   - PostgreSQL
-  website: https://eventzonen.dk
+  website: https://eventzone.com
 
 fab-it:
   client: Fab:IT, Denmark
@@ -203,29 +201,38 @@ fab-it:
   - Ruby
   - Ruby on Rails
 
-falconeer:
+falcon:
+  case_studies:
+  - da
+  - en
   client: Investeringsforeningen Falcon Invest, Denmark
   client_website: https://falconinvest.dk
   description:
     da: Investerings-portefølje-værktøj der gør det muligt for Falcon Invest at overvåge og optimere deres investings-strategier.
     en: Portfolio management tool that allows Falcon Invest to monitor and optimize their investment strategies across all their funds.
-  name: Falconeer
+  name: Falcon Invest
+  position: 3
+  slug: falcon
   services:
+    - automation
+    - maintenance
     - web_application_development
   technologies:
     - Ruby on Rails
+    - Avo
+    - CSS
+    - Javascript
+    - Hotwire
+    - Heroku
+    - PostgreSQL
 
 flaym:
-  case_studies:
-  - da
   client: LEO Innovation Lab, Denmark
-  client_website: https://leoinnovationlab.com/
   description:
-    da: Socialt netværk for personer med psoriasis. Deadlinen var stram, så kunden havde brug for en partner, der kunne arbejde iterativt og sammen med deres designere.
-    en: Flaym connects psoriasis sufferers from all over the world. They needed a development partner who could work iteratively and closely with their designers.
+    da: Socialt netværk for personer med psoriasis.
+    en: Flaym connects psoriasis sufferers from all over the world.
   featured: true
   name: Flaym
-  position: 4
   services:
   - maintenance
   - web_application_development
@@ -259,7 +266,6 @@ gamekillers:
 
 gas-detection:
   client: Danfoss Cooling, Denmark
-  client_website: https://refrigerationandairconditioning.danfoss.dk/
   description:
     da: I Danfoss første forsøg med IoT havde de brug for en fleksibel partner, der kunne levere en brugervenlig applikation.
     en: Danfoss wanted to venture into the IoT space and needed a flexible partner to build out a userfriendly frontend for their devices.
@@ -281,11 +287,11 @@ gomore:
   client: GoMore, Denmark
   client_website: https://gomore.dk
   description:
-    da: Samkørsel, privat biludlejning, og deleøkonomi. GoMore forbinder passagerer med bilister og lejere med private udlejere.
-    en: Ridesharing and peer to peer car-rental done right. Connecting passengers with drivers, renters with car owners.
+    da: Samkørsel, privat biludlejning, og deleøkonomi.
+    en: Ridesharing and peer to peer car-rental done right.
   featured: true
   name: GoMore
-  position: 2
+  position: 6
   services:
   - maintenance
   - project_management
@@ -315,8 +321,8 @@ hhcomponents:
   client: HH Components, Denmark
   client_website: https://hhcomponents.com/forside
   description:
-    da: HH Components sparer penge og øger kvaliteten med en software robot udviklet af Substance Lab til at automatisere e-conomic.
-    en: HH Components uses a CPA Software Robot built by Substance Lab to ensure quality and save money to automate their inventory and order flows.
+    da: HH Components sparer penge og øger kvaliteten med en software robot.
+    en: HH Components uses a CPA Software Robot to ensure quality and savings.
   name: Shipmaster Robot
   position: 5
   services:
@@ -399,11 +405,11 @@ lokalebasen:
   client: Lokalebasen.dk, Denmark
   client_website: https://lokalebasen.dk
   description:
-    da: "Danmarks førende portal for udlejning af erhvervslokaler. Sitet blev til under anvendelse af Rails, testdreven udvikling og agile metoder."
-    en: "Substance Lab was hired to build Denmarks leading portal for renting and selling offices, warehouses, and production facilities."
+    da: "Danmarks førende portal for udlejning af erhvervslokaler."
+    en: "Denmarks leading portal for offices, warehouses, and production facilities."
   featured: true
   name: Lokalebasen
-  position: 6
+  position: 9
   services:
   - api_development
   - economic_integration
@@ -522,13 +528,12 @@ rp_lookups:
   case_studies:
   - en
   client: Mapicture, Denmark
-  client_website: https://mapicture.dk
   description:
     da: Det er ikke simpelt at indsamle og visualisere rejsetider mellem tusindvis af afgangssteder og destinationer. Men det er netop det Mapictures interne analyseværktøj gør.
     en: Collecting traveltimes between thousands of destinations and visualizing them is no simple task. Mapictures internal analysis tool does just that.
   featured: true
   name: Internal analysis tool
-  position: 5
+  position: 8
   services:
   - automation
   - project_management
@@ -569,7 +574,6 @@ test_cloud:
 
 tumlino:
   client: Tumlino, Denmark
-  client_website: https://www.tumlino.dk
   name: Tumlino
   services:
   - project_management

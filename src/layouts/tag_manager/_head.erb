@@ -1,7 +1,29 @@
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PTSD5CR7');</script>
+<script>
+  // GTM brings in heavy third-party scripts (Meta pixel, ads, consent banner)
+  // that would otherwise compete with rendering the page. Load it when the
+  // visitor first interacts, or after a few idle seconds at the latest.
+  // Events pushed to dataLayer before then are queued and sent once it loads.
+  (function (w, d, id) {
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+
+    var loaded = false;
+    var events = ["pointerdown", "keydown", "touchstart", "scroll", "mousemove"];
+
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      events.forEach(function (event) { w.removeEventListener(event, load, { passive: true }); });
+
+      var script = d.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtm.js?id=" + id;
+      d.head.appendChild(script);
+    }
+
+    events.forEach(function (event) { w.addEventListener(event, load, { passive: true }); });
+    w.addEventListener("load", function () { setTimeout(load, 5000); });
+  })(window, document, "GTM-PTSD5CR7");
+</script>
 <!-- End Google Tag Manager -->

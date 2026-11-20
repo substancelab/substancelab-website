@@ -1,5 +1,6 @@
 ---
 title: "Launch: UrbanWineBox"
+author: jakob
 description: "Substance Lab har leveret backend til UrbanWineBox; Danmarks første deleøkonomiske vinkælder og -markedsplads"
 tags: launch, urbanwinebox
 photo:
@@ -10,9 +11,9 @@ Vin skal drikkes i godt selskab og gode oplevelser skal deles. [UrbanWineBox](ht
 
 READMORE
 
-<div class="quote"><blockquote>
-Vi har været rigtig glade for samarbejdet med Substance Lab, og meget tilfredse med det udførte arbejde og jeres måde at håndtere processen på
-</blockquote></div>
+<%= render Quote.new do %>
+  <p>Vi har været rigtig glade for samarbejdet med Substance Lab, og meget tilfredse med det udførte arbejde og jeres måde at håndtere processen på</p>
+<% end %>
 
 ## Roadmapping
 

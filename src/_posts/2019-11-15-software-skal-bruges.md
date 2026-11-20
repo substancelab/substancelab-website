@@ -1,5 +1,6 @@
 ---
 title: "Software skal bruges"
+author: jakob
 description: "Software er beregnet til at blive brugt og du får aldrig et indblik i hvordan software fungerer ved at kigge på."
 tags: software
 photo:

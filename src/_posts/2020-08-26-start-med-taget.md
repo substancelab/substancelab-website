@@ -1,5 +1,6 @@
 ---
 title: "Start med taget"
+author: jakob
 description: "På mange punkter kan det at udvikle en ny softwareløsning sammenlignes med at skulle bygge et hus. På mange andre punkter, kan det slet ikke."
 tags: prioritering, software, udvikling, estimat, pris
 photo:

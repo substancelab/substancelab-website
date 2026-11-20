@@ -21,11 +21,11 @@ module ProjectHelpers
     }
   end
 
-  def case_study_masthead(project)
-    view.slot(:masthead) do
+  def case_study_hero(project)
+    view.slot(:hero) do
       name = project.is_a?(Hash) ? project["name"] : project.name
       desc = localized(project.is_a?(Hash) ? project["description"] : project.description)
-      "<h1>#{CGI.escapeHTML(name.to_s)}</h1><div class=\"subtitle\">#{CGI.escapeHTML(desc.to_s)}</div>".html_safe
+      view.render(Hero.new(badge: "Case study", badge_url: projects_url, title: name, lede: desc))
     end
   end
 
@@ -33,8 +33,30 @@ module ProjectHelpers
     Array(project.is_a?(Hash) ? project["case_studies"] : project.case_studies).include?(current_locale)
   end
 
-  def featured_projects
-    all_projects.select { |p| p["featured"] }
+  def featured_case_studies
+    case_studies.select { |p| p["featured"] }
+  end
+
+  # The services we have pages for, and the project services each page covers
+  SERVICE_PAGES = {
+    "/services/seed/" => %w[seed],
+    "/services/development/" => %w[web_application_development],
+    "/services/maintenance/" => %w[maintenance],
+    "/services/roadmapping/" => %w[roadmapping],
+    "/services/team-lead/" => %w[tech_lead project_management]
+  }.freeze
+
+  # Case studies of projects where we delivered at least one of the services
+  # covered by the service page at url
+  def case_studies_for_service_page(url)
+    services = SERVICE_PAGES.fetch(url)
+    case_studies.select { |p| (Array(p["services"]) & services).any? }
+  end
+
+  # The URL of the service page covering a project service, if any
+  def service_page_url(service)
+    url = SERVICE_PAGES.find { |_url, services| services.include?(service.to_s) }&.first
+    url if url && page_exists?(url)
   end
 
   def project_page_title(project)
@@ -66,7 +88,7 @@ module ProjectHelpers
     case_studies
   end
 
-  def project_masthead_image_path(project)
+  def project_hero_image_path(project)
     slug = project.is_a?(Hash) ? project["slug"] : project.slug
     image = "work/#{slug}/masthead.jpg"
     return nil unless image_exists?(image)
@@ -90,7 +112,7 @@ module ProjectHelpers
       img
     end
 
-    "<section class=\"display-project\"><div class=\"container\">#{img_with_link}</div></section>".html_safe
+    "<section class=\"ui-content wide\">#{img_with_link}</section>".html_safe
   end
 
   def project_services(project, max_length: nil)
@@ -111,6 +133,21 @@ module ProjectHelpers
     result.sort.to_sentence
   end
 
+  # Like project_services, but linking each service to its service page, if
+  # we have one
+  def linked_project_services(project)
+    services = project.is_a?(Hash) ? project["services"] : project.services
+    return "" unless services
+
+    services.map { |s|
+      [I18n.translate(s, :scope => :services, :default => s.to_s), s]
+    }.sort_by(&:first).map { |name, s|
+      name = ERB::Util.html_escape(name)
+      url = service_page_url(s)
+      url ? %(<a href="#{url}">#{name}</a>) : name
+    }.to_sentence.html_safe
+  end
+
   def project_url(project)
     slug = project.is_a?(Hash) ? project["slug"] : project.slug
     raise "Slug cannot be blank" if slug.to_s.empty?
@@ -122,5 +159,26 @@ module ProjectHelpers
       techs = values.is_a?(Hash) ? values["technologies"] : values.technologies
       techs
     }.flatten.compact.uniq.sort
+  end
+
+  def technology_url(technology)
+    "/work/with/#{Bridgetown::Utils.slugify(technology)}/"
+  end
+
+  # The technologies as a sentence, each linking to its technology page
+  def linked_technologies(technologies)
+    Array(technologies).sort.map { |technology|
+      %(<a href="#{technology_url(technology)}">#{ERB::Util.html_escape(technology)}</a>)
+    }.to_sentence.html_safe
+  end
+
+  def projects_with_technology(technology)
+    all_projects.select { |project| Array(project["technologies"]).include?(technology) }
+  end
+
+  # The name of a project, falling back to its client's name without the
+  # country for projects that don't have a name of their own
+  def project_name(project)
+    project["name"] || project["client"].to_s.sub(/, [^,]+\z/, "")
   end
 end

@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-gem "bridgetown", "~> 2.0"
-gem "puma", "~> 8.1"
+gem "bridgetown", "~> 2.2"
+gem "falcon"
 
 gem "vite_ruby"
 

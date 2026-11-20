@@ -3,7 +3,7 @@
   publish = "output"
 
 [build.environment]
-  RUBY_VERSION = "3.2.2"
+  RUBY_VERSION = "4.0.10"
   NODE_VERSION = "24.15.0"
 
 # Production gets its LOCALE from the Netlify UI. Previews show the Danish site,
